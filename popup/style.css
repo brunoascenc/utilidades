@@ -1,0 +1,52 @@
+*, *::after, *::before {
+    box-sizing: border-box;
+}
+
+.modal {
+    position: fixed; /* vai se mover junto com a tela */
+    top: 50%;
+    left: 50%;
+    border: 2px solid rgb(50, 50, 151);
+    border-radius: 5px;
+    z-index: 10; /* ficar acima de tudo e todos */
+    transition: 200ms ease-in-out;
+    background-color: white;
+    width: 500px;
+    max-width: 80%;
+    transform: translate(-50%, -50%) scale(0); /*conteudo fica centralizado na tela*/
+}
+
+.modal.active{
+    transform: translate(-50%, -50%) scale(1);
+}
+
+.modal-header {
+    padding: 10px 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-header .close-button {
+    cursor: pointer;
+    background: none;
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+#overlay {
+    position: fixed;
+    opacity: 0;
+    transition: 200ms ease-in-out;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0,50%);
+    pointer-events: none;
+}
+
+#overlay.active {
+    pointer-events: all;
+    opacity: 1;
+}
