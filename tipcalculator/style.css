@@ -1,0 +1,43 @@
+* {
+    box-sizing: border-box;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-transform: uppercase;
+}
+
+.tip-calculator {
+    padding: 10px 25px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    background-color: aqua;
+}
+
+.tip-inputs {
+    text-align: center;
+    justify-content: center;
+}
+
+button {
+    cursor: pointer;
+    padding: 4px 15px;
+    margin-left: 5%;
+    margin-top: 3%;
+    background: blue;
+    outline: none;
+    border: none;
+    color: white;
+}
+
+label {
+    padding: 5%;
+}
+
+#msg {
+    margin-top: 25px;
+    font-size: 1.5em;
+    font-weight: bold;
+    
+}

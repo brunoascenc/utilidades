@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+    <div class="tip-calculator">
+        <div class="tip-inputs">
+            <h1>Tip Calculator</h1>
+            <label for="valor">Valor R$</label>
+            <input type="text" id="valor"><br>
+            <label for="opcoes">Porcentagem</label><br>
+            <button onclick="dezTip()" id="dez">10%</button><button onclick="vinteTip()" id="vinte">20%</button><button
+                onclick="trintaTip()" id="trinta">30%</button>
+            <div id="msg"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
