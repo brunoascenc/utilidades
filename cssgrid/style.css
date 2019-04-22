@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.box1{
+    background: lightpink;
+}
+
+.box2 {
+    background: lightgreen;
+}
+
+.box3 {
+    background: lightseagreen;
+}
+
+main {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* FR = Fractions, pega o espaço disponivel na tela*/
+    grid-template-rows: 1fr 1fr; /* A tamnho do espaço que o row vai pegar*/
+}
+
+.box3 {
+    grid-column-start: 2; /*Em que ponto a coloca vai começar, nesse caso na column 2*/
+    grid-column-end: 3; /* E vai terminar na column 3*/
+}
+
+.box1 {
+    grid-row-start: 1; /* Ponto em que o row vai começar*/
+    grid-row-end: 3; /* E vai terminar no row 3*/
+}
