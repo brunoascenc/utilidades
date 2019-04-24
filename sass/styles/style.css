@@ -1,0 +1,27 @@
+header, .contact {
+  height: 100vh;
+  background: lightcoral;
+  color: #9e7c7c;
+}
+
+header button, .contact button {
+  cursor: pointer;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+  background: #bb53aa;
+}
+
+header button:hover, .contact button:hover {
+  color: lightblue;
+  background: lightgreen;
+}
+
+header button::after, .contact button::after {
+  content: 'aspkasp';
+}
+
+.contact {
+  background: lightgray;
+  width: 80%;
+}
+/*# sourceMappingURL=style.css.map */

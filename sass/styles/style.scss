@@ -1,0 +1,11 @@
+// Para importar outros arquivos scss
+@import './variables';
+@import './header';
+
+.contact {
+    background: lightgray;
+    @extend header; // Importa styles do header
+    // @include flexCenter(row, rgb(53, 158, 177));
+    width: 100% - 20%;
+}
+

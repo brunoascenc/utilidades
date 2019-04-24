@@ -1,0 +1,28 @@
+// @mixin flexCenter($direction, $background) {
+//     height: 100vh;
+//     display: flex;
+//     justify-content: center; // Cria variavel para fazer algo
+//     align-items: center;
+//     flex-direction: $direction;
+//     background: $background;
+// }
+
+
+header {
+    // @include flexCenter(column, lightgreen); // Aplica a variavel
+    height: 100vh;
+    background: lightcoral;
+    color: $textColor;
+    button{
+        cursor: pointer;
+        transition: 0.3s ease;
+        background: $primaryBtn;  // Se quiser mexer em algo dentro daquela section
+        &:hover{
+            color: lightblue;
+            background: lightgreen;
+        }
+        &::after{
+            content: 'aspkasp';
+        }
+    } 
+}
