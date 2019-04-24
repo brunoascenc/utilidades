@@ -21,14 +21,30 @@ main {
     display: grid;
     grid-template-columns: 1fr 1fr; /* FR = Fractions, pega o espaço disponivel na tela*/
     grid-template-rows: 1fr 1fr; /* A tamnho do espaço que o row vai pegar*/
+    grid-template-areas: 
+      "box1 box2"
+      "box3 box3"; /* Organizando as divs de uma forma mais explicita*/
+      /* justify-items: center; Coloca os itens no meio */
+      /* justify-items: end; Coloca os itens no final */
+      /* justify-items: start; Colosa os itens no começo */
+      /* justify-items: stretch; Default */
+      /* align-items: center; Alinha verticalmente */
+
 }
 
-.box3 {
-    grid-column-start: 2; /*Em que ponto a coloca vai começar, nesse caso na column 2*/
-    grid-column-end: 3; /* E vai terminar na column 3*/
+ .box3 {
+    /* grid-column-start: 2; Em que ponto a coloca vai começar, nesse caso na column 2 */
+    /* grid-column-end: 3; E vai terminar na column */
+    grid-area: box3;
 }
 
 .box1 {
-    grid-row-start: 1; /* Ponto em que o row vai começar*/
-    grid-row-end: 3; /* E vai terminar no row 3*/
+    /* grid-row-start: 1; Ponto em que o row vai começar */
+    /* grid-row-end: 3; E vai terminar no row 3 */
+    grid-area: box1;
+    /* align-self: center; Só afeta uma unica area especifica */
+}
+
+.box2{
+    grid-area: box2;
 }

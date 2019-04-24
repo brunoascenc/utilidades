@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.gallery {
+    display: grid;
+    grid-column-gap: 20px; /* Espaço entre as colunas */
+    grid-row-gap: 20px; /* Espaço entre os rows */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* O minimo e o maximo de espaço que a imagem vai ocupar de acordo com a tela*/
+}
+
+.gallery img {
+    width: 100%;
+}
