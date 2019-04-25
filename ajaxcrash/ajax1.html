@@ -22,39 +22,38 @@
     <script>
         document.getElementById('button').addEventListener('click', loadText => {
             // Criar XHR Obj
-            const xhr = new XMLHttpRequest()
-            // OPEN PARAMETROS: 'GET', 'URL', 'ASYNC TRUE OR FALSE'
-            xhr.open('GET', 'simple.txt', true)
+                const xhr = new XMLHttpRequest()
+                // OPEN PARAMETROS: 'GET', 'URL', 'ASYNC TRUE OR FALSE'
+                xhr.open('GET', 'simple.txt', true)
 
-            // Used for loaders,
-            xhr.onprogress = () => {
-                console.log('READYSTATE: ', xhr.readyState) // = 3
-            }
-
-            // Onload
-            xhr.onload = () => {
-                if (xhr.status === 200) {
-                    // console.log(xhr.responseText)
-                    document.getElementById('text').innerHTML = xhr.responseText // mostrar na pagina
-                } else if (xhr.status = 404) {
-                    document.getElementById('text').innerHTML = 'Not Found' // mostra o err na tela
+                // Used for loaders,
+                xhr.onprogress = () => {
+                    console.log('READYSTATE: ', xhr.readyState) // = 3
                 }
-            }
 
-            xhr.onerror = () => {
-                console.log('Request Error....')
-            }
+                // Onload
+                xhr.onload = () => {
+                    if (xhr.status === 200) {
+                        // console.log(xhr.responseText)
+                        document.getElementById('text').innerHTML = xhr.responseText // mostrar na pagina
+                    } else if (xhr.status = 404) {
+                        document.getElementById('text').innerHTML = 'Not Found' // mostra o err na tela
+                    }
+                }
 
-            // xhr.onreadystatechange = () => {
-            //     if (xhr.readyState === 4 && xhr.status === 200) {
-            //         console.log(xhr.responseText)
-            //     }
-            // }
+                xhr.onerror = () => {
+                    console.log('Request Error....')
+                }
 
-            // Envia o request
-            xhr.send()
+                // xhr.onreadystatechange = () => {
+                //     if (xhr.readyState === 4 && xhr.status === 200) {
+                //         console.log(xhr.responseText)
+                //     }
+                // }
 
-
+                // Envia o request
+                xhr.send()
+    
         })
 
         // readeState values
@@ -69,6 +68,8 @@
         // 403: "Forbidden"
         // 404: "Not Found"
     </script>
+
+
 </body>
 
 </html>
