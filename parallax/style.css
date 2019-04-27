@@ -1,0 +1,38 @@
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ header {
+     min-height: 100vh;
+     background:lightblue;
+     position: relative;
+     z-index: -1;
+ }
+
+ main {
+     height: 100vh;
+     background:lightcoral;
+ }
+
+ .text {
+     position: absolute;
+     top: 50%;
+     left: 20%;
+ }
+
+ .rocket1{
+     height: 200px;
+     position: absolute;
+     top: 10%;
+     left: 40%;
+ }
+
+ .rocket2 {
+     height: 100px;
+     position: absolute;
+     top: 30%;
+     left: 10%;
+ }
+
