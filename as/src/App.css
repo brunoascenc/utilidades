@@ -1,0 +1,14 @@
+.app {
+  height: 100vh;
+  background: lightgreen;
+}
+
+.tweet {
+  border: 2px dotted lightcoral;
+  height: 400px;
+  width: 450px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
