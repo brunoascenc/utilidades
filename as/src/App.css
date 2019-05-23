@@ -1,6 +1,17 @@
 .app {
   height: 100vh;
   background: lightgreen;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.app button {
+  cursor: pointer;
+  padding: 1% 4%;
+  background-color: lightpink;
+  border: none;
+  outline: none;
 }
 
 .tweet {
@@ -9,6 +20,10 @@
   width: 450px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+}
+
+.purple {
+  color: rebeccapurple;
 }
