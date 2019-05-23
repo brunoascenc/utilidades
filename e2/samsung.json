@@ -1,0 +1,57 @@
+[
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-j5-2016-metal-dourado-1.jpg",
+        "titulo": "Samsung J5 Metal Dourado",
+        "preco": "R$ 899,00",
+        "parcela": "ou 12x R$ 38,92 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-s8-plus-ametista-1.jpg",
+        "titulo": "Samsung Galaxy S8 Plus",
+        "preco": "R$ 1970,90",
+        "parcela": "ou 12x R$ 50,90 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-s6-edge-plus-preto-1.jpg",
+        "titulo": "Samsung Galaxy S6 Edge",
+        "preco": "R$ 1489,99",
+        "parcela": "ou 12x R$ 45,99 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-s7-edge-dourado-1.png",
+        "titulo": "Samsung Galaxy S7 Edge",
+        "preco": "R$ 1689,99",
+        "parcela": "ou R$ 65,60 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-a7-2017-dourado-1.jpg",
+        "titulo": "Samsung Galaxy A7",
+        "preco": "R$ 1455,95",
+        "parcela": "ou 12x R$ 45,99 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-samsung-galaxy-a5-dourado.png",
+        "titulo": "Samsung Galaxy A5",
+        "preco": "R$ 789,90",
+        "parcela": "ou 12x R$ 50,68 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-galaxy-s9-azul-frente.png",
+        "titulo": "Samsung Galaxy S9 Azul",
+        "preco": "R$ 2269,00",
+        "parcela": "ou 12x R$129,08 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-galaxy-s6-flat-bran-1.png",
+        "titulo": "Samsung Galaxy S6 Flat",
+        "preco": "R$ 659,00",
+        "parcela": "ou 12x R$ 25,90 sem juros"
+    }
+]

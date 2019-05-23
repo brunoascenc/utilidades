@@ -1,0 +1,29 @@
+[
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-5b3134b3-zenfone-4-verde-frente.png",
+        "titulo": "Zenfone 4 Verde",
+        "preco": "R$ 1659,55",
+        "parcela": "ou 12x R$ 49,90 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-zenfone-4-selfie-pro-vermelho-frente.png",
+        "titulo": "Zenfone 4 Selfie Pro",
+        "preco": "R$ 1789,00",
+        "parcela": "ou 12x R$ 69,99 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-5a5f3e54-zenfone-3-preto-1.jpg",
+        "titulo": "Zenfone 3 Preto",
+        "preco": "R$ 1289,66",
+        "parcela": "ou 12x R$ 45,60 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-5c23a990-zenfone-4-max-preto-frente.png",
+        "titulo": "Asus Zenfone 4 Max Preto",
+        "preco": "R$ 1989,56",
+        "parcela": "ou 12x R$ 89,90 sem juros"
+    }
+]

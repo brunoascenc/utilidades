@@ -1,0 +1,57 @@
+[
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-5ab2a65e-iphone-x-prateado-frente.png",
+        "titulo": "Iphone X Cinza Espacial",
+        "preco": "R$ 2000,00",
+        "parcela": "ou 12X de 49,60 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-5834762a-cinza-e-frente.png",
+        "titulo": "Iphone 6S Cinza Espacial",
+        "preco": "R$ 1599,90",
+        "parcela": "ou 12X de 50,00 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-prata-frente.jpg",
+        "titulo": "Iphone SE Prata",
+        "preco": "R$ 1259,99",
+        "parcela": "ou 12x de R$ 39,90 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-5834535c-cinza-e-frente.png",
+        "titulo": "Iphone 5S Cinza Espacal",
+        "preco": "R$ 1199,56",
+        "parcela": "ou 12x de R$ 29,99 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-iphone-5s-16gb-dourado.png",
+        "titulo": "Iphone 5S 16GB Dourado",
+        "preco": "R$ 999,00",
+        "parcela": "ou 12x de R$ 56,90 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-58344fcb-branco-frente.png",
+        "titulo": "iPhone 5C 8GB Branco",
+        "preco": "R$ 509,00 ",
+        "parcela": "ou 12x de R$ 29,23 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-58347a07-cinza-e-frente.png",
+        "titulo": "iPhone 6S Plus Cinza",
+        "preco": "R$ 1754,00",
+        "parcela": "ou 12x de R$ 39,99 sem juros"
+    },
+
+    {
+        "imagem": "https://imagens.trocafone.com/images/phones/dt-591c9c9f-iphone7-black-1.jpg",
+        "titulo": "iPhone 7 Plus Preto Matte",
+        "preco": "R$ 1899,90",
+        "parcela": "ou 12x de R$ 59,99 sem juros"
+    }
+]
