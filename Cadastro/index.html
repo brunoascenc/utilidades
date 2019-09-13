@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="style.css">
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="logo"><img src="fmu-logo.png" alt="" srcset=""></div>
+        <figure>
+            <img src="banner.jpg" alt="Rally">
+        </figure>
+
+        <form action="#" onsubmit="return validarForm()">
+            <div class="detalhes">
+                <h3>Cadastre sua equipe</h3>
+                <p>* Nome do grupo é obrigatorio</p>
+                <p>* Mínimo de 2 integrantes Max de 4 </p>
+            </div>
+            <div class="nome-grupo"><input id="inputGrupo" type="text" name="nome-grupo" placeholder="Nome do grupo*"></div>
+            <div><input id = "ra1" type="text" name="ra" placeholder="Digite o RA*"></div>
+            <div><input id = "ra2" type="text" name="ra" placeholder="Digite o RA*"></div>
+            <div><input type="text" name="ra" placeholder="Digite o RA"></div>
+            <div><input type="text" name="ra" placeholder="Digite o RA"></div>
+            <div id = "mensagem"></div>
+            <div class="buttons">
+                <button type="submit">Verificar</button><button type="submit">Cadastrar</button>
+            </div>
+        </form>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(245, 243, 243);
+    font-family: sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    margin-top: -10px;
+}
+
+.logo img {
+    width: 110px;
+}
+
+figure {
+    margin-bottom: 10px;
+}
+
+.nome-grupo {
+    border-bottom: solid 1px rgb(231, 228, 228);
+}
+
+form{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: rgb(250, 249, 249);
+    padding: 40px 85px 40px 85px;
+    border: solid 1px rgb(231, 229, 229);
+    box-shadow: 1px 9px 13px 1px rgba(0, 0, 0, 0.1);
+}
+
+#mensagem {
+    color: rgb(241, 58, 58);
+    font-size: 15px;
+}
+
+.detalhes {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.detalhes h3{
+    color: rgb(46, 45, 45);
+    align-self: center;
+    margin-bottom: 10px;
+}
+
+.detalhes p{
+    font-size: 13px;
+    color: rgb(126, 125, 125);
+}
+
+form input {
+    padding: 12px 40px 12px 20px;
+    outline: none;
+    box-shadow: none;
+    border: solid 1px rgb(231, 228, 228);
+    border-radius: 3px;
+}
+
+input[type="text"] {
+    background-color : #f5f1f1;   
+}
+
+form div {
+    padding: 6px;
+}
+
+.buttons button {
+    cursor: pointer;
+    background: rgb(241, 57, 57);
+    color: rgb(251, 248, 248);
+    text-transform: uppercase;
+    border:none;
+    outline: none;
+    margin: 6px;
+    padding: 8px 16px 8px 16px;
+    border-radius: 2px;   
+}
+
+.buttons button:hover{
+    background: rgb(243, 77, 77);
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .container{
+        padding: 16px;
+    }
+
+    form{
+        width: 100%;
+        margin-bottom: 5%;
+    }
+
+    form input {
+        width: 100%;
+    }
+    
+    .buttons button {
+        width: 100%;
+        margin: 1px;
+        margin-top: 5px;
+    }
+}
