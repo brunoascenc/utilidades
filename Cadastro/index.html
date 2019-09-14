@@ -11,25 +11,33 @@
 
 <body>
     <div class="container">
-        <div class="logo"><img src="fmu-logo.png" alt="" srcset=""></div>
-        <figure>
-            <img src="banner.jpg" alt="Rally">
-        </figure>
+        <div class="logo">
+            <img src="fmu-logo.png" alt="Logo-fmu">
+        </div>
 
         <form action="#" onsubmit="return validarForm()">
             <div class="detalhes">
-                <h3>Cadastre sua equipe</h3>
-                <p>* Nome do grupo é obrigatorio</p>
+                <figure>
+                    <img src="banner.jpg" alt="Rally">
+                </figure>
+                <p>* Nome do grupo é obrigatório </p>
+                <p>* Email do grupo é obrigatório </p>
                 <p>* Mínimo de 2 integrantes Max de 4 </p>
+                <p>* Não serão aceitos nomes com cunhos políticos,
+                    religiosos ou ofensivos a qualquer tipo de pessoa (<a href="http://informa.fmu.br/wp-content/uploads/2018/10/Edital_Rally2018_22.10.1-00000002.pdf">conforme o edital</a>).
+                </p>
             </div>
-            <div class="nome-grupo"><input id="inputGrupo" type="text" name="nome-grupo" placeholder="Nome do grupo*"></div>
-            <div><input id = "ra1" type="text" name="ra" placeholder="Digite o RA*"></div>
-            <div><input id = "ra2" type="text" name="ra" placeholder="Digite o RA*"></div>
-            <div><input type="text" name="ra" placeholder="Digite o RA"></div>
-            <div><input type="text" name="ra" placeholder="Digite o RA"></div>
-            <div id = "mensagem"></div>
+            <div class="nome-grupo">
+                <input id="inputGrupo" type="text" name="nome-grupo" placeholder="Nome do grupo*">
+                <input id="emailInput" type="email" name="email" placeholder="Email do grupo*">
+            </div>
+            <div><input id="ra1" type="text" name="ra" placeholder="Digite o RA*"></div>
+            <div><input id="ra2" type="text" name="ra" placeholder="Digite o RA*"></div>
+            <div><input id="ra3" type="text" name="ra" placeholder="Digite o RA"></div>
+            <div><input id="ra4" type="text" name="ra" placeholder="Digite o RA"></div>
+            <div id="mensagem"></div>
             <div class="buttons">
-                <button type="submit">Verificar</button><button type="submit">Cadastrar</button>
+                <button>Verificar</button><button id="submitBtn" type="submit" disabled>Cadastrar</button>
             </div>
         </form>
     </div>
@@ -37,4 +45,4 @@
     <script src="script.js"></script>
 </body>
 
-</html>
+</input>
