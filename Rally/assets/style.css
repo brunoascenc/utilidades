@@ -1,0 +1,174 @@
+/*Navbar*/
+.navbar a img {
+  width: 80px;
+}
+
+.navbar {
+    border-bottom: solid 1px rgb(236, 234, 234);
+}
+
+.card img {
+    max-width: 100%;
+}
+
+/* Map */
+.map {
+  padding: 7px;
+  margin-bottom: 80px;
+}
+
+main {
+  padding: 8px;
+}
+
+/*Banner*/
+.jumbotron {
+    background-color: unset;
+}
+
+/* Form */
+.nome-grupo {
+  border-bottom: solid 1px rgb(226, 223, 223);
+  display: flex;
+  flex-direction: column;
+}
+
+input[type='email'] {
+  background-color: #ebe9e9;
+  margin-top: 7px;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 21px;
+}
+
+.detalhes {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.detalhes h3 {
+  color: rgb(46, 45, 45);
+  align-self: center;
+  margin-bottom: 10px;
+}
+
+.detalhes a {
+  text-decoration: none;
+  color: #696767;
+  border-bottom: dotted 1px rgb(83, 82, 82);
+}
+
+.detalhes p {
+  font-size: 15px;
+  color: rgb(238, 44, 44);
+  width: 100%;
+}
+
+form input {
+  padding: 12px 40px 12px 20px;
+  outline: none;
+  box-shadow: none;
+  border: solid 1px rgb(231, 228, 228);
+  border-radius: 3px;
+}
+
+input[type='text'] {
+  background-color: #ebe9e9;
+}
+
+form div {
+  padding: 6px;
+}
+
+.buttons button {
+  cursor: pointer;
+  background: rgb(241, 57, 57);
+  color: rgb(251, 248, 248);
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  margin: 6px;
+  padding: 8px 16px 8px 16px;
+  border-radius: 2px;
+}
+
+.buttons button:hover {
+  background: rgb(243, 77, 77);
+  color: white;
+}
+
+/*Informacoes*/
+.inscricoes a {
+  color:rgb(230, 50, 50);
+}
+
+/* Erro mensagem */
+#mensagem {
+  color: rgb(241, 58, 58);
+  font-size: 15px;
+}
+
+footer a {
+    color: red;
+}
+
+footer a:hover {
+    color: red;
+    border-bottom: red;
+}
+
+/* Media Queries */
+@media (max-width: 665px) {
+  .container {
+    padding: 16px;
+    margin-top: 10%;
+  }
+
+  form {
+    width: 100%;
+    margin-bottom: 5%;
+  }
+
+  form input {
+    width: 100%;
+  }
+
+  .buttons button {
+    width: 100%;
+    margin: 1px;
+    margin-top: 3px;
+    padding: 6px;
+  }
+}
+
+@media (max-width: 460px) {
+  form {
+    padding: 25px 32px 21px 25px;
+  }
+  .detalhes p {
+    width: 220px;
+  }
+}
+
+@media (max-width: 320px) {
+  form input {
+    padding: 6px 40px 6px 20px;
+  }
+
+  .detalhes p {
+    width: 100%;
+  }
+
+  .logo img {
+    width: 70px;
+  }
+
+  .detalhes p {
+    font-size: 11px;
+  }
+}
