@@ -26,6 +26,10 @@ main {
     background-color: unset;
 }
 
+.jumbotron img {
+  max-width: 100%;
+}
+
 /* Form */
 .nome-grupo {
   border-bottom: solid 1px rgb(226, 223, 223);
@@ -107,6 +111,11 @@ form div {
   color:rgb(230, 50, 50);
 }
 
+/* FAQ */
+#faq p {
+  padding: 0px 0px 25px 0px ;
+}
+
 /* Erro mensagem */
 #mensagem {
   color: rgb(241, 58, 58);
@@ -122,11 +131,25 @@ footer a:hover {
     border-bottom: red;
 }
 
+.btn:focus,.btn:active {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 /* Media Queries */
 @media (max-width: 665px) {
   .container {
     padding: 16px;
     margin-top: 10%;
+  }
+
+  .jumbotron p {
+    font-size: 17px;
+  }
+
+  .jumbotron h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
   }
 
   form {
