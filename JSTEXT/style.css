@@ -1,0 +1,31 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(22, 22, 22);
+}
+
+.txt-animation{
+    text-align: center;
+    font-size: 4rem;
+    font-family: sans-serif;
+    color: aliceblue;
+    line-height: 100vh;
+}
+
+span{
+    opacity: 0;
+    transition: all 0.5s ease;
+    transform: translateY(50px);
+    display: inline-block;
+    color: rgb(235, 47, 47);
+}
+
+span.fade{
+    opacity: 1;
+    color: rebeccapurple;
+    transform: translateY(0px);
+}
