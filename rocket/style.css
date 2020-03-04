@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css?family=Archivo+Black|Bowlby+One+SC|Quicksand&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -5,8 +6,14 @@
           box-sizing: border-box;
 }
 
+body {
+  font-family: 'Quicksand', sans-serif;
+  overflow-x: hidden;
+}
+
 a {
   text-decoration: none;
+  color: #383737;
 }
 
 ul {
@@ -14,7 +21,7 @@ ul {
 }
 
 svg {
-  width: 40%;
+  max-width: 35%;
 }
 
 #home {
@@ -26,15 +33,43 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  padding: 1.5rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 1.5rem 12rem 1.5rem 12rem;
+}
+
+header h1 {
+  font-family: "Bowlby One SC", cursive;
+  letter-spacing: 2px;
+  font-weight: 100;
+  background: -webkit-linear-gradient(#a64fce, #d79df1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+header nav {
+  margin-top: 5px;
 }
 
 header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header nav ul .signupNav {
+  background: -webkit-gradient(linear, left top, left bottom, from(#a255c5), to(#c669f1));
+  background: linear-gradient(#a255c5, #c669f1);
+  padding: 0.6rem 2.0rem 0.6rem 2.0rem;
+  color: #f7f3f3;
+  border-radius: 25px;
 }
 
 header nav ul li {
@@ -51,32 +86,43 @@ header nav ul li {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  margin-top: -60px;
 }
 
 .landing-content .landing-text p {
-  width: 520px;
+  width: 450px;
   font-size: 1.1rem;
+  color: #1f1e1e;
+  margin-top: 10px;
 }
 
-.landing-content strong p {
-  font-size: 3.2rem !important;
+.landing-content .title p {
+  font-size: 3.2rem;
+  color: #333232;
+  width: 100%;
+  margin-bottom: 9px;
+  line-height: 2.8rem;
+  font-family: "Archivo Black", sans-serif;
 }
 
 .landing-content .home-btn {
-  margin-top: 25px;
+  margin-top: 30px;
 }
 
 .landing-content .home-btn a {
   color: #f7f5f1;
   background: #a64fce;
-  padding: 1.0rem 2.5rem 1.0rem 2.5rem;
+  padding: 0.8rem 2.5rem 0.8rem 2.5rem;
   border-radius: 25px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#8d4aac), to(#c669f1));
+  background: linear-gradient(#8d4aac, #c669f1);
 }
 
 .landing-content .home-btn .test {
   background: transparent;
-  color: #202020;
-  border: 1px #383737 solid;
+  color: #3d3c3c;
+  border: 1px #b1adad solid;
+  padding: 0.7rem 2.2rem 0.7rem 2.2rem;
 }
 
 .landing-content #rocket {
