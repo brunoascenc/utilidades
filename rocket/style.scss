@@ -10,16 +10,40 @@ body {
     overflow-x: hidden;
 }
 
-// .container{
-//     padding: 1.5rem 15rem 1.5rem 15rem;
-
-// }
+.container{
+    // background: blue;
+    // padding: 450px;
+    // margin: 0 auto;
+}
 
 
 //VARS
 $primaryColor: rgb(166, 79, 206);
 $logoFont: 'Bowlby One SC', cursive;
 $subTitle: 'Archivo Black', sans-serif;
+
+@mixin gradientFont{
+    font-weight: 100;
+    background: -webkit-linear-gradient(rgb(166, 79, 206),rgb(215, 157, 241));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@mixin gradientBtn{
+    color: rgb(247, 245, 241);
+    background: $primaryColor;
+    padding: 0.8rem 2.5rem 0.8rem 2.5rem ;
+    border-radius: 25px;
+    background: linear-gradient(rgb(141, 74, 172),rgb(198, 105, 241));
+}
+
+@mixin simpleBtn{
+    background: transparent;
+    color: rgb(61, 60, 60);
+    border: 1px rgb(177, 173, 173)solid;
+    padding: 0.7rem 2.2rem 0.7rem 2.2rem ;
+    border-radius: 25px;
+}
 
 a{
     text-decoration: none;
@@ -32,12 +56,16 @@ ul {
 
 svg{
     max-width: 35%;
+    // background-color: red;
+    // height: 35%;
+    z-index: -1;
 }
 
 //Home
 #home{
     height: 100vh;
     width: 100vw;
+    // background: linear-gradient(-35deg,rgb(245, 243, 243) 60%, transparent 60%);
 }
 
 // Header
@@ -45,16 +73,14 @@ header{
     display: flex;
     justify-content: space-between;
     padding: 1.5rem 12rem 1.5rem 12rem;
-    // background: red;
+    width: 100vw;
+    height: 80px;
 
     h1 {
         font-family: $logoFont;
         letter-spacing: 2px;
         // text-transform: uppercase;
-        font-weight: 100;
-        background: -webkit-linear-gradient(rgb(166, 79, 206),rgb(215, 157, 241));
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+        @include gradientFont();
     }
 
     nav {
@@ -63,18 +89,18 @@ header{
 
     nav ul {
         display: flex;
-        align-items: center;
-        justify-content: center;
 
         .signupNav{
-            background: linear-gradient(rgb(162, 85, 197),rgb(198, 105, 241));
-            padding: 0.6rem 2.0rem 0.6rem 2.0rem ;
-            color: rgb(247, 243, 243);
-            border-radius: 25px;
+            @include gradientBtn;
+            padding: 0.6rem 1.5rem 0.6rem 1.5rem;
         }
 
         li{
             margin-left: 20px;
+
+            a{
+                color: rgb(59, 58, 58);
+            }
         }
     }
 }
@@ -92,17 +118,13 @@ header{
         font-size: 1.1rem;
         color: rgb(31, 30, 30);
         margin-top: 10px;
-        // background-color: blue;
-        // text-align: justify;
+        padding: 2px;
     }
 
     .title p {
         font-size: 3.2rem;
         color: rgb(51, 50, 50);
         width: 100%;
-        // padding: 2px;
-        // background: red;
-        margin-bottom: 9px;
         line-height: 2.8rem;
         font-family: $subTitle;
     }
@@ -111,18 +133,13 @@ header{
         margin-top: 30px;
         
         a{
-            color: rgb(247, 245, 241);
-            background: $primaryColor;
-            padding: 0.8rem 2.5rem 0.8rem 2.5rem ;
-            // border: 2px rgb(177, 80, 223) solid;
-            border-radius: 25px;
-            background: linear-gradient(rgb(141, 74, 172),rgb(198, 105, 241));
+            @include gradientBtn;
         }
 
         .test{
             background: transparent;
             color: rgb(61, 60, 60);
-            border: 1px rgb(177, 173, 173) solid;
+            border: 1px rgb(177, 173, 173)solid;
             padding: 0.7rem 2.2rem 0.7rem 2.2rem ;
         }
     }
@@ -140,4 +157,134 @@ header{
         }
     }
 
+}
+
+//About
+#about{
+    height: 85vh;
+    width: 100vw;
+    background: rgb(245, 243, 243);
+    padding: 120px;
+
+    .container{
+        display: flex;
+        justify-content: center;
+        // padding: 35px;
+
+        .indexOf{
+            font-family: $logoFont;
+            @include gradientFont();
+        }
+
+        .about-text{
+            width: 850px;
+            margin-top: 50px;
+            justify-self: center;
+            margin-left: 50px;
+
+            h3{
+                font-family: $subTitle;
+                font-size: 1.8rem;
+                line-height: 2rem;
+                margin-bottom: 10px;
+                color: rgb(51, 50, 50);
+            }
+
+            p{
+                font-size: 1.2rem;
+                margin-bottom: 25px;
+                color: rgb(31, 30, 30);
+            }
+
+            a{
+                @include simpleBtn();
+                color: rgb(88, 87, 87);
+            }
+        }
+    }
+}
+
+//Services
+#services{
+    // height: 100vh;
+    width: 100vw;
+    background-color: blue;
+    padding: 85px;
+
+
+
+    .container {
+        display: flex;
+        // justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        // padding: 120px;
+        
+        .card{
+            display: grid;
+            padding: 5rem;
+            background-color: red;
+            width: 850px;
+
+            .img{
+                grid-column-start: 3;
+            }
+            .card-content{
+                grid-column-start: 1;
+            }
+        }
+
+        .card2 {
+            display: grid;
+            padding: 2rem;
+            background-color: red;
+            width: 850px;
+            .img{
+                grid-column-start: 1;
+            }
+            .card-content{
+                grid-column-start: 3;
+            }
+        }
+
+        .card3 {
+            display: grid;
+            padding: 2rem;
+            background-color: red;
+            width: 850px;
+            .img{
+                grid-column-start: 3;
+            }
+            .card-content{
+                grid-column-start: 1;
+            }
+        }
+
+        .card4 {
+            display: grid;
+            padding: 2rem;
+            background-color: red;
+            width: 850px;
+            .img{
+                grid-column-start: 1;
+            }
+            .card-content{
+                grid-column-start: 3;
+            }
+        }
+
+        
+
+
+        .indexOf {
+            @include gradientFont();
+            font-family: $logoFont;
+            align-self: flex-start;
+        }
+
+        .test{
+            align-self: flex-start;
+            // margin-left: 172px;
+        }
+    }
 }
