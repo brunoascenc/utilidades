@@ -10,11 +10,12 @@ body {
     overflow-x: hidden;
 }
 
-.container{
-    // background: blue;
-    // padding: 450px;
-    // margin: 0 auto;
-}
+// .container{
+//     padding-right: 15px;
+//     padding-left: 15px;
+//     margin-right: auto;
+//     margin-left: auto;
+// }
 
 
 //VARS
@@ -166,9 +167,9 @@ header{
     background: rgb(245, 243, 243);
     padding: 120px;
 
-    .container{
+    .container2{
         display: flex;
-        justify-content: center;
+        justify-content: space-around;
         // padding: 35px;
 
         .indexOf{
@@ -208,36 +209,66 @@ header{
 #services{
     // height: 100vh;
     width: 100vw;
-    background-color: blue;
+    // background-color: blue;
     padding: 85px;
 
 
 
-    .container {
+    .container3 {
         display: flex;
-        // justify-content: space-around;
+        // justify-content: center;
         flex-direction: column;
         align-items: center;
         // padding: 120px;
         
         .card{
-            display: grid;
-            padding: 5rem;
-            background-color: red;
-            width: 850px;
+            // display: flex;
+            margin-left: auto;
+            margin-right: auto;
+            // background-color: red;
+            padding: 85px;
 
-            .img{
-                grid-column-start: 3;
+            svg{
+                // width: 100%;
+                height: 100%;
+                // justify-self: flex-end;
             }
+
+            
+    #money-circle {
+        animation: floating 1s infinite ease-in-out alternate;
+    }
+
+    @keyframes floating {
+        from{
+            transform: translateY(0px);
+        }
+        to{
+            transform: translateY(-20px);
+        }
+    }
             .card-content{
-                grid-column-start: 1;
+                float:left;
+                align-self: center;
+                margin-top: 150px;
+
+                h3{
+                    font-family: $subTitle;
+                    font-size: 1.9rem;
+                    color: rgb(44, 43, 43);
+                }
+
+                p{
+                    max-width: 70%;
+                    font-size: 1.2rem;
+                }
             }
         }
 
         .card2 {
             display: grid;
             padding: 2rem;
-            background-color: red;
+            // background-color: red;
             width: 850px;
             .img{
                 grid-column-start: 1;
@@ -250,7 +281,7 @@ header{
         .card3 {
             display: grid;
             padding: 2rem;
-            background-color: red;
+            // background-color: red;
             width: 850px;
             .img{
                 grid-column-start: 3;
@@ -263,7 +294,7 @@ header{
         .card4 {
             display: grid;
             padding: 2rem;
-            background-color: red;
+            // background-color: red;
             width: 850px;
             .img{
                 grid-column-start: 1;
