@@ -4,23 +4,24 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+img {
+    width: 450px;
+}
 body {
     font-family: 'Quicksand', sans-serif;
+
     overflow-x: hidden;
 }
 
-// .container{
-//     padding-right: 15px;
-//     padding-left: 15px;
-//     margin-right: auto;
-//     margin-left: auto;
-// }
-
-
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
 //VARS
 $primaryColor: rgb(166, 79, 206);
-$logoFont: 'Bowlby One SC', cursive;
+$logoFont: 'Bowlby One SC', cursive; 
 $subTitle: 'Archivo Black', sans-serif;
 
 @mixin gradientFont{
@@ -64,21 +65,21 @@ svg{
 
 //Home
 #home{
-    height: 100vh;
-    width: 100vw;
+    height: 100%;
+    // width: 100vw;
     // background: linear-gradient(-35deg,rgb(245, 243, 243) 60%, transparent 60%);
 }
 
 // Header
 header{
-    display: flex;
+    display: flex !important;
     justify-content: space-between;
     padding: 1.5rem 12rem 1.5rem 12rem;
-    width: 100vw;
-    height: 80px;
+    // width: 100vw;
+    // height: 80px;
 
     h1 {
-        font-family: $logoFont;
+        font-family: $logoFont; 
         letter-spacing: 2px;
         // text-transform: uppercase;
         @include gradientFont();
@@ -116,10 +117,11 @@ header{
 
     .landing-text p {
         width: 450px;
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         color: rgb(31, 30, 30);
         margin-top: 10px;
         padding: 2px;
+        // line-height: 1.9rem;
     }
 
     .title p {
@@ -127,7 +129,7 @@ header{
         color: rgb(51, 50, 50);
         width: 100%;
         line-height: 2.8rem;
-        font-family: $subTitle;
+        font-family: $subTitle !important;
     }
 
     .home-btn {
@@ -162,8 +164,8 @@ header{
 
 //About
 #about{
-    height: 85vh;
-    width: 100vw;
+    // height: 85vh;
+    // width: 100vw;
     background: rgb(245, 243, 243);
     padding: 120px;
 
@@ -208,10 +210,20 @@ header{
 //Services
 #services{
     // height: 100vh;
-    width: 100vw;
+    // width: 100vw;
     // background-color: blue;
     padding: 85px;
 
+    h3{
+        font-family: $subTitle;
+        font-size: 1.9rem;
+        width: 450px;
+        color: rgb(44, 43, 43);
+    }
+
+    p{
+        font-size: 1.2rem;
+    }
 
 
     .container3 {
@@ -221,86 +233,79 @@ header{
         align-items: center;
         // padding: 120px;
         
-        .card{
-            // display: flex;
-            margin-left: auto;
-            margin-right: auto;
-            // background-color: red;
-            padding: 85px;
-
-            svg{
-                // width: 100%;
-                height: 100%;
-                // justify-self: flex-end;
-            }
-
-            
-    #money-circle {
-        animation: floating 1s infinite ease-in-out alternate;
-    }
-
-    @keyframes floating {
-        from{
-            transform: translateY(0px);
-        }
-        to{
-            transform: translateY(-20px);
-        }
-    }
-            .card-content{
-                float:left;
-                align-self: center;
-                margin-top: 150px;
-
-                h3{
-                    font-family: $subTitle;
-                    font-size: 1.9rem;
-                    color: rgb(44, 43, 43);
-                }
-
-                p{
-                    max-width: 70%;
-                    font-size: 1.2rem;
-                }
-            }
-        }
-
-        .card2 {
+        .card {
             display: grid;
-            padding: 2rem;
+            grid-template-columns: 1fr 1fr;
+            padding: 85px;
             // background-color: red;
-            width: 850px;
+            // width: 850px;
             .img{
                 grid-column-start: 1;
+                // background: red;
+                // padding: 85px;
             }
             .card-content{
                 grid-column-start: 3;
+                grid-row-start: 1;
+                padding: 5rem;
+                align-self: center;
+            }
+        }
+
+
+        .card2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            padding: 85px;
+            // width: 850px;
+            .img{
+                grid-column-start:3;
+            }
+            .card-content{
+                grid-column-start: 1;
+                grid-row-start: 1;
+                padding: 5rem;
+                align-self: center;
+
             }
         }
 
         .card3 {
             display: grid;
-            padding: 2rem;
+            grid-template-columns: 1fr 1fr;
+            padding: 85px;
             // background-color: red;
-            width: 850px;
+            // width: 850px;
             .img{
-                grid-column-start: 3;
-            }
-            .card-content{
                 grid-column-start: 1;
             }
+            .card-content{
+                grid-column-start: 3;
+                grid-row-start: 1;
+                align-self: center;
+                // background-color: blue;
+                padding: 5rem;
+                width: 550px;
+            }
+
         }
 
         .card4 {
             display: grid;
-            padding: 2rem;
+            grid-template-columns: 1fr 1fr;
+            padding: 85px;
             // background-color: red;
-            width: 850px;
+            // width: 850px;
             .img{
-                grid-column-start: 1;
+                grid-column-start: 3;
             }
             .card-content{
-                grid-column-start: 3;
+                grid-column-start: 1;
+                grid-row-start: 1;
+                align-self: center;
+                // background-color: blue;
+                // justify-self: center;
+                padding: 5rem;
             }
         }
 
