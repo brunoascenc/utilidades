@@ -39,25 +39,35 @@ ul {
 }
 
 svg {
-  max-width: 35%;
+  max-width: 45%;
   z-index: -1;
 }
 
 #home {
   height: 100%;
+  width: 1000px;
 }
 
-header {
+@media (max-width: 1150px) {
+  #home {
+    width: 90%;
+  }
+}
+
+#home header {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 1.5rem 12rem 1.5rem 12rem;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem 0rem 0rem 0rem;
 }
 
-header h1 {
+#home header h1 {
   font-family: "Bowlby One SC", cursive;
   letter-spacing: 2px;
   font-weight: 100;
@@ -66,17 +76,17 @@ header h1 {
   -webkit-text-fill-color: transparent;
 }
 
-header nav {
+#home header nav {
   margin-top: 5px;
 }
 
-header nav ul {
+#home header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-header nav ul .test55 {
+#home header nav ul .test55 {
   color: #f7f5f1;
   background: #a64fce;
   padding: 0.8rem 2.5rem 0.8rem 2.5rem;
@@ -86,7 +96,7 @@ header nav ul .test55 {
   padding: 0.5rem 1.8rem 0.5rem 1.8rem;
 }
 
-header nav ul .signupNav {
+#home header nav ul .signupNav {
   color: #f7f5f1;
   background: #a64fce;
   padding: 0.8rem 2.5rem 0.8rem 2.5rem;
@@ -96,28 +106,28 @@ header nav ul .signupNav {
   padding: 0.6rem 1.5rem 0.6rem 1.5rem;
 }
 
-header nav ul li {
+#home header nav ul li {
   margin-left: 20px;
 }
 
-header nav ul li a {
+#home header nav ul li a {
   color: #3b3a3a;
 }
 
-.landing-content {
+#home .landing-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
   margin-top: -60px;
 }
 
-.landing-content .landing-text p {
+#home .landing-content .landing-text p {
   width: 450px;
   font-size: 1.4rem;
   color: #1f1e1e;
@@ -125,7 +135,13 @@ header nav ul li a {
   padding: 2px;
 }
 
-.landing-content .title p {
+@media (max-width: 1150px) {
+  #home .landing-content .landing-text p {
+    width: 95%;
+  }
+}
+
+#home .landing-content .title p {
   font-size: 3.2rem;
   color: #333232;
   width: 100%;
@@ -133,11 +149,17 @@ header nav ul li a {
   font-family: "Archivo Black", sans-serif !important;
 }
 
-.landing-content .home-btn {
+@media (max-width: 1150px) {
+  #home .landing-content .title p {
+    font-size: 2.8rem;
+  }
+}
+
+#home .landing-content .home-btn {
   margin-top: 30px;
 }
 
-.landing-content .home-btn a {
+#home .landing-content .home-btn a {
   color: #f7f5f1;
   background: #a64fce;
   padding: 0.8rem 2.5rem 0.8rem 2.5rem;
@@ -146,14 +168,14 @@ header nav ul li a {
   background: linear-gradient(#8d4aac, #c669f1);
 }
 
-.landing-content .home-btn .test {
+#home .landing-content .home-btn .test {
   background: transparent;
   color: #3d3c3c;
   border: 1px #b1adad solid;
   padding: 0.7rem 2.2rem 0.7rem 2.2rem;
 }
 
-.landing-content #rocket {
+#home .landing-content #rocket {
   -webkit-animation: floating 1s infinite ease-in-out alternate;
           animation: floating 1s infinite ease-in-out alternate;
 }
