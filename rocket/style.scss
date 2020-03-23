@@ -14,9 +14,30 @@ body {
 }
 
 $small-desktop: 1150px;
+$xs-desktop: 930px;
+$tablet: 780px;
+$mobile: 625px;
 
 @mixin small-desktop {
     @media (max-width: #{$small-desktop}) {
+        @content;
+    }
+}
+
+@mixin xs-desktop {
+    @media (max-width: #{$xs-desktop}) {
+        @content;
+    }
+}
+
+@mixin tablet {
+    @media (max-width: #{$tablet}) {
+        @content;
+    }
+}
+
+@mixin mobile {
+    @media (max-width: #{$mobile}) {
         @content;
     }
 }
@@ -66,10 +87,17 @@ ul {
 }
 
 svg{
-    max-width: 45%;
+    max-width: 95%;
     // background-color: red;
     // height: 35%;
     z-index: -1;
+
+    @include mobile{
+        width: 65%;
+        margin-top: -360px;
+        justify-self: center;
+        grid-row-start: 1;
+    }
     
 }
 
@@ -131,11 +159,33 @@ header{
 
 // Landing-Content
 .landing-content{
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    // justify-content: space-between;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     align-items: center;
     margin-top: -60px;
+    // margin: 0 auto;
     // background-color: blue;
+
+    @include tablet{
+        grid-template-columns: 320px 1fr;
+    }
+
+    @include mobile{
+        grid-template-columns: 1fr;
+        margin-top: 150px;
+        justify-content: center;
+    }
+
+    .landing-text{
+        @include mobile{
+            grid-row-start: 3;
+            margin-top: -300px;
+            height: 85vh;
+        }
+    }
+
 
     .landing-text p {
         width: 450px;
@@ -143,32 +193,63 @@ header{
         color: rgb(31, 30, 30);
         margin-top: 10px;
         padding: 2px;
+        
         // line-height: 1.9rem;
+        @include mobile{
+            text-align: center;
+        }
 
         
         @include small-desktop{
            width: 95%;
+           font-size: 1.2rem;
         }
+
+        @include xs-desktop{
+            font-size: 1rem;
+         }
     }
 
     .title p {
-        font-size: 3.2rem;
+        font-size: 2.9rem;
         color: rgb(51, 50, 50);
         width: 100%;
         line-height: 2.8rem;
         font-family: $subTitle !important;
         
     @include small-desktop{
-        font-size: 2.8rem;
+        font-size: 2.4rem;
         // width: 490px;
      }
+
+     @include xs-desktop{
+        font-size: 2rem;
+        margin-bottom: -10px;
+     }
+
+     @include tablet{
+        font-size: 1.8rem;
+    }
+
+    @include mobile{
+        font-size: 1.5rem;
+    }
+
     }
 
     .home-btn {
         margin-top: 30px;
+        @include mobile{
+            text-align: center;
+        }
         
         a{
             @include gradientBtn;
+            @include tablet{
+                padding: 0.7rem 1.8rem 0.7rem 1.8rem ;
+                font-size: 0.9rem;
+            }
+
         }
 
         .test{
@@ -176,6 +257,10 @@ header{
             color: rgb(61, 60, 60);
             border: 1px rgb(177, 173, 173)solid;
             padding: 0.7rem 2.2rem 0.7rem 2.2rem ;
+            @include tablet{
+                padding: 0.6rem 1.8rem 0.6rem 1.8rem ;
+                font-size: 0.9rem;
+            }
         }
     }
 
@@ -196,54 +281,6 @@ header{
 
 }
 
-
-// //About
-// #about{
-//     // height: 585px;
-//     width: 100%;
-//     background: rgb(245, 243, 243);
-//     padding: 120px;
-
-//     .container2{
-//         display: flex;
-//         justify-content: space-between;
-//         // padding: 35px;
-//         width: 1000px;
-//         margin: 0 auto;
-
-
-//         .indexOf{
-//             font-family: $logoFont;
-//             @include gradientFont();
-//         }
-
-//         .about-text{
-//             width: 850px;
-//             margin-top: 50px;
-//             justify-self: center;
-//             margin-left: 50px;
-
-//             h3{
-//                 font-family: $subTitle;
-//                 font-size: 1.8rem;
-//                 line-height: 2rem;
-//                 margin-bottom: 10px;
-//                 color: rgb(51, 50, 50);
-//             }
-
-//             p{
-//                 font-size: 1.2rem;
-//                 margin-bottom: 25px;
-//                 color: rgb(31, 30, 30);
-//             }
-
-//             a{
-//                 @include simpleBtn();
-//                 color: rgb(88, 87, 87);
-//             }
-//         }
-//     }
-// }
 
 #about{
     height: 400px;
@@ -269,6 +306,12 @@ header{
         flex-direction: column;
         color: rgb(230, 223, 223);
         box-shadow: 7px 10px 21px -4px rgba(66,63,66,0.32);
+
+        
+        @include xs-desktop{
+          width:90%;
+        }
+
 
     }
 
