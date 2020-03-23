@@ -666,11 +666,37 @@ svg {
   padding: 125px;
 }
 
+@media (max-width: 780px) {
+  #portfolio {
+    padding: 85px;
+    margin-bottom: 60px;
+  }
+}
+
+@media (max-width: 625px) {
+  #portfolio {
+    padding: 55px;
+  }
+}
+
+@media (max-width: 565px) {
+  #portfolio {
+    padding: 45px;
+    margin-bottom: 60px;
+  }
+}
+
 #portfolio h2 {
   font-family: "Archivo Black", sans-serif;
   text-transform: uppercase;
   color: #353434;
   font-size: 2rem;
+}
+
+@media (max-width: 565px) {
+  #portfolio h2 {
+    font-size: 1.7rem;
+  }
 }
 
 #portfolio p {
@@ -679,9 +705,22 @@ svg {
   color: #615f5f;
 }
 
+@media (max-width: 780px) {
+  #portfolio p {
+    text-align: center;
+  }
+}
+
+@media (max-width: 625px) {
+  #portfolio p {
+    font-size: 1rem;
+  }
+}
+
 #portfolio .portfolio-content {
   display: -ms-grid;
   display: grid;
+  width: 100%;
   -ms-grid-columns: 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-gap: 1rem;
@@ -694,11 +733,37 @@ svg {
   -ms-grid-row: 1;
       grid-row-start: 1;
   grid-row-end: 5;
-  background-color: red;
   width: 550px;
-  height: 520px;
-  background: url("nf.png");
+  height: 517px;
+  background: url("nf.png") no-repeat;
+  width: 100%;
   background-size: cover;
+}
+
+@media (max-width: 930px) {
+  #portfolio .portfolio-content .northface {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+    -ms-grid-row: 1;
+        grid-row-start: 1;
+    grid-row-end: 1;
+    height: 250px;
+  }
+}
+
+@media (max-width: 780px) {
+  #portfolio .portfolio-content .northface {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+@media (max-width: 625px) {
+  #portfolio .portfolio-content .northface {
+    height: 200px;
+  }
 }
 
 #portfolio .portfolio-content .restaurant {
@@ -706,9 +771,24 @@ svg {
       grid-column-start: 3;
   grid-column-end: 5;
   background-color: blue;
-  background: url("restaurante.jfif");
+  background: url("restaurante.jfif") no-repeat;
+  width: 100%;
   background-size: cover;
   height: 250px;
+}
+
+@media (max-width: 780px) {
+  #portfolio .portfolio-content .restaurant {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+@media (max-width: 625px) {
+  #portfolio .portfolio-content .restaurant {
+    height: 200px;
+  }
 }
 
 #portfolio .portfolio-content .business {
@@ -719,11 +799,55 @@ svg {
   background-position: left;
 }
 
+@media (max-width: 930px) {
+  #portfolio .portfolio-content .business {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 3;
+  }
+}
+
+@media (max-width: 780px) {
+  #portfolio .portfolio-content .business {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+@media (max-width: 625px) {
+  #portfolio .portfolio-content .business {
+    height: 200px;
+  }
+}
+
 #portfolio .portfolio-content .sonora {
   background-color: yellow;
   background: url("sonora.jfif");
   background-size: cover;
   height: 250px;
+}
+
+@media (max-width: 930px) {
+  #portfolio .portfolio-content .sonora {
+    -ms-grid-column: 3;
+        grid-column-start: 3;
+    grid-column-end: 5;
+  }
+}
+
+@media (max-width: 780px) {
+  #portfolio .portfolio-content .sonora {
+    -ms-grid-column: 1;
+        grid-column-start: 1;
+    grid-column-end: 5;
+  }
+}
+
+@media (max-width: 625px) {
+  #portfolio .portfolio-content .sonora {
+    height: 200px;
+  }
 }
 
 #contact {

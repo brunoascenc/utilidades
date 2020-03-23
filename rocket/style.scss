@@ -567,22 +567,50 @@ header{
     // height: 100vh;
     padding: 125px;
 
+    @include tablet{
+        padding: 85px;
+        margin-bottom: 60px;
+    }
+
+    @include mobile{
+        padding: 55px;
+    }
+
+    @include sm-mobile{
+        padding: 45px;
+        margin-bottom: 60px;
+    }
+
     h2{
         font-family: $subTitle;
         text-transform: uppercase;
         color: rgb(53, 52, 52);
         font-size: 2rem;
+
+        @include sm-mobile{
+            font-size: 1.7rem;
+        }
     }
 
     p{
         margin-bottom: 55px;
         font-size: 1.3rem;
         color: rgb(97, 95, 95);
+
+        @include tablet{
+            text-align: center;
+        }
+
+        @include mobile{
+            font-size: 1rem;
+        }
     }
 
     .portfolio-content{
         display: grid;
+        width: 100%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
+        // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         grid-gap: 1rem;
 
         .northface{
@@ -590,19 +618,45 @@ header{
             grid-column-end: 3;
             grid-row-start: 1;
             grid-row-end: 5;
-            background-color: red;
+            // background-color: red;
             width: 550px;
-            height: 520px;
-            background: url('nf.png');
+            height: 517px;
+            background: url('nf.png') no-repeat;
+            width: 100%;
             background-size: cover;
+
+            @include xs-desktop{
+                grid-column-start: 1;
+                grid-column-end: 3;
+                grid-row-start: 1;
+                grid-row-end: 1;
+                height: 250px;
+            }
+
+            @include tablet{
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+
+            @include mobile{
+                height: 200px;
+            }
         }
         .restaurant{
             grid-column-start: 3;
             grid-column-end: 5;
             background-color: blue;
-            background: url('restaurante.jfif');
+            background: url('restaurante.jfif') no-repeat;
+            width: 100%;
             background-size: cover;
             height: 250px;
+            @include tablet{
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+            @include mobile{
+                height: 200px;
+            }
         }
 
         .business{
@@ -611,12 +665,37 @@ header{
             background-size: cover;
             height: 250px;
             background-position: left;
+            @include xs-desktop{
+                grid-column-start: 1;
+                grid-column-end: 3;
+            }
+
+            @include tablet{
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+
+            @include mobile{
+                height: 200px;
+            }
         }
         .sonora{
             background-color: yellow;
             background: url('sonora.jfif');
             background-size: cover;
             height: 250px;
+            @include xs-desktop{
+                grid-column-start: 3;
+                grid-column-end: 5;
+            }
+
+            @include tablet{
+                grid-column-start: 1;
+                grid-column-end: 5;
+            }
+            @include mobile{
+                height: 200px;
+            }
         }
     }
 }
