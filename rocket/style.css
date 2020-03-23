@@ -334,6 +334,14 @@ svg {
   padding: 50px;
   -ms-flex-line-pack: center;
       align-content: center;
+  overflow: hidden;
+}
+
+@media (max-width: 565px) {
+  #about .about-text {
+    padding: 20px;
+    margin-top: 10px;
+  }
 }
 
 #about .about-text .title-about {
@@ -343,11 +351,47 @@ svg {
   width: 50%;
 }
 
+@media (max-width: 780px) {
+  #about .about-text .title-about {
+    font-size: 1.7rem;
+  }
+}
+
+@media (max-width: 625px) {
+  #about .about-text .title-about {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 565px) {
+  #about .about-text .title-about {
+    font-size: 1.3rem;
+  }
+}
+
 #about .about-text .about-content {
   font-size: 1.5rem;
   margin-left: 25px;
   width: 50%;
   border-bottom: solid 2px #cc95e6;
+}
+
+@media (max-width: 780px) {
+  #about .about-text .about-content {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 625px) {
+  #about .about-text .about-content {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 565px) {
+  #about .about-text .about-content {
+    font-size: 1rem;
+  }
 }
 
 #about h2 {
@@ -374,6 +418,12 @@ svg {
           align-items: center;
   width: 1000px;
   margin-top: 125px;
+}
+
+@media (max-width: 1150px) {
+  #services {
+    width: 100%;
+  }
 }
 
 #services .test99 {
@@ -403,14 +453,45 @@ svg {
   margin-bottom: -85px;
 }
 
+@media (max-width: 625px) {
+  #services .test99 p {
+    width: 85%;
+  }
+}
+
 #services .test55 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
   margin-bottom: 55px;
   margin-top: -125px;
+  padding: 50px;
+}
+
+@media (max-width: 780px) {
+  #services .test55 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+#services .test55 img {
+  width: 50%;
+}
+
+@media (max-width: 780px) {
+  #services .test55 img {
+    width: 100%;
+    margin: 0 auto;
+  }
 }
 
 #services .test55 div {
@@ -419,6 +500,23 @@ svg {
       align-self: center;
   margin-left: 85px;
   margin-top: 50px;
+}
+
+@media (max-width: 780px) {
+  #services .test55 div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 60px;
+    margin-left: 0;
+  }
 }
 
 #services .test55 div h3 {
@@ -435,6 +533,12 @@ svg {
   margin-top: 10px;
 }
 
+@media (max-width: 780px) {
+  #services .test55 div p {
+    text-align: center;
+  }
+}
+
 #services .test55 div a {
   color: #f7f5f1;
   background: #a64fce;
@@ -448,6 +552,25 @@ svg {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-family: 'Quicksand', sans-serif;
+}
+
+@media (max-width: 930px) {
+  #services .test55 div a {
+    padding: 0.8rem 1rem 0.8rem 1rem;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 780px) {
+  #services .test55 div a {
+    color: #f7f5f1;
+    background: #a64fce;
+    padding: 0.8rem 2.5rem 0.8rem 2.5rem;
+    border-radius: 25px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#8d4aac), to(#c669f1));
+    background: linear-gradient(#8d4aac, #c669f1);
+    margin-top: -20px;
+  }
 }
 
 #services .indexOf {
@@ -472,6 +595,27 @@ svg {
   padding: 12rem;
 }
 
+@media (max-width: 1150px) {
+  #services .cards {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 780px) {
+  #services .cards {
+    grid-row-gap: 3rem;
+    grid-column-gap: 0rem;
+  }
+}
+
+@media (max-width: 625px) {
+  #services .cards {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+}
+
 #services .cards .card {
   text-align: center;
 }
@@ -491,6 +635,19 @@ svg {
   font-size: 1.2rem;
   width: 300px;
   margin: 0 auto;
+}
+
+@media (max-width: 780px) {
+  #services .cards .card p {
+    font-size: 1rem;
+    width: 80%;
+  }
+}
+
+@media (max-width: 625px) {
+  #services .cards .card p {
+    width: 100%;
+  }
 }
 
 #portfolio {

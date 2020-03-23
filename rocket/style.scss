@@ -17,6 +17,7 @@ $small-desktop: 1150px;
 $xs-desktop: 930px;
 $tablet: 780px;
 $mobile: 625px;
+$sm-mobile: 565px;
 
 @mixin small-desktop {
     @media (max-width: #{$small-desktop}) {
@@ -38,6 +39,12 @@ $mobile: 625px;
 
 @mixin mobile {
     @media (max-width: #{$mobile}) {
+        @content;
+    }
+}
+
+@mixin sm-mobile {
+    @media (max-width: #{$sm-mobile}) {
         @content;
     }
 }
@@ -193,6 +200,7 @@ header{
         color: rgb(31, 30, 30);
         margin-top: 10px;
         padding: 2px;
+ 
         
         // line-height: 1.9rem;
         @include mobile{
@@ -207,7 +215,7 @@ header{
 
         @include xs-desktop{
             font-size: 1rem;
-         }
+        }
     }
 
     .title p {
@@ -319,6 +327,13 @@ header{
         display: flex;
         padding: 50px;
         align-content: center;
+        overflow:hidden;
+
+        @include sm-mobile{
+            padding: 20px;
+            margin-top: 10px;
+        }
+    
 
         .title-about{
             font-family: $subTitle;
@@ -326,6 +341,19 @@ header{
             font-size: 2.0rem;
             // padding: 25px;
             width: 50%;
+
+            @include tablet{
+              font-size: 1.7rem;
+            }
+
+            @include mobile{
+                font-size: 1.5rem;
+            }
+
+            @include sm-mobile{
+                font-size: 1.3rem;
+            }
+           
         }
 
         .about-content{
@@ -333,6 +361,20 @@ header{
             margin-left: 25px;
             width: 50%;
             border-bottom: solid 2px rgb(204, 149, 230);
+
+            @include tablet{
+              font-size: 1.3rem;
+            }
+
+            @include mobile{
+                font-size: 1.2rem;
+            }
+
+            @include sm-mobile{
+                font-size: 1rem;
+            }
+        
+
         }
     }
 
@@ -355,6 +397,10 @@ header{
     align-items: center;
     width: 1000px;
     margin-top: 125px;
+    @include small-desktop{
+        width: 100%;
+    }
+
     .test99{
         display: flex;
         flex-direction: column;
@@ -371,21 +417,49 @@ header{
             width: 75%;
             font-size: 1.2rem;
             margin-bottom: -85px;
+            @include mobile{
+                width: 85%;
+            }
         }
 
     }
 
     .test55{
         display: flex;
-        align-self: flex-start;
+        // display: grid;
+        // grid-template-columns: 1fr 1fr;
+        // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        // align-self: flex-start;
         // background-color: blue;
         margin-bottom: 55px;
         margin-top: -125px;
+        padding: 50px;
+
+        @include tablet{
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+        }
+
+        img{
+            width:50%;
+            @include tablet{
+                width:100%;
+                margin: 0 auto;
+             }
+        }
 
         div{
             align-self: center;
             margin-left: 85px;
             margin-top: 50px;
+            @include tablet{
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                margin-top: 60px;
+                margin-left: 0;
+            }
 
             h3{
                 font-family: $subTitle;
@@ -399,6 +473,9 @@ header{
                 font-size: 1.2rem;
                 margin-bottom: 45px;
                 margin-top: 10px;
+                @include tablet{
+                    text-align: center;
+                }
             }
 
             a{
@@ -408,7 +485,15 @@ header{
                 margin-top: 15px;
                 text-transform: uppercase;
                 letter-spacing: 2px;
-                font-family: 'Quicksand', sans-serif;;
+                font-family: 'Quicksand', sans-serif;
+                @include xs-desktop{
+                    padding: 0.8rem 1rem 0.8rem 1rem ;
+                    font-size: 0.8rem;
+                }
+                @include tablet{
+                    @include gradientBtn();
+                    margin-top: -20px;
+                }
             }
         }
     }
@@ -428,6 +513,20 @@ header{
         grid-column-gap: 3.5rem;
         padding: 12rem;
 
+        @include small-desktop{
+            grid-template-columns: repeat(2,1fr);
+        }
+
+        @include tablet{
+            grid-row-gap: 3rem;
+            grid-column-gap: 0rem;
+        }
+
+        @include mobile{
+            grid-template-columns: repeat(1,1fr);
+        }
+
+
         .card{
             text-align: center;
             h3{
@@ -445,6 +544,15 @@ header{
                 font-size: 1.2rem;
                 width: 300px;
                 margin: 0 auto;
+
+                @include tablet{
+                    font-size: 1rem;
+                    width: 80%;
+                }
+
+                @include mobile{
+                    width: 100%;
+                }
             }
         }
     }
