@@ -164,7 +164,78 @@ header{
 
     nav {
         margin-top: 5px;
+
+        // Responsive Nav
+        .links{
+            li {
+                @include tablet{
+                    margin: 10%;
+                    font-size: 1.5rem;
+                    a{
+                        color: rgb(248, 244, 244);
+                        text-transform: uppercase;
+                        font-weight: bold;
+                    }
+
+                }
+                
+                @include tablet{
+                    opacity: 0;
+                }
+            }
+            
+            @include tablet{
+                position: absolute;
+                right: 0px;
+                height: 100vh;
+                width: 100%;
+                top: 8vh;
+                background-color: $primaryColor;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                z-index: 100;
+                transform: translateX(100%);
+                transition: transform 0.5s ease-in;
+            }
+        }
+
+        .burguer {
+            display: none;
+            @include tablet{
+                display: block;
+                cursor: pointer;
+            }
+        }
+
+        .burguer div{
+            width: 23px;
+            height: 3px;
+            background-color: $primaryColor;
+            margin: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .burguerToggle .line1{
+            transform: rotate(-45deg) translate(-5px, 6px);
+        
+        }
+
+        .burguerToggle  .line2{
+            opacity: 0;
+        }
+
+        .burguerToggle  .line3{
+            transform: rotate(45deg) translate(-5px, -6px);
+        }
+
+        .nav-active{
+            transform: translateX(0%) !important;
+        }
+        
+        
     }
+    // Responsive nav ends
 
     nav ul {
         display: flex;
@@ -172,6 +243,9 @@ header{
         .test55{
             @include gradientBtn();
             padding: 0.5rem 1.8rem 0.5rem 1.8rem ;
+            @include tablet{
+                background: transparent;
+            }
         }
 
         .signupNav{
@@ -306,16 +380,6 @@ header{
     #rocket {
         animation: floating 1s infinite ease-in-out alternate;
     }
-
-    @keyframes floating {
-        from{
-            transform: translateY(0px);
-        }
-        to{
-            transform: translateY(-20px);
-        }
-    }
-
 }
 
 }
@@ -447,6 +511,7 @@ header{
         font-size: 1rem;
     }
 }
+
 
 #services{
     // height: 100vh;
@@ -1073,3 +1138,24 @@ footer{
     }
 }
 
+// Keyframes
+@keyframes linkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+
+@keyframes floating {
+    from{
+        transform: translateY(0px);
+    }
+    to{
+        transform: translateY(-20px);
+    }
+}

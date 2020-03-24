@@ -106,6 +106,91 @@ svg {
   margin-top: 5px;
 }
 
+@media (max-width: 780px) {
+  #home header nav .links li {
+    margin: 10%;
+    font-size: 1.5rem;
+  }
+  #home header nav .links li a {
+    color: #f8f4f4;
+    text-transform: uppercase;
+    font-weight: bold;
+  }
+}
+
+@media (max-width: 780px) {
+  #home header nav .links li {
+    opacity: 0;
+  }
+}
+
+@media (max-width: 780px) {
+  #home header nav .links {
+    position: absolute;
+    right: 0px;
+    height: 100vh;
+    width: 100%;
+    top: 8vh;
+    background-color: #a64fce;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    z-index: 100;
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+  }
+}
+
+#home header nav .burguer {
+  display: none;
+}
+
+@media (max-width: 780px) {
+  #home header nav .burguer {
+    display: block;
+    cursor: pointer;
+  }
+}
+
+#home header nav .burguer div {
+  width: 23px;
+  height: 3px;
+  background-color: #a64fce;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+#home header nav .burguerToggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+#home header nav .burguerToggle .line2 {
+  opacity: 0;
+}
+
+#home header nav .burguerToggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+#home header nav .nav-active {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
+}
+
 #home header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -120,6 +205,12 @@ svg {
   background: -webkit-gradient(linear, left top, left bottom, from(#8d4aac), to(#c669f1));
   background: linear-gradient(#8d4aac, #c669f1);
   padding: 0.5rem 1.8rem 0.5rem 1.8rem;
+}
+
+@media (max-width: 780px) {
+  #home header nav ul .test55 {
+    background: transparent;
+  }
 }
 
 #home header nav ul .signupNav {
@@ -281,28 +372,6 @@ svg {
 #home .landing-content #rocket {
   -webkit-animation: floating 1s infinite ease-in-out alternate;
           animation: floating 1s infinite ease-in-out alternate;
-}
-
-@-webkit-keyframes floating {
-  from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  to {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
-}
-
-@keyframes floating {
-  from {
-    -webkit-transform: translateY(0px);
-            transform: translateY(0px);
-  }
-  to {
-    -webkit-transform: translateY(-20px);
-            transform: translateY(-20px);
-  }
 }
 
 #about {
@@ -1314,5 +1383,53 @@ footer .socials h4 {
   font-family: "Archivo Black", sans-serif;
   color: #f1ebeb;
   margin-bottom: 15px;
+}
+
+@-webkit-keyframes linkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes linkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@-webkit-keyframes floating {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
+}
+
+@keyframes floating {
+  from {
+    -webkit-transform: translateY(0px);
+            transform: translateY(0px);
+  }
+  to {
+    -webkit-transform: translateY(-20px);
+            transform: translateY(-20px);
+  }
 }
 /*# sourceMappingURL=style.css.map */
