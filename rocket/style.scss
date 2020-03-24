@@ -16,8 +16,10 @@ body {
 $small-desktop: 1150px;
 $xs-desktop: 930px;
 $tablet: 780px;
+$xs-tablet:705px;
 $mobile: 625px;
 $sm-mobile: 565px;
+$xs-mobile: 380px;
 
 @mixin small-desktop {
     @media (max-width: #{$small-desktop}) {
@@ -37,6 +39,12 @@ $sm-mobile: 565px;
     }
 }
 
+@mixin xs-tablet {
+    @media (max-width: #{$xs-tablet}) {
+        @content;
+    }
+}
+
 @mixin mobile {
     @media (max-width: #{$mobile}) {
         @content;
@@ -45,6 +53,12 @@ $sm-mobile: 565px;
 
 @mixin sm-mobile {
     @media (max-width: #{$sm-mobile}) {
+        @content;
+    }
+}
+
+@mixin xs-mobile {
+    @media (max-width: #{$xs-mobile}) {
         @content;
     }
 }
@@ -104,6 +118,17 @@ svg{
         margin-top: -360px;
         justify-self: center;
         grid-row-start: 1;
+    }
+
+    @include sm-mobile{
+        width: 75%;
+        margin-bottom: 10px;
+    }
+
+    @include xs-mobile{
+        width: 87%;
+        margin-bottom: 0px;
+        margin-top: -420px;
     }
     
 }
@@ -191,6 +216,12 @@ header{
             margin-top: -300px;
             height: 85vh;
         }
+
+        // @include xs-tablet{
+        //     grid-row-start: 3;
+        //     margin-top: -300px;
+        //     height: 85vh;
+        // }
     }
 
 
@@ -320,6 +351,17 @@ header{
           width:90%;
         }
 
+        @include mobile{
+            justify-content: center;
+        }
+
+        @include sm-mobile{
+            // width:80%;
+        }
+
+
+
+
 
     }
 
@@ -330,8 +372,8 @@ header{
         overflow:hidden;
 
         @include sm-mobile{
-            padding: 20px;
-            margin-top: 10px;
+            flex-direction: column;
+            padding: 10px;
         }
     
 
@@ -352,6 +394,12 @@ header{
 
             @include sm-mobile{
                 font-size: 1.3rem;
+                width: 100%;
+                text-align: center;
+            }
+
+            @include xs-mobile{
+                font-size: 1rem;
             }
            
         }
@@ -371,7 +419,17 @@ header{
             }
 
             @include sm-mobile{
-                font-size: 1rem;
+                font-size: 1.0rem;
+                width: 100%;
+                // margin: 25px;
+                text-align: center;
+                margin-left: 0;
+                padding: 10px;
+                // border: none;
+            }
+
+            @include xs-mobile{
+                // width:90%;
             }
         
 
@@ -441,6 +499,13 @@ header{
            align-items: center;
         }
 
+        @include mobile{
+            padding: 30px;
+        }
+        @include xs-mobile{
+            padding: 20px;
+        }
+
         img{
             width:50%;
             @include tablet{
@@ -466,6 +531,9 @@ header{
                 text-transform: uppercase;
                 color: rgb(51, 50, 50);
                 font-size: 1.5rem;
+                @include mobile{
+                    text-align: center;
+                }
             }
 
             p{
@@ -475,6 +543,13 @@ header{
                 margin-top: 10px;
                 @include tablet{
                     text-align: center;
+                }
+                @include mobile{
+                    font-size: 1rem;
+                }
+
+                @include xs-mobile{
+                    font-size: 0.8rem;
                 }
             }
 
@@ -493,6 +568,10 @@ header{
                 @include tablet{
                     @include gradientBtn();
                     margin-top: -20px;
+                }
+
+                @include mobile{
+                    font-size: 0.7rem;
                 }
             }
         }
@@ -551,7 +630,7 @@ header{
                 }
 
                 @include mobile{
-                    width: 100%;
+                    width: 95%;
                 }
             }
         }
@@ -608,10 +687,15 @@ header{
 
     .portfolio-content{
         display: grid;
-        width: 100%;
+        max-width: 100%;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
         grid-gap: 1rem;
+        
+        @include xs-desktop{
+            width: 100%;
+        }
+
 
         .northface{
             grid-column-start: 1;
@@ -622,7 +706,7 @@ header{
             width: 550px;
             height: 517px;
             background: url('nf.png') no-repeat;
-            width: 100%;
+            max-width: 100%;
             background-size: cover;
 
             @include xs-desktop{
@@ -631,6 +715,7 @@ header{
                 grid-row-start: 1;
                 grid-row-end: 1;
                 height: 250px;
+                width: 100%;
             }
 
             @include tablet{
@@ -640,6 +725,10 @@ header{
 
             @include mobile{
                 height: 200px;
+            }
+
+            @include xs-mobile{
+                height: 120px;
             }
         }
         .restaurant{
@@ -647,15 +736,23 @@ header{
             grid-column-end: 5;
             background-color: blue;
             background: url('restaurante.jfif') no-repeat;
-            width: 100%;
+            // width: 100%;
             background-size: cover;
             height: 250px;
+            @include xs-desktop{
+   
+                width: 100%;
+            }
             @include tablet{
                 grid-column-start: 1;
                 grid-column-end: 5;
             }
             @include mobile{
                 height: 200px;
+            }
+            
+            @include xs-mobile{
+                height: 120px;
             }
         }
 
@@ -678,6 +775,10 @@ header{
             @include mobile{
                 height: 200px;
             }
+
+            @include xs-mobile{
+                height: 120px;
+            }
         }
         .sonora{
             background-color: yellow;
@@ -696,6 +797,10 @@ header{
             @include mobile{
                 height: 200px;
             }
+
+            @include xs-mobile{
+                height: 120px;
+            }
         }
     }
 }
@@ -706,6 +811,19 @@ header{
     background-image: linear-gradient(to right,rgb(163, 68, 207),rgb(205, 105, 252));;
     width: 100vw;
     // margin-top: 220px;
+
+    @include mobile{
+        padding: 65px;
+    }
+
+    @include sm-mobile{
+        padding: 40px;
+    }
+
+    @include xs-mobile{
+        padding: 25px;
+    }
+
     .formulario{
         padding: 85px;
         background-image: linear-gradient(to right,rgb(163, 68, 207),rgb(205, 105, 252));
@@ -719,10 +837,24 @@ header{
         color: black;
         box-shadow: 7px 10px 21px -4px rgba(48, 47, 47, 0.185);  
         border-radius: 25px;
+        overflow: hidden;
+        @include mobile{
+            padding: 60px;
+        }
+
+        @include sm-mobile{
+            margin-top: -100px;
+            padding: 40px;
+        }
+
+        @include xs-mobile{
+            padding: 25px;
+        }
+    
     }
 
     .test{
-        width: 10px;
+        // width: 10px;
         // background-color: blue;
         // grid-column-start: 4;
     }
@@ -736,12 +868,14 @@ header{
         input, textarea, a{
             padding: 15px 15px 3px 10px;
             // padding: 1rem;
-            width: 550px;
+            // width: 550px;
             width: 100%;
             margin: 10px;
             outline: none;
             border-color: rgb(199, 152, 230);
             // background: rgb(202, 116, 241);
+
+            
         }
 
         h3{
@@ -756,6 +890,15 @@ header{
             margin-bottom: 5px;
             margin-top: -50px;
             // color: rgb(56, 55, 55);
+            @include mobile{
+                // width: 100%;
+                font-size: 1.8rem;
+                margin-top: 0;
+            }
+            @include xs-mobile{
+                // width: 100%;
+                font-size: 1.4rem;
+            }
         }
 
         // ::placeholder{
@@ -765,9 +908,26 @@ header{
         p{
             margin: 10px;
             margin-bottom: 35px;
-            color: rgb(236, 230, 230);
+            // color: rgb(236, 230, 230);
             // paddrgb(227, 225, 230);
-           color: rgb(227, 225, 230);
+            color: rgb(227, 225, 230);
+            @include xs-desktop{
+                text-align:center;
+            }
+
+            @include tablet{
+                width: 100%;
+            }
+
+            @include mobile{
+                width: 100%;
+                font-size: 0.9rem;
+            }
+
+            @include xs-mobile{
+                // width: 100%;
+                font-size: 0.8rem;
+            }
         }
 
         input,textarea{
@@ -801,6 +961,9 @@ header{
             letter-spacing: 2px;
             text-transform: uppercase;
             // background-color: white;
+            @include sm-mobile{
+                width: 100%;
+            }
         }
     }
 }
@@ -817,6 +980,24 @@ footer{
     width: 100vw;
     border-image:  linear-gradient(to right,rgb(163, 68, 207),rgb(205, 105, 252));;
     border-top: solid 3px rgb(163, 68, 207);
+
+    @include tablet{
+        padding: 50px;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @include mobile{
+        // padding: 5px;
+        grid-template-columns: 1fr;
+    }
+
+    @include sm-mobile{
+        padding: 20px;
+    }
+
+    @include xs-mobile{
+        padding: 20px 0 20px 0;
+    }
 
     a{
         color: rgb(222, 184, 240);
@@ -840,17 +1021,33 @@ footer{
         border-left: solid 1px rgb(205, 129, 240);
         border-right: solid 1px rgb(205, 129, 240);
         color: rgb(222, 184, 240);
+
+        @include mobile{
+            margin: 3.5rem;
+        }
+
         h3{
             align-self: center;
             font-family: $logoFont; 
             color: rgb(227, 225, 230);;
-            letter-spacing: 0px;
+            letter-spacing: 1px;
             font-weight: 100;
         }
         p{
             text-align: center;
             // font-size: 0.9rem;
             padding: 10px;
+            @include mobile{
+                padding: 5px;
+                width: 85%;
+                align-self: center;
+            }
+            @include sm-mobile{
+                width: 100%;
+            }
+        }
+        @include tablet{
+            border: none;
         }
     }
 
@@ -859,10 +1056,19 @@ footer{
         flex-direction: column;
         align-items: center;
 
+        .icons{
+            text-align: center;
+            a{
+                margin: 5px;
+                color: rgb(240, 236, 241);
+            }
+        }
+
         h4{
             align-self: center;
             font-family: $subTitle;
             color: rgb(241, 235, 235);
+            margin-bottom: 15px;
         }
     }
 }
