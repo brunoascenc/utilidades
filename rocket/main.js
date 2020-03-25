@@ -5,8 +5,10 @@ const navShow = () => {
 
 
     burguer.addEventListener('click', () =>{
+        //toggle nav
         nav.classList.toggle('nav-active');
 
+        //fade animation
         navLinks.forEach((link, index)=>{
             if(link.style.animation){
                link.style.animation = '';
@@ -21,3 +23,8 @@ const navShow = () => {
 }
 
 navShow();
+
+window.addEventListener('scroll', () =>{
+    var header = document.querySelector('header');
+    header.classList.toggle('sticky', window.scrollY > 0);
+});
