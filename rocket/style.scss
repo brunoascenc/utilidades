@@ -818,6 +818,7 @@ header.sticky {
     }
 
     .northface {
+      cursor: pointer;
       grid-column-start: 1;
       grid-column-end: 3;
       grid-row-start: 1;
@@ -828,6 +829,12 @@ header.sticky {
       background: url("nf.png") no-repeat;
       max-width: 100%;
       background-size: cover;
+      transition: 0.3s ease-in-out;
+
+      // &:hover{
+      //   transform: translateY(-10px);
+      //   box-shadow: 0px 2px 15px 0px rgba(129, 127, 127, 0.192);
+      // }
 
       @include xs-desktop {
         grid-column-start: 1;
@@ -852,6 +859,7 @@ header.sticky {
       }
     }
     .restaurant {
+      cursor: pointer;
       grid-column-start: 3;
       grid-column-end: 5;
       background-color: blue;
@@ -859,6 +867,13 @@ header.sticky {
       // width: 100%;
       background-size: cover;
       height: 250px;
+      transition: 0.3s ease-in-out;
+
+      &:hover{
+        transform: translateY(-10px);
+        box-shadow: 20px rgba(129, 127, 127, 0.192);
+      }
+
       @include xs-desktop {
         width: 100%;
       }
@@ -876,11 +891,13 @@ header.sticky {
     }
 
     .business {
+      cursor: pointer;
       background-color: green;
       background: url("business.jfif");
       background-size: cover;
       height: 250px;
       background-position: left;
+      transition: 0.3s ease-in-out;
       @include xs-desktop {
         grid-column-start: 1;
         grid-column-end: 3;
@@ -900,10 +917,17 @@ header.sticky {
       }
     }
     .sonora {
-      background-color: yellow;
+      cursor: pointer;
       background: url("sonora.jfif");
       background-size: cover;
       height: 250px;
+      transition: 0.3s ease-in-out;
+
+      &:hover{
+        transform: translateY(-10px);
+        box-shadow: 20px rgb(0, 0, 0);
+      }
+
       @include xs-desktop {
         grid-column-start: 3;
         grid-column-end: 5;
@@ -922,7 +946,29 @@ header.sticky {
       }
     }
   }
+
+  .northface:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.281);
+  }
+
+  .business:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
+  }
+
+  .sonora:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
+  }
+
+  .restaurant:hover{
+    transform: translateY(-10px);
+    box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
+  }
+  
 }
+
 
 //Contact
 .contact {
@@ -1069,6 +1115,7 @@ header.sticky {
     }
 
     button {
+      cursor: pointer;
       @include simpleBtn();
       // @include gradientBtn();
       // @include gradientBtn();

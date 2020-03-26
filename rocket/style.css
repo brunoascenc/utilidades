@@ -963,6 +963,7 @@ header.sticky {
 }
 
 .portfolio .portfolio-content .northface {
+  cursor: pointer;
   -ms-grid-column: 1;
       grid-column-start: 1;
   grid-column-end: 3;
@@ -974,6 +975,8 @@ header.sticky {
   background: url("nf.png") no-repeat;
   max-width: 100%;
   background-size: cover;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 930px) {
@@ -1010,6 +1013,7 @@ header.sticky {
 }
 
 .portfolio .portfolio-content .restaurant {
+  cursor: pointer;
   -ms-grid-column: 3;
       grid-column-start: 3;
   grid-column-end: 5;
@@ -1017,6 +1021,15 @@ header.sticky {
   background: url("restaurante.jfif") no-repeat;
   background-size: cover;
   height: 250px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio .portfolio-content .restaurant:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 20px rgba(129, 127, 127, 0.192);
+          box-shadow: 20px rgba(129, 127, 127, 0.192);
 }
 
 @media (max-width: 930px) {
@@ -1046,11 +1059,14 @@ header.sticky {
 }
 
 .portfolio .portfolio-content .business {
+  cursor: pointer;
   background-color: green;
   background: url("business.jfif");
   background-size: cover;
   height: 250px;
   background-position: left;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
 }
 
 @media (max-width: 930px) {
@@ -1082,10 +1098,19 @@ header.sticky {
 }
 
 .portfolio .portfolio-content .sonora {
-  background-color: yellow;
+  cursor: pointer;
   background: url("sonora.jfif");
   background-size: cover;
   height: 250px;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+}
+
+.portfolio .portfolio-content .sonora:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 20px black;
+          box-shadow: 20px black;
 }
 
 @media (max-width: 930px) {
@@ -1114,6 +1139,34 @@ header.sticky {
   .portfolio .portfolio-content .sonora {
     height: 120px;
   }
+}
+
+.portfolio .northface:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.281);
+          box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.281);
+}
+
+.portfolio .business:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
+          box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
+}
+
+.portfolio .sonora:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
+          box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
+}
+
+.portfolio .restaurant:hover {
+  -webkit-transform: translateY(-10px);
+          transform: translateY(-10px);
+  -webkit-box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
+          box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
 }
 
 .contact {
@@ -1300,6 +1353,7 @@ header.sticky {
 }
 
 .contact form button {
+  cursor: pointer;
   background: transparent;
   color: #3d3c3c;
   border: 1px #b1adad solid;
