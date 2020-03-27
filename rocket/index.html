@@ -6,6 +6,7 @@
     <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css" />
     <script src="https://cdn.jsdelivr.net/gh/cferdinandi/smooth-scroll@15.0.0/dist/smooth-scroll.polyfills.min.js"></script>
     <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"> -->
@@ -211,10 +212,10 @@
         <div class="test123">
           <h2>About us</h2>
         <div class="about-text">
-          <div class="title-about">
+          <div class="title-about" data-aos="fade-right">
             <h3>Lorem, ipsum dolor sit amet consectetur adipisicing elit.</h3>
           </div>
-          <div class="about-content">
+          <div class="about-content" data-aos="fade-left">
             <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facere animi veniam eius quae, fuga, nostrum accusamus impedit voluptas mollitia labore quas! Excepturi in sapiente architecto!</p>
           </div>
         </div>
@@ -223,13 +224,13 @@
 
     <!-- Services -->
     <section  data-index = "2" class="services" id="services">
-      <div class="test99">
+      <div class="test99" data-aos="fade-down">
 
 
       <h1>What we do</h1>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel praesentium odio maiores minima expedita, quaerat nam quia quisquam tempora? Voluptate.</p>
     </div>
-      <div class="cards">
+      <div class="cards" data-aos="zoom-in">
         <div class="card">
           <h3>Digital Marketing</h3>
           <p>We manage all online media that your company operates through business intelligence and commercial automation.</p>
@@ -262,14 +263,14 @@
         </div>
       </div>
 
-      <div class="test55">
+      <!-- <div class="test55">
         <img src="code.svg">
         <div>
           <h3>Web Development</h3>
           <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem laborum, quisquam ipsa nesciunt consequuntur nam enim magnam quis recusandae vel!</p>
           <a href="#">see our work below</a>
         </div>
-      </div>
+      </div> -->
     </section>
     
     <section data-index = "3" class="portfolio" id="portfolio">
@@ -337,6 +338,13 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/ScrollMagic.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="main.js"></script>
+  <script>
+    AOS.init({
+      offset: 250,
+      duration: 1000
+    });
+  </script>
   </body>
 </html>

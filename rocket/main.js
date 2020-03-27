@@ -75,14 +75,20 @@ const scroll = new SmoothScroll('.links a[href*="#"]', {
   speed: 600
 });
 
-//Gsap Animations
-// const tl = gsap.timeline({defaults: {duration: 1}})
-// tl.from('.landAnimation', {y: -50, stagger: .4, opacity: 0})
-//   .from('svg', {y: 50, opacity: 0},'-=0.8')
-//   .from('.test123 h2', {opacity: 0},'-=0.5')
-//   .from('.title-about', {x: -50, opacity: 0},'-=0.8')
-//   .from('.about-content', {x: 50, opacity: 0},'-=0.8')
-//   .from('.card', {stagger: .4, opacity: 0})
+// Gsap Animations
+const tl = gsap.timeline({defaults: {duration: 1}})
+tl.from('.landAnimation', {y: -50, stagger: .4, opacity: 0})
+  .from('svg', {y: 50, opacity: 0},'-=0.8')
+  // .from('.test123 h2', {opacity: 0},'-=0.5')
+  // .from('.title-about', {x: -50, opacity: 0},'-=0.8')
+  // .from('.about-content', {x: 50, opacity: 0},'-=0.8')
+//   // .from('.card', {stagger: .4, opacity: 0})
+//   .from('.card', {autoAlpha: 0, y: '-50%', scale: .5})
+
+
+
+
+
 
 //Form Validation
 function validarForm() {

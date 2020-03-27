@@ -1239,6 +1239,13 @@ header.sticky {
   }
 }
 
+.contact .formulario #error-msg {
+  color: #f7f2f2;
+  -ms-flex-item-align: start;
+      align-self: flex-start;
+  font-size: 1.1rem;
+}
+
 .contact form {
   display: -webkit-box;
   display: -ms-flexbox;

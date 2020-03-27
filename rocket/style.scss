@@ -1024,6 +1024,12 @@ header.sticky {
     @include xs-mobile {
       padding: 25px;
     }
+
+    #error-msg{
+      color: rgb(247, 242, 242);
+      align-self: flex-start;
+      font-size: 1.1rem;
+    }
   }
 
   form {
