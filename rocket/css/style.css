@@ -151,7 +151,7 @@ header nav .links li {
     right: 0px;
     height: 100vh;
     width: 50%;
-    top: 9vh;
+    top: 10vh;
     background-image: -webkit-gradient(linear, left top, right top, from(#a140ce), to(#c76ff0));
     background-image: linear-gradient(to right, #a140ce, #c76ff0);
     display: -webkit-box;
@@ -260,22 +260,6 @@ header nav ul .bubble {
   }
 }
 
-header nav ul .test55 {
-  color: #f7f5f1;
-  background: #a64fce;
-  padding: 0.8rem 2.5rem 0.8rem 2.5rem;
-  border-radius: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#8d4aac), to(#c669f1));
-  background: linear-gradient(#8d4aac, #c669f1);
-  padding: 0.5rem 1.8rem 0.5rem 1.8rem;
-}
-
-@media (max-width: 780px) {
-  header nav ul .test55 {
-    background: transparent;
-  }
-}
-
 header nav ul .signupNav {
   color: #f7f5f1;
   background: #a64fce;
@@ -308,6 +292,7 @@ header.sticky {
 
 .home {
   width: 1000px;
+  max-height: 100vh;
 }
 
 @media (max-width: 1150px) {
@@ -440,7 +425,7 @@ header.sticky {
   }
 }
 
-.home .landing-content .home-btn .test {
+.home .landing-content .home-btn .lightBtn {
   background: transparent;
   color: #3d3c3c;
   border: 1px #b1adad solid;
@@ -448,7 +433,7 @@ header.sticky {
 }
 
 @media (max-width: 780px) {
-  .home .landing-content .home-btn .test {
+  .home .landing-content .home-btn .lightBtn {
     padding: 0.6rem 1.8rem 0.6rem 1.8rem;
     font-size: 0.9rem;
   }
@@ -465,16 +450,31 @@ header.sticky {
   background-image: linear-gradient(to right, #a140ce, #c76ff0);
   width: 100%;
   position: relative;
-  margin-top: -20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
-.about .test123 {
+@media (max-width: 780px) {
+  .about {
+    margin-top: 100px;
+  }
+}
+
+.about .about-item {
   background-image: -webkit-gradient(linear, left top, right top, from(#a344cf), to(#cd69fc));
   background-image: linear-gradient(to right, #a344cf, #cd69fc);
   width: 850px;
   height: 400px;
   margin: 0 auto;
-  margin-top: -65px;
+  margin-top: -165px;
   border-radius: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -492,13 +492,13 @@ header.sticky {
 }
 
 @media (max-width: 930px) {
-  .about .test123 {
+  .about .about-item {
     width: 90%;
   }
 }
 
 @media (max-width: 625px) {
-  .about .test123 {
+  .about .about-item {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
@@ -599,7 +599,6 @@ header.sticky {
 }
 
 .services {
-  height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -610,6 +609,9 @@ header.sticky {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 1000px;
   margin-top: 125px;
 }
@@ -620,7 +622,7 @@ header.sticky {
   }
 }
 
-.services .test99 {
+.services .services-txt {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -633,13 +635,13 @@ header.sticky {
           align-items: center;
 }
 
-.services .test99 h1 {
+.services .services-txt h1 {
   color: #383737;
   text-transform: uppercase;
   font-family: "Archivo Black", sans-serif;
 }
 
-.services .test99 p {
+.services .services-txt p {
   text-align: center;
   color: #666464;
   width: 75%;
@@ -648,171 +650,9 @@ header.sticky {
 }
 
 @media (max-width: 625px) {
-  .services .test99 p {
+  .services .services-txt p {
     width: 85%;
   }
-}
-
-.services .test55 {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-bottom: 55px;
-  margin-top: -125px;
-  padding: 50px;
-}
-
-@media (max-width: 780px) {
-  .services .test55 {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-}
-
-@media (max-width: 625px) {
-  .services .test55 {
-    padding: 30px;
-  }
-}
-
-@media (max-width: 380px) {
-  .services .test55 {
-    padding: 20px;
-  }
-}
-
-.services .test55 img {
-  width: 50%;
-}
-
-@media (max-width: 780px) {
-  .services .test55 img {
-    width: 100%;
-    margin: 0 auto;
-  }
-}
-
-.services .test55 div {
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin-left: 85px;
-  margin-top: 50px;
-}
-
-@media (max-width: 780px) {
-  .services .test55 div {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    margin-top: 60px;
-    margin-left: 0;
-  }
-}
-
-.services .test55 div h3 {
-  font-family: "Archivo Black", sans-serif;
-  text-transform: uppercase;
-  color: #333232;
-  font-size: 1.5rem;
-}
-
-@media (max-width: 625px) {
-  .services .test55 div h3 {
-    text-align: center;
-  }
-}
-
-.services .test55 div p {
-  color: #747070;
-  font-size: 1.2rem;
-  margin-bottom: 45px;
-  margin-top: 10px;
-}
-
-@media (max-width: 780px) {
-  .services .test55 div p {
-    text-align: center;
-  }
-}
-
-@media (max-width: 625px) {
-  .services .test55 div p {
-    font-size: 1rem;
-  }
-}
-
-@media (max-width: 380px) {
-  .services .test55 div p {
-    font-size: 0.8rem;
-  }
-}
-
-.services .test55 div a {
-  color: #f7f5f1;
-  background: #a64fce;
-  padding: 0.8rem 2.5rem 0.8rem 2.5rem;
-  border-radius: 25px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#8d4aac), to(#c669f1));
-  background: linear-gradient(#8d4aac, #c669f1);
-  border: solid 2px #b9b6b6;
-  border: none;
-  margin-top: 15px;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-family: "Quicksand", sans-serif;
-}
-
-@media (max-width: 930px) {
-  .services .test55 div a {
-    padding: 0.8rem 1rem 0.8rem 1rem;
-    font-size: 0.8rem;
-  }
-}
-
-@media (max-width: 780px) {
-  .services .test55 div a {
-    color: #f7f5f1;
-    background: #a64fce;
-    padding: 0.8rem 2.5rem 0.8rem 2.5rem;
-    border-radius: 25px;
-    background: -webkit-gradient(linear, left top, left bottom, from(#8d4aac), to(#c669f1));
-    background: linear-gradient(#8d4aac, #c669f1);
-    margin-top: -20px;
-  }
-}
-
-@media (max-width: 625px) {
-  .services .test55 div a {
-    font-size: 0.7rem;
-  }
-}
-
-.services .indexOf {
-  font-family: "Bowlby One SC", cursive;
-  font-weight: 100;
-  background: -webkit-linear-gradient(#a64fce, #d79df1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  -ms-flex-item-align: start;
-      align-self: flex-start;
-  margin-top: 55px;
-  margin-bottom: -85px;
 }
 
 .services .cards {
@@ -972,7 +812,7 @@ header.sticky {
   grid-row-end: 5;
   width: 550px;
   height: 517px;
-  background: url("nf.png") no-repeat;
+  background: url("../assets/nf.png") no-repeat;
   max-width: 100%;
   background-size: cover;
   -webkit-transition: 0.3s ease-in-out;
@@ -1018,7 +858,7 @@ header.sticky {
       grid-column-start: 3;
   grid-column-end: 5;
   background-color: blue;
-  background: url("restaurante.jfif") no-repeat;
+  background: url("../assets/restaurante.jfif") no-repeat;
   background-size: cover;
   height: 250px;
   -webkit-transition: 0.3s ease-in-out;
@@ -1061,7 +901,7 @@ header.sticky {
 .portfolio .portfolio-content .business {
   cursor: pointer;
   background-color: green;
-  background: url("business.jfif");
+  background: url("../assets/business.jfif");
   background-size: cover;
   height: 250px;
   background-position: left;
@@ -1099,7 +939,7 @@ header.sticky {
 
 .portfolio .portfolio-content .sonora {
   cursor: pointer;
-  background: url("sonora.jfif");
+  background: url("../assets/sonora.jfif");
   background-size: cover;
   height: 250px;
   -webkit-transition: 0.3s ease-in-out;
@@ -1359,8 +1199,22 @@ header.sticky {
   font-size: 0.9rem;
 }
 
+.contact form input:-webkit-autofill,
+.contact form input:-webkit-autofill:hover,
+.contact form input:-webkit-autofill:focus,
+.contact form input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 35px #a64fce inset !important;
+}
+
+.contact form input:-webkit-autofill {
+  -webkit-text-fill-color: #e7e7df !important;
+  font-family: "Quicksand", sans-serif;
+  font-size: 0.9rem;
+}
+
 .contact form button {
   cursor: pointer;
+  outline: none;
   background: transparent;
   color: #3d3c3c;
   border: 1px #b1adad solid;

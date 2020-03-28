@@ -13,6 +13,7 @@ body {
   overflow-x: hidden;
 }
 
+//Variables
 $small-desktop: 1150px;
 $xs-desktop: 930px;
 $tablet: 780px;
@@ -21,6 +22,8 @@ $mobile: 625px;
 $sm-mobile: 565px;
 $xs-mobile: 380px;
 
+
+//Media Queries
 @mixin small-desktop {
   @media (max-width: #{$small-desktop}) {
     @content;
@@ -63,12 +66,13 @@ $xs-mobile: 380px;
   }
 }
 
+//Layout Container
 .container {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: center;
 }
+
 //VARS
 $primaryColor: rgb(166, 79, 206);
 $logoFont: "Bowlby One SC", cursive;
@@ -108,8 +112,6 @@ ul {
 
 svg {
   max-width: 95%;
-  // background-color: red;
-  // height: 35%;
   z-index: -1;
 
   @include mobile {
@@ -142,13 +144,8 @@ header {
   align-items: center;
   margin: 0 auto;
   padding: 1.5rem 0 0.6rem 0rem;
-  // padding: 1rem 13rem;
-  // padding: 20px 200px;
-  // margin: 0 auto;
   z-index: 1000;
-  // box-shadow: 0px 5px 15px 0px rgb(241, 238, 238);
   transition: 0.5s;
-//   background: linear-gradient(rgb(200, 104, 245), rgb(175, 73, 223));
 
   .nav-container {
     display: flex;
@@ -165,18 +162,12 @@ header {
     font-family: $logoFont;
     font-size: 1.5rem;
     letter-spacing: 2px;
-    // text-transform: uppercase;
     @include gradientFont();
-    // color: rgb(247, 241, 241);
     font-weight: 100;
   }
 
   nav {
-    // width: 100vw;
     margin-top: 5px;
-    // align-self: center !important;
-
-    // Responsive Nav
     .links {
       li {
         margin-left: 2.5rem;
@@ -186,7 +177,6 @@ header {
           a {
             color: rgb(243, 239, 239);
             text-transform: uppercase;
-            // font-weight: bold;
             color: rgb(226, 219, 219);
           }
         }
@@ -201,7 +191,7 @@ header {
         right: 0px;
         height: 100vh;
         width: 50%;
-        top: 9vh;
+        top: 10vh;
         background-image: linear-gradient(
           to right,
           rgb(161, 64, 206),
@@ -262,32 +252,22 @@ header {
       transform: translateX(0%) !important;
     }
   }
-
   // Responsive nav ends
 
   nav ul {
     display: flex;
 
     .bubble {
-        position: absolute;
-        z-index: -2;
-        color: white;
-        transform: scale(1.8);
-        border-radius: 25px;
-        transition: all 0.5s ease;
-        // @include  gradientBtn();
-        background: rgb(199, 111, 240);
+      position: absolute;
+      z-index: -2;
+      color: white;
+      transform: scale(1.8);
+      border-radius: 25px;
+      transition: all 0.5s ease;
+      background: rgb(199, 111, 240);
 
-        @include tablet {
-            display: none;
-        }
-    }
-
-    .test55 {
-      @include gradientBtn();
-      padding: 0.5rem 1.8rem 0.5rem 1.8rem;
       @include tablet {
-        background: transparent;
+        display: none;
       }
     }
 
@@ -305,11 +285,10 @@ header {
     }
   }
 
-  .activeLink{
+  .activeLink {
     color: rgb(245, 239, 239);
     transition: all 0.5s ease-in-out;
-}
-
+  }
 }
 header.sticky {
   background-color: rgb(245, 245, 248);
@@ -318,10 +297,8 @@ header.sticky {
 
 //Home
 .home {
-  // width: 100vw;
-  // background: linear-gradient(-35deg,rgb(245, 243, 243) 60%, transparent 60%);
   width: 1000px;
-//   min-height: 100vh;
+  max-height: 100vh;
 
   @include small-desktop {
     width: 90%;
@@ -329,14 +306,10 @@ header.sticky {
 
   // Landing-Content
   .landing-content {
-    // display: flex;
-    // justify-content: space-between;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
     margin-top: -60px;
-    // margin: 0 auto;
-    // background-color: blue;
 
     @include tablet {
       grid-template-columns: 320px 1fr;
@@ -354,12 +327,6 @@ header.sticky {
         margin-top: -300px;
         height: 85vh;
       }
-
-      // @include xs-tablet{
-      //     grid-row-start: 3;
-      //     margin-top: -300px;
-      //     height: 85vh;
-      // }
     }
 
     .landing-text p {
@@ -369,7 +336,6 @@ header.sticky {
       margin-top: 10px;
       padding: 2px;
 
-      // line-height: 1.9rem;
       @include mobile {
         text-align: center;
       }
@@ -393,7 +359,6 @@ header.sticky {
 
       @include small-desktop {
         font-size: 2.4rem;
-        // width: 490px;
       }
 
       @include xs-desktop {
@@ -424,7 +389,7 @@ header.sticky {
         }
       }
 
-      .test {
+      .lightBtn {
         background: transparent;
         color: rgb(61, 60, 60);
         border: 1px rgb(177, 173, 173) solid;
@@ -445,18 +410,23 @@ header.sticky {
 //About
 .about {
   height: 400px;
-//   height: 100vh;
+  // margin-top: 450px;
   background-image: linear-gradient(
     to right,
     rgb(161, 64, 206),
     rgb(199, 111, 240)
   );
-  // background-color: rgb(211, 79, 200);
   width: 100%;
   position: relative;
-  margin-top: -20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 
-  .test123 {
+  @include tablet {
+    margin-top: 100px;
+  }
+
+  .about-item {
     background-image: linear-gradient(
       to right,
       rgb(163, 68, 207),
@@ -464,12 +434,8 @@ header.sticky {
     );
     width: 850px;
     height: 400px;
-    // height: 40vh;
-    // position: absolute;
-    // top: 730px;
-    // left: 250px;
     margin: 0 auto;
-    margin-top: -65px;
+    margin-top: -165px;
     border-radius: 25px;
     display: flex;
     align-items: center;
@@ -483,10 +449,6 @@ header.sticky {
 
     @include mobile {
       justify-content: center;
-    }
-
-    @include sm-mobile {
-      // width:80%;
     }
   }
 
@@ -505,7 +467,6 @@ header.sticky {
       font-family: $subTitle;
       text-align: right;
       font-size: 2rem;
-      // padding: 25px;
       width: 50%;
 
       @include tablet {
@@ -544,15 +505,12 @@ header.sticky {
       @include sm-mobile {
         font-size: 1rem;
         width: 100%;
-        // margin: 25px;
         text-align: center;
         margin-left: 0;
         padding: 10px;
-        // border: none;
       }
 
       @include xs-mobile {
-        // width:90%;
       }
     }
   }
@@ -571,17 +529,17 @@ header.sticky {
 
 //Services
 .services {
-  height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   width: 1000px;
   margin-top: 125px;
   @include small-desktop {
     width: 100%;
   }
 
-  .test99 {
+  .services-txt {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -601,109 +559,6 @@ header.sticky {
         width: 85%;
       }
     }
-  }
-
-  .test55 {
-    display: flex;
-    // display: grid;
-    // grid-template-columns: 1fr 1fr;
-    // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-    // align-self: flex-start;
-    // background-color: blue;
-    margin-bottom: 55px;
-    margin-top: -125px;
-    padding: 50px;
-
-    @include tablet {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    @include mobile {
-      padding: 30px;
-    }
-    @include xs-mobile {
-      padding: 20px;
-    }
-
-    img {
-      width: 50%;
-      @include tablet {
-        width: 100%;
-        margin: 0 auto;
-      }
-    }
-
-    div {
-      align-self: center;
-      margin-left: 85px;
-      margin-top: 50px;
-      @include tablet {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-top: 60px;
-        margin-left: 0;
-      }
-
-      h3 {
-        font-family: $subTitle;
-        text-transform: uppercase;
-        color: rgb(51, 50, 50);
-        font-size: 1.5rem;
-        @include mobile {
-          text-align: center;
-        }
-      }
-
-      p {
-        color: rgb(116, 112, 112);
-        font-size: 1.2rem;
-        margin-bottom: 45px;
-        margin-top: 10px;
-        @include tablet {
-          text-align: center;
-        }
-        @include mobile {
-          font-size: 1rem;
-        }
-
-        @include xs-mobile {
-          font-size: 0.8rem;
-        }
-      }
-
-      a {
-        @include gradientBtn();
-        border: solid 2px rgb(185, 182, 182);
-        border: none;
-        margin-top: 15px;
-        text-transform: uppercase;
-        letter-spacing: 2px;
-        font-family: "Quicksand", sans-serif;
-        @include xs-desktop {
-          padding: 0.8rem 1rem 0.8rem 1rem;
-          font-size: 0.8rem;
-        }
-        @include tablet {
-          @include gradientBtn();
-          margin-top: -20px;
-        }
-
-        @include mobile {
-          font-size: 0.7rem;
-        }
-      }
-    }
-  }
-
-  .indexOf {
-    font-family: $logoFont;
-    @include gradientFont();
-    align-self: flex-start;
-    margin-top: 55px;
-    margin-bottom: -85px;
   }
 
   .cards {
@@ -739,7 +594,6 @@ header.sticky {
       p {
         color: rgb(116, 112, 112);
         margin-top: 5px;
-        // font-weight: bold;
         font-size: 1.2rem;
         width: 300px;
         margin: 0 auto;
@@ -764,7 +618,6 @@ header.sticky {
   align-items: center;
   width: 100vw;
   background-color: rgb(247, 241, 241);
-//   height: 100vh;
   padding: 125px;
 
   @include tablet {
@@ -810,7 +663,6 @@ header.sticky {
     display: grid;
     max-width: 100%;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    // grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
     grid-gap: 1rem;
 
     @include xs-desktop {
@@ -823,18 +675,12 @@ header.sticky {
       grid-column-end: 3;
       grid-row-start: 1;
       grid-row-end: 5;
-      // background-color: red;
       width: 550px;
       height: 517px;
-      background: url("nf.png") no-repeat;
+      background: url("../assets/nf.png") no-repeat;
       max-width: 100%;
       background-size: cover;
       transition: 0.3s ease-in-out;
-
-      // &:hover{
-      //   transform: translateY(-10px);
-      //   box-shadow: 0px 2px 15px 0px rgba(129, 127, 127, 0.192);
-      // }
 
       @include xs-desktop {
         grid-column-start: 1;
@@ -863,13 +709,12 @@ header.sticky {
       grid-column-start: 3;
       grid-column-end: 5;
       background-color: blue;
-      background: url("restaurante.jfif") no-repeat;
-      // width: 100%;
+      background: url("../assets/restaurante.jfif") no-repeat;
       background-size: cover;
       height: 250px;
       transition: 0.3s ease-in-out;
 
-      &:hover{
+      &:hover {
         transform: translateY(-10px);
         box-shadow: 20px rgba(129, 127, 127, 0.192);
       }
@@ -893,7 +738,7 @@ header.sticky {
     .business {
       cursor: pointer;
       background-color: green;
-      background: url("business.jfif");
+      background: url("../assets/business.jfif");
       background-size: cover;
       height: 250px;
       background-position: left;
@@ -918,12 +763,12 @@ header.sticky {
     }
     .sonora {
       cursor: pointer;
-      background: url("sonora.jfif");
+      background: url("../assets/sonora.jfif");
       background-size: cover;
       height: 250px;
       transition: 0.3s ease-in-out;
 
-      &:hover{
+      &:hover {
         transform: translateY(-10px);
         box-shadow: 20px rgb(0, 0, 0);
       }
@@ -947,28 +792,26 @@ header.sticky {
     }
   }
 
-  .northface:hover{
+  .northface:hover {
     transform: translateY(-10px);
     box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.281);
   }
 
-  .business:hover{
+  .business:hover {
     transform: translateY(-10px);
     box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
   }
 
-  .sonora:hover{
+  .sonora:hover {
     transform: translateY(-10px);
     box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
   }
 
-  .restaurant:hover{
+  .restaurant:hover {
     transform: translateY(-10px);
     box-shadow: 0px 2px 15px 0px rgba(32, 32, 32, 0.534);
   }
-  
 }
-
 
 //Contact
 .contact {
@@ -980,7 +823,6 @@ header.sticky {
     rgb(205, 105, 252)
   );
   width: 100vw;
-  // margin-top: 220px;
 
   @include mobile {
     padding: 65px;
@@ -1025,7 +867,7 @@ header.sticky {
       padding: 25px;
     }
 
-    #error-msg{
+    #error-msg {
       color: rgb(247, 242, 242);
       align-self: flex-start;
       font-size: 1.1rem;
@@ -1036,53 +878,39 @@ header.sticky {
     display: flex;
     flex-direction: column;
     align-items: center;
-    // align-self: flex-end;
 
     input,
     textarea,
     a {
       padding: 15px 15px 3px 10px;
-      // padding: 1rem;
-      // width: 550px;
       width: 100%;
       margin: 10px;
       outline: none;
       border-color: rgb(199, 152, 230);
-      // background: rgb(202, 116, 241);
     }
 
     h3 {
       font-family: $subTitle;
       color: rgb(227, 225, 230);
       font-weight: 100;
-      // color:rgb(240, 233, 233);
       text-transform: uppercase;
       letter-spacing: -2px;
       font-size: 2.2rem;
       margin: 10px;
       margin-bottom: 5px;
       margin-top: -50px;
-      // color: rgb(56, 55, 55);
       @include mobile {
-        // width: 100%;
         font-size: 1.8rem;
         margin-top: 0;
       }
       @include xs-mobile {
-        // width: 100%;
         font-size: 1.4rem;
       }
     }
 
-    // ::placeholder{
-    //     color: rgb(245, 239, 239);
-    // }
-
     p {
       margin: 10px;
       margin-bottom: 35px;
-      // color: rgb(236, 230, 230);
-      // paddrgb(227, 225, 230);
       color: rgb(227, 225, 230);
       @include xs-desktop {
         text-align: center;
@@ -1098,7 +926,6 @@ header.sticky {
       }
 
       @include xs-mobile {
-        // width: 100%;
         font-size: 0.8rem;
       }
     }
@@ -1110,7 +937,6 @@ header.sticky {
       border-bottom: solid 2px rgb(196, 156, 236);
       background: rgb(181, 105, 216);
       background: transparent;
-      // border-radius: 2px;
       color: rgb(212, 201, 201);
     }
 
@@ -1120,22 +946,30 @@ header.sticky {
       font-size: 0.9rem;
     }
 
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 35px $primaryColor inset !important;
+    }
+
+    input:-webkit-autofill {
+      -webkit-text-fill-color: rgb(231, 231, 223) !important;
+      font-family:"Quicksand", sans-serif;
+      font-size: 0.9rem;
+    }
+
     button {
       cursor: pointer;
+      outline: none;
       @include simpleBtn();
-      // @include gradientBtn();
-      // @include gradientBtn();
-      // border: solid 3px rgb(230, 206, 238);
       color: rgb(247, 241, 241);
       width: 155px;
       align-self: flex-end;
       border: 2px solid rgb(221, 204, 238);
-      // border: none;
-      // font-weight: bold;
       font-family: "Quicksand", sans-serif;
       letter-spacing: 2px;
       text-transform: uppercase;
-      // background-color: white;
       @include sm-mobile {
         width: 100%;
       }
@@ -1169,7 +1003,6 @@ footer {
   }
 
   @include mobile {
-    // padding: 5px;
     grid-template-columns: 1fr;
   }
 
@@ -1199,7 +1032,6 @@ footer {
   .footer-logo {
     display: flex;
     flex-direction: column;
-    // width: 250px;
     border-left: solid 1px rgb(205, 129, 240);
     border-right: solid 1px rgb(205, 129, 240);
     color: rgb(222, 184, 240);
@@ -1217,7 +1049,6 @@ footer {
     }
     p {
       text-align: center;
-      // font-size: 0.9rem;
       padding: 10px;
       @include mobile {
         padding: 5px;

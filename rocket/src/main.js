@@ -75,6 +75,7 @@ const scroll = new SmoothScroll('.links a[href*="#"]', {
   speed: 600
 });
 
+
 // Gsap Animations
 const tl = gsap.timeline({defaults: {duration: 1}})
 tl.from('.landAnimation', {y: -50, stagger: .4, opacity: 0})
@@ -94,6 +95,7 @@ tl.from('.landAnimation', {y: -50, stagger: .4, opacity: 0})
 function validarForm() {
   const nome= document.getElementById("nome").value;
   const email = document.getElementById("email").value;
+  const textarea = document.getElementById("message").value;
 
   if (!nome) {
     document.getElementById("error-msg").innerHTML = "* Insira seu nome";
@@ -101,7 +103,10 @@ function validarForm() {
   } else if (!email) {
     document.getElementById("error-msg").innerHTML = "* Insira seu email";
     return false;
-  } else {
+  } else if (!textarea){
+    document.getElementById("error-msg").innerHTML = "* Escreva sua mensagem";
+    return false;
+  }else {
     alert(
       "Tudo ok"
     );
