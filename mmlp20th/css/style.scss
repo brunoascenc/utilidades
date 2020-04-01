@@ -1,3 +1,8 @@
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara|Oswald|Paytone+One&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -6,6 +11,7 @@
 
 body{
     overflow-x: hidden;
+    font-family: 'Hind Vadodara', sans-serif;
 }
 
 .container{
@@ -30,7 +36,10 @@ header{
     width: 100%;
 
     h1{
-        color: rgb(235, 32, 32);
+        color: rgb(236, 176, 86);
+        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+        text-transform: uppercase;
+        font-size: 1.7rem;
     }
 
     nav{
@@ -41,7 +50,11 @@ header{
 
         .cart{
             width: 10px;
-            margin-left: 8rem;
+            margin-left: 5rem;
+            i{
+                color: rgb(247, 243, 243);
+                font-size: 1.5rem;
+            }
         }
     }
     .nav-links{
@@ -50,7 +63,21 @@ header{
         a{
             text-decoration: none;
             margin: 1rem;
+            // font-family: 'Bebas Neue', cursive;
+            // font-family: 'Reenie Beanie', cursive;
+            font-weight: 100;
+            color: rgb(238, 229, 229);
+            font-size: 1.3rem;
+            // text-transform: uppercase;
+            // letter-spacing: 1px;
+            // font-family: 'Oswald', sans-serif;
+            // font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+            // font-weight: bold;
+            // font-family: 'Paytone One', sans-serif;
+            // font-family: 'Vollkorn SC', serif;
         }
+
+
     }
 }
 
@@ -70,9 +97,10 @@ header{
         // position: absolute;
         // top: 0;
         z-index: -1;
-        background: url('https://wallpapercave.com/wp/wp3696170.jpg');
+        background: url('../assets/eminem1.jpg');
         background-size: cover;
         background-position: center;
+        // border-right: 1px rgb(230, 59, 59) solid;
     }
 
     .landing-content{
@@ -80,13 +108,81 @@ header{
         grid-column-start: 2;
         // grid-column-end: 3;
         grid-row-start: 1;
-        color: red;
-        background-color: blue;
+        color: rgb(240, 231, 231);
+        background-color: rgb(29, 28, 28);
         display: flex;
         align-items: center;
-        h1{
-            font-size: 4rem;
+        flex-direction: column;
+        justify-content: center;
+        position: relative;
+
+        // .test{
+
+        //     max-width: 0%;
+        //     position: relative;
+        //     // background-color: blue;
+        // }
+
+
+        .title{
+            display: flex;
+            position: relative;
+            // background-color: blue;
+            max-width: 100%;
+            z-index: 100;
+            padding: 85px;
+            h1{
+                font-size: 5.6rem;
+                font-family: 'Bebas Neue', cursive;
+                // max-width: 75%;
+                width: 450px;
+                text-align: start;
+                letter-spacing: 3px;
+                z-index: 100;
+                // position: relative;
+                align-self: center;
+            }
+
+            p{
+                // text-align: start;
+                transform: rotate(-90deg);
+                // justify-self: flex-end;
+                // width: 5%;
+                font-size: 1rem;
+                font-weight: 100;
+                position: absolute;
+                top: 15rem;
+                left: 1rem;
+            }
         }
+
+        .see-more{
+            background-color: rgb(233, 43, 43);
+            background-color: rgb(230, 95, 41);;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            height: 50%;
+            width: 75%;
+            display: flex;
+            // z-index: ;
+            // padding: 5rem;
+            a{
+                color: rgb(245, 239, 239);
+                font-family: 'Bebas Neue', cursive;
+                align-self: flex-end;
+                text-decoration: none;
+                font-size: 2rem;
+                font-weight: 100;
+                // background-color: blue;
+                width: 100%;
+                text-align: end;
+                padding: 1.5rem;
+                
+
+            }
+        }
+
     }
 
 }

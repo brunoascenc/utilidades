@@ -1,3 +1,8 @@
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara|Oswald|Paytone+One&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -7,6 +12,7 @@
 
 body {
   overflow-x: hidden;
+  font-family: 'Hind Vadodara', sans-serif;
 }
 
 .container {
@@ -38,7 +44,10 @@ header {
 }
 
 header h1 {
-  color: #eb2020;
+  color: #ecb056;
+  font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  text-transform: uppercase;
+  font-size: 1.7rem;
 }
 
 header nav {
@@ -49,7 +58,12 @@ header nav {
 
 header nav .cart {
   width: 10px;
-  margin-left: 8rem;
+  margin-left: 5rem;
+}
+
+header nav .cart i {
+  color: #f7f3f3;
+  font-size: 1.5rem;
 }
 
 header .nav-links {
@@ -62,6 +76,9 @@ header .nav-links {
 header .nav-links a {
   text-decoration: none;
   margin: 1rem;
+  font-weight: 100;
+  color: #eee5e5;
+  font-size: 1.3rem;
 }
 
 .home {
@@ -81,7 +98,7 @@ header .nav-links a {
       grid-row-start: 1;
   height: 100vh;
   z-index: -1;
-  background: url("https://wallpapercave.com/wp/wp3696170.jpg");
+  background: url("../assets/eminem1.jpg");
   background-size: cover;
   background-position: center;
 }
@@ -91,17 +108,79 @@ header .nav-links a {
       grid-column-start: 2;
   -ms-grid-row: 1;
       grid-row-start: 1;
-  color: red;
-  background-color: blue;
+  color: #f0e7e7;
+  background-color: #1d1c1c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
 }
 
-.home .landing-content h1 {
-  font-size: 4rem;
+.home .landing-content .title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  max-width: 100%;
+  z-index: 100;
+  padding: 85px;
+}
+
+.home .landing-content .title h1 {
+  font-size: 5.6rem;
+  font-family: 'Bebas Neue', cursive;
+  width: 450px;
+  text-align: start;
+  letter-spacing: 3px;
+  z-index: 100;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.home .landing-content .title p {
+  -webkit-transform: rotate(-90deg);
+          transform: rotate(-90deg);
+  font-size: 1rem;
+  font-weight: 100;
+  position: absolute;
+  top: 15rem;
+  left: 1rem;
+}
+
+.home .landing-content .see-more {
+  background-color: #e92b2b;
+  background-color: #e65f29;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 50%;
+  width: 75%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.home .landing-content .see-more a {
+  color: #f5efef;
+  font-family: 'Bebas Neue', cursive;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  text-decoration: none;
+  font-size: 2rem;
+  font-weight: 100;
+  width: 100%;
+  text-align: end;
+  padding: 1.5rem;
 }
 /*# sourceMappingURL=style.css.map */
