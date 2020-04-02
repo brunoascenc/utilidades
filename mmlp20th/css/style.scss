@@ -1,188 +1,294 @@
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap');
-@import url('https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara|Oswald|Paytone+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap");
+@import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara|Oswald|Paytone+One&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    overflow-x: hidden;
-    font-family: 'Hind Vadodara', sans-serif;
+body {
+  overflow-x: hidden;
+  font-family: "Hind Vadodara", sans-serif;
+  background-color: rgb(19, 18, 18);
 }
 
-.container{
-    max-width: 90%;
-    margin: 0 auto;
+.container {
+  max-width: 90%;
+  margin: 0 auto;
 }
 
 // Header
-header{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    grid-row-start: 1;
-    grid-row-end: 2;
-    grid-column-start: 1;
-    grid-column-end: 3;
-    // background-color: blue;
-    max-width: 90%;
-    height: 10vh;
-    margin: 0 auto;
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  grid-row-start: 1;
+  grid-row-end: 2;
+  grid-column-start: 1;
+  grid-column-end: 3;
+  // background-color: blue;
+  max-width: 90%;
+  height: 10vh;
+  margin: 0 auto;
+  z-index: 100;
+  width: 100%;
+
+  .bars {
+    cursor: pointer;
+    margin-left: 1.5rem;
     z-index: 100;
+    div {
+      width: 40px;
+      height: 3px;
+      background-color: rgb(243, 229, 107);
+      margin: 5px;
+      transition: all 0.3s ease;
+    }
+  }
+
+  // i {
+  //     color: rgb(236, 176, 86);
+  //     font-size: 2rem;
+  // }
+
+  h1 {
+    color: rgba(247, 233, 104, 0.911);
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+  }
+
+  nav {
+    display: flex;
+    z-index: 10000;
+    position: absolute;
+    right: 0%;
     width: 100%;
+    height: 100vh;
+    top: 0;
+    background-color: rgb(14, 13, 13);
+    display: flex;
+    // flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
 
-    h1{
-        color: rgb(236, 176, 86);
-        font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-        text-transform: uppercase;
-        font-size: 1.7rem;
+    .cart {
+      width: 10px;
+      margin-left: 5rem;
+      align-self: center;
+      i {
+        color: rgb(68, 68, 67);
+        font-size: 1.5rem;
+      }
+    }
+  }
+  .nav-links {
+    display: flex;
+    list-style: none;
+    flex-direction: column;
+    text-align: center;
+    a {
+      text-decoration: none;
+      margin: 1rem;
+      font-weight: 100;
+      color: rgb(104, 103, 103);
+      font-size: 2rem;
+      font-family: 'Saira Stencil One', cursive;
+      text-transform: uppercase;
     }
 
-    nav{
-        display: flex;
-        // justify-content: space-evenly;
-        // margin: 25px;
-        // width: 35%
-
-        .cart{
-            width: 10px;
-            margin-left: 5rem;
-            i{
-                color: rgb(247, 243, 243);
-                font-size: 1.5rem;
-            }
-        }
+    li {
+      margin: 2rem;
+      opacity: 0;
     }
-    .nav-links{
-        display: flex;
-        list-style: none;
-        a{
-            text-decoration: none;
-            margin: 1rem;
-            // font-family: 'Bebas Neue', cursive;
-            // font-family: 'Reenie Beanie', cursive;
-            font-weight: 100;
-            color: rgb(238, 229, 229);
-            font-size: 1.3rem;
-            // text-transform: uppercase;
-            // letter-spacing: 1px;
-            // font-family: 'Oswald', sans-serif;
-            // font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
-            // font-weight: bold;
-            // font-family: 'Paytone One', sans-serif;
-            // font-family: 'Vollkorn SC', serif;
-        }
+  }
 
+  //Hover effect
+  span {
+    position: relative;
+    // display: block;
+  }
 
-    }
+  .nav-item{
+    user-select: none;
+    // width: 100%;
+    // display: block;
+  }
+
+  .nav-item span:before{
+    width: 0;
+    color: rgb(233, 230, 227);
+    overflow: hidden;
+    position: absolute;
+    content: attr(data-text);
+    transition: all 0.6s cubic-bezier(0.84, 0, 0.08, 0.99);
+  }
+
+  .nav-item span:hover:before{
+    width: 100%;
+  }
+
+  .project-preview-wrapper{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: flex;
+    justify-content: center;
+  }
+
+  .project-preview{
+    position: fixed;
+    top: 12%;
+    left: 50%;
+    width: 0;
+    height: 40%;
+    background-position: center;
+  }
+  //Hover effect ends
+
+  .barsToggle .line1 {
+    transform: rotate(-45deg) translate(-5px, 6px);
+  }
+
+  .barsToggle .line2 {
+    opacity: 0;
+  }
+
+  .barsToggle .line3 {
+    transform: rotate(45deg) translate(-5px, -6px);
+  }
+
+  .nav-active {
+    transform: translateX(0%) !important;
+  }
 }
 
 //home
-.home{
-    display: grid;
+.home {
+  display: grid;
+  height: 100vh;
+  width: 100%;
+  grid-template-columns: 50% 1fr;
+
+  .landing-img {
+    background-color: black;
+    grid-column-start: 1;
+    // grid-column-end: 1;
+    grid-row-start: 1;
     height: 100vh;
-    width: 100%;
-    grid-template-columns: 50% 1fr;
+    // position: absolute;
+    // top: 0;
+    z-index: -1;
+    background: url("../assets/eminem1.jpg");
+    background-size: cover;
+    background-position: center;
+    // border-right: 1px rgba(243, 229, 107, 0.678) solid;
+    // border: solid 2px rgb(243, 229, 107);
+  }
 
-    .landing-img{
-        background-color: black;
-        grid-column-start: 1;
-        // grid-column-end: 1;
-        grid-row-start: 1;
-        height: 100vh;
-        // position: absolute;
-        // top: 0;
-        z-index: -1;
-        background: url('../assets/eminem1.jpg');
-        background-size: cover;
-        background-position: center;
-        // border-right: 1px rgb(230, 59, 59) solid;
+  .landing-content {
+    // align-self: flex-end;
+    grid-column-start: 2;
+    // grid-column-end: 3;
+    grid-row-start: 1;
+    color: rgb(240, 231, 231);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+
+    // .test{
+
+    //     max-width: 0%;
+    //     position: relative;
+    //     // background-color: blue;
+    // }
+
+    .title {
+      display: flex;
+      position: relative;
+      // background-color: blue;
+      max-width: 100%;
+      z-index: 1;
+      padding: 85px;
+      // background-color: rgb(243, 63, 63);
+      h1 {
+        font-size: 5.6rem;
+        font-family: "Bebas Neue", cursive;
+        color: rgb(243, 229, 107);
+        // max-width: 75%;
+        width: 450px;
+        text-align: start;
+        letter-spacing: 3px;
+        z-index: 100;
+        // position: relative;
+        align-self: center;
+      }
+
+      p {
+        // text-align: start;
+        transform: rotate(-90deg);
+        // justify-self: flex-end;
+        // width: 5%;
+        font-size: 1rem;
+        font-weight: 100;
+        position: absolute;
+        top: 15rem;
+        left: 1rem;
+        color: rgb(88, 87, 87);
+      }
     }
 
-    .landing-content{
-        // align-self: flex-end;
-        grid-column-start: 2;
-        // grid-column-end: 3;
-        grid-row-start: 1;
-        color: rgb(240, 231, 231);
-        background-color: rgb(29, 28, 28);
-        display: flex;
-        align-items: center;
-        flex-direction: column;
-        justify-content: center;
-        position: relative;
-
-        // .test{
-
-        //     max-width: 0%;
-        //     position: relative;
-        //     // background-color: blue;
-        // }
-
-
-        .title{
-            display: flex;
-            position: relative;
-            // background-color: blue;
-            max-width: 100%;
-            z-index: 100;
-            padding: 85px;
-            h1{
-                font-size: 5.6rem;
-                font-family: 'Bebas Neue', cursive;
-                // max-width: 75%;
-                width: 450px;
-                text-align: start;
-                letter-spacing: 3px;
-                z-index: 100;
-                // position: relative;
-                align-self: center;
-            }
-
-            p{
-                // text-align: start;
-                transform: rotate(-90deg);
-                // justify-self: flex-end;
-                // width: 5%;
-                font-size: 1rem;
-                font-weight: 100;
-                position: absolute;
-                top: 15rem;
-                left: 1rem;
-            }
-        }
-
-        .see-more{
-            background-color: rgb(233, 43, 43);
-            background-color: rgb(230, 95, 41);;
-            position: absolute;
-            bottom: 0;
-            right: 0;
-            height: 50%;
-            width: 75%;
-            display: flex;
-            // z-index: ;
-            // padding: 5rem;
-            a{
-                color: rgb(245, 239, 239);
-                font-family: 'Bebas Neue', cursive;
-                align-self: flex-end;
-                text-decoration: none;
-                font-size: 2rem;
-                font-weight: 100;
-                // background-color: blue;
-                width: 100%;
-                text-align: end;
-                padding: 1.5rem;
-                
-
-            }
-        }
-
+    .see-more {
+      background-color: rgb(233, 43, 43);
+      background-color: rgb(238, 122, 76);
+      //   background-color: rgb(22, 21, 21);
+      background: url("https://2dopeboyz.com/wp-content/uploads/2015/05/eminem-mmlp-main-500x430.jpg");
+      background-position: center;
+      //   background-size: cover;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      height: 50%;
+      width: 75%;
+      display: flex;
+      // z-index: ;
+      // padding: 5rem;
+      border: solid 2px rgb(243, 229, 107);
+      border-bottom: none;
+      border-right: none;
+      a {
+        color: rgb(245, 239, 239);
+        color: rgb(243, 229, 107);
+        font-family: "Bebas Neue", cursive;
+        align-self: flex-end;
+        text-decoration: none;
+        font-size: 2rem;
+        font-weight: 100;
+        // background-color: blue;
+        width: 100%;
+        text-align: end;
+        padding: 1.5rem;
+      }
     }
+  }
+}
 
+@keyframes linkFade {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0px);
+  }
 }

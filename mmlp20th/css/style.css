@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara|Oswald|Paytone+One&display=swap");
 * {
   margin: 0;
@@ -12,7 +13,8 @@
 
 body {
   overflow-x: hidden;
-  font-family: 'Hind Vadodara', sans-serif;
+  font-family: "Hind Vadodara", sans-serif;
+  background-color: #131212;
 }
 
 .container {
@@ -43,8 +45,23 @@ header {
   width: 100%;
 }
 
+header .bars {
+  cursor: pointer;
+  margin-left: 1.5rem;
+  z-index: 100;
+}
+
+header .bars div {
+  width: 40px;
+  height: 3px;
+  background-color: #f3e56b;
+  margin: 5px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
 header h1 {
-  color: #ecb056;
+  color: rgba(247, 233, 104, 0.911);
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
   text-transform: uppercase;
   font-size: 1.7rem;
@@ -54,15 +71,39 @@ header nav {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  z-index: 10000;
+  position: absolute;
+  right: 0%;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  background-color: #0e0d0d;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  z-index: 100;
+  -webkit-transform: translateX(100%);
+          transform: translateX(100%);
+  -webkit-transition: -webkit-transform 0.5s ease-in;
+  transition: -webkit-transform 0.5s ease-in;
+  transition: transform 0.5s ease-in;
+  transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
 }
 
 header nav .cart {
   width: 10px;
   margin-left: 5rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 header nav .cart i {
-  color: #f7f3f3;
+  color: #444443;
   font-size: 1.5rem;
 }
 
@@ -71,14 +112,91 @@ header .nav-links {
   display: -ms-flexbox;
   display: flex;
   list-style: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: center;
 }
 
 header .nav-links a {
   text-decoration: none;
   margin: 1rem;
   font-weight: 100;
-  color: #eee5e5;
-  font-size: 1.3rem;
+  color: #686767;
+  font-size: 2rem;
+  font-family: 'Saira Stencil One', cursive;
+  text-transform: uppercase;
+}
+
+header .nav-links li {
+  margin: 2rem;
+  opacity: 0;
+}
+
+header span {
+  position: relative;
+}
+
+header .nav-item {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}
+
+header .nav-item span:before {
+  width: 0;
+  color: #e9e6e3;
+  overflow: hidden;
+  position: absolute;
+  content: attr(data-text);
+  -webkit-transition: all 0.6s cubic-bezier(0.84, 0, 0.08, 0.99);
+  transition: all 0.6s cubic-bezier(0.84, 0, 0.08, 0.99);
+}
+
+header .nav-item span:hover:before {
+  width: 100%;
+}
+
+header .project-preview-wrapper {
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+header .project-preview {
+  position: fixed;
+  top: 12%;
+  left: 50%;
+  width: 0;
+  height: 40%;
+  background-position: center;
+}
+
+header .barsToggle .line1 {
+  -webkit-transform: rotate(-45deg) translate(-5px, 6px);
+          transform: rotate(-45deg) translate(-5px, 6px);
+}
+
+header .barsToggle .line2 {
+  opacity: 0;
+}
+
+header .barsToggle .line3 {
+  -webkit-transform: rotate(45deg) translate(-5px, -6px);
+          transform: rotate(45deg) translate(-5px, -6px);
+}
+
+header .nav-active {
+  -webkit-transform: translateX(0%) !important;
+          transform: translateX(0%) !important;
 }
 
 .home {
@@ -109,7 +227,6 @@ header .nav-links a {
   -ms-grid-row: 1;
       grid-row-start: 1;
   color: #f0e7e7;
-  background-color: #1d1c1c;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -132,13 +249,14 @@ header .nav-links a {
   display: flex;
   position: relative;
   max-width: 100%;
-  z-index: 100;
+  z-index: 1;
   padding: 85px;
 }
 
 .home .landing-content .title h1 {
   font-size: 5.6rem;
-  font-family: 'Bebas Neue', cursive;
+  font-family: "Bebas Neue", cursive;
+  color: #f3e56b;
   width: 450px;
   text-align: start;
   letter-spacing: 3px;
@@ -156,11 +274,14 @@ header .nav-links a {
   position: absolute;
   top: 15rem;
   left: 1rem;
+  color: #585757;
 }
 
 .home .landing-content .see-more {
   background-color: #e92b2b;
-  background-color: #e65f29;
+  background-color: #ee7a4c;
+  background: url("https://2dopeboyz.com/wp-content/uploads/2015/05/eminem-mmlp-main-500x430.jpg");
+  background-position: center;
   position: absolute;
   bottom: 0;
   right: 0;
@@ -169,11 +290,15 @@ header .nav-links a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  border: solid 2px #f3e56b;
+  border-bottom: none;
+  border-right: none;
 }
 
 .home .landing-content .see-more a {
   color: #f5efef;
-  font-family: 'Bebas Neue', cursive;
+  color: #f3e56b;
+  font-family: "Bebas Neue", cursive;
   -ms-flex-item-align: end;
       align-self: flex-end;
   text-decoration: none;
@@ -182,5 +307,31 @@ header .nav-links a {
   width: 100%;
   text-align: end;
   padding: 1.5rem;
+}
+
+@-webkit-keyframes linkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
+}
+
+@keyframes linkFade {
+  from {
+    opacity: 0;
+    -webkit-transform: translateX(50px);
+            transform: translateX(50px);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translateX(0px);
+            transform: translateX(0px);
+  }
 }
 /*# sourceMappingURL=style.css.map */
