@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Reenie+Beanie&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Vollkorn+SC&display=swap");
-@import url('https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap');
+@import url("https://fonts.googleapis.com/css?family=Saira+Stencil+One&display=swap");
 @import url("https://fonts.googleapis.com/css?family=Bebas+Neue|Hind+Vadodara|Oswald|Paytone+One&display=swap");
 * {
   margin: 0;
@@ -14,6 +14,7 @@ body {
   overflow-x: hidden;
   font-family: "Hind Vadodara", sans-serif;
   background-color: rgb(19, 18, 18);
+  color: rgba(240, 231, 231, 0.61);
 }
 
 .container {
@@ -75,6 +76,8 @@ header {
     // flex-direction: column;
     align-items: center;
     justify-content: center;
+    padding: 25rem;
+  
     z-index: 100;
     transform: translateX(100%);
     transition: transform 0.5s ease-in;
@@ -93,14 +96,14 @@ header {
     display: flex;
     list-style: none;
     flex-direction: column;
-    text-align: center;
+    text-align: start;
     a {
       text-decoration: none;
       margin: 1rem;
       font-weight: 100;
       color: rgb(104, 103, 103);
-      font-size: 2rem;
-      font-family: 'Saira Stencil One', cursive;
+      font-size: 2.3rem;
+      font-family: "Saira Stencil One", cursive;
       text-transform: uppercase;
     }
 
@@ -116,13 +119,13 @@ header {
     // display: block;
   }
 
-  .nav-item{
+  .nav-item {
     user-select: none;
-    // width: 100%;
+    width: 100%;
     // display: block;
   }
 
-  .nav-item span:before{
+  .nav-item span:before {
     width: 0;
     color: rgb(233, 230, 227);
     overflow: hidden;
@@ -131,11 +134,11 @@ header {
     transition: all 0.6s cubic-bezier(0.84, 0, 0.08, 0.99);
   }
 
-  .nav-item span:hover:before{
+  .nav-item span:hover:before {
     width: 100%;
   }
 
-  .project-preview-wrapper{
+  .project-preview-wrapper {
     width: 100%;
     height: 100vh;
     position: fixed;
@@ -143,13 +146,16 @@ header {
     justify-content: center;
   }
 
-  .project-preview{
+  .project-preview {
     position: fixed;
-    top: 12%;
+    top: 25%;
     left: 50%;
     width: 0;
     height: 40%;
     background-position: center;
+    // background: url('eminem3.jpg');
+    background-size: cover;
+    // overflow: hidden;
   }
   //Hover effect ends
 
@@ -280,6 +286,45 @@ header {
       }
     }
   }
+}
+
+//About
+.about{
+  margin-top: 10rem;
+  width: 1150px;
+  margin: 0 auto;
+
+  h1{
+    color: rgba(247, 233, 104, 0.911);
+    margin-bottom: 2rem;
+  }
+
+  .about-content{
+    // margin-top: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    img{
+      width: 500px;
+    }
+    .about-text{
+      display: flex;
+      flex-direction: column;
+      h3 {
+        align-self: center;
+        margin: 2rem;
+      }
+      p{
+        width: 100%;
+      }
+    }
+  }
+
+
+
+
+
 }
 
 @keyframes linkFade {
