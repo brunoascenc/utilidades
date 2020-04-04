@@ -324,7 +324,7 @@ header .nav-active {
   margin-bottom: 2rem;
 }
 
-.about .about-content {
+.about .about-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -340,11 +340,22 @@ header .nav-active {
           justify-content: center;
 }
 
-.about .about-content img {
+.about .about-wrapper img {
   width: 500px;
 }
 
-.about .about-content .about-text {
+.about .about-wrapper .about-content {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: left;
+}
+
+.about .about-wrapper .about-content div:nth-child(2) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -352,17 +363,75 @@ header .nav-active {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-.about .about-content .about-text h3 {
+.about .about-wrapper .about-content div:nth-child(2) h3 {
+  margin: 1rem;
+}
+
+.about .best-songs {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  margin-top: 4rem;
+}
+
+.about .best-songs img {
+  max-width: 450px;
+}
+
+.about .best-songs .song-img {
+  position: relative;
+}
+
+.about .best-songs .song-img h2 {
+  position: absolute;
+  top: 0;
+  right: 0;
+  color: #eeee61;
+  font-size: 3rem;
+  background-color: #131212;
+}
+
+.about .best-songs .song-txt, .about .best-songs .song-txt2, .about .best-songs .song-txt3 {
   -ms-flex-item-align: center;
       -ms-grid-row-align: center;
       align-self: center;
-  margin: 2rem;
+  position: relative;
 }
 
-.about .about-content .about-text p {
-  width: 100%;
+.about .best-songs .song-txt p, .about .best-songs .song-txt2 p, .about .best-songs .song-txt3 p {
+  font-size: 1.3rem;
+}
+
+.about .song-img2 {
+  position: relative;
+}
+
+.about .song-img2 h2 {
+  position: absolute;
+  top: 0;
+  right: 100px;
+  color: #eeee61;
+  font-size: 3rem;
+  background-color: #131212;
+}
+
+.about .song-img3 {
+  position: relative;
+}
+
+.about .song-img3 h2 {
+  position: absolute;
+  top: 0;
+  right: -5rem;
+  color: #eeee61;
+  font-size: 3rem;
+  background-color: #131212;
 }
 
 @-webkit-keyframes linkFade {
