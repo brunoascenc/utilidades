@@ -312,6 +312,7 @@ header {
       display: grid;
       // flex-direction: column;
       grid-template-columns:  1fr 1fr;
+      margin-bottom: 10rem;
       align-items: center;
       text-align: left;
       div:nth-child(2){
@@ -327,23 +328,35 @@ header {
   }
 
   .best-songs{
+    margin-top: 15rem;
     display: grid;
     grid-template-columns:  1fr 1fr;
+    grid-row-gap: 5rem;
+    grid-template-areas:
+         "boxT box"
+         "box2 box3"
+         "box5 box4";
     margin-top: 4rem;
     img{
-      max-width: 450px;
+      max-width: 420px;
     }
 
     .song-img{
       position: relative;
+      grid-area: box;
+      margin-left: 150px;
       h2{
         position: absolute;
-        top: 0;
-        right: 0;
-        color: rgb(238, 238, 97);
+        top: 10px;
+        left: -180px;
+        color: rgb(26, 26, 24);
         font-size: 3rem;
-        background-color: rgb(19, 18, 18);
+        background-color: rgb(228, 217, 59);
+        padding: 5px;
       }
+    }
+    .song-txt{
+      grid-area: boxT;
     }
 
     .song-txt,.song-txt2,.song-txt3{
@@ -357,34 +370,95 @@ header {
 
   .song-img2{
     position: relative;
+    grid-area: box2;
       h2{
         position: absolute;
-        top: 0;
+        top: 15px;
         right: 100px;
-        color: rgb(238, 238, 97);
+        color: rgb(26, 26, 24);
         font-size: 3rem;
-        background-color: rgb(19, 18, 18);
+        background-color: rgb(228, 217, 59);
+        padding: 5px;
       }
+  }
+
+
+
+  .song-txt2{
+    grid-area: box3;
   }
 
   .song-img3{
     position: relative;
+    grid-area: box4;
+    margin-left: 150px;
     h2{
       position: absolute;
-      top: 0;
-      right:-5rem;
-      color: rgb(238, 238, 97);
+      top: 10px;
+      left:-20rem;
+      color: rgb(26, 26, 24);
       font-size: 3rem;
-      background-color: rgb(19, 18, 18);
+      background-color: rgb(228, 217, 59);
+      padding: 5px;
+    }
+  }
+  .song-txt3{
+    grid-area: box5;
+    margin-top: 3rem;
+  }
+
+}
+
+//Footer
+footer{
+  background-color: rgb(228, 217, 59);
+  color: rgb(34, 33, 33);
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem;
+  margin-top: 10rem;
+  // justify-content: center;
+  h4{
+    text-transform: uppercase;
+    font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
+  }
+
+  .more-info{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ul{
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      a{
+        text-decoration: none;
+        color: rgb(26, 24, 24);
+      }
     }
   }
 
-
-
-
-
-
-
+  .socials{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    h4{
+      padding: 1rem;
+    }
+    ul{
+      display: flex;
+      list-style: none;
+      border-top: solid 2px black;
+      a{
+        text-decoration: none;
+        color: rgb(31, 29, 29);
+        margin: 1rem;
+        font-size: 1.8rem;
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 @keyframes linkFade {
