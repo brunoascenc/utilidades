@@ -1,6 +1,6 @@
 const navShow = () => {
   const burguer = document.querySelector(".bars");
-  const nav = document.querySelector("nav");
+  const nav = document.querySelector(".nav");
   const navLinks = document.querySelectorAll(".nav-links li");
 
   burguer.addEventListener("click", () => {

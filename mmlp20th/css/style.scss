@@ -11,6 +11,57 @@
   box-sizing: border-box;
 }
 
+$small-desktop: 1150px;
+$xs-desktop: 930px;
+$tablet: 875px;
+$xs-tablet: 705px;
+$mobile: 625px;
+$sm-mobile: 565px;
+$xs-mobile: 380px;
+
+//Media Queries
+@mixin small-desktop {
+  @media (max-width: #{$small-desktop}) {
+    @content;
+  }
+}
+
+@mixin xs-desktop {
+  @media (max-width: #{$xs-desktop}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin xs-tablet {
+  @media (max-width: #{$xs-tablet}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin sm-mobile {
+  @media (max-width: #{$sm-mobile}) {
+    @content;
+  }
+}
+
+@mixin xs-mobile {
+  @media (max-width: #{$xs-mobile}) {
+    @content;
+  }
+}
+
 body {
   overflow-x: hidden;
   font-family: "Hind Vadodara", sans-serif;
@@ -45,6 +96,7 @@ header {
   // width: 100%;
   font-family: $linkFont;
   text-transform: uppercase;
+  position: relative;
 
   .nav{
     ul{
@@ -67,6 +119,15 @@ header {
     background-color: $primaryYellow;
     padding: 10px;
     border-radius: 2rem;
+    @include tablet{
+      position: absolute;
+      right: 2rem;
+      top: 0.7rem;
+    }
+
+    @include xs-tablet{
+      right: 1rem;
+    }
   }
 
 
@@ -95,56 +156,69 @@ header {
     font-size: 1.7rem;
   }
 
-  nav {
-    display: flex;
-    z-index: 10000;
-    position: absolute;
-    right: 0%;
-    width: 100%;
-    height: 100vh;
-    top: 0;
-    background-color: rgb(14, 13, 13);
-    display: flex;
-    // flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    padding: 25rem;
-
-    z-index: 100;
-    transform: translateX(100%);
-    transition: transform 0.5s ease-in;
-
-    .cart {
-      width: 10px;
-      margin-left: 5rem;
-      align-self: center;
-      i {
-        color: rgb(68, 68, 67);
-        font-size: 1.5rem;
+  @include tablet{
+    .nav {
+      display: flex;
+      z-index: 10000;
+      position: absolute;
+      right: 0%;
+      width: 100%;
+      height: 100vh;
+      top: 0;
+      background-color: rgb(14, 13, 13);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 25rem;
+      z-index: 100;
+      transform: translateX(100%);
+      transition: transform 0.5s ease-in;
+  
+      .cart {
+        width: 10px;
+        margin-left: 5rem;
+        align-self: center;
+        i {
+          color: rgb(68, 68, 67);
+          font-size: 1.5rem;
+        }
       }
     }
+
   }
 
-  .nav-links {
-    display: flex;
-    list-style: none;
-    flex-direction: column;
-    text-align: start;
-    a {
-      text-decoration: none;
-      margin: 1rem;
-      font-weight: 100;
-      color: rgb(104, 103, 103);
-      font-size: 2.3rem;
-      font-family: "Saira Stencil One", cursive;
-      text-transform: uppercase;
+  
+
+
+  @include tablet{
+    .nav-links {
+      display: flex;
+      list-style: none;
+      flex-direction: column;
+      // text-align: start;
+      align-items: center;
+      a {
+        text-decoration: none;
+        margin: 1rem;
+        font-weight: 100;
+        color: rgb(104, 103, 103);
+        font-size: 2.3rem;
+        font-family: "Saira Stencil One", cursive;
+        text-transform: uppercase;
+        width: 100%;
+      }
+  
+      li {
+        margin: 2rem;
+        opacity: 0;
+      }
+      
+  
     }
 
-    li {
-      margin: 2rem;
-      opacity: 0;
-    }
   }
+  
 
   //Hover effect
   span {
@@ -191,6 +265,14 @@ header {
     // overflow: hidden;
   }
   //Hover effect ends
+
+  .bars {
+    display: none;
+    @include tablet {
+      display: block;
+      cursor: pointer;
+    }
+  }
 
   .barsToggle .line1 {
     transform: rotate(-45deg) translate(-5px, 6px);
