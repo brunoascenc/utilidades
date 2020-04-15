@@ -11,16 +11,25 @@
   box-sizing: border-box;
 }
 
+$padding: 1325px;
 $small-desktop: 1150px;
 $xs-desktop: 930px;
 $tablet: 875px;
-$sm-tablet: 875px;
-$xs-tablet: 705px;
+$sm-tablet: 800px;
+$xs-tablet: 745px;
 $mobile: 625px;
 $sm-mobile: 565px;
+// $xs-mobile: 430px;
 $xs-mobile: 380px;
+$xxs-mobile: 320px;
 
 //Media Queries
+@mixin padding {
+  @media (max-width: #{$padding}) {
+    @content;
+  }
+}
+
 @mixin small-desktop {
   @media (max-width: #{$small-desktop}) {
     @content;
@@ -69,6 +78,12 @@ $xs-mobile: 380px;
   }
 }
 
+@mixin xxs-mobile {
+  @media (max-width: #{$xs-mobile}) {
+    @content;
+  }
+}
+
 body {
   overflow-x: hidden;
   font-family: "Hind Vadodara", sans-serif;
@@ -93,7 +108,8 @@ $linkFont: "Saira Stencil One", cursive;
 // Header
 header {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
+  padding: 0rem 5rem 0 5rem;
   align-items: center;
   // background-color: blue;
   // max-width: 90%;
@@ -104,6 +120,9 @@ header {
   font-family: $linkFont;
   text-transform: uppercase;
   position: relative;
+  @include padding{
+    padding: 0rem 1rem 0 1rem;
+  }
 
   .nav{
     ul{
@@ -128,13 +147,16 @@ header {
     border-radius: 2rem;
     @include tablet{
       position: absolute;
-      right: 2rem;
-      top: 0.7rem;
+      right: 4.4rem;
+      top: 1.2rem;
+      display: none;
+      font-size: 0.7rem;
+      padding: 5px;
     }
 
-    @include xs-tablet{
-      right: 1rem;
-    }
+    // @include xs-tablet{
+    //   right: 5rem;
+    // }
   }
 
 
@@ -161,10 +183,13 @@ header {
     font-family: $titleFont;
     text-transform: uppercase;
     font-size: 1.7rem;
+    @include tablet{
+      font-size: 1.5rem;
+    }
   }
 
   @include tablet{
-    .nav {
+    nav {
       display: flex;
       z-index: 10000;
       position: absolute;
@@ -277,6 +302,7 @@ header {
     display: none;
     @include tablet {
       display: block;
+      // margin-right: 50px;
       cursor: pointer;
     }
   }
@@ -362,6 +388,11 @@ header {
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-areas: "home-content1 home-img home-content2";
       // margin-top: 25%;
+      @include xs-tablet{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
     }
     .home-img {
       position: relative;
@@ -373,6 +404,15 @@ header {
       img{
         @include xs-desktop{
           width: 380px;
+        }
+        @include sm-mobile{
+          width: 310px;
+        }
+        @include xs-mobile{
+          width: 265px;
+        }
+        @include xxs-mobile{
+          width: 230px;
         }
       }
       h1 {
@@ -390,6 +430,15 @@ header {
         @include xs-desktop{
           font-size: 1rem;
         }
+        @include sm-mobile{
+          font-size: 0.8rem;
+        }
+        @include xs-mobile{
+          font-size: 0.6rem;
+        }
+        @include xxs-mobile{
+          font-size: 0.5rem;
+        }
       }
       span{
         font-family: 'Covered By Your Grace', cursive;
@@ -398,6 +447,15 @@ header {
         letter-spacing: 3px;
         @include xs-desktop{
           font-size: 1.5rem;
+        }
+        @include sm-mobile{
+          font-size: 1.3rem;
+        }
+        @include xs-mobile{
+          font-size: 1rem;
+        }
+        @include xxs-mobile{
+          font-size: 0.8rem;
         }
       }
       h2 {
@@ -417,6 +475,21 @@ header {
           left: -8.3rem;
           top: 12rem;
         }
+        @include sm-mobile{
+          font-size: 1.2rem;
+          top: 9.9rem;
+          left: -6.6rem;
+        }
+        @include xs-mobile{
+          font-size: 1.1rem;
+          top: 8rem;
+          left: -6.1rem;
+        }
+        @include xxs-mobile{
+          font-size: 1rem;
+          top: 6.7rem;
+          left: -5.5rem;
+        }
       }
 
       p {
@@ -435,6 +508,19 @@ header {
           // left: -8.3rem;
           // top: 12rem;
         }
+        @include sm-mobile{
+          font-size: 1rem;
+          left: 0.9rem;
+          width: 100%;
+        }
+        @include xs-mobile{
+          font-size: 0.8rem;
+          bottom: -0.8rem;
+        }
+        @include xxs-mobile{
+          font-size: 0.7rem;
+        }
+
       }
     }
 
@@ -457,6 +543,13 @@ header {
           font-size: 1rem;
           // left: -8.3rem;
           // top: 12rem;
+        }
+        @include xs-tablet{
+          font-size: 0.9rem;
+          letter-spacing: 1px;
+          // left: -8.3rem;
+          // top: 12rem;
+          display: none;
         }
       }
       p:nth-child(2){
@@ -502,6 +595,7 @@ header {
         // margin-top: 5rem;
         margin-left: 1rem;
         background-color: $primaryYellow;
+
         padding: 1rem;
         border-radius: 1px;
         font-size: 1.3rem;
@@ -509,6 +603,28 @@ header {
         @include small-desktop{
           font-size: 1rem;
         }
+        @include sm-tablet{
+          font-size: 0.9rem;
+          margin-left: 0.3rem;
+        }
+        @include xs-tablet{
+          width: 380px;
+          margin-left: 0;
+          margin-top: -1rem;
+        }
+        @include sm-mobile{
+          width: 310px;
+        }
+        @include xs-mobile{
+          width: 265px;
+          font-size: 0.8rem;
+        }
+        @include xxs-mobile{
+          width: 230px;
+          font-size: 0.7rem;
+        }
+
+
       }
       p:nth-child(2){
         margin-top: 5rem;
@@ -538,6 +654,10 @@ header {
         }
         @include sm-tablet{
           font-size: 1.3rem;
+        }
+        @include xs-tablet{
+          margin-left: 0;
+          align-self: flex-end;
         }
 
 

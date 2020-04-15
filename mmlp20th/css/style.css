@@ -28,8 +28,10 @@ header {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 0rem 5rem 0 5rem;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -37,6 +39,12 @@ header {
   font-family: "Saira Stencil One", cursive;
   text-transform: uppercase;
   position: relative;
+}
+
+@media (max-width: 1325px) {
+  header {
+    padding: 0rem 1rem 0 1rem;
+  }
 }
 
 header .nav ul {
@@ -65,14 +73,11 @@ header i {
 @media (max-width: 875px) {
   header i {
     position: absolute;
-    right: 2rem;
-    top: 0.7rem;
-  }
-}
-
-@media (max-width: 705px) {
-  header i {
-    right: 1rem;
+    right: 4.4rem;
+    top: 1.2rem;
+    display: none;
+    font-size: 0.7rem;
+    padding: 5px;
   }
 }
 
@@ -99,7 +104,13 @@ header h1 {
 }
 
 @media (max-width: 875px) {
-  header .nav {
+  header h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 875px) {
+  header nav {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -130,14 +141,14 @@ header h1 {
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
   }
-  header .nav .cart {
+  header nav .cart {
     width: 10px;
     margin-left: 5rem;
     -ms-flex-item-align: center;
         -ms-grid-row-align: center;
         align-self: center;
   }
-  header .nav .cart i {
+  header nav .cart i {
     color: #444443;
     font-size: 1.5rem;
   }
@@ -288,6 +299,21 @@ header .nav-active {
       grid-template-areas: "home-content1 home-img home-content2";
 }
 
+@media (max-width: 745px) {
+  .home main .home-wrapper {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
 .home main .home-img {
   position: relative;
   -ms-grid-row: 1;
@@ -298,6 +324,24 @@ header .nav-active {
 @media (max-width: 930px) {
   .home main .home-img img {
     width: 380px;
+  }
+}
+
+@media (max-width: 565px) {
+  .home main .home-img img {
+    width: 310px;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img img {
+    width: 265px;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img img {
+    width: 230px;
   }
 }
 
@@ -321,6 +365,24 @@ header .nav-active {
   }
 }
 
+@media (max-width: 565px) {
+  .home main .home-img h1 {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img h1 {
+    font-size: 0.6rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img h1 {
+    font-size: 0.5rem;
+  }
+}
+
 .home main .home-img span {
   font-family: 'Covered By Your Grace', cursive;
   text-transform: uppercase;
@@ -331,6 +393,24 @@ header .nav-active {
 @media (max-width: 930px) {
   .home main .home-img span {
     font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 565px) {
+  .home main .home-img span {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img span {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img span {
+    font-size: 0.8rem;
   }
 }
 
@@ -355,6 +435,30 @@ header .nav-active {
   }
 }
 
+@media (max-width: 565px) {
+  .home main .home-img h2 {
+    font-size: 1.2rem;
+    top: 9.9rem;
+    left: -6.6rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img h2 {
+    font-size: 1.1rem;
+    top: 8rem;
+    left: -6.1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img h2 {
+    font-size: 1rem;
+    top: 6.7rem;
+    left: -5.5rem;
+  }
+}
+
 .home main .home-img p {
   position: absolute;
   bottom: -1.4rem;
@@ -370,6 +474,27 @@ header .nav-active {
     font-size: 1rem;
     bottom: -1.1rem;
     left: 2.5rem;
+  }
+}
+
+@media (max-width: 565px) {
+  .home main .home-img p {
+    font-size: 1rem;
+    left: 0.9rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img p {
+    font-size: 0.8rem;
+    bottom: -0.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-img p {
+    font-size: 0.7rem;
   }
 }
 
@@ -393,6 +518,14 @@ header .nav-active {
 @media (max-width: 930px) {
   .home main .home-content p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 745px) {
+  .home main .home-content p {
+    font-size: 0.9rem;
+    letter-spacing: 1px;
+    display: none;
   }
 }
 
@@ -449,6 +582,41 @@ header .nav-active {
   }
 }
 
+@media (max-width: 800px) {
+  .home main .home-content2 p {
+    font-size: 0.9rem;
+    margin-left: 0.3rem;
+  }
+}
+
+@media (max-width: 745px) {
+  .home main .home-content2 p {
+    width: 380px;
+    margin-left: 0;
+    margin-top: -1rem;
+  }
+}
+
+@media (max-width: 565px) {
+  .home main .home-content2 p {
+    width: 310px;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-content2 p {
+    width: 265px;
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .home main .home-content2 p {
+    width: 230px;
+    font-size: 0.7rem;
+  }
+}
+
 .home main .home-content2 p:nth-child(2) {
   margin-top: 5rem;
 }
@@ -477,9 +645,17 @@ header .nav-active {
   }
 }
 
-@media (max-width: 875px) {
+@media (max-width: 800px) {
   .home main .home-content2 a {
     font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 745px) {
+  .home main .home-content2 a {
+    margin-left: 0;
+    -ms-flex-item-align: end;
+        align-self: flex-end;
   }
 }
 
