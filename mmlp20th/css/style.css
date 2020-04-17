@@ -39,6 +39,9 @@ header {
   font-family: "Saira Stencil One", cursive;
   text-transform: uppercase;
   position: relative;
+  background-color: #141414;
+  -webkit-box-shadow: 2px 2px 20px 10px rgba(14, 13, 13, 0.507);
+          box-shadow: 2px 2px 20px 10px rgba(14, 13, 13, 0.507);
 }
 
 @media (max-width: 1325px) {
@@ -74,8 +77,8 @@ header i {
   header i {
     position: absolute;
     right: 4.4rem;
-    top: 1.2rem;
-    display: none;
+    top: 1.5rem;
+    display: none !important;
     font-size: 0.7rem;
     padding: 5px;
   }
@@ -682,7 +685,6 @@ header .nav-active {
   font-weight: 100;
   font-size: 1rem;
   text-transform: uppercase;
-  width: 350px;
   padding: 1rem;
   color: #4b4848;
   text-align: center;
@@ -733,7 +735,7 @@ header .nav-active {
   display: grid;
   -ms-grid-columns: 1fr 1fr;
       grid-template-columns: 1fr 1fr;
-  margin-top: 5rem;
+  margin-top: 2rem;
   margin-bottom: 10rem;
   text-align: left;
 }
@@ -753,10 +755,34 @@ header .nav-active {
   }
 }
 
+@media (max-width: 565px) {
+  .about .about-wrapper .about-content {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 745px) {
+  .about .about-wrapper .about-content .mmlp-cover {
+    padding: 1rem;
+  }
+}
+
 .about .about-wrapper .about-content .mmlp-txt {
   margin-top: 5rem;
   position: relative;
   height: 400px;
+}
+
+@media (max-width: 565px) {
+  .about .about-wrapper .about-content .mmlp-txt {
+    padding: 1rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .about .about-wrapper .about-content .mmlp-txt {
+    padding: 0.6rem;
+  }
 }
 
 @media (max-width: 930px) {
@@ -768,6 +794,19 @@ header .nav-active {
 @media (max-width: 1150px) {
   .about .about-wrapper .about-content .mmlp-txt p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 745px) {
+  .about .about-wrapper .about-content .mmlp-txt p {
+    margin-top: 0.5rem;
+    width: 100%;
+  }
+}
+
+@media (max-width: 565px) {
+  .about .about-wrapper .about-content .mmlp-txt p {
+    font-size: 0.8rem;
   }
 }
 
@@ -803,6 +842,15 @@ header .nav-active {
   }
 }
 
+@media (max-width: 565px) {
+  .about .about-wrapper .about-content .mmlp-txt h3 {
+    width: 100%;
+    text-align: center;
+    font-size: 0.8rem;
+    margin: 0 auto;
+  }
+}
+
 .about .about-wrapper .about-content .mmlp-txt span {
   font-family: 'Covered By Your Grace', cursive;
   text-transform: uppercase;
@@ -814,6 +862,18 @@ header .nav-active {
 @media (max-width: 1150px) {
   .about .about-wrapper .about-content .mmlp-txt span {
     font-size: 2rem;
+  }
+}
+
+@media (max-width: 565px) {
+  .about .about-wrapper .about-content .mmlp-txt span {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .about .about-wrapper .about-content .mmlp-txt span {
+    font-size: 1.2rem;
   }
 }
 
@@ -972,6 +1032,13 @@ header .nav-active {
   }
 }
 
+@media (max-width: 745px) {
+  .about .best-songs {
+    padding: 0.7rem;
+    margin-top: 1rem;
+  }
+}
+
 .about .best-songs h2 {
   margin: 1rem;
   background-color: #e7e543;
@@ -983,6 +1050,14 @@ header .nav-active {
   letter-spacing: 2px;
   border-radius: 2px;
   font-family: "Covered By Your Grace", cursive;
+}
+
+@media (max-width: 565px) {
+  .about .best-songs h2 {
+    width: 85%;
+    text-align: center;
+    font-size: 1.2rem;
+  }
 }
 
 .about .best-songs img {
@@ -1051,6 +1126,13 @@ header .nav-active {
   }
 }
 
+@media (max-width: 565px) {
+  .about .best-songs .song-txt {
+    margin-bottom: 5rem;
+    padding: 0;
+  }
+}
+
 .about .best-songs .song-txt p:nth-child(1) {
   position: absolute;
   top: -3rem;
@@ -1073,6 +1155,12 @@ header .nav-active {
 @media (max-width: 875px) {
   .about .best-songs .song-txt p:nth-child(1) {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 745px) {
+  .about .best-songs .song-txt p:nth-child(1) {
+    display: none;
   }
 }
 
@@ -1101,6 +1189,12 @@ header .nav-active {
   }
 }
 
+@media (max-width: 745px) {
+  .about .best-songs .song-txt p:nth-child(2) {
+    display: none;
+  }
+}
+
 .about .best-songs .song-txt p:nth-child(3) {
   position: absolute;
   top: 3rem;
@@ -1124,6 +1218,12 @@ header .nav-active {
 @media (max-width: 875px) {
   .about .best-songs .song-txt p:nth-child(3) {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 745px) {
+  .about .best-songs .song-txt p:nth-child(3) {
+    display: none;
   }
 }
 
@@ -1164,6 +1264,14 @@ header .nav-active {
   .about .best-songs .song-txt2 p,
   .about .best-songs .song-txt3 p {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 565px) {
+  .about .best-songs .song-txt p,
+  .about .best-songs .song-txt2 p,
+  .about .best-songs .song-txt3 p {
+    font-size: 0.8rem;
   }
 }
 
@@ -1230,6 +1338,12 @@ header .nav-active {
   }
 }
 
+@media (max-width: 565px) {
+  .about .song-txt2 {
+    margin-bottom: 5rem;
+  }
+}
+
 .about .song-txt2 p:nth-child(1) {
   position: absolute;
   top: -4rem;
@@ -1255,6 +1369,12 @@ header .nav-active {
   }
 }
 
+@media (max-width: 745px) {
+  .about .song-txt2 p:nth-child(1) {
+    display: none;
+  }
+}
+
 .about .song-txt2 p:nth-child(3) {
   position: absolute;
   bottom: -5rem;
@@ -1270,6 +1390,12 @@ header .nav-active {
 @media (max-width: 875px) {
   .about .song-txt2 p:nth-child(3) {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 745px) {
+  .about .song-txt2 p:nth-child(3) {
+    display: none;
   }
 }
 
@@ -1291,6 +1417,12 @@ header .nav-active {
   }
 }
 
+@media (max-width: 745px) {
+  .about .song-txt2 p:nth-child(2) {
+    display: none;
+  }
+}
+
 .about .song-img3 {
   position: relative;
   -ms-grid-row: 3;
@@ -1302,6 +1434,13 @@ header .nav-active {
 @media (max-width: 1150px) {
   .about .song-img3 {
     margin-left: 30px;
+  }
+}
+
+@media (max-width: 745px) {
+  .about .song-img3 {
+    margin-left: 0px;
+    margin-bottom: -2rem;
   }
 }
 
@@ -1352,6 +1491,12 @@ header .nav-active {
   }
 }
 
+@media (max-width: 745px) {
+  .about .song-txt3 p:nth-child(1) {
+    display: none;
+  }
+}
+
 .about .song-txt3 p:nth-child(2) {
   position: absolute;
   bottom: -6rem;
@@ -1370,6 +1515,12 @@ header .nav-active {
   }
 }
 
+@media (max-width: 745px) {
+  .about .song-txt3 p:nth-child(2) {
+    display: none;
+  }
+}
+
 .about .song-txt3 p:nth-child(3) {
   position: absolute;
   top: 12rem;
@@ -1385,6 +1536,13 @@ header .nav-active {
 @media (max-width: 875px) {
   .about .song-txt3 p:nth-child(3) {
     font-size: 1rem;
+    left: -10rem;
+  }
+}
+
+@media (max-width: 745px) {
+  .about .song-txt3 p:nth-child(3) {
+    display: none;
   }
 }
 
@@ -1405,6 +1563,15 @@ footer h4 {
   font-family: "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 
+@media (max-width: 565px) {
+  footer {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 footer .more-info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1416,6 +1583,12 @@ footer .more-info {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media (max-width: 565px) {
+  footer .more-info {
+    margin-bottom: 1rem;
+  }
 }
 
 footer .more-info ul {
