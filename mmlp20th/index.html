@@ -14,7 +14,10 @@
 
     <title>mmlp</title>
   </head>
-  <body>
+  <body data-barba="wrapper">
+    <div class="load-container">
+      <div class="loading-screen"></div>
+    </div>
     <header>
       <h1>EminƎm</h1>   
         <div class="nav">  
@@ -46,10 +49,10 @@
       </header>
 
   
-        <section class="home">
+        <section data-barba="container" data-barba-namespace = "home-section" class="home">
             
               <main>
-                <div class="home-wrapper">
+                <div class="home-wrapper fade-up">
                   <div class="home-img">
                     <img src="assets/mmlp3.jpg">
                     <h1>The <span>Marshall Mathers</span> LP</h1>
@@ -82,6 +85,9 @@
 
         </section>
 
+        <!-- <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script> -->
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <!-- <div class="container"></div> -->
     <!--Greensock-->
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.6/gsap.min.js"></script> -->

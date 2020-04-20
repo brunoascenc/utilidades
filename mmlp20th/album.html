@@ -12,8 +12,8 @@
     <link rel="stylesheet" href="./css/style.css" />
     <title>MMLP</title>
   </head>
-  <body>
-    <div class="containe">
+  <body data-barba="wrapper">
+    
       <header>
         <h1>EminƎm</h1>   
           <div class="nav">  
@@ -44,8 +44,9 @@
           </div>
         </header>
 
-      <main class="about">
-        <div class="about-wrapper">
+      <div data-barba="container" data-barba-namespace = "album-section">
+      <main  class="about">
+        <div class="about-wrapper fade-up">
           <h1>About the album</h1>
 
           <div class="about-content">
@@ -142,30 +143,34 @@
         
         </div>
       </main>
+
+      <footer>
+        <div class="more-info">
+          <h4>Know More</h4>
+          <ul>
+            <li><a href="#">Charts</a></li>
+            <li><a href="#">Shop</a></li>
+            <li><a href="#">Producers</a></li>
+            <li><a href="#">Features</a></li>
+          </ul>
+        </div>
+  
+        <div class="socials">
+          <h4>Follow EminƎm</h4>
+          <ul>
+            <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
+            <li><a href="#"><i class="fab fa-twitter"></i></a></li>
+            <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+            <li><a href="#"><i class="fab fa-youtube"></i></a></li>
+          </ul>
+        </div>
+      </footer> 
     </div>
 
-    <footer>
-      <div class="more-info">
-        <h4>Know More</h4>
-        <ul>
-          <li><a href="#">Charts</a></li>
-          <li><a href="#">Shop</a></li>
-          <li><a href="#">Producers</a></li>
-          <li><a href="#">Features</a></li>
-        </ul>
-      </div>
 
-      <div class="socials">
-        <h4>Follow EminƎm</h4>
-        <ul>
-          <li><a href="#"><i class="fab fa-facebook-f"></i></a></li>
-          <li><a href="#"><i class="fab fa-twitter"></i></a></li>
-          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-          <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-        </ul>
-      </div>
-    </footer>
-
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+    <script src="https://unpkg.com/@barba/core"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.2.4/gsap.min.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>
