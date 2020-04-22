@@ -1,0 +1,133 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Noto+Sans+KR:900');
+
+$titleFont: 'Noto Sans KR', sans-serif;
+$borderStyle: solid 1px #e0dfdf;
+$item-border: solid 1px rgb(195, 193, 193);
+$dark : black;
+$mainBlue: rgb(13, 156, 212);
+$hoverBlue: rgb(79, 200, 248);
+$max-slides: 5;
+$prefix: true;
+$responsive: true;
+$breakpoint-small: 500px;
+$fade-time: 1;
+$prev-next-fontfamily: sans-serif;
+$prev-next-icon-size: 3vw;
+$prev-next-icon-color: rgba(255,255,255,0.5);
+$prev-next-bg: rgba(255,255,255,0);
+$prev-next-bg-hover: rgba(255,255,255,0.1);
+$prev-icon: '❮';
+$next-icon:	'❯';
+$autohide-next-prev: true;
+$quick-nav-color: rgba(255,255,255,0.8);
+$quick-nav-active-color: $mainBlue;
+$fade-color: #fff;
+$autoplay: true;
+$autoplay-duration: 3;
+
+@mixin flexCenter {
+    display: flex;
+    justify-content: center;
+}
+
+@mixin btnReset {
+    cursor: pointer;
+    background-color: rgb(13, 156, 212);
+    border: none;
+    outline: none;
+    color: #f8f8f8;
+}
+
+@mixin linksReset{
+    list-style: none;
+    text-decoration: none;
+    color: rgb(59, 59, 59);
+}
+
+@mixin columnCenter {
+    display: flex;
+    // justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+@mixin inputReset {
+    outline: none;
+    border: none;
+    padding: 5px;
+}
+
+@mixin aReset {
+    background: none !important;
+    padding: 16px 0 !important;
+    width: 120px !important;
+    margin-top: 0 !important;
+    margin-left: 0 !important;
+}
+
+@mixin dots {
+	height: 25px;
+	width: 25px;
+	border-radius: 50px;
+	background: rgb(240, 240, 243);
+	cursor: pointer;
+	border: solid 1px rgb(175, 170, 170);
+}
+
+
+
+
+@mixin fadeshow-transition($value...) {
+	@if length($value) < 1 {
+		$value: all 150ms linear;
+	}
+	@if $prefix == true {
+		-webkit-transition: $value;
+	}
+				  transition: $value;
+}
+
+@mixin fadeshow-transform($value...) {
+	@if length($value) < 1 {
+		$value: all 150ms linear;
+	}
+	@if $prefix == true {
+		-webkit-transform: $value;
+			 -ms-transform: $value;
+	}
+				  transform: $value;
+}
+
+@mixin fadeshow-animation($value...) {
+	@if $prefix == true {
+		-webkit-animation: $value;
+	}
+				  animation: $value;
+}
+
+@mixin fadeshow-animation-delay($value) {
+	@if $prefix == true {
+		-webkit-animation-delay: $value;
+	}
+				  animation-delay: $value;
+}
+
+@mixin fadeshow-unselectable() {
+	@if $prefix == true {
+		-webkit-user-select: none;
+		   -moz-user-select: none;
+			 -ms-user-select: none;
+	}
+				  user-select: none;
+}
+
+/* Mixins to handle Quick Navigation Button states */
+
+@mixin quickNavBtnActive() {
+	background-color: $quick-nav-active-color;
+}
+
+@mixin quickNavBtnInactive() {
+	background-color: $quick-nav-color;
+}

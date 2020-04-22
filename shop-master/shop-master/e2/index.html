@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" type = "text/css" href="styles/style.css">
+    <link rel="stylesheet" type = "text/css" href="styles/responsive.css">
+    <title>Blues</title>
+</head>
+
+<body>
+    <header>
+        <div class="home-nav home-content topo-nav">
+            <div class="logo">
+                <h1>Blues</h1>
+            </div>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="show-menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="navbar">
+                <nav id="main">
+                    <li><a class="voltarHome" id="home" href="index.html" data-name="home">Home</a></li>
+                    <li><a class="voltarHome" id="apple" href="apple.html" data-name="apple">Apple</a></li>
+                    <li><a class="voltarHome" id="motorola" href="motorola.html" data-name="motorola">Motorola</a></li>
+                    <li><a class="voltarHome" id="asus" href="asus.html" data-name="asus">Asus</a></li>
+                    <li><a class="voltarHome" id="samsung" href="samsung.html" data-name="samsung">Samsung</a></li>
+                    <li><a id="contato" href="contato.html" data-name="contato">Contato</a></li>
+                    <div class="searchNav">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="search" id="search" placeholder="Pesquise um produto...">
+                    </div>
+                    <div>
+
+                        <div class="login-link">
+                            <i class="fas fa-user"></i>
+                            <li><a data-modal-target="#modal" href="#">Login</a></li>
+                        </div>
+
+                        <label for="check" class="hide-menu-btn">
+                            <i class="fas fa-times"></i>
+                        </label>
+                </nav>
+            </div>
+
+            <div class="login">
+                <div class="modal" id=modal>
+                    <button data-close-button class="close-button">&times;</button>
+                    <div class="modal-header">
+                        <div class="title"><a href="#">Login</a></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="login-form">
+                            <input type="email" name="email" id="emailInput" placeholder="Seu email..."><br>
+                            <input type="password" placeholder="Sua senha...">
+                            <button>Entrar</button>
+                            <a id="registrarLink" href="#">Quero me registrar</a>
+                            <a id="recuperarLink" href="#">Esqueci minha senha</a>
+                        </div>
+
+                        <div class="registrar-form" hidden>
+                            <form>
+                                <input type="text" placeholder="Digite seu nome">
+                                <input type="email" name="email" id="emailRegistrar" placeholder="Digite seu email"><br>
+                                <input type="password" placeholder="Digite sua senha">
+                                <input type="password" placeholder="Digite sua senha novamente">
+                                <button>Regitrar</button><br>
+                                <a class="voltarLink" href="#">Voltar</a>
+                            </form>
+                        </div>
+
+                        <div class="recuperar-senha" hidden>
+                            <p>Vamos enviar um email para que você possa recuperar sua senha!</p>
+                            <input type="email" name="email" id="emailRecuperar" placeholder="Digite seu email..."><br>
+                            <button>Enviar</button><br>
+                            <a class="voltarLink" href="#">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="overlay">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="banner">
+
+        <div data-am-fadeshow="next-prev-navigation autoplay">
+
+            <!-- Radio -->
+            <input type="radio" name="css-fadeshow" id="slide-1" />
+            <input type="radio" name="css-fadeshow" id="slide-2" />
+            <input type="radio" name="css-fadeshow" id="slide-3" />
+
+            <!-- Slides -->
+            <div class="fs-slides">
+                <div class="fs-slide"
+                    style="background-image: url(https://imagens.trocafone.com/images/banners/20190715143338-Brazil-1920x320_s8.jpg);">
+                </div>
+                <div class="fs-slide" 
+                    style="background-image: url(https://imagens.trocafone.com/images/banners/20190723182204-Brazil-1920x320_s9.jpg); max-height: 100%;">
+                </div>
+                <div class="fs-slide"
+                    style="background-image: url(https://imagens.trocafone.com/images/banners/20190723181518-Brazil-1920x320_s7.jpg);">
+                </div>
+            </div>
+
+            <!-- Quick Navigation -->
+            <div class="fs-quick-nav">
+                <label class="fs-quick-btn" for="slide-1"></label>
+                <label class="fs-quick-btn" for="slide-2"></label>
+                <label class="fs-quick-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Prev Navigation -->
+            <div class="fs-prev-nav">
+                <label class="fs-prev-btn" for="slide-1"></label>
+                <label class="fs-prev-btn" for="slide-2"></label>
+                <label class="fs-prev-btn" for="slide-3"></label>
+            </div>
+
+            <!-- Next Navigation -->
+            <div class="fs-next-nav">
+                <label class="fs-next-btn" for="slide-1"></label>
+                <label class="fs-next-btn" for="slide-2"></label>
+                <label class="fs-next-btn" for="slide-3"></label>
+            </div>
+        </div>
+    </div>
+
+    <main class="home-content container">
+        <input type="checkbox" id="check-menu">
+        <label for="check-menu" class="show-menu-item">
+            <a>Filtrar</a>
+            <i class="fas fa-chevron-right"></i>
+        </label>
+        <div class="menu">
+            <div class="menu-items">
+                <label for="check-menu" class="hide-menu-item">
+                    <i class="fas fa-chevron-left"></i>
+                    <a>Voltar</a>
+                </label>
+                <ul>
+                    <h3>Apple</h3>
+                    <li><a class="iphoneX" href="#">Iphone X</a></li>
+                    <li><a class="iphone7" href="#">Iphone 7 Plus</a></li>
+                    <li><a class="iphoneSE" href="#">Iphone SE</a></li>
+                </ul>
+
+                <ul>
+                    <h3>Motorola</h3>
+                    <li><a class="motoMaxx" href="#">Moto Maxx</a></li>
+                    <li><a class="motoG5" href="#">Moto G5</a></li>
+                    <li><a class="motoXstyle" href="#">Moto X Style</a></li>
+                </ul>
+
+                <ul>
+                    <h3>Samsung</h3>
+                    <li><a class="galaxys8" href="#">Galaxy S8</a></li>
+                    <li><a class="galaxys7" href="#">Galaxy S7</a></li>
+                    <li><a class="galaxys6" href="#">Galaxy S6</a></li>
+                </ul>
+
+                <ul>
+                    <h3>Asus</h3>
+                    <li><a class="zenfone4" href="#">Zenfone 4</a></li>
+                    <li><a class="zenfone4pro" href="#">Zenfone 4 Pro</a></li>
+                    <li><a class="zenfone3" href="#">Zenfone 3</a></li>
+                </ul>
+
+                <ul class="ordenar-menu">
+                    <h3>Pesquisar:</h3>
+                    <input type="search" placeholder="pesquisar...">
+                    <i class="fas fa-search"></i>
+                </ul>
+
+                <h3>Cor:</h3>
+                <ul class="cores-opcoes">
+                    <li>
+                        <div class="branco" cor="Branco"></div>
+                    </li>
+                    <li>
+                        <div class="dourado" cor="Dourado"></div>
+                    </li>
+                    <li>
+                        <div class="preto" cor="Preto"></div>
+                    </li>
+                    <li>
+                        <div class="azul" cor="Azul"></div>
+                    </li>
+                    <li>
+                        <div class="cinza" cor="Cinza"></div>
+                    </li>
+                    <li>
+                        <div class="vermelho" cor="Vermelha"></div>
+                    </li>
+                    <li>
+                        <div class="verde" cor="Verde"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div id="destaques">
+            <div class="organizar">
+                <div class="item">
+                    <button class="test23"></button>
+                </div>
+            </div>
+        </div>
+    </main>
+    <section id="finalizarCompra" hidden>
+    </section>
+
+
+    <footer>
+        <div class="info">
+            <h4>Blues</h4>
+            <li><a href="">Sobre a Blues</a></li>
+            <li><a href="">Avaliações</a></li>
+            <li><a href="">Certificados</a></li>
+            <li><a href="">Políticas de Privacidade</a></li>
+            <li><a href="">Lojas Logo</a></li>
+        </div>
+
+        <div class="info">
+            <h4>Dúvidas frequentes</h4>
+            <li><a href="">Troca</a></li>
+            <li><a href="">Devolução</a></li>
+            <li><a href="">Garantia</a></li>
+            <li><a href="">Produto com defeito</a></li>
+            <li><a href="">Prazo de entrega</a></li>
+        </div>
+
+        <div class="info">
+            <h4>Parceiros</h4>
+            <li><a href="">Apple</a></li>
+            <li><a href="">Samsung</a></li>
+            <li><a href="">Motorola</a></li>
+            <li><a href="">Asus</a></li>
+        </div>
+
+        <div class="newsletter">
+            <div class="socials">
+                <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-youtube-square fa-2x"></i></a>
+            </div>
+            <div class="email">
+                <h5>Cadastre-se</h5>
+                <input type="email" placeholder="Seu email...">
+                <button>Enviar</button>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="text-center">Copyright &copy; 2019 | Blues</p>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+    <script src="./js/content.js"></script>
+</body>
+
+</html>

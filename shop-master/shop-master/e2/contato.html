@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles//style.css">
+    <link rel="stylesheet" type = "text/css" href="styles/responsive.css">
+    <title>Blues</title>
+</head>
+
+<body>
+    <header>
+        <div class=" home-content topo-nav">
+            <div class="logo">
+                <h1>Blues</h1>
+            </div>
+
+            <input type="checkbox" id="check">
+            <label for="check" class="show-menu-btn">
+                <i class="fas fa-bars"></i>
+            </label>
+            <div class="navbar">
+                <nav id="main">
+                    <li><a class="voltarHome" id="home" href="index.html" data-name="home">Home</a></li>
+                    <li><a class="voltarHome" id="apple" href="apple.html" data-name="apple">Apple</a></li>
+                    <li><a class="voltarHome" id="motorola" href="motorola.html" data-name="motorola">Motorola</a></li>
+                    <li><a class="voltarHome" id="asus" href="asus.html" data-name="asus">Asus</a></li>
+                    <li><a class="voltarHome" id="samsung" href="samsung.html" data-name="samsung">Samsung</a></li>
+                    <li><a id="contato" href="contato.html" data-name="contato">Contato</a></li>
+                    <div class="searchNav">
+                        <i class="fas fa-search"></i>
+                        <input type="text" name="search" id="search" placeholder="Pesquise um produto...">
+                    </div>
+                    <div>
+
+                        <div class="login-link">
+                            <i class="fas fa-user"></i>
+                            <li><a data-modal-target="#modal" href="#">Login</a></li>
+                        </div>
+
+                        <label for="check" class="hide-menu-btn">
+                            <i class="fas fa-times"></i>
+                        </label>
+                </nav>
+            </div>
+
+            <div class="login">
+                <div class="modal" id=modal>
+                    <button data-close-button class="close-button">&times;</button>
+                    <div class="modal-header">
+                        <div class="title"><a href="#">Login</a></div>
+                    </div>
+                    <div class="modal-body">
+                        <div class="login-form">
+                            <input type="email" name="email" id="emailInput" placeholder="Seu email..."><br>
+                            <input type="password" placeholder="Sua senha...">
+                            <button>Entrar</button>
+                            <a id="registrarLink" href="#">Quero me registrar</a>
+                            <a id="recuperarLink" href="#">Esqueci minha senha</a>
+                        </div>
+
+                        <div class="registrar-form" hidden>
+                            <form>
+                                <input type="text" placeholder="Digite seu nome">
+                                <input type="email" name="email" id="emailRegistrar" placeholder="Digite seu email"><br>
+                                <input type="password" placeholder="Digite sua senha">
+                                <input type="password" placeholder="Digite sua senha novamente">
+                                <button>Regitrar</button><br>
+                                <a class="voltarLink" href="#">Voltar</a>
+                            </form>
+                        </div>
+
+                        <div class="recuperar-senha" hidden>
+                            <p>Vamos enviar um email para que você possa recuperar sua senha!</p>
+                            <input type="email" name="email" id="emailRecuperar" placeholder="Digite seu email..."><br>
+                            <button>Enviar</button><br>
+                            <a class="voltarLink" href="#">Voltar</a>
+                        </div>
+                    </div>
+                </div>
+                <div id="overlay">
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <section id="contato">
+        <div class="contato-title">
+            <h1>Fale conosco</h1>
+        </div>
+
+        <div class="container-contato">
+            <div class="contato-form">
+                <div class="duvidas-form">
+                    <h2>Contato</h2>
+                    <!-- <form action=""> -->
+                    <input type="text" placeholder="Seu nome">
+                    <input type="email" placeholder="Seu email">
+                    <select name="duvidas">
+                        <option value="valor1" selected>Selecione uma dúvida</option>
+                        <option value="devo">Devoluções</option>
+                        <option value="troca">Troca</option>
+                        <option value="garantia">Garantia</option>
+                        <option value="defeito">Produto com defeito</option>
+                        <textarea id="story" name="story" rows="5" cols="33">
+                        </textarea>
+                        <button>Enviar</button>
+                    </select>
+                    <!-- </form> -->
+                </div>
+
+                <div class="sobre">
+                    <h2>Quem somos?</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos beatae animi in quas reprehenderit
+                        ea
+                        earum, nemo vitae illo iusto? Vel, omnis neque. Itaque eius, nemo enim tenetur ad perferendis
+                        culpa
+                        veritatis fugiat iusto porro non cupiditate accusantium soluta cum. Provident animi totam
+                        voluptatibus saepe ut obcaecati, asperiores aliquam tenetur, repellat nesciunt sint tempora
+                        nostrum!
+                        Laborum sit reiciendis tempora fugiat veniam in explicabo quod cumque facere ipsa, autem tenetur
+                        quasi rerum vero, beatae, soluta nostrum sed temporibus expedita? Doloribus, dignissimos.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="pagamento">
+            <div class="pagamento-icons">
+                <img src="./images/paypal.png">
+
+                <img src="./images/master.png">
+
+                <img src="./images/visa.png">
+
+                <img src="./images/american.png">
+
+                <img src="./images/diners.png">
+
+                <img src="./images/boleto.png">
+
+                <img src="./images/amazon.png">
+            </div>
+    </section>
+
+    <footer>
+        <div class="info">
+            <h4>Blues</h4>
+            <li><a href="">Sobre a Blues</a></li>
+            <li><a href="">Avaliações</a></li>
+            <li><a href="">Certificados</a></li>
+            <li><a href="">Políticas de Privacidade</a></li>
+            <li><a href="">Lojas Logo</a></li>
+        </div>
+
+        <div class="info">
+            <h4>Dúvidas frequentes</h4>
+            <li><a href="">Troca</a></li>
+            <li><a href="">Devolução</a></li>
+            <li><a href="">Garantia</a></li>
+            <li><a href="">Produto com defeito</a></li>
+            <li><a href="">Prazo de entrega</a></li>
+        </div>
+
+        <div class="info">
+            <h4>Parceiros</h4>
+            <li><a href="">Apple</a></li>
+            <li><a href="">Samsung</a></li>
+            <li><a href="">Motorola</a></li>
+            <li><a href="">Asus</a></li>
+        </div>
+
+        <div class="newsletter">
+            <div class="socials">
+                <a href="#"><i class="fab fa-twitter-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-facebook-square fa-2x"></i></a>
+                <a href="#"><i class="fab fa-youtube-square fa-2x"></i></a>
+            </div>
+            <div class="email">
+                <h5>Cadastre-se</h5>
+                <input type="email" placeholder="Seu email...">
+                <button>Enviar</button>
+            </div>
+        </div>
+        <div class="copyright">
+            <p class="text-center">Copyright &copy; 2019 | Blues</p>
+        </div>
+    </footer>
+    <script src="./js/app.js"></script>
+</body>
+
+</html>

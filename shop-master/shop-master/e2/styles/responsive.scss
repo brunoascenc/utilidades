@@ -1,0 +1,536 @@
+@import './variables';
+// /*****************/
+// /* MEDIA QUERIES */
+// /*****************/
+@media screen and (max-width: 1275px) {
+  #destaques,
+  #destaquesApple,
+  #destaquesMoto,
+  #destaquesSam,
+  #destaquesAsus {
+    grid-template-columns: repeat(3, 210px) !important;
+  }
+
+  .duvidas-form,
+  .sobre {
+    width: 100% !important;
+  }
+
+  .itemBanner {
+    grid-column-start: 1 !important;
+    grid-column-end: 4 !important;
+    grid-row: 1/13;
+    img {
+      max-width: 100% !important;
+      height: 100% !important;
+      border: $item-border;
+    }
+  }
+
+  .home-nav {
+    .logo {
+      margin-right: 53px !important;
+    }
+    .login-link {
+      margin-right: 11px !important;
+    }
+  }
+
+  header {
+    .logo {
+      margin-right: 53px;
+      margin-top: 10px;
+      font-size: 12px !important;
+    }
+
+    li,
+    a {
+      margin-left: 12px;
+      font-size: 14.6px;
+    }
+  }
+
+  .buttonsPag {
+    margin-top: 10px !important;
+    margin-left: 0 !important;
+  }
+}
+
+@media screen and (max-width: 1135px) {
+  .show-menu-btn,
+  .hide-menu-btn,
+  .login {
+    display: block !important;
+  }
+  .navbar,
+  .login {
+    position: fixed;
+    width: 60% !important;
+    height: 100%;
+    background: #f5f3f3;
+    right: -100%;
+    top: 0;
+    transition: 0.7s;
+    z-index: 1;
+    #main {
+      display: flex;
+      flex-direction: column;
+      margin-top: -195px;
+      overflow-y: scroll;
+      width: 100%;
+      a {
+        color: rgb(63, 62, 62);
+        font-size: 17px;
+        border-bottom: solid 2px rgb(207, 206, 206);
+        width: 100%;
+      }
+      .searchNav {
+        display: none;
+      }
+    }
+    .hide-menu-btn {
+      position: absolute;
+      top: 40px;
+      right: 40px;
+      color: rgb(100, 98, 98) !important;
+    }
+  }
+
+  .topo-nav,
+  .nav-contato {
+    align-items: center !important;
+  }
+
+  .contato-form {
+    flex-direction: column;
+  }
+  .sobre {
+    margin-top: 15px;
+    padding: 6px;
+  }
+
+  .login-link {
+    i {
+      display: none;
+    }
+  }
+  .opcoes {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .detalhes-pag {
+    width: 100% !important;
+    margin-left: 0 !important;
+    margin-top: 15px;
+  }
+
+  .buttonsPag {
+    margin-top: -75px !important;
+    margin-left: 60% !important;
+  }
+
+  .precodet {
+    display: flex;
+    align-items: flex-start !important;
+    flex-direction: column;
+  }
+
+  table {
+    width: 98% !important;
+    margin-left: 0 !important;
+  }
+
+  .banner {
+    z-index: -1;
+  }
+  #check:checked ~ .navbar {
+    right: 0 !important;
+  }
+
+  #destaques,
+  #destaquesApple,
+  #destaquesMoto,
+  #destaquesSam,
+  #destaquesAsus {
+    grid-template-columns: repeat(2, 210px) !important;
+    border-left: none !important;
+  }
+
+  .itemBanner {
+    grid-column: 1/3 !important;
+    grid-row: 1/9 !important;
+  }
+
+  .menu {
+    border-right: $item-border !important;
+  }
+
+  header {
+    .logo {
+      position: absolute;
+      left: 45px;
+      top: 5px;
+    }
+
+    li,
+    a {
+      margin-left: 12px;
+      font-size: 14.6px;
+    }
+  }
+
+  .show-menu-btn {
+    color: #323333;
+    position: absolute;
+    right: 58px;
+    top: -20px;
+  }
+}
+
+@media screen and (max-width: 750px) {
+  .show-menu-item,
+  .hide-menu-item {
+    display: block !important;
+  }
+
+  .navbar,
+  .login {
+    width: 100% !important;
+  }
+
+  .navbar {
+    width: 100%;
+  }
+
+  .buttonsPag {
+    margin-top: 10px !important;
+    margin-left: 0 !important;
+  }
+  .precodet {
+    display: flex;
+    align-items: center !important;
+    flex-direction: column;
+  }
+  .opcoes {
+    display: flex !important;
+    margin-left: 0% !important;
+    img {
+      width: 70%;
+      margin-left: 15%;
+    }
+  }
+  .card-nav {
+    justify-content: end !important;
+  }
+  table {
+    margin-left: 0 !important;
+    width: 100% !important;
+    td {
+      padding: 12px 36px 4px 14px !important;
+    }
+  }
+
+  .detalhes-pag {
+    p {
+      font-size: 15px;
+      padding: 2px;
+    }
+    h1 {
+      font-size: 17px;
+      padding: 4px;
+    }
+  }
+  
+  .menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 100% !important;
+    background: #f4f5f5 !important;
+    height: 100vh;
+    overflow: scroll;
+    overflow-x: hidden;
+    z-index: 1000;
+    input {
+      border: solid 2px #ccc !important;
+      border-radius: 4px;
+      width: 250px !important;
+    }
+    ul {
+      border-bottom: solid 1px rgb(219, 219, 221);
+      padding: 4px;
+    }
+    .cores-opcoes {
+      border-bottom: none;
+    }
+    .ordenar-menu {
+      position: relative;
+      i {
+        position: absolute;
+        top: 65px;
+        left: 230px;
+        color: #adadad;
+      }
+    }
+  }
+
+  .show-menu-item {
+    display: flex;
+    background: #f8fafa;
+    border: solid 2px rgb(200, 199, 199);
+    border-radius: 4px;
+    padding: 10px;
+    width: 469px;
+    margin-bottom: 2%;
+    margin-top: 6%;
+    margin-right: 8px;
+    a {
+      color: #333333;
+    }
+    i {
+      margin-left: 365px;
+      color: rgb(141, 138, 138);
+      font-size: 18px;
+    }
+  }
+
+  #check-menu:checked ~ .menu {
+    left: 0 !important;
+  }
+
+  .hide-menu-item {
+    border-bottom: solid 2px rgb(219, 216, 216);
+    width: 100%;
+    padding: 6px;
+    margin-top: 15px;
+    a {
+      margin-left: 15px;
+      color: #464646;
+    }
+    i {
+      color: rgb(195, 193, 193);
+      font-size: 18px;
+    }
+  }
+
+  #main {
+    margin-top: 0px !important;
+  }
+
+  #destaques,
+  #destaquesApple,
+  #destaquesMoto,
+  #destaquesSam,
+  #destaquesAsus {
+    grid-template-columns: repeat(2, 210px) !important;
+  }
+
+  .itemBanner {
+    grid-column: 1/3 !important;
+    grid-row: 1/10 !important;
+  }
+
+  .logo {
+    position: absolute;
+    left: 6px !important;
+  }
+
+  .show-menu-btn {
+    position: absolute;
+    right: 20px !important;
+    margin-top: 4px;
+  }
+
+  .container-contato {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 610px) {
+  .contato-form {
+    padding: 30px;
+    margin-bottom: 15px;
+  }
+  .container-contato {
+    margin-bottom: 45px;
+    margin-top: 15px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  #destaques,
+  #destaquesApple,
+  #destaquesMoto,
+  #destaquesSam,
+  #destaquesAsus {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+
+  .itemBanner {
+    grid-column: 1/2 !important;
+    grid-row: 1/9 !important;
+  }
+
+  #destaquesApple,
+  #destaquesAsus,
+  #destaquesMoto,
+  #destaquesSam {
+    .item {
+      margin-left: 17.8%;
+    }
+  }
+
+  .orderBy {
+    margin-left: 0 !important;
+  }
+
+  .item {
+    width: 300px !important;
+    img {
+      width: 65% !important;
+    }
+  }
+
+  footer {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    height: 100%;
+    padding: 4%;
+    .info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+}
+
+@media screen and (max-width: 475px) {
+  #destaques,
+  #destaquesApple,
+  #destaquesMoto,
+  #destaquesSam,
+  #destaquesAsus {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+  .item {
+    margin-left: 0 !important;
+    justify-self: center !important;
+  }
+
+  .opcoes {
+    img {
+      margin-left: 20px !important;
+    }
+    #img-container {
+      margin-left: 47px !important;
+    }
+  }
+  .frete {
+    input {
+      width: 100% !important;
+    }
+  }
+
+  .show-menu-item {
+    width: 93% !important;
+    position: relative;
+    margin-left: 7px;
+    i {
+      position: absolute;
+      right: 15px;
+    }
+  }
+}
+
+@media screen and (max-width: 420px){
+  .card-nav {
+    img{
+      width: 68.5px !important;
+    }
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .itemBanner {
+    grid-row: 1/8 !important;
+  }
+  #finalizarCompra {
+    align-items: unset;
+  }
+  .opcoes {
+    align-items: center !important;
+    margin-left: 0 !important;
+    img {
+      margin-left: 10px !important;
+    }
+    #img-container {
+      margin-left: 37px !important;
+    }
+  }
+  .logo {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .buttonsPag {
+    button {
+      width: 82% !important;
+    }
+  }
+  table {
+    width: 100% !important;
+  }
+
+  .buttonsPag {
+    margin-left: 35px !important;
+  }
+
+  .opcoes {
+    margin-top: 2%;
+    p {
+      font-size: 13px;
+    }
+  }
+
+  #destaques,
+  #destaquesApple,
+  #destaquesMoto,
+  #destaquesSam,
+  #destaquesAsus {
+    grid-template-columns: repeat(1, 1fr) !important;
+    .item {
+      width: 80% !important;
+    }
+  }
+  .card-nav {
+    img {
+      width: 62.5px !important;
+    }
+  }
+
+  .itemBanner {
+    grid-row: 1/6 !important;
+  }
+  #finalizarCompra {
+    margin-top: 15%;
+  }
+
+  #contato {
+    margin-top: 2% !important;
+  }
+
+  #finalizarCompra {
+    padding: 4%;
+  }
+
+  .navbar,
+  .login {
+    #main {
+      a {
+        font-size: 14px;
+      }
+    }
+  }
+}
