@@ -1,5 +1,6 @@
 [
     {
+        "id": "0",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-5b3134b3-zenfone-4-verde-frente.png",
         "titulo": "Zenfone 4 Verde",
         "preco": "1659,55",
@@ -10,7 +11,7 @@
         "cor": "Verde",
         "chip": "Nano Chip",
         "qtd_chip": "Single Chip",
-        "memoria_interna": "até 64GB",
+        "memoria_interna": "8GB",
         "memoria_ram": "4GB",
         "processador": "QUALCOMM SNAPDRAGON SDN630 2,2 GHz, 2 MB Cache",
         "sistema": "Android",
@@ -19,10 +20,13 @@
         "tamanho_display": "5.5'",
         "resolucao": "1440 x 2560 pixel",
         "camera_traseira": "12 + 8MP (Dual Traseira)",
-        "camera_frontal": "8MP"
+        "camera_frontal": "8MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-5b3134b4-zenfone-4-verde-perfil.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-5b3134b5-zenfone-4-verde-traseira.png"
     },
 
     {
+        "id": "1",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-zenfone-4-selfie-pro-vermelho-frente.png",
         "titulo": "Zenfone 4 Selfie Pro",
         "preco": "1789,00",
@@ -33,7 +37,7 @@
         "cor": "Vermelho",
         "chip": "Nano Chip",
         "qtd_chip": "Single Chip",
-        "memoria_interna": "até 64GB",
+        "memoria_interna": "16GB",
         "memoria_ram": "4GB",
         "processador": "QUALCOMM SNAPDRAGON SDN630 2,2 GHz, 2 MB Cache",
         "sistema": "Android",
@@ -42,17 +46,20 @@
         "tamanho_display": "5.5'",
         "resolucao": "1440 x 2560 pixel",
         "camera_traseira": "18 + 8MP (Dual Traseira)",
-        "camera_frontal": "8MP"
+        "camera_frontal": "8MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-zenfone-4-selfie-pro-vermelho-perfil.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-zenfone-4-selfie-pro-vermelho-traseira.png"
     },
 
     {
+        "id": "2",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-5a5f3e54-zenfone-3-preto-1.jpg",
         "titulo": "Zenfone 3 Preto",
         "preco":  "1289,66",
         "parcela": "ou 12x R$ 45,60 sem juros",
         "tituloDetalhe": "Smartphone Asus Zenfone 3 Dual Chip ",
         "marca": "Asus",
-        "modelo": "ZE520KL-1A090BR",
+        "modelo": "Zenfone 3",
         "cor": "Preto",
         "chip": "Micro Chip",
         "qtd_chip": "Dual Chip",
@@ -65,17 +72,20 @@
         "tamanho_display": "5.2'",
         "resolucao": "1920x1080",
         "camera_traseira": "16MP",
-        "camera_frontal": "8MP"
+        "camera_frontal": "8MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-5aa96fd9-zenfone-3-preto-2.jpg",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-5aa96fd9-zenfone-3-preto-3.jpg"
     },
 
     {
+        "id": "3",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-5c23a990-zenfone-4-max-preto-frente.png",
         "titulo": "Asus Zenfone 4 Max Preto",
         "preco": "1989,56",
         "parcela": "ou 12x R$ 89,90 sem juros",
         "tituloDetalhe": "Asus Zenfone 4 Max Dual Chip Android 7",
         "marca": "Asus",
-        "modelo": "ZC554KL-4A013BR",
+        "modelo": "Zenfone 4",
         "cor": "Preto",
         "chip": "Nano Chip",
         "qtd_chip": "Dual Chip",
@@ -88,6 +98,8 @@
         "tamanho_display": "5.5'",
         "resolucao": "1280x720",
         "camera_traseira": "13 + 5MP (Dual Traseira)",
-        "camera_frontal": "8MP"
+        "camera_frontal": "8MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-5c23a991-zenfone-4-max-preto-perfil.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-5c23a991-zenfone-4-max-preto-traseira.png"
     }
 ]

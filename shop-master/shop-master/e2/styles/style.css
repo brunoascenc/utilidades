@@ -12,7 +12,7 @@
 body {
   font-family: 'Open Sans', sans-serif;
   overflow-x: hidden;
-  background-color: #f3eded;
+  background-color: #f8f2f2;
 }
 
 /* Nav*/
@@ -266,7 +266,7 @@ main .menu {
   width: 230px;
   height: 100%;
   background: #fbfafa;
-  border: solid 1px #c3c1c1;
+  border: solid 1px #e0dbdb;
   margin-bottom: 200px;
   margin-top: 2%;
   padding: 0 26px 12px;
@@ -434,8 +434,25 @@ main #destaquesAsus .item {
   height: 100%;
   padding: 6%;
   background-color: white;
-  border: solid 1px #cfcdcd;
+  border: solid 1px #e0dbdb;
   border-radius: 2px;
+}
+
+main #destaques .item button,
+main #destaquesApple .item button,
+main #destaquesMoto .item button,
+main #destaquesSam .item button,
+main #destaquesAsus .item button {
+  cursor: pointer;
+  padding: 11px;
+  width: 70%;
+  margin-top: 10px;
+  font-family: "Noto Sans KR", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: #f1ecec;
+  background-color: rgba(37, 172, 240, 0.932);
+  border: none;
 }
 
 main #destaques .itemBanner,
@@ -458,7 +475,7 @@ main #destaquesSam .itemBanner img,
 main #destaquesAsus .itemBanner img {
   max-width: 100%;
   height: 100%;
-  border: solid 1px #c3c1c1;
+  border: solid 1px #e0dbdb;
 }
 
 main #destaques h3,

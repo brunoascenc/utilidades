@@ -1,5 +1,6 @@
 [
     {
+        "id": "0",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-motorola-moto-maxx-2-64gb.jpg",
         "titulo": "Motorola Moto Maxx 2 64gb",
         "preco": "2000,00",
@@ -10,7 +11,7 @@
         "cor": "Preto",
         "chip": "Nano Chip",
         "qtd_chip": "Single Chip",
-        "memoria_interna": "até 64GB",
+        "memoria_interna": "64GB",
         "memoria_ram": "3GB",
         "processador": "Snapdragon 805 Qualcomm APQ8084",
         "sistema": "Android",
@@ -19,10 +20,13 @@
         "tamanho_display": "5.2'",
         "resolucao": "1440 x 2560 pixel",
         "camera_traseira": "21MP",
-        "camera_frontal": "2MP"
+        "camera_frontal": "2MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-moto-maxx-2a-g-2.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-moto-maxx-2a-g-3.png"
     },
 
     {
+        "id": "1",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-motorola-moto-x-style-32gb-preto.png",
         "titulo": "Motorola Moto X Style",
         "preco": "2000,00",
@@ -42,17 +46,20 @@
         "tamanho_display": "5.7'",
         "resolucao": "1440 x 2560 pixel",
         "camera_traseira": "12MP",
-        "camera_frontal": "2MP"
+        "camera_frontal": "2MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-x-style-pret-2.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-x-style-pret-3.png"
     },
 
     {
+        "id": "2",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-5c1148d1-moto-g-3a-geracao-16gb-4g-dual-preto.png",
         "titulo": "Moto G3 Geração",
         "preco": "1200,00",
         "parcela": "ou 12x R$ 55,96 sem juros",
         "tituloDetalhe": "Moto G3 Motorola Xt1543 16gb Preto",
         "marca": "Motorola",
-        "modelo": "Moto G3",
+        "modelo": "Moto G",
         "cor": "Preto",
         "chip": "Nano Chip",
         "qtd_chip": "Single Chip",
@@ -65,10 +72,13 @@
         "tamanho_display": "4'",
         "resolucao": "1440 x 2560 pixel",
         "camera_traseira": "8MP",
-        "camera_frontal": "1MP"
+        "camera_frontal": "1MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-58bd610f-moto-g-3a-geracao-16gb-4g-dual-preto-2.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-58bd6110-moto-g-3a-geracao-16gb-4g-dual-preto-3.png"
     },
 
     {
+        "id": "3",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-597a4afd-moto-z-play-preto-1.jpg",
         "titulo": "Motorola Moto Z Play",
         "preco": "2509,56",
@@ -88,17 +98,20 @@
         "tamanho_display": "5.1'",
         "resolucao": "1440 x 2560 pixel",
         "camera_traseira": "16MP",
-        "camera_frontal": "5MP"
+        "camera_frontal": "5MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-moto-z-play-preto-2.jpg",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-moto-z-play-preto-3.jpg"
     },
 
     {
+        "id": "4",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-moto-x4-preto-frete.png",
         "titulo": "Motorola Moto X4 Preto",
         "preco": "1565,90",
         "parcela": "ou 12x R$ 56,99 sem juros",
         "tituloDetalhe": "Smartphone Motorola Moto X4 Dual Cam",
         "marca": "Motorola",
-        "modelo": "XT1900",
+        "modelo": "Moto X",
         "cor": "Preto",
         "chip": "Nano Chip",
         "qtd_chip": "Single Chip",
@@ -110,17 +123,20 @@
         "tipo_tela": "LCD IPS",
         "tamanho_display": "5.2'",
         "resolucao": "Full HD - 1920x1080",
-        "camera_traseira": "12 + 8MP (Dual Traseira)"
+        "camera_traseira": "12 + 8MP (Dual Traseira)",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-moto-x4-preto-lado.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-moto-x4-preto-costas.png"
     },
 
     {
+        "id": "5",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-5979f872-moto-g5-plus-platinum-1.jpg",
         "titulo": "Motorola Moto G5 Plus",
         "preco": "859,90",
         "parcela": "ou 12x R$ 39,90 sem juros",
         "tituloDetalhe": "Motorola Moto G 5S Dual Chip Android 7.1.1 Nougat",
         "marca": "Motorola",
-        "modelo": "Moto G5",
+        "modelo": "Moto G",
         "cor": "Platinum",
         "chip": "Nano Chip",
         "qtd_chip": "Dual Chip",
@@ -133,17 +149,20 @@
         "tamanho_display": "5.2'",
         "resolucao": "Full HD - 1920x1080",
         "camera_traseira": "16MP",
-        "camera_frontal": "5MP"
+        "camera_frontal": "5MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-moto-g5-plus-platinum-2.jpg",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-moto-g5-plus-platinum-3.jpg"
     },
 
     {
+        "id": "6",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-motorola-moto-x2-32gb-preto.png",
         "titulo": "Motorola Moto X2 Preto",
         "preco": "1254,00",
         "parcela": "ou 12x R$ 50,99 sem juros",
         "tituloDetalhe": "Motorola Moto X2 32gb Preto",
         "marca": "Motorola",
-        "modelo": "Moto X2",
+        "modelo": "Moto X",
         "cor": "Preto",
         "chip": "Nano Chip",
         "qtd_chip": "Dual Chip",
@@ -156,17 +175,20 @@
         "tamanho_display": "5.2'",
         "resolucao": "1080 x 1920 pixels",
         "camera_traseira": "13MP",
-        "camera_frontal": "2MP"
+        "camera_frontal": "2MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-58bd6172-moto-x-2a-geracao-32-gb-preto-2.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-58bd6174-moto-x-2a-geracao-32-gb-preto-3.png"
     },
 
     {
+        "id": "7",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-moto-g6-play-indigo-frete.png",
         "titulo": "Motorola Moto G6 Play",
         "preco": "1299,90",
         "parcela": "ou 12x R$ 40,90 sem juros",
         "tituloDetalhe": "Smartphone Motorola Moto G6 32GB Dual Chip",
         "marca": "Motorola",
-        "modelo": "XT1925-3",
+        "modelo": "Moto G",
         "cor": "Preto",
         "chip": "Nano Chip",
         "qtd_chip": "Dual Chip",
@@ -179,6 +201,8 @@
         "tamanho_display": "5.7'",
         "resolucao": "12 + 5MP (Dual Traseira)",
         "camera_traseira": "13MP",
-        "camera_frontal": "8MP"
+        "camera_frontal": "8MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-5c0eb064-moto-g6-indigo-lado.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-5c0eb064-moto-g6-indigo-costas.png"
     }
 ]

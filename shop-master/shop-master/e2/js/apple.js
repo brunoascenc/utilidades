@@ -7,10 +7,10 @@ function appleProd() {
         const produtos = JSON.parse(xhr.responseText);
         let output = `
         <div class = "itemBanner">
-           <img src = "https://novemberfive.co/images/blog/apple-september-iphoneX-apps/u_img_header.jpg">
+           <img src = "https://gridcoregraphics.co.uk/wp-content/uploads/2018/08/iphone-x.jpg">
         </div>
            `;
-       
+        
         for(let i in produtos){
           output += `
          <div class = "item">
@@ -28,6 +28,218 @@ function appleProd() {
               </a>
           `;
         }
+
+        /* CAPACIDADE FILTER */
+        document.addEventListener('click', e => {
+          if (e.target.className === '32gb'){
+            let memoria = produtos.filter(memoriaProd => {
+              return memoriaProd.memoria_interna === '32GB'
+            })
+            let output = `
+           `;
+            for(let i in memoria){
+              output += `
+             <div class = "item">
+                   <img src = "${memoria[i].imagem}">
+                      <h3>${memoria[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${memoria[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${memoria[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${memoria[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaquesApple').innerHTML = output;
+          }
+
+          if (e.target.className === '64gb'){
+            let memoria = produtos.filter(memoriaProd => {
+              return memoriaProd.memoria_interna === '64GB'
+            })
+            let output = `
+           `;
+            for(let i in memoria){
+              output += `
+             <div class = "item">
+                   <img src = "${memoria[i].imagem}">
+                      <h3>${memoria[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${memoria[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${memoria[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${memoria[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaquesApple').innerHTML = output;
+          }
+        })
+
+        /* MODEL FILTER */
+        document.addEventListener('click', e =>{
+          if (e.target.className === 'iphone5c'){
+            let modelo = produtos.filter(modeloProd => {
+              return modeloProd.modelo === 'iPhone 5c'
+            })
+            console.log(modelo)
+            let output = `
+           `;
+            for(let i in modelo){
+              output += `
+             <div class = "item">
+                   <img src = "${modelo[i].imagem}">
+                      <h3>${modelo[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${modelo[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${modelo[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${modelo[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaquesApple').innerHTML = output;
+          }
+
+          if (e.target.className === 'iphone6s'){
+            let modelo = produtos.filter(modeloProd => {
+              return modeloProd.modelo === 'iPhone 6s'
+            })
+            console.log(modelo)
+            let output = `
+           `;
+            for(let i in modelo){
+              output += `
+             <div class = "item">
+                   <img src = "${modelo[i].imagem}">
+                      <h3>${modelo[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${modelo[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${modelo[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${modelo[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaquesApple').innerHTML = output;
+          }
+
+          if (e.target.className === 'iphoneX'){
+            let modelo = produtos.filter(modeloProd => {
+              return modeloProd.modelo === 'iPhone X'
+            })
+            console.log(modelo)
+            let output = `
+           `;
+            for(let i in modelo){
+              output += `
+             <div class = "item">
+                   <img src = "${modelo[i].imagem}">
+                      <h3>${modelo[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${modelo[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${modelo[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${modelo[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaquesApple').innerHTML = output;
+          }
+
+          if (e.target.className === 'iphone7'){
+            let modelo = produtos.filter(modeloProd => {
+              return modeloProd.modelo === 'iPhone 7'
+            })
+            console.log(modelo)
+            let output = `
+           `;
+            for(let i in modelo){
+              output += `
+             <div class = "item">
+                   <img src = "${modelo[i].imagem}">
+                      <h3>${modelo[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${modelo[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${modelo[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${modelo[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaquesApple').innerHTML = output;
+          }
+
+          if (e.target.className === 'iphone5s'){
+            let modelo = produtos.filter(modeloProd => {
+              return modeloProd.modelo === 'iPhone 5s'
+            })
+            console.log(modelo)
+            let output = `
+           `;
+            for(let i in modelo){
+              output += `
+             <div class = "item">
+                   <img src = "${modelo[i].imagem}">
+                      <h3>${modelo[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${modelo[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${modelo[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${modelo[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaquesApple').innerHTML = output;
+          }
+
+          if (e.target.className === 'iphoneSE'){
+            let modelo = produtos.filter(modeloProd => {
+              return modeloProd.modelo === 'iPhone SE'
+            })
+            console.log(modelo)
+            let output = `
+           `;
+            for(let i in modelo){
+              output += `
+             <div class = "item">
+                   <img src = "${modelo[i].imagem}">
+                      <h3>${modelo[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${modelo[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${modelo[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${modelo[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaquesApple').innerHTML = output;
+          }
+        })
 
    
                   
@@ -79,7 +291,6 @@ function appleProd() {
                       
                       <button button-id="${cores[i].id}">Comprar</button>
                   </div>
-                  </a>
               `;
             }
             document.getElementById('destaquesApple').innerHTML = output;
@@ -150,8 +361,7 @@ function appleProd() {
               compraDiv.style.display = 'block';
               let saida = `
               <div class = "container">
-                <a   href  = "apple.html">Voltar</a>
-             
+                <a   href  = "apple.html">Voltar</a>        
                 <div class = "opcoes">
                   <div>
                     <img id = "img-container" src = "${produtos[j].imagem}">

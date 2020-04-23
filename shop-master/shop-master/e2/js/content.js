@@ -33,6 +33,109 @@ function homeProd() {
           `;
         }
 
+        /* CAPACIDADE FILTER */
+        document.addEventListener('click', e => {
+          if (e.target.className === '32gb'){
+            let memoria = produtos.filter(memoriaProd => {
+              return memoriaProd.memoria_interna === '32GB'
+            })
+            let output = `
+           `;
+            for(let i in memoria){
+              output += `
+             <div class = "item">
+                   <img src = "${memoria[i].imagem}">
+                      <h3>${memoria[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${memoria[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${memoria[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${memoria[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaques').innerHTML = output;
+          }
+
+          if (e.target.className === '64gb'){
+            let memoria = produtos.filter(memoriaProd => {
+              return memoriaProd.memoria_interna === '64GB'
+            })
+            let output = `
+           `;
+            for(let i in memoria){
+              output += `
+             <div class = "item">
+                   <img src = "${memoria[i].imagem}">
+                      <h3>${memoria[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${memoria[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${memoria[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${memoria[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaques').innerHTML = output;
+          }
+
+          if (e.target.className === '8gb'){
+            let memoria = produtos.filter(memoriaProd => {
+              return memoriaProd.memoria_interna === '8GB'
+            })
+            let output = `
+           `;
+            for(let i in memoria){
+              output += `
+             <div class = "item">
+                   <img src = "${memoria[i].imagem}">
+                      <h3>${memoria[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${memoria[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${memoria[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${memoria[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaques').innerHTML = output;
+          }
+
+          if (e.target.className === '16gb'){
+            let memoria = produtos.filter(memoriaProd => {
+              return memoriaProd.memoria_interna === '16GB'
+            })
+            let output = `
+           `;
+            for(let i in memoria){
+              output += `
+             <div class = "item">
+                   <img src = "${memoria[i].imagem}">
+                      <h3>${memoria[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${memoria[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${memoria[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${memoria[i].id}">Comprar</button>
+                  </div>
+              `;
+            }
+            document.getElementById('destaques').innerHTML = output;
+          }
+        })
+
         /******/
         /* COLORS FILTER*/
        /******/

@@ -1,5 +1,6 @@
 [
     {
+        "id": "0",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-j5-2016-metal-dourado-1.jpg",
         "titulo": "Samsung J5 Prime Dourado",
         "preco": "899,00",
@@ -7,6 +8,7 @@
         "tituloDetalhe": "Smartphone Samsung Galaxy J5 Prime Dual Chip",
         "marca": "Samsung",
         "modelo": "Galaxy J5 Prime",
+        "series": "Galaxy J",
         "cor": "Dourado",
         "chip": "Nano Chip",
         "qtd_chip": "Dual Chip",
@@ -19,10 +21,13 @@
         "tamanho_display": "5'",
         "resolucao": "1280x720 (HD)",
         "camera_traseira": "13MP",
-        "camera_frontal": "5MP"
+        "camera_frontal": "5MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-j5-2016-metal-dourado-3.jpg",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-j5-2016-metal-dourado-2.jpg"
     },
 
     {
+        "id": "1",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-s8-preto-1.jpg",
         "titulo": "Samsung Galaxy S8 Plus",
         "preco": "1970,00",
@@ -30,6 +35,7 @@
         "tituloDetalhe": "Samsung Galaxy S8 Plus 64GB",
         "marca": "Samsung",
         "modelo": "Galaxy S8 Plus",
+        "series": "Galaxy S",
         "cor": "Preto",
         "chip": "Dois chips",
         "memoria_interna": "64GB",
@@ -41,10 +47,13 @@
         "tamanho_display": "6.2'",
         "resolucao": "2960 x 1440 pixels",
         "camera_traseira": "12 MP",
-        "camera_frontal": "8 MP"
+        "camera_frontal": "8 MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-s8-preto-2.jpg",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-s8-preto-3.jpg"
     },
 
     {
+        "id": "2",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-s6-edge-plus-preto-1.jpg",
         "titulo": "Samsung Galaxy S6 Edge",
         "preco": "1489,99",
@@ -52,6 +61,7 @@
         "tituloDetalhe": "Samsung Galaxy S6 Edge Preto 32GB",
         "marca": "Samsung",
         "modelo": "Galaxy S6 Flat",
+        "series": "Galaxy S",
         "cor": "Preto",
         "chip": "Nano Chip",
         "qtd_chip": "Single Chip",
@@ -64,10 +74,13 @@
         "tamanho_display": "5.7'",
         "resolucao": "2560 x 1440 (518 ppi)",
         "camera_traseira": "16MP",
-        "camera_frontal": "5MP"
+        "camera_frontal": "5MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-58593d7f-galaxys6edgepretolateral.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-58593d80-galaxys6edgepretotraseira.png"
     },
 
     {
+        "id": "3",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-s7-edge-dourado-1.png",
         "titulo": "Samsung Galaxy S7 Edge",
         "preco": "1689,99",
@@ -75,6 +88,7 @@
         "tituloDetalhe": "Smartphone Samsung Galaxy S7 Edge Android 6.0",
         "marca": "Samsung",
         "modelo": "Galaxy S7 Edge",
+        "series": "Galaxy S",
         "cor": "Dourado",
         "chip": "Nano Chip",
         "qtd_chip": "Single Chip",
@@ -87,10 +101,13 @@
         "tamanho_display": "5.5'",
         "resolucao": "2560x1440 (Quad HD)",
         "camera_traseira": "12MP",
-        "camera_frontal": "5MP"
+        "camera_frontal": "5MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-s7-edge-dourado-3.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-s7-edge-dourado-4.png"
     },
 
     {
+        "id": "4",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-a7-2017-dourado-1.jpg",
         "titulo": "Samsung Galaxy A7",
         "preco": "1455,95",
@@ -98,6 +115,7 @@
         "tituloDetalhe": "Samsung Galaxy A7 2017 Dourado",
         "marca": "Samsung",
         "modelo": "Galaxy A7",
+        "series": "Galaxy A",
         "cor": "Dourado",
         "chip": "Nano Chip",
         "qtd_chip": "Single Chip",
@@ -110,10 +128,13 @@
         "tamanho_display": "5.2'",
         "resolucao": "1920 x 1080 pixels",
         "camera_traseira": "16 MP",
-        "camera_frontal": "16 MP"
+        "camera_frontal": "16 MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-58ff99e7-a5-2017-dourado-2.jpg",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-58ff99e8-a5-2017-dourado-3.jpg"
     },
 
     {
+        "id": "5",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-samsung-galaxy-a5-dourado.png",
         "titulo": "Samsung Galaxy A5",
         "preco": "789,90",
@@ -121,6 +142,7 @@
         "tituloDetalhe": "Smartphone Samsung Galaxy A5 Dual Chip",
         "marca": "Samsung",
         "modelo": "SM-A520F/DS",
+        "series": "Galaxy A",
         "cor": "Dourado",
         "chip": "Nano Chip",
         "qtd_chip": "Dual Chip",
@@ -133,10 +155,13 @@
         "tamanho_display": "5.2'",
         "resolucao": "1920 x 1080 pixels",
         "camera_traseira": "16 MP",
-        "camera_frontal": "16 MP"
+        "camera_frontal": "16 MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-a5-a500m-dour-2.jpg",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-585aa4fe-dt-traseiraa5dourado.png"
     },
 
     {
+        "id": "6",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-galaxy-s9-azul-frente.png",
         "titulo": "Samsung Galaxy S9 Azul",
         "preco": "2269,00",
@@ -144,6 +169,7 @@
         "tituloDetalhe": "Samsung Galaxy S9 Desbloqueado 128GB Dual Chip",
         "marca": "Samsung",
         "modelo": "Galaxy S9",
+        "series": "Galaxy S",
         "cor": "Azul",
         "chip": "Nano Chip",
         "qtd_chip": "Dual Chip",
@@ -156,10 +182,13 @@
         "tamanho_display": "5.8'",
         "resolucao": "2960 x 1440 (Quad HD+)",
         "camera_traseira": "12MP Dual Cam",
-        "camera_frontal": "16 MP"
+        "camera_frontal": "16 MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-galaxy-s9-azul-perfil.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-galaxy-s9-azul-traseira.png"
     },
 
     {
+        "id": "7",
         "imagem": "https://imagens.trocafone.com/images/phones/dt-galaxy-s6-flat-bran-1.png",
         "titulo": "Samsung Galaxy S6 Flat",
         "preco": "659,00",
@@ -167,6 +196,7 @@
         "tituloDetalhe": "Samsung Galaxy S6 Flat Branco",
         "marca": "Samsung",
         "modelo": "Galaxy S6 Flat",
+        "series": "Galaxy S",
         "cor": "Branco",
         "chip": "Nano Chip",
         "qtd_chip": "Single Chip",
@@ -179,6 +209,8 @@
         "tamanho_display": "5.1'",
         "resolucao": "1440 x 2560 pixels",
         "camera_traseira": "12MP",
-        "camera_frontal": "2MP"
+        "camera_frontal": "2MP",
+        "lado": "https://imagens.trocafone.com/images/phones/dt-galaxy-s6-flat-bran-2.png",
+        "traseira": "https://imagens.trocafone.com/images/phones/dt-galaxy-s6-flat-bran-3.png"
     }
 ]
