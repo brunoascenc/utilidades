@@ -100,6 +100,11 @@
   .login ul li {
     margin: 1rem;
   }
+  .nav ul a,
+  .login ul a {
+    font-size: 1.5rem;
+    color: #a09b9b;
+  }
   .nav .hide-menu-btn,
   .login .hide-menu-btn {
     position: absolute;
@@ -375,6 +380,13 @@
   .container-contato {
     margin-bottom: 45px;
     margin-top: 15px;
+  }
+  .nav {
+    width: 100% !important;
+  }
+  .nav a {
+    font-size: 1.3rem;
+    color: #a09b9b;
   }
 }
 

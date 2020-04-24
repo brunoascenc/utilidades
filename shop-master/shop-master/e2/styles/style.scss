@@ -285,6 +285,7 @@ main {
         margin-top: 11px;
         font-size: 16px;
         transition: 0.1s ease;
+        cursor: pointer;
         &:hover {
           color: #0d9cd4;
         }
@@ -508,16 +509,17 @@ main {
     margin-top: 4px;
     outline: none;
     width: 85%;
-    border-radius: 4px;
-    border: none;
-    border-bottom: solid 3px rgb(208, 213, 216);
-    background: rgb(241, 240, 240);
+    border-radius: 1px;
+    border: solid 1px rgb(225, 225, 233);
+    // border-bottom: solid 3px rgb(208, 213, 216);
+    background: rgb(245, 243, 243);
   }
 
   button {
     @include btnReset();
     text-transform: uppercase;
     font-weight: bold;
+    background-color: $mainBlue;
   }
 
   .duvidas-form,
@@ -545,8 +547,9 @@ main {
 .contato-title {
   display: flex;
   justify-content: center;
-  margin-top: 1%;
+  // margin-top: 1%;
   padding: 14px;
+  margin-bottom: -3rem;
   h1 {
     background: $mainBlue;
     margin-top: 45px;
@@ -554,7 +557,9 @@ main {
     font-family: $titleFont;
     text-transform: uppercase;
     padding: 4px;
-    color: #f8f5f5;
+    color: #f5f3f3;
+    font-size: 1rem;
+    font-weight: 100;
   }
 }
 
@@ -608,6 +613,7 @@ footer {
     .socials i {
       color: rgb(0, 183, 255);
       padding: 2px;
+      // border-radius: 5rem;
     }
     .email {
       @include columnCenter();
@@ -616,24 +622,25 @@ footer {
         color: #353434;
       }
       input {
-        width: 122%;
+        width: 121%;
         height: 27px;
         padding: 16px;
         outline: none;
-        border-radius: 4px;
-        border: none;
-        border-bottom: solid 3px rgb(209, 211, 212);
-        background: rgb(231, 229, 229);
+        border-radius: 1px;
+        border: solid 1px rgb(224, 219, 219);
+        // border-bottom: solid 3px rgb(209, 211, 212);
+        background: rgb(245, 243, 243);
       }
 
       button {
         @include btnReset();
-        margin-top: 2px;
+        margin-top: 4px;
         width: 121%;
         height: 25px;
         text-transform: uppercase;
         font-weight: bold;
-        border-radius: 2px;
+        border-radius: 1px;
+        background-color: $mainBlue;
       }
     }
   }
@@ -645,6 +652,7 @@ footer {
     align-items: center;
     color: #3b3b3b;
     padding: 4% 0 2% 0%;
+    font-size: 0.8rem;
   }
 }
 /* Footer end */
@@ -823,7 +831,7 @@ footer {
 .opcoes {
   display: flex;
   background: rgb(253, 253, 253);
-  border: solid 1px rgb(224, 221, 221);
+  border: solid 1px rgb(224, 219, 219);
   padding: 28px;
   // box-shadow: 10px 10px 8px #f8f5f5;
   img {
@@ -915,7 +923,7 @@ footer {
     img {
       margin-top: 6px;
       width: 80px;
-      border: solid 1px rgb(207, 205, 205);
+      border: solid 1px rgb(230, 222, 222);
       cursor: pointer;
     }
     img:nth-child(2),
