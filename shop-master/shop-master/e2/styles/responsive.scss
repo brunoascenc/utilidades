@@ -62,7 +62,19 @@
   .login {
     display: block !important;
   }
-  .navbar,
+  .show-menu-btn{
+    margin-top: 2.2rem;
+  }
+  header{
+    position: relative;
+  }
+  .cart i {
+    position: absolute;
+    right: 97px;
+    top: 19px;
+    padding: 6px !important;
+  }
+  .nav,
   .login {
     position: fixed;
     width: 60% !important;
@@ -72,22 +84,32 @@
     top: 0;
     transition: 0.7s;
     z-index: 1;
-    #main {
+    ul{
       display: flex;
       flex-direction: column;
-      margin-top: -195px;
-      overflow-y: scroll;
-      width: 100%;
-      a {
-        color: rgb(63, 62, 62);
-        font-size: 17px;
-        border-bottom: solid 2px rgb(207, 206, 206);
-        width: 100%;
-      }
-      .searchNav {
-        display: none;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      li{
+        margin: 1rem;
       }
     }
+    // #main {
+    //   display: flex;
+    //   flex-direction: column;
+    //   margin-top: -195px;
+    //   overflow-y: scroll;
+    //   width: 100%;
+    //   a {
+    //     color: rgb(63, 62, 62);
+    //     font-size: 17px;
+    //     border-bottom: solid 2px rgb(207, 206, 206);
+    //     width: 100%;
+    //   }
+    //   .searchNav {
+    //     display: none;
+    //   }
+    // }
     .hide-menu-btn {
       position: absolute;
       top: 40px;
@@ -144,7 +166,7 @@
   .banner {
     z-index: -1;
   }
-  #check:checked ~ .navbar {
+  #check:checked ~ .nav {
     right: 0 !important;
   }
 
@@ -192,6 +214,10 @@
   .show-menu-item,
   .hide-menu-item {
     display: block !important;
+  }
+
+  .cart i { 
+    right: 52px;
   }
 
   .navbar,
@@ -333,13 +359,13 @@
 
   .logo {
     position: absolute;
-    left: 6px !important;
+    left: 10px !important;
   }
 
   .show-menu-btn {
     position: absolute;
-    right: 20px !important;
-    margin-top: 4px;
+    right: 16px !important;
+    // margin-top: 4px;
   }
 
   .container-contato {

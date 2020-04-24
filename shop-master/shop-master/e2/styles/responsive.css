@@ -55,7 +55,19 @@
   .login {
     display: block !important;
   }
-  .navbar,
+  .show-menu-btn {
+    margin-top: 2.2rem;
+  }
+  header {
+    position: relative;
+  }
+  .cart i {
+    position: absolute;
+    right: 97px;
+    top: 19px;
+    padding: 6px !important;
+  }
+  .nav,
   .login {
     position: fixed;
     width: 60% !important;
@@ -67,8 +79,8 @@
     transition: 0.7s;
     z-index: 1;
   }
-  .navbar #main,
-  .login #main {
+  .nav ul,
+  .login ul {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -76,22 +88,19 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin-top: -195px;
-    overflow-y: scroll;
-    width: 100%;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    height: 100vh;
   }
-  .navbar #main a,
-  .login #main a {
-    color: #3f3e3e;
-    font-size: 17px;
-    border-bottom: solid 2px #cfcece;
-    width: 100%;
+  .nav ul li,
+  .login ul li {
+    margin: 1rem;
   }
-  .navbar #main .searchNav,
-  .login #main .searchNav {
-    display: none;
-  }
-  .navbar .hide-menu-btn,
+  .nav .hide-menu-btn,
   .login .hide-menu-btn {
     position: absolute;
     top: 40px;
@@ -154,7 +163,7 @@
   .banner {
     z-index: -1;
   }
-  #check:checked ~ .navbar {
+  #check:checked ~ .nav {
     right: 0 !important;
   }
   #destaques,
@@ -199,6 +208,9 @@
   .show-menu-item,
   .hide-menu-item {
     display: block !important;
+  }
+  .cart i {
+    right: 52px;
   }
   .navbar,
   .login {
@@ -344,12 +356,11 @@
   }
   .logo {
     position: absolute;
-    left: 6px !important;
+    left: 10px !important;
   }
   .show-menu-btn {
     position: absolute;
-    right: 20px !important;
-    margin-top: 4px;
+    right: 16px !important;
   }
   .container-contato {
     width: 100% !important;

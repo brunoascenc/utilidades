@@ -17,73 +17,36 @@ body {
 
 /* Nav*/
 header {
-  height: 12vh;
-  background: #fdfcfc;
-  width: 100%;
-}
-
-header .topo-nav,
-header .nav-contato {
+  background-color: white;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  height: 12vh;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  background: #fdfcfc;
-  border-bottom: solid 1px #e0dfdf;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  padding: 2rem 0 1rem 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
-header .navbar {
+header nav ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-bottom: 15px;
+  list-style: none;
+  margin-top: 1rem;
 }
 
-header .navbar input {
-  outline: none;
-  border: none;
-  padding: 5px;
-  height: 25px;
-  margin-top: 37px;
-  margin-left: 30px;
-  margin-right: 14px;
-  border: solid 1px #f0eded;
-  border-bottom: solid 3px #e4e4e4;
-  border-radius: 4px;
-  background: #faf9f9;
-}
-
-header #main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-header .home-nav .logo {
-  margin-right: 229px;
-}
-
-header .home-nav .login-link {
-  margin-right: 11px;
+header nav ul a {
+  text-decoration: none;
+  margin: 1rem;
+  color: #3f3c3c;
+  text-transform: uppercase;
+  font-size: 1rem;
+  letter-spacing: 1px;
 }
 
 header .logo {
-  margin-top: 15px;
-  margin-right: 220px;
-  margin-left: 13px;
-  margin-bottom: 15px;
   font-family: "Noto Sans KR", sans-serif;
   text-transform: uppercase;
   background: #00b7ff;
@@ -92,66 +55,17 @@ header .logo {
   cursor: pointer;
 }
 
-header li,
-header a {
-  list-style: none;
-  text-decoration: none;
-  color: #3b3b3b;
-  margin-left: 15px;
+header .cart i {
+  color: #f1f5f8;
+  background-color: #00b7ff;
+  padding: 10px;
+  border: solid 2px #00b7ff;
   font-size: 1rem;
-  margin-top: 40px;
-  text-transform: uppercase;
-  color: #6b6969;
-  -webkit-transition: 0.1s ease;
-  transition: 0.1s ease;
+  border-radius: 5rem;
 }
 
-header li:hover,
-header a:hover {
-  color: #4395bb;
-}
-
-header .fa-shopping-cart {
-  margin-top: 35px;
-  margin-left: 25px;
-  cursor: pointer;
-  font-size: 20px;
-  color: #0d9cd4;
-  -webkit-transition: 0.1s ease;
-  transition: 0.1s ease;
-  border-bottom: solid 2px #0d9cd4;
-}
-
-header .fa-shopping-cart:hover {
-  color: #4fc8f8;
-  border-bottom: solid 2px #4fc8f8;
-}
-
-header .login-link {
-  position: relative;
-}
-
-header .login-link i {
-  cursor: pointer;
-  position: absolute;
-  top: 1px;
-  right: 53px;
-  color: #bfc0c2;
-}
-
-header .searchNav {
-  position: relative;
-}
-
-header .searchNav i {
-  position: absolute;
-  top: 40px;
-  right: 20px;
-  color: #ccc9c9;
-}
-
-header .show-menu-btn,
-header .hide-menu-btn {
+.show-menu-btn,
+.hide-menu-btn {
   -webkit-transition: 0.4s;
   transition: 0.4s;
   font-size: 30px;
@@ -159,36 +73,10 @@ header .hide-menu-btn {
   display: none;
 }
 
-header .hide-menu-btn {
-  color: #ebe8e8;
-}
-
-header .show-menu-btn i {
-  line-height: 100px;
-}
-
-header #check {
+#check {
   position: absolute;
   visibility: hidden;
   z-index: -1111;
-}
-
-.pages-content .login-link {
-  margin-right: 10px;
-}
-
-.pages-content .logo {
-  margin-right: 228px;
-}
-
-.sticky-nav {
-  position: fixed;
-  width: 100%;
-  background: #f6f4f4;
-  z-index: 100;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  border-bottom: solid 1px #e0dede;
 }
 
 /*Banner*/
@@ -763,7 +651,7 @@ main .organizar .fa-search {
 
 /* Footer */
 footer {
-  padding: 0 12%;
+  padding: 0 10%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -772,9 +660,9 @@ footer {
   border-top: solid 1px #c3c1c1;
   background: #fdfcfc;
   height: 100%;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 footer .info {
