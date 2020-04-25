@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
         integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
     <link rel="stylesheet" href="styles//style.css">
-    <link rel="stylesheet" type = "text/css" href="styles/responsive.css">
+    <link rel="stylesheet" type="text/css" href="styles/responsive.css">
     <title>Blues</title>
 </head>
 
@@ -18,29 +18,32 @@
             <h1>Blues</h1>
         </div>
         <input type="checkbox" id="check">
-            <label for="check" class="show-menu-btn">
-                <i class="fas fa-bars"></i>
+        <label for="check" class="show-menu-btn">
+            <i class="fas fa-bars"></i>
         </label>
         <div class="nav">
-        <nav>
-            <ul>
-                <li><a class="voltarHome" id="home" href="index.html" data-name="home">Home</a></li>
-                <li><a class="voltarHome" id="apple" href="apple.html" data-name="apple">Apple</a></li>
-                <li><a class="voltarHome" id="motorola" href="motorola.html" data-name="motorola">Motorola</a></li>
-                <li><a class="voltarHome" id="asus" href="asus.html" data-name="asus">Asus</a></li>
-                <li><a class="voltarHome" id="samsung" href="samsung.html" data-name="samsung">Samsung</a></li>
-                <li><a id="contato" href="contato.html" data-name="contato">Contato</a></li>
-            </ul>
-            <div>
-                <label for="check" class="hide-menu-btn">
-                    <i class="fas fa-times"></i>
-                </label>
-        </nav>
-    </div>
-
-        <div class="cart">
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+            <nav>
+                <ul>
+                    <li><a class="voltarHome" id="home" href="index.html" data-name="home">Home</a></li>
+                    <li><a class="voltarHome" id="apple" href="apple.html" data-name="apple">Apple</a></li>
+                    <li><a class="voltarHome" id="motorola" href="motorola.html" data-name="motorola">Motorola</a></li>
+                    <li><a class="voltarHome" id="asus" href="asus.html" data-name="asus">Asus</a></li>
+                    <li><a class="voltarHome" id="samsung" href="samsung.html" data-name="samsung">Samsung</a></li>
+                    <li><a id="contato" href="contato.html" data-name="contato">Contato</a></li>
+                </ul>
+                <div>
+                    <label for="check" class="hide-menu-btn">
+                        <i class="fas fa-times"></i>
+                    </label>
+            </nav>
         </div>
+        <div class="login-link">
+            <i data-modal-target="#modal" class="fas fa-user"></i>
+        </div>
+
+        <!-- <div class="cart">
+            <a href="#"><i class="fas fa-shopping-cart"></i></a>
+        </div> -->
         <!-- <div class="pages-content home-content topo-nav">
             <div class="logo">
                 <h1>Blues</h1>
@@ -115,7 +118,46 @@
             </div>
         </div> -->
     </header>
+    <div class="login">
+        <div class="modal" id=modal>
+            <button data-close-button class="close-button">&times;</button>
+            <!-- <div class="modal-header">
+                <div class="title">Login</div>
+            </div> -->
+            <div class="modal-body">
+                <div class="modal-header">
+                    <div class="title">Login</div>
+                </div>
+                <div class="login-form">
+                    <input type="email" name="email" id="emailInput" placeholder="Seu email...">
+                    <input type="password" placeholder="Sua senha...">
+                    <button class="confirmar-btn">Entrar</button>
+                    <a id="registrarLink" href="#">Quero me registrar</a>
+                    <a id="recuperarLink" href="#">Esqueci minha senha</a>
+                </div>
 
+                <div class="registrar-form" hidden>
+                    <form>
+                        <input type="text" placeholder="Digite seu nome">
+                        <input type="email" name="email" id="emailRegistrar" placeholder="Digite seu email">
+                        <input type="password" placeholder="Digite sua senha">
+                        <input type="password" placeholder="Digite sua senha novamente">
+                        <button class="confirmar-btn">Registrar</button><br>
+                        <a class="voltarLink" href="#">Voltar</a>
+                    </form>
+                </div>
+
+                <div class="recuperar-senha" hidden>
+                    <p>Vamos enviar um email para que você possa recuperar sua senha!</p>
+                    <input type="email" name="email" id="emailRecuperar" placeholder="Digite seu email...">
+                    <button class="confirmar-btn">Enviar</button><br>
+                    <a class="voltarLink" href="#">Voltar</a>
+                </div>
+            </div>
+        </div>
+        <div id="overlay">
+        </div>
+    </div>
 
     <main class="home-content">
         <input type="checkbox" id="check-menu">
@@ -135,7 +177,7 @@
                     <li><a class="zenfone3" href="#">Zenfone 3</a></li>
                 </ul>
 
-                
+
                 <ul>
                     <h3>Capacidade</h3>
                     <li><a class="32gb">32 GB</a></li>

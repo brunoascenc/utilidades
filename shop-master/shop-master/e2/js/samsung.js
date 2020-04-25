@@ -1,6 +1,6 @@
 function samsungProd() {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', './content/samsung.json', true);
+  xhr.open("GET", "./content/samsung.json", true);
 
   xhr.onload = () => {
     if (xhr.status === 200) {
@@ -11,8 +11,8 @@ function samsungProd() {
       </div>
         `;
 
-        for(let i in produtos){
-          output += `
+      for (let i in produtos) {
+        output += `
          <div class = "item">
                <img src = "${produtos[i].imagem}">
                   <h3>${produtos[i].titulo}</h3>
@@ -27,16 +27,16 @@ function samsungProd() {
               </div>
               </a>
           `;
-        }
+      }
       /* CAPACIDADE FILTER */
-      document.addEventListener('click', e => {
-        if (e.target.className === '32gb'){
-          let memoria = produtos.filter(memoriaProd => {
-            return memoriaProd.memoria_interna === '32GB'
-          })
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "32gb") {
+          let memoria = produtos.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "32GB";
+          });
           let output = `
          `;
-          for(let i in memoria){
+          for (let i in memoria) {
             output += `
            <div class = "item">
                  <img src = "${memoria[i].imagem}">
@@ -52,16 +52,16 @@ function samsungProd() {
                 </div>
             `;
           }
-          document.getElementById('destaquesSam').innerHTML = output;
+          document.getElementById("destaquesSam").innerHTML = output;
         }
 
-        if (e.target.className === '64gb'){
-          let memoria = produtos.filter(memoriaProd => {
-            return memoriaProd.memoria_interna === '64GB'
-          })
+        if (e.target.className === "64gb") {
+          let memoria = produtos.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "64GB";
+          });
           let output = `
          `;
-          for(let i in memoria){
+          for (let i in memoria) {
             output += `
            <div class = "item">
                  <img src = "${memoria[i].imagem}">
@@ -77,20 +77,20 @@ function samsungProd() {
                 </div>
             `;
           }
-          document.getElementById('destaquesSam').innerHTML = output;
+          document.getElementById("destaquesSam").innerHTML = output;
         }
-      })
+      });
 
-       /* MODEL FILTER */
-       document.addEventListener('click', e =>{
-        if (e.target.className === 'galaxys'){
-          let modelo = produtos.filter(modeloProd => {
-            return modeloProd.series === 'Galaxy S'
-          })
-          console.log(modelo)
+      /* MODEL FILTER */
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "galaxys") {
+          let modelo = produtos.filter((modeloProd) => {
+            return modeloProd.series === "Galaxy S";
+          });
+          console.log(modelo);
           let output = `
          `;
-          for(let i in modelo){
+          for (let i in modelo) {
             output += `
            <div class = "item">
                  <img src = "${modelo[i].imagem}">
@@ -106,17 +106,17 @@ function samsungProd() {
                 </div>
             `;
           }
-          document.getElementById('destaquesSam').innerHTML = output;
+          document.getElementById("destaquesSam").innerHTML = output;
         }
 
-        if (e.target.className === 'galaxya'){
-          let modelo = produtos.filter(modeloProd => {
-            return modeloProd.series === 'Galaxy A'
-          })
-          console.log(modelo)
+        if (e.target.className === "galaxya") {
+          let modelo = produtos.filter((modeloProd) => {
+            return modeloProd.series === "Galaxy A";
+          });
+          console.log(modelo);
           let output = `
          `;
-          for(let i in modelo){
+          for (let i in modelo) {
             output += `
            <div class = "item">
                  <img src = "${modelo[i].imagem}">
@@ -132,17 +132,17 @@ function samsungProd() {
                 </div>
             `;
           }
-          document.getElementById('destaquesSam').innerHTML = output;
+          document.getElementById("destaquesSam").innerHTML = output;
         }
 
-        if (e.target.className === 'galaxyj'){
-          let modelo = produtos.filter(modeloProd => {
-            return modeloProd.series === 'Galaxy J'
-          })
-          console.log(modelo)
+        if (e.target.className === "galaxyj") {
+          let modelo = produtos.filter((modeloProd) => {
+            return modeloProd.series === "Galaxy J";
+          });
+          console.log(modelo);
           let output = `
          `;
-          for(let i in modelo){
+          for (let i in modelo) {
             output += `
            <div class = "item">
                  <img src = "${modelo[i].imagem}">
@@ -158,22 +158,20 @@ function samsungProd() {
                 </div>
             `;
           }
-          document.getElementById('destaquesSam').innerHTML = output;
+          document.getElementById("destaquesSam").innerHTML = output;
         }
-      })
-
-      
+      });
 
       /* Cores Filter */
-      document.addEventListener('click', e => {
-        if (e.target.className === 'preto'){
-          let cores = produtos.filter(coresPreto => {
-            return coresPreto.cor === 'Preto'
-          })
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "preto") {
+          let cores = produtos.filter((coresPreto) => {
+            return coresPreto.cor === "Preto";
+          });
           let output = `
           `;
-           for(let i in cores){
-             output += `
+          for (let i in cores) {
+            output += `
             <div class = "item">
                   <img src = "${cores[i].imagem}">
                      <h3>${cores[i].titulo}</h3>
@@ -188,18 +186,16 @@ function samsungProd() {
                  </div>
                  </a>
              `;
-           }
-           document.getElementById('destaquesSam').innerHTML = output;
-        }
-
-        else if (e.target.className === 'azul'){
-          let cores = produtos.filter(coresAzul => {
-            return coresAzul.cor === 'Azul'
-          })
+          }
+          document.getElementById("destaquesSam").innerHTML = output;
+        } else if (e.target.className === "azul") {
+          let cores = produtos.filter((coresAzul) => {
+            return coresAzul.cor === "Azul";
+          });
           let output = `
           `;
-           for(let i in cores){
-             output += `
+          for (let i in cores) {
+            output += `
             <div class = "item">
                   <img src = "${cores[i].imagem}">
                      <h3>${cores[i].titulo}</h3>
@@ -214,18 +210,16 @@ function samsungProd() {
                  </div>
                  </a>
              `;
-           }
-           document.getElementById('destaquesSam').innerHTML = output;
-        }
-
-        else if (e.target.className === 'branco'){
-          let cores = produtos.filter(coresBranco => {
-            return coresBranco.cor === 'Branco'
-          })
+          }
+          document.getElementById("destaquesSam").innerHTML = output;
+        } else if (e.target.className === "branco") {
+          let cores = produtos.filter((coresBranco) => {
+            return coresBranco.cor === "Branco";
+          });
           let output = `
           `;
-           for(let i in cores){
-             output += `
+          for (let i in cores) {
+            output += `
             <div class = "item">
                   <img src = "${cores[i].imagem}">
                      <h3>${cores[i].titulo}</h3>
@@ -240,18 +234,16 @@ function samsungProd() {
                  </div>
                  </a>
              `;
-           }
-           document.getElementById('destaquesSam').innerHTML = output;
-        }
-
-        else if (e.target.className === 'dourado'){
-          let cores = produtos.filter(coresDourado => {
-            return coresDourado.cor === 'Dourado'
-          })
+          }
+          document.getElementById("destaquesSam").innerHTML = output;
+        } else if (e.target.className === "dourado") {
+          let cores = produtos.filter((coresDourado) => {
+            return coresDourado.cor === "Dourado";
+          });
           let output = `
           `;
-           for(let i in cores){
-             output += `
+          for (let i in cores) {
+            output += `
             <div class = "item">
                   <img src = "${cores[i].imagem}">
                      <h3>${cores[i].titulo}</h3>
@@ -266,23 +258,23 @@ function samsungProd() {
                  </div>
                  </a>
              `;
-           }
-           document.getElementById('destaquesSam').innerHTML = output;
+          }
+          document.getElementById("destaquesSam").innerHTML = output;
         }
       });
 
       //Product details
-      document.addEventListener('click', e => {
+      document.addEventListener("click", (e) => {
         var target = e.target;
-          if(target.tagName == 'BUTTON'){
-            var btnId = target.getAttribute('button-id');
-            samsungProd(btnId)
-          }
-          for(var j = 0; j < produtos.length; j++){
-            if (produtos[j].id == btnId) {
-              menuDiv.style.display = 'none';
-              compraDiv.style.display = 'block';
-              let saida = `
+        if (target.tagName == "BUTTON") {
+          var btnId = target.getAttribute("button-id");
+          samsungProd(btnId);
+        }
+        for (var j = 0; j < produtos.length; j++) {
+          if (produtos[j].id == btnId) {
+            menuDiv.style.display = "none";
+            compraDiv.style.display = "block";
+            let saida = `
               <div class = "container">
                 <a   href  = "apple.html">Voltar</a>
              
@@ -390,16 +382,16 @@ function samsungProd() {
            </div>
           </div>
                 `;
-            document.getElementById('finalizarCompra').innerHTML = saida;
-            }
+            document.getElementById("finalizarCompra").innerHTML = saida;
           }
-          
+        }
+
         if (
-          e.target.className == 'samsungBtn0' ||
-          e.target.className == 'galaxyJ5'
+          e.target.className == "samsungBtn0" ||
+          e.target.className == "galaxyJ5"
         ) {
-          menuDiv.style.display = 'none';
-          compraDiv.style.display = 'block';
+          menuDiv.style.display = "none";
+          compraDiv.style.display = "block";
 
           let saida = `
           <div class = "container">
@@ -508,10 +500,10 @@ function samsungProd() {
         </div>
         </div>
                     `;
-          document.getElementById('finalizarCompra').innerHTML = saida;
-        } else if (e.target.className == 'samsungBtn1') {
-          menuDiv.style.display = 'none';
-          compraDiv.style.display = 'block';
+          document.getElementById("finalizarCompra").innerHTML = saida;
+        } else if (e.target.className == "samsungBtn1") {
+          menuDiv.style.display = "none";
+          compraDiv.style.display = "block";
 
           let saida = `
           <div class = "container">
@@ -620,13 +612,13 @@ function samsungProd() {
         </div>
         </div>
                 `;
-          document.getElementById('finalizarCompra').innerHTML = saida;
+          document.getElementById("finalizarCompra").innerHTML = saida;
         } else if (
-          e.target.className == 'samsungBtn2' ||
-          e.target.className == 'galaxys6edge'
+          e.target.className == "samsungBtn2" ||
+          e.target.className == "galaxys6edge"
         ) {
-          menuDiv.style.display = 'none';
-          compraDiv.style.display = 'block';
+          menuDiv.style.display = "none";
+          compraDiv.style.display = "block";
 
           let saida = `
           <div class = "container">
@@ -735,10 +727,10 @@ function samsungProd() {
               </div>
               </div>
                 `;
-          document.getElementById('finalizarCompra').innerHTML = saida;
-        } else if (e.target.className == 'samsungBtn3') {
-          menuDiv.style.display = 'none';
-          compraDiv.style.display = 'block';
+          document.getElementById("finalizarCompra").innerHTML = saida;
+        } else if (e.target.className == "samsungBtn3") {
+          menuDiv.style.display = "none";
+          compraDiv.style.display = "block";
 
           let saida = `
           <div class = "container">
@@ -847,13 +839,13 @@ function samsungProd() {
         </div>
         </div>
                 `;
-          document.getElementById('finalizarCompra').innerHTML = saida;
+          document.getElementById("finalizarCompra").innerHTML = saida;
         } else if (
-          e.target.className == 'samsungBtn4' ||
-          e.target.className == 'galaxyA7'
+          e.target.className == "samsungBtn4" ||
+          e.target.className == "galaxyA7"
         ) {
-          menuDiv.style.display = 'none';
-          compraDiv.style.display = 'block';
+          menuDiv.style.display = "none";
+          compraDiv.style.display = "block";
 
           let saida = `
           <div class = "container">
@@ -961,13 +953,13 @@ function samsungProd() {
         </div>
         </div>
                 `;
-          document.getElementById('finalizarCompra').innerHTML = saida;
+          document.getElementById("finalizarCompra").innerHTML = saida;
         } else if (
-          e.target.className == 'samsungBtn5' ||
-          e.target.className == 'galaxyA5'
+          e.target.className == "samsungBtn5" ||
+          e.target.className == "galaxyA5"
         ) {
-          menuDiv.style.display = 'none';
-          compraDiv.style.display = 'block';
+          menuDiv.style.display = "none";
+          compraDiv.style.display = "block";
 
           let saida = `
           <div class = "container">
@@ -1076,13 +1068,13 @@ function samsungProd() {
         </div>
         </div>
                 `;
-          document.getElementById('finalizarCompra').innerHTML = saida;
+          document.getElementById("finalizarCompra").innerHTML = saida;
         } else if (
-          e.target.className == 'samsungBtn6' ||
-          e.target.className == 'galaxys9'
+          e.target.className == "samsungBtn6" ||
+          e.target.className == "galaxys9"
         ) {
-          menuDiv.style.display = 'none';
-          compraDiv.style.display = 'block';
+          menuDiv.style.display = "none";
+          compraDiv.style.display = "block";
 
           let saida = `
           <div class = "container">
@@ -1191,11 +1183,11 @@ function samsungProd() {
         </div>
         </div>
                 `;
-          document.getElementById('finalizarCompra').innerHTML = saida;
-        } else if (e.target.className == 'samsungBtn7') {
-          menuDiv.style.display = 'none';
-          compraDiv.style.display = 'block';
-  
+          document.getElementById("finalizarCompra").innerHTML = saida;
+        } else if (e.target.className == "samsungBtn7") {
+          menuDiv.style.display = "none";
+          compraDiv.style.display = "block";
+
           let saida = `
           <div class = "container">
                     <a   href  = "samsung.html">Voltar</a>
@@ -1302,20 +1294,19 @@ function samsungProd() {
           </table>
         </div>
         </div>
-        `
-            ;
-          document.getElementById('finalizarCompra').innerHTML = saida;
+        `;
+          document.getElementById("finalizarCompra").innerHTML = saida;
         }
-        const imgContainer = document.getElementById('img-container')
+        const imgContainer = document.getElementById("img-container");
         window.changeImg = (image) => {
-           imgContainer.src = image.src
-        }
+          imgContainer.src = image.src;
+        };
       });
 
-      document.getElementById('destaquesSam').innerHTML = output;
+      document.getElementById("destaquesSam").innerHTML = output;
     } else if (xhr.status === 404) {
-      document.getElementById('destaquesSam').innerHTML =
-        'Produto não encontrado';
+      document.getElementById("destaquesSam").innerHTML =
+        "Produto não encontrado";
     }
   };
   xhr.send();

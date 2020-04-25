@@ -1,18 +1,18 @@
 function motoProd() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', './content/motorola.json', true);
-  
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        const produtos = JSON.parse(xhr.responseText);
-        let output = `
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "./content/motorola.json", true);
+
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      const produtos = JSON.parse(xhr.responseText);
+      let output = `
         <div class = "itemBanner">
           <img src = "https://4.bp.blogspot.com/-uYsnKoHPUow/WagNrUkOnMI/AAAAAAAA2Qw/eMNDHMyoFyUjQD-l2ipDK0sA0AnSRPAdwCLcBGAs/s1600/motox4banner.png">
         </div>
         `;
 
-        for(let i in produtos){
-          output += `
+      for (let i in produtos) {
+        output += `
          <div class = "item">
                <img src = "${produtos[i].imagem}">
                   <h3>${produtos[i].titulo}</h3>
@@ -27,19 +27,44 @@ function motoProd() {
               </div>
               </a>
           `;
+      }
+
+      /* Capacidade Filter */
+
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "32gb") {
+          let memoria = produtos.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "32GB";
+          });
+          let output = `
+           `;
+          for (let i in memoria) {
+            output += `
+             <div class = "item">
+                   <img src = "${memoria[i].imagem}">
+                      <h3>${memoria[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${memoria[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${memoria[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${memoria[i].id}">Comprar</button>
+                  </div>
+              `;
+          }
+          document.getElementById("destaquesMoto").innerHTML = output;
         }
 
-        /* Capacidade Filter */
-
-        document.addEventListener('click', e => {
-          if (e.target.className === '32gb'){
-            let memoria = produtos.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '32GB'
-            })
-            let output = `
+        if (e.target.className === "64gb") {
+          let memoria = produtos.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "64GB";
+          });
+          let output = `
            `;
-            for(let i in memoria){
-              output += `
+          for (let i in memoria) {
+            output += `
              <div class = "item">
                    <img src = "${memoria[i].imagem}">
                       <h3>${memoria[i].titulo}</h3>
@@ -53,18 +78,18 @@ function motoProd() {
                       <button button-id="${memoria[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaquesMoto').innerHTML = output;
           }
+          document.getElementById("destaquesMoto").innerHTML = output;
+        }
 
-          if (e.target.className === '64gb'){
-            let memoria = produtos.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '64GB'
-            })
-            let output = `
+        if (e.target.className === "16gb") {
+          let memoria = produtos.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "16GB";
+          });
+          let output = `
            `;
-            for(let i in memoria){
-              output += `
+          for (let i in memoria) {
+            output += `
              <div class = "item">
                    <img src = "${memoria[i].imagem}">
                       <h3>${memoria[i].titulo}</h3>
@@ -78,47 +103,22 @@ function motoProd() {
                       <button button-id="${memoria[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaquesMoto').innerHTML = output;
           }
+          document.getElementById("destaquesMoto").innerHTML = output;
+        }
+      });
 
-          if (e.target.className === '16gb'){
-            let memoria = produtos.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '16GB'
-            })
-            let output = `
+      /* MODEL FILTER */
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "motoMaxx") {
+          let modelo = produtos.filter((modeloProd) => {
+            return modeloProd.modelo === "Moto Maxx";
+          });
+          console.log(modelo);
+          let output = `
            `;
-            for(let i in memoria){
-              output += `
-             <div class = "item">
-                   <img src = "${memoria[i].imagem}">
-                      <h3>${memoria[i].titulo}</h3>
-                      <span class = "preco">
-                          <p>R$ ${memoria[i].preco} à vista</p>
-                      </span>
-                      <span class = "parcela">
-                          <p>${memoria[i].parcela}</p>
-                      </span>
-                      
-                      <button button-id="${memoria[i].id}">Comprar</button>
-                  </div>
-              `;
-            }
-            document.getElementById('destaquesMoto').innerHTML = output;
-          }
-        })
-
-        /* MODEL FILTER */
-        document.addEventListener('click', e =>{
-          if (e.target.className === 'motoMaxx'){
-            let modelo = produtos.filter(modeloProd => {
-              return modeloProd.modelo === 'Moto Maxx'
-            })
-            console.log(modelo)
-            let output = `
-           `;
-            for(let i in modelo){
-              output += `
+          for (let i in modelo) {
+            output += `
              <div class = "item">
                    <img src = "${modelo[i].imagem}">
                       <h3>${modelo[i].titulo}</h3>
@@ -132,19 +132,19 @@ function motoProd() {
                       <button button-id="${modelo[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaquesMoto').innerHTML = output;
           }
+          document.getElementById("destaquesMoto").innerHTML = output;
+        }
 
-          if (e.target.className === 'motoX'){
-            let modelo = produtos.filter(modeloProd => {
-              return modeloProd.modelo === 'Moto X'
-            })
-            console.log(modelo)
-            let output = `
+        if (e.target.className === "motoX") {
+          let modelo = produtos.filter((modeloProd) => {
+            return modeloProd.modelo === "Moto X";
+          });
+          console.log(modelo);
+          let output = `
            `;
-            for(let i in modelo){
-              output += `
+          for (let i in modelo) {
+            output += `
              <div class = "item">
                    <img src = "${modelo[i].imagem}">
                       <h3>${modelo[i].titulo}</h3>
@@ -158,19 +158,19 @@ function motoProd() {
                       <button button-id="${modelo[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaquesMoto').innerHTML = output;
           }
+          document.getElementById("destaquesMoto").innerHTML = output;
+        }
 
-          if (e.target.className === 'motoG'){
-            let modelo = produtos.filter(modeloProd => {
-              return modeloProd.modelo === 'Moto G'
-            })
-            console.log(modelo)
-            let output = `
+        if (e.target.className === "motoG") {
+          let modelo = produtos.filter((modeloProd) => {
+            return modeloProd.modelo === "Moto G";
+          });
+          console.log(modelo);
+          let output = `
            `;
-            for(let i in modelo){
-              output += `
+          for (let i in modelo) {
+            output += `
              <div class = "item">
                    <img src = "${modelo[i].imagem}">
                       <h3>${modelo[i].titulo}</h3>
@@ -184,19 +184,19 @@ function motoProd() {
                       <button button-id="${modelo[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaquesMoto').innerHTML = output;
           }
+          document.getElementById("destaquesMoto").innerHTML = output;
+        }
 
-          if (e.target.className === 'motoZ'){
-            let modelo = produtos.filter(modeloProd => {
-              return modeloProd.modelo === 'Moto Z'
-            })
-            console.log(modelo)
-            let output = `
+        if (e.target.className === "motoZ") {
+          let modelo = produtos.filter((modeloProd) => {
+            return modeloProd.modelo === "Moto Z";
+          });
+          console.log(modelo);
+          let output = `
            `;
-            for(let i in modelo){
-              output += `
+          for (let i in modelo) {
+            output += `
              <div class = "item">
                    <img src = "${modelo[i].imagem}">
                       <h3>${modelo[i].titulo}</h3>
@@ -210,22 +210,21 @@ function motoProd() {
                       <button button-id="${modelo[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaquesMoto').innerHTML = output;
           }
-        })
-  
-       
-     /* CORES FILTER */
-     document.addEventListener('click', e => {
-      if (e.target.className === 'preto'){
-        let cores = produtos.filter(coresPreto => {
-          return coresPreto.cor === 'Preto'
-        })
-        let output = `
+          document.getElementById("destaquesMoto").innerHTML = output;
+        }
+      });
+
+      /* CORES FILTER */
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "preto") {
+          let cores = produtos.filter((coresPreto) => {
+            return coresPreto.cor === "Preto";
+          });
+          let output = `
         `;
-         for(let i in cores){
-           output += `
+          for (let i in cores) {
+            output += `
           <div class = "item">
                 <img src = "${cores[i].imagem}">
                    <h3>${cores[i].titulo}</h3>
@@ -240,17 +239,15 @@ function motoProd() {
                </div>
                </a>
            `;
-         }
-         document.getElementById('destaquesMoto').innerHTML = output;
-      }
-
-      else if (e.target.className === 'cinza'){
-        let cores = produtos.filter(coresPlatinum => {
-          return coresPlatinum.cor === 'Platinum'
-        })
-        let output = ``
-        for(let i in cores){
-          output += `
+          }
+          document.getElementById("destaquesMoto").innerHTML = output;
+        } else if (e.target.className === "cinza") {
+          let cores = produtos.filter((coresPlatinum) => {
+            return coresPlatinum.cor === "Platinum";
+          });
+          let output = ``;
+          for (let i in cores) {
+            output += `
          <div class = "item">
                <img src = "${cores[i].imagem}">
                   <h3>${cores[i].titulo}</h3>
@@ -265,25 +262,23 @@ function motoProd() {
               </div>
               </a>
           `;
-        }
-        document.getElementById('destaquesMoto').innerHTML = output;
-      }
-
-     })
-
-
-        //Product details
-        document.addEventListener('click', e => {
-          var target = e.target;
-          if(target.tagName == 'BUTTON'){
-            var btnId = target.getAttribute('button-id');
-            motoProd(btnId)
           }
-          for(var j = 0; j < produtos.length; j++){
-            if (produtos[j].id == btnId) {
-              menuDiv.style.display = 'none';
-              compraDiv.style.display = 'block';
-              let saida = `
+          document.getElementById("destaquesMoto").innerHTML = output;
+        }
+      });
+
+      //Product details
+      document.addEventListener("click", (e) => {
+        var target = e.target;
+        if (target.tagName == "BUTTON") {
+          var btnId = target.getAttribute("button-id");
+          motoProd(btnId);
+        }
+        for (var j = 0; j < produtos.length; j++) {
+          if (produtos[j].id == btnId) {
+            menuDiv.style.display = "none";
+            compraDiv.style.display = "block";
+            let saida = `
               <div class = "container">
                 <a   href  = "apple.html">Voltar</a>
              
@@ -391,26 +386,22 @@ function motoProd() {
            </div>
           </div>
                 `;
-            document.getElementById('finalizarCompra').innerHTML = saida;
-            }
+            document.getElementById("finalizarCompra").innerHTML = saida;
           }
-          
-          const imgContainer = document.getElementById('img-container')
-          window.changeImg = (image) => {
-             imgContainer.src = image.src
-          }
-        });
-  
-        document.getElementById('destaquesMoto').innerHTML = output;
-      } else if (xhr.status === 404) {
-        document.getElementById('destaquesMoto').innerHTML =
-          'Produto não encontrado';
-      }
-    };
-    xhr.send();
-  }
-  motoProd();
+        }
 
+        const imgContainer = document.getElementById("img-container");
+        window.changeImg = (image) => {
+          imgContainer.src = image.src;
+        };
+      });
 
-
-
+      document.getElementById("destaquesMoto").innerHTML = output;
+    } else if (xhr.status === 404) {
+      document.getElementById("destaquesMoto").innerHTML =
+        "Produto não encontrado";
+    }
+  };
+  xhr.send();
+}
+motoProd();

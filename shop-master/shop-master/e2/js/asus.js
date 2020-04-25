@@ -1,19 +1,18 @@
 function asusProd() {
-    const xhr = new XMLHttpRequest();
-    xhr.open('GET', './content/asus.json', true);
-  
-    xhr.onload = () => {
-      if (xhr.status === 200) {
-        const produtosAsus = JSON.parse(xhr.responseText);
-        let output = `
+  const xhr = new XMLHttpRequest();
+  xhr.open("GET", "./content/asus.json", true);
+
+  xhr.onload = () => {
+    if (xhr.status === 200) {
+      const produtosAsus = JSON.parse(xhr.responseText);
+      let output = `
         <div class = "itemBanner">
           <img src = "https://www.celulardireto.com.br/wp-content/uploads/2019/04/Asus-ZenFone-5Z.jpg">
         </div>
         `;
 
-        
-        for(let i in produtosAsus){
-          output += `
+      for (let i in produtosAsus) {
+        output += `
          <div class = "item">
                <img src = "${produtosAsus[i].imagem}">
                   <h3>${produtosAsus[i].titulo}</h3>
@@ -28,19 +27,43 @@ function asusProd() {
               </div>
               </a>
           `;
+      }
+
+      /* Capacidade Filter */
+
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "32gb") {
+          let memoria = produtosAsus.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "32GB";
+          });
+          let output = `
+           `;
+          for (let i in memoria) {
+            output += `
+             <div class = "item">
+                   <img src = "${memoria[i].imagem}">
+                      <h3>${memoria[i].titulo}</h3>
+                      <span class = "preco">
+                          <p>R$ ${memoria[i].preco} à vista</p>
+                      </span>
+                      <span class = "parcela">
+                          <p>${memoria[i].parcela}</p>
+                      </span>
+                      
+                      <button button-id="${memoria[i].id}">Comprar</button>
+                  </div>
+              `;
+          }
+          document.getElementById("destaquesAsus").innerHTML = output;
         }
-    
-        /* Capacidade Filter */
-
-        document.addEventListener('click', e => {
-          if (e.target.className === '32gb'){
-            let memoria = produtosAsus.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '32GB'
-            })
-            let output = `
+        if (e.target.className === "16gb") {
+          let memoria = produtosAsus.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "16GB";
+          });
+          let output = `
            `;
-            for(let i in memoria){
-              output += `
+          for (let i in memoria) {
+            output += `
              <div class = "item">
                    <img src = "${memoria[i].imagem}">
                       <h3>${memoria[i].titulo}</h3>
@@ -54,17 +77,18 @@ function asusProd() {
                       <button button-id="${memoria[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaquesAsus').innerHTML = output;
           }
-          if (e.target.className === '16gb'){
-            let memoria = produtosAsus.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '16GB'
-            })
-            let output = `
+          document.getElementById("destaquesAsus").innerHTML = output;
+        }
+
+        if (e.target.className === "8gb") {
+          let memoria = produtosAsus.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "8GB";
+          });
+          let output = `
            `;
-            for(let i in memoria){
-              output += `
+          for (let i in memoria) {
+            output += `
              <div class = "item">
                    <img src = "${memoria[i].imagem}">
                       <h3>${memoria[i].titulo}</h3>
@@ -78,49 +102,22 @@ function asusProd() {
                       <button button-id="${memoria[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaquesAsus').innerHTML = output;
           }
+          document.getElementById("destaquesAsus").innerHTML = output;
+        }
+      });
 
-          if (e.target.className === '8gb'){
-            let memoria = produtosAsus.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '8GB'
-            })
-            let output = `
-           `;
-            for(let i in memoria){
-              output += `
-             <div class = "item">
-                   <img src = "${memoria[i].imagem}">
-                      <h3>${memoria[i].titulo}</h3>
-                      <span class = "preco">
-                          <p>R$ ${memoria[i].preco} à vista</p>
-                      </span>
-                      <span class = "parcela">
-                          <p>${memoria[i].parcela}</p>
-                      </span>
-                      
-                      <button button-id="${memoria[i].id}">Comprar</button>
-                  </div>
-              `;
-            }
-            document.getElementById('destaquesAsus').innerHTML = output;
-          }
-
-        })
-
-
-    /* MODEL FILTER */
-    document.addEventListener('click', e =>{
-      if (e.target.className === 'zenfone4'){
-        let modelo = produtosAsus.filter(modeloProd => {
-          return modeloProd.modelo === 'Zenfone 4'
-        })
-        console.log(modelo)
-        let output = `
+      /* MODEL FILTER */
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "zenfone4") {
+          let modelo = produtosAsus.filter((modeloProd) => {
+            return modeloProd.modelo === "Zenfone 4";
+          });
+          console.log(modelo);
+          let output = `
        `;
-        for(let i in modelo){
-          output += `
+          for (let i in modelo) {
+            output += `
          <div class = "item">
                <img src = "${modelo[i].imagem}">
                   <h3>${modelo[i].titulo}</h3>
@@ -134,19 +131,19 @@ function asusProd() {
                   <button button-id="${modelo[i].id}">Comprar</button>
               </div>
           `;
+          }
+          document.getElementById("destaquesAsus").innerHTML = output;
         }
-        document.getElementById('destaquesAsus').innerHTML = output;
-      }
 
-      if (e.target.className === 'zenfone3'){
-        let modelo = produtosAsus.filter(modeloProd => {
-          return modeloProd.modelo === 'Zenfone 3'
-        })
-        console.log(modelo)
-        let output = `
+        if (e.target.className === "zenfone3") {
+          let modelo = produtosAsus.filter((modeloProd) => {
+            return modeloProd.modelo === "Zenfone 3";
+          });
+          console.log(modelo);
+          let output = `
        `;
-        for(let i in modelo){
-          output += `
+          for (let i in modelo) {
+            output += `
          <div class = "item">
                <img src = "${modelo[i].imagem}">
                   <h3>${modelo[i].titulo}</h3>
@@ -160,101 +157,97 @@ function asusProd() {
                   <button button-id="${modelo[i].id}">Comprar</button>
               </div>
           `;
-        }
-        document.getElementById('destaquesAsus').innerHTML = output;
-      }
-    })
-  
-    /* Cores Filter */
-     document.addEventListener('click', e => {
-        if (e.target.className === 'vermelho'){
-        let cores = produtosAsus.filter(coresVermelho => {
-          return coresVermelho.cor === 'Vermelho'
-        })
-        let output = ``
-        for(let i in cores){
-          output += `
-         <div class = "item">
-               <img src = "${cores[i].imagem}">
-                  <h3>${cores[i].titulo}</h3>
-                  <span class = "preco">
-                      <p>R$ ${cores[i].preco} à vista</p>
-                  </span>
-                  <span class = "parcela">
-                      <p>${cores[i].parcela}</p>
-                  </span>
-                  
-                  <button button-id="${cores[i].id}">Comprar</button>
-              </div>
-              </a>
-          `;
-        }
-        document.getElementById('destaquesAsus').innerHTML = output;
-      }
-
-      else if (e.target.className === 'verde'){
-        let cores = produtosAsus.filter(coresBranco => {
-          return coresBranco.cor === 'Verde'
-        })
-        let output = ``
-        for(let i in cores){
-          output += `
-         <div class = "item">
-               <img src = "${cores[i].imagem}">
-                  <h3>${cores[i].titulo}</h3>
-                  <span class = "preco">
-                      <p>R$ ${cores[i].preco} à vista</p>
-                  </span>
-                  <span class = "parcela">
-                      <p>${cores[i].parcela}</p>
-                  </span>
-                  
-                  <button button-id="${cores[i].id}">Comprar</button>
-              </div>
-              </a>
-          `;
-        }
-        document.getElementById('destaquesAsus').innerHTML = output;
-      }
-
-      else if (e.target.className === 'preto'){
-        let cores = produtosAsus.filter(coresBranco => {
-          return coresBranco.cor === 'Preto'
-        })
-        let output = ``
-        for(let i in cores){
-          output += `
-         <div class = "item">
-               <img src = "${cores[i].imagem}">
-                  <h3>${cores[i].titulo}</h3>
-                  <span class = "preco">
-                      <p>R$ ${cores[i].preco} à vista</p>
-                  </span>
-                  <span class = "parcela">
-                      <p>${cores[i].parcela}</p>
-                  </span>
-                  
-                  <button button-id="${cores[i].id}">Comprar</button>
-              </div>
-              </a>
-          `;
-        }
-        document.getElementById('destaquesAsus').innerHTML = output;
-      }
-    })
-
-        //Product details
-        document.addEventListener('click', e => {
-          var target = e.target;
-          if(target.tagName == 'BUTTON'){
-            var btnId = target.getAttribute('button-id');
-            asusProd(btnId)
           }
-          for(var j = 0; j < produtosAsus.length; j++){
-            if (produtosAsus[j].id == btnId) {
-              menuDiv.style.display = 'none';
-              compraDiv.style.display = 'block';
-              let saida = `
+          document.getElementById("destaquesAsus").innerHTML = output;
+        }
+      });
+
+      /* Cores Filter */
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "vermelho") {
+          let cores = produtosAsus.filter((coresVermelho) => {
+            return coresVermelho.cor === "Vermelho";
+          });
+          let output = ``;
+          for (let i in cores) {
+            output += `
+         <div class = "item">
+               <img src = "${cores[i].imagem}">
+                  <h3>${cores[i].titulo}</h3>
+                  <span class = "preco">
+                      <p>R$ ${cores[i].preco} à vista</p>
+                  </span>
+                  <span class = "parcela">
+                      <p>${cores[i].parcela}</p>
+                  </span>
+                  
+                  <button button-id="${cores[i].id}">Comprar</button>
+              </div>
+              </a>
+          `;
+          }
+          document.getElementById("destaquesAsus").innerHTML = output;
+        } else if (e.target.className === "verde") {
+          let cores = produtosAsus.filter((coresBranco) => {
+            return coresBranco.cor === "Verde";
+          });
+          let output = ``;
+          for (let i in cores) {
+            output += `
+         <div class = "item">
+               <img src = "${cores[i].imagem}">
+                  <h3>${cores[i].titulo}</h3>
+                  <span class = "preco">
+                      <p>R$ ${cores[i].preco} à vista</p>
+                  </span>
+                  <span class = "parcela">
+                      <p>${cores[i].parcela}</p>
+                  </span>
+                  
+                  <button button-id="${cores[i].id}">Comprar</button>
+              </div>
+              </a>
+          `;
+          }
+          document.getElementById("destaquesAsus").innerHTML = output;
+        } else if (e.target.className === "preto") {
+          let cores = produtosAsus.filter((coresBranco) => {
+            return coresBranco.cor === "Preto";
+          });
+          let output = ``;
+          for (let i in cores) {
+            output += `
+         <div class = "item">
+               <img src = "${cores[i].imagem}">
+                  <h3>${cores[i].titulo}</h3>
+                  <span class = "preco">
+                      <p>R$ ${cores[i].preco} à vista</p>
+                  </span>
+                  <span class = "parcela">
+                      <p>${cores[i].parcela}</p>
+                  </span>
+                  
+                  <button button-id="${cores[i].id}">Comprar</button>
+              </div>
+              </a>
+          `;
+          }
+          document.getElementById("destaquesAsus").innerHTML = output;
+        }
+      });
+
+      //Product details
+      document.addEventListener("click", (e) => {
+        var target = e.target;
+        if (target.tagName == "BUTTON") {
+          var btnId = target.getAttribute("button-id");
+          asusProd(btnId);
+        }
+        for (var j = 0; j < produtosAsus.length; j++) {
+          if (produtosAsus[j].id == btnId) {
+            menuDiv.style.display = "none";
+            compraDiv.style.display = "block";
+            let saida = `
               <div class = "container">
                 <a   href  = "apple.html">Voltar</a>
              
@@ -362,22 +355,21 @@ function asusProd() {
            </div>
           </div>
                 `;
-            document.getElementById('finalizarCompra').innerHTML = saida;
-            }
+            document.getElementById("finalizarCompra").innerHTML = saida;
           }
-          const imgContainer = document.getElementById('img-container')
-          window.changeImg = (image) => {
-             imgContainer.src = image.src
-          }
-        });
-  
-        document.getElementById('destaquesAsus').innerHTML = output;
-      } else if (xhr.status === 404) {
-        document.getElementById('destaquesAsus').innerHTML =
-          'Produto não encontrado';
-      }
-    };
-    xhr.send();
-  }
-  asusProd();
-  
+        }
+        const imgContainer = document.getElementById("img-container");
+        window.changeImg = (image) => {
+          imgContainer.src = image.src;
+        };
+      });
+
+      document.getElementById("destaquesAsus").innerHTML = output;
+    } else if (xhr.status === 404) {
+      document.getElementById("destaquesAsus").innerHTML =
+        "Produto não encontrado";
+    }
+  };
+  xhr.send();
+}
+asusProd();

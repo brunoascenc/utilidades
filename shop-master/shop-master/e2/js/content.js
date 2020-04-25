@@ -1,22 +1,22 @@
 //Hide divs/buy section
-const compraDiv = document.querySelector('#finalizarCompra');
-const bannerDiv = document.querySelector('.banner');
-const menuDiv = document.querySelector('main');
+const compraDiv = document.querySelector("#finalizarCompra");
+const bannerDiv = document.querySelector(".banner");
+const menuDiv = document.querySelector("main");
 // const tableDiv = document.querySelector('.table');
 
 // *** FETCHING JSON DATA *** //
 //Home content
 function homeProd() {
   const xhr = new XMLHttpRequest();
-  xhr.open('GET', './content/home.json', true);
+  xhr.open("GET", "./content/home.json", true);
 
   xhr.onload = () => {
     if (xhr.status === 200) {
       const produtos = JSON.parse(xhr.responseText);
       let output = `
          `;
-         for(let i in produtos){
-          output += `
+      for (let i in produtos) {
+        output += `
          <div class = "item">
                <img src = "${produtos[i].imagem}">
                   <h3>${produtos[i].titulo}</h3>
@@ -31,18 +31,18 @@ function homeProd() {
               </div>
               </a>
           `;
-        }
+      }
 
-        /* CAPACIDADE FILTER */
-        document.addEventListener('click', e => {
-          if (e.target.className === '32gb'){
-            let memoria = produtos.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '32GB'
-            })
-            let output = `
+      /* CAPACIDADE FILTER */
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "32gb") {
+          let memoria = produtos.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "32GB";
+          });
+          let output = `
            `;
-            for(let i in memoria){
-              output += `
+          for (let i in memoria) {
+            output += `
              <div class = "item">
                    <img src = "${memoria[i].imagem}">
                       <h3>${memoria[i].titulo}</h3>
@@ -56,18 +56,18 @@ function homeProd() {
                       <button button-id="${memoria[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaques').innerHTML = output;
           }
+          document.getElementById("destaques").innerHTML = output;
+        }
 
-          if (e.target.className === '64gb'){
-            let memoria = produtos.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '64GB'
-            })
-            let output = `
+        if (e.target.className === "64gb") {
+          let memoria = produtos.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "64GB";
+          });
+          let output = `
            `;
-            for(let i in memoria){
-              output += `
+          for (let i in memoria) {
+            output += `
              <div class = "item">
                    <img src = "${memoria[i].imagem}">
                       <h3>${memoria[i].titulo}</h3>
@@ -81,18 +81,18 @@ function homeProd() {
                       <button button-id="${memoria[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaques').innerHTML = output;
           }
+          document.getElementById("destaques").innerHTML = output;
+        }
 
-          if (e.target.className === '8gb'){
-            let memoria = produtos.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '8GB'
-            })
-            let output = `
+        if (e.target.className === "8gb") {
+          let memoria = produtos.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "8GB";
+          });
+          let output = `
            `;
-            for(let i in memoria){
-              output += `
+          for (let i in memoria) {
+            output += `
              <div class = "item">
                    <img src = "${memoria[i].imagem}">
                       <h3>${memoria[i].titulo}</h3>
@@ -106,18 +106,18 @@ function homeProd() {
                       <button button-id="${memoria[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaques').innerHTML = output;
           }
+          document.getElementById("destaques").innerHTML = output;
+        }
 
-          if (e.target.className === '16gb'){
-            let memoria = produtos.filter(memoriaProd => {
-              return memoriaProd.memoria_interna === '16GB'
-            })
-            let output = `
+        if (e.target.className === "16gb") {
+          let memoria = produtos.filter((memoriaProd) => {
+            return memoriaProd.memoria_interna === "16GB";
+          });
+          let output = `
            `;
-            for(let i in memoria){
-              output += `
+          for (let i in memoria) {
+            output += `
              <div class = "item">
                    <img src = "${memoria[i].imagem}">
                       <h3>${memoria[i].titulo}</h3>
@@ -131,185 +131,175 @@ function homeProd() {
                       <button button-id="${memoria[i].id}">Comprar</button>
                   </div>
               `;
-            }
-            document.getElementById('destaques').innerHTML = output;
           }
-        })
-
-        /******/
-        /* COLORS FILTER*/
-       /******/
-
-      document.addEventListener('click', e => {
-        if (e.target.className === 'branco'){
-          let cores = produtos.filter(coresBranco => {
-            return coresBranco.cor === 'Branco'
-          })
-          let output = `
-         `;
-          for(let i in cores){
-            output += `
-           <div class = "item">
-                 <img src = "${cores[i].imagem}">
-                    <h3>${cores[i].titulo}</h3>
-                    <span class = "preco">
-                        <p>R$ ${cores[i].preco} à vista</p>
-                    </span>
-                    <span class = "parcela">
-                        <p>${cores[i].parcela}</p>
-                    </span>
-                    
-                    <button button-id="${cores[i].id}">Comprar</button>
-                </div>
-                </a>
-            `;
-          }
-          document.getElementById('destaques').innerHTML = output;
-          
-        }
-        else if (e.target.className === 'dourado'){
-          let cores = produtos.filter(coresDourado => {
-            return coresDourado.cor === 'Dourado'
-          })
-          let output = `
-         `;
-          for(let i in cores){
-            output += `
-           <div class = "item">
-                 <img src = "${cores[i].imagem}">
-                    <h3>${cores[i].titulo}</h3>
-                    <span class = "preco">
-                        <p>R$ ${cores[i].preco} à vista</p>
-                    </span>
-                    <span class = "parcela">
-                        <p>${cores[i].parcela}</p>
-                    </span>
-                    
-                    <button button-id="${cores[i].id}">Comprar</button>
-                </div>
-                </a>
-            `;
-          }
-          document.getElementById('destaques').innerHTML = output;
-        }
-        else if (e.target.className === 'preto'){
-          let cores = produtos.filter(coresPreto => {
-            return coresPreto.cor === 'Preto'
-          })
-          let output = `
-          `;
-           for(let i in cores){
-             output += `
-            <div class = "item">
-                  <img src = "${cores[i].imagem}">
-                     <h3>${cores[i].titulo}</h3>
-                     <span class = "preco">
-                         <p>R$ ${cores[i].preco} à vista</p>
-                     </span>
-                     <span class = "parcela">
-                         <p>${cores[i].parcela}</p>
-                     </span>
-                     
-                     <button button-id="${cores[i].id}">Comprar</button>
-                 </div>
-                 </a>
-             `;
-           }
-           document.getElementById('destaques').innerHTML = output;
-        }
-
-        else if (e.target.className === 'cinza'){
-          let cores = produtos.filter(coresCinza => {
-            return coresCinza.cor === 'Cinza'
-          })
-         let output = `
-         `;
-          for(let i in cores){
-            output += `
-           <div class = "item">
-                 <img src = "${cores[i].imagem}">
-                    <h3>${cores[i].titulo}</h3>
-                    <span class = "preco">
-                        <p>R$ ${cores[i].preco} à vista</p>
-                    </span>
-                    <span class = "parcela">
-                        <p>${cores[i].parcela}</p>
-                    </span>
-                    
-                    <button button-id="${cores[i].id}">Comprar</button>
-                </div>
-                </a>
-            `;
-          }
-          document.getElementById('destaques').innerHTML = output;
-        }
-        else if (e.target.className === 'vermelho'){
-          let cores = produtos.filter(coresVermelho => {
-            return coresVermelho.cor === 'Vermelho'
-          })
-          let output = `
-         `;
-          for(let i in cores){
-            output += `
-           <div class = "item">
-                 <img src = "${cores[i].imagem}">
-                    <h3>${cores[i].titulo}</h3>
-                    <span class = "preco">
-                        <p>R$ ${cores[i].preco} à vista</p>
-                    </span>
-                    <span class = "parcela">
-                        <p>${cores[i].parcela}</p>
-                    </span>
-                    
-                    <button button-id="${cores[i].id}">Comprar</button>
-                </div>
-                </a>
-            `;
-          }
-          document.getElementById('destaques').innerHTML = output;
-        }
-
-        else if (e.target.className === 'verde'){
-          let cores = produtos.filter(coresVerde => {
-            return coresVerde.cor === 'Verde'
-          })
-          let output = `
-          `;
-           for(let i in cores){
-             output += `
-            <div class = "item">
-                  <img src = "${cores[i].imagem}">
-                     <h3>${cores[i].titulo}</h3>
-                     <span class = "preco">
-                         <p>R$ ${cores[i].preco} à vista</p>
-                     </span>
-                     <span class = "parcela">
-                         <p>${cores[i].parcela}</p>
-                     </span>
-                     
-                     <button button-id="${cores[i].id}">Comprar</button>
-                 </div>
-                 </a>
-             `;
-           }
-           document.getElementById('destaques').innerHTML = output;
+          document.getElementById("destaques").innerHTML = output;
         }
       });
 
+      /******/
+      /* COLORS FILTER*/
+      /******/
 
-     
-      //Product details
-      document.addEventListener('click', e => {
-        var target = e.target;
-        if(target.tagName == 'BUTTON'){
-          var btnId = target.getAttribute('button-id');
-          homeProd(btnId)
+      document.addEventListener("click", (e) => {
+        if (e.target.className === "branco") {
+          let cores = produtos.filter((coresBranco) => {
+            return coresBranco.cor === "Branco";
+          });
+          let output = `
+         `;
+          for (let i in cores) {
+            output += `
+           <div class = "item">
+                 <img src = "${cores[i].imagem}">
+                    <h3>${cores[i].titulo}</h3>
+                    <span class = "preco">
+                        <p>R$ ${cores[i].preco} à vista</p>
+                    </span>
+                    <span class = "parcela">
+                        <p>${cores[i].parcela}</p>
+                    </span>
+                    
+                    <button button-id="${cores[i].id}">Comprar</button>
+                </div>
+                </a>
+            `;
+          }
+          document.getElementById("destaques").innerHTML = output;
+        } else if (e.target.className === "dourado") {
+          let cores = produtos.filter((coresDourado) => {
+            return coresDourado.cor === "Dourado";
+          });
+          let output = `
+         `;
+          for (let i in cores) {
+            output += `
+           <div class = "item">
+                 <img src = "${cores[i].imagem}">
+                    <h3>${cores[i].titulo}</h3>
+                    <span class = "preco">
+                        <p>R$ ${cores[i].preco} à vista</p>
+                    </span>
+                    <span class = "parcela">
+                        <p>${cores[i].parcela}</p>
+                    </span>
+                    
+                    <button button-id="${cores[i].id}">Comprar</button>
+                </div>
+                </a>
+            `;
+          }
+          document.getElementById("destaques").innerHTML = output;
+        } else if (e.target.className === "preto") {
+          let cores = produtos.filter((coresPreto) => {
+            return coresPreto.cor === "Preto";
+          });
+          let output = `
+          `;
+          for (let i in cores) {
+            output += `
+            <div class = "item">
+                  <img src = "${cores[i].imagem}">
+                     <h3>${cores[i].titulo}</h3>
+                     <span class = "preco">
+                         <p>R$ ${cores[i].preco} à vista</p>
+                     </span>
+                     <span class = "parcela">
+                         <p>${cores[i].parcela}</p>
+                     </span>
+                     
+                     <button button-id="${cores[i].id}">Comprar</button>
+                 </div>
+                 </a>
+             `;
+          }
+          document.getElementById("destaques").innerHTML = output;
+        } else if (e.target.className === "cinza") {
+          let cores = produtos.filter((coresCinza) => {
+            return coresCinza.cor === "Cinza";
+          });
+          let output = `
+         `;
+          for (let i in cores) {
+            output += `
+           <div class = "item">
+                 <img src = "${cores[i].imagem}">
+                    <h3>${cores[i].titulo}</h3>
+                    <span class = "preco">
+                        <p>R$ ${cores[i].preco} à vista</p>
+                    </span>
+                    <span class = "parcela">
+                        <p>${cores[i].parcela}</p>
+                    </span>
+                    
+                    <button button-id="${cores[i].id}">Comprar</button>
+                </div>
+                </a>
+            `;
+          }
+          document.getElementById("destaques").innerHTML = output;
+        } else if (e.target.className === "vermelho") {
+          let cores = produtos.filter((coresVermelho) => {
+            return coresVermelho.cor === "Vermelho";
+          });
+          let output = `
+         `;
+          for (let i in cores) {
+            output += `
+           <div class = "item">
+                 <img src = "${cores[i].imagem}">
+                    <h3>${cores[i].titulo}</h3>
+                    <span class = "preco">
+                        <p>R$ ${cores[i].preco} à vista</p>
+                    </span>
+                    <span class = "parcela">
+                        <p>${cores[i].parcela}</p>
+                    </span>
+                    
+                    <button button-id="${cores[i].id}">Comprar</button>
+                </div>
+                </a>
+            `;
+          }
+          document.getElementById("destaques").innerHTML = output;
+        } else if (e.target.className === "verde") {
+          let cores = produtos.filter((coresVerde) => {
+            return coresVerde.cor === "Verde";
+          });
+          let output = `
+          `;
+          for (let i in cores) {
+            output += `
+            <div class = "item">
+                  <img src = "${cores[i].imagem}">
+                     <h3>${cores[i].titulo}</h3>
+                     <span class = "preco">
+                         <p>R$ ${cores[i].preco} à vista</p>
+                     </span>
+                     <span class = "parcela">
+                         <p>${cores[i].parcela}</p>
+                     </span>
+                     
+                     <button button-id="${cores[i].id}">Comprar</button>
+                 </div>
+                 </a>
+             `;
+          }
+          document.getElementById("destaques").innerHTML = output;
         }
-        for(var j = 0; j < produtos.length; j++){
+      });
+
+      //Product details
+      document.addEventListener("click", (e) => {
+        var target = e.target;
+        if (target.tagName == "BUTTON") {
+          var btnId = target.getAttribute("button-id");
+          homeProd(btnId);
+        }
+        for (var j = 0; j < produtos.length; j++) {
           if (produtos[j].id == btnId) {
-            menuDiv.style.display = 'none';
-            bannerDiv.style.display = 'none';
-            compraDiv.style.display = 'block';
+            menuDiv.style.display = "none";
+            bannerDiv.style.display = "none";
+            compraDiv.style.display = "block";
             let saida = `
             <div class = "container">
               <a   href  = "index.html">Voltar</a>
@@ -332,8 +322,8 @@ function homeProd() {
                       <h2>R$ ${produtos[j].preco}</h2>
                       <p>à vista no cartão</p>
                       <div class = "buttonsPag">
-                         <button><i class="fas fa-check"></i> Comprar</button>
-                         <button><i class="fas fa-shopping-cart"></i> Adicionar ao carrinho</button>
+                         <button data-modal-target="#modal" ><i class="fas fa-check"></i> Comprar</button>
+                        
                       </div>
                   </div>
                  
@@ -418,19 +408,19 @@ function homeProd() {
          </div>
         </div>
               `;
-          document.getElementById('finalizarCompra').innerHTML = saida;
+            document.getElementById("finalizarCompra").innerHTML = saida;
           }
         }
-        /* PRODUCT UI CARD */
-        const imgContainer = document.getElementById('img-container')
-          window.changeImg = (image) => {
-             imgContainer.src = image.src
-          }
-      });
 
-      document.getElementById('destaques').innerHTML = output;
+        /* PRODUCT UI CARD */
+        const imgContainer = document.getElementById("img-container");
+        window.changeImg = (image) => {
+          imgContainer.src = image.src;
+        };
+      });
+      document.getElementById("destaques").innerHTML = output;
     } else if (xhr.status === 404) {
-      document.getElementById('destaques').innerHTML = 'Produto não encontrado';
+      document.getElementById("destaques").innerHTML = "Produto não encontrado";
     }
   };
   xhr.send();

@@ -1,4 +1,4 @@
-@import './variables';
+@import "./variables";
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,7 @@
 }
 
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   overflow-x: hidden;
   background-color: #f8f2f2;
 }
@@ -16,14 +16,15 @@ header {
   background-color: white;
   display: flex;
   justify-content: space-around;
-  padding: 2rem 0 1rem 0 ;
+  padding: 2rem 0 1rem 0;
   align-items: center;
+  height: 10vh;
   // box-shadow: 10px 10px 8px #f3f0f0;
-  nav ul{
+  nav ul {
     display: flex;
     list-style: none;
     margin-top: 1rem;
-    a{
+    a {
       text-decoration: none;
       margin: 1rem;
       color: rgb(63, 60, 60);
@@ -42,7 +43,7 @@ header {
     cursor: pointer;
   }
 
-  .cart i{
+  .cart i {
     color: rgb(241, 245, 248);
     background-color: rgb(0, 183, 255);
     padding: 10px;
@@ -51,160 +52,38 @@ header {
     font-size: 1rem;
     border-radius: 5rem;
   }
+
+  .login-link {
+    i {
+      color: rgb(241, 245, 248);
+      background-color: rgb(0, 183, 255);
+      padding: 10px;
+      // width: 10p;
+      border: solid 2px rgb(0, 183, 255);
+      font-size: 1rem;
+      border-radius: 5rem;
+    }
+  }
 }
-//   height: 12vh;
-//   background: #fdfcfc;
-//   width: 100%;
-//   .topo-nav,
-//   .nav-contato {
-//     display: flex;
-//     height: 12vh;
-//     justify-content: center;
-//     align-items: flex-end;
-//     background: #fdfcfc;
-//     border-bottom: $borderStyle;
-//   }
 
-//   .navbar {
-//     @include flexCenter();
-//     justify-content: space-between;
-//     margin-bottom: 15px;
+.show-menu-btn,
+.hide-menu-btn {
+  transition: 0.4s;
+  font-size: 30px;
+  cursor: pointer;
+  display: none;
+}
 
-//     input {
-//       @include inputReset();
-//       height: 25px;
-//       margin-top: 37px;
-//       margin-left: 30px;
-//       margin-right: 14px;
-//       border: solid 1px rgb(240, 237, 237);
-//       border-bottom: solid 3px rgb(228, 228, 228);
-//       border-radius: 4px;
-//       background: #faf9f9;
-//     }
-//   }
+.show-menu-btn i {
+  color: rgb(0, 183, 255);
+}
 
-//   #main {
-//     @include flexCenter();
-//   }
+#check {
+  position: absolute;
+  visibility: hidden;
+  z-index: -1111;
+}
 
-//   .home-nav {
-//     display: flex;
-//     justify-content: space-evenly;
-//     .logo {
-//       margin-right: 229px;
-//     }
-//     .login-link {
-//       margin-right: 11px;
-//     }
-//   }
-
-  // .logo {
-  //   margin-top: 15px;
-  //   margin-right: 220px;
-  //   margin-left: 13px;
-  //   margin-bottom: 15px;
-  //   font-family: $titleFont;
-  //   text-transform: uppercase;
-  //   background: rgb(0, 183, 255);
-  //   padding: 0 12px 0;
-  //   color: rgb(247, 245, 248);
-  //   cursor: pointer;
-  // }
-
-//   li,
-//   a {
-//     @include linksReset();
-//     margin-left: 15px;
-//     font-size: 1rem;
-//     margin-top: 40px;
-//     text-transform: uppercase;
-//     color: #6b6969;
-//     transition: 0.1s ease;
-//     &:hover {
-//       color: #4395bb;
-//     }
-//   }
-
-//   .fa-shopping-cart {
-//     margin-top: 35px;
-//     margin-left: 25px;
-//     cursor: pointer;
-//     font-size: 20px;
-//     color: $mainBlue;
-//     transition: 0.1s ease;
-//     border-bottom: solid 2px $mainBlue;
-//     &:hover {
-//       color: $hoverBlue;
-//       border-bottom: solid 2px $hoverBlue;
-//     }
-//   }
-
-//   .login-link {
-//     position: relative;
-//     i {
-//       cursor: pointer;
-//       position: absolute;
-//       top: 1px;
-//       right: 53px;
-//       color: rgb(191, 192, 194);
-//     }
-//   }
-
-//   .searchNav {
-//     position: relative;
-//     i {
-//       position: absolute;
-//       top: 40px;
-//       right: 20px;
-//       color: #ccc9c9;
-//     }
-//   }
-
-  .show-menu-btn,
-  .hide-menu-btn {
-    transition: 0.4s;
-    font-size: 30px;
-    cursor: pointer;
-    display: none;
-  }
-
-//   .hide-menu-btn {
-//     color: rgb(235, 232, 232);
-//   }
-
-//   .show-menu-btn {
-//     i {
-//       line-height: 100px;
-//     }
-//   }
-
-  #check {
-    position: absolute;
-    visibility: hidden;
-    z-index: -1111;
-  }
-
-
-// .pages-content {
-//   .login-link {
-//     margin-right: 10px;
-//   }
-// }
-
-// .pages-content {
-//   .logo {
-//     margin-right: 228px;
-//   }
-// }
-
-// .sticky-nav {
-//   position: fixed;
-//   width: 100%;
-//   background: #f6f4f4;
-//   z-index: 100;
-//   transition: 0.5s;
-//   border-bottom: solid 1px rgb(224, 222, 222);
-// }
 
 /*Banner*/
 .banner {
@@ -219,6 +98,23 @@ header {
       width: 100%;
     }
   }
+  .swiper-container {
+    width: 100%;
+    // background-color: red;
+    .swiper-slide{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: url('https://imagens.trocafone.com/images/banners/20190715143338-Brazil-1920x320_s8.jpg');
+      background-size: cover;
+      background-position: center;
+      img{
+        max-width: 100%;
+        height: 100%;
+      }
+    }
+}
 }
 
 #prevButton {
@@ -359,7 +255,7 @@ main {
       border: solid 1px rgb(224, 219, 219);
       border-radius: 2px;
 
-      button{
+      button {
         cursor: pointer;
         padding: 11px;
         width: 70%;
@@ -371,7 +267,6 @@ main {
         color: rgb(241, 236, 236);
         background-color: rgba(37, 172, 240, 0.932);
         border: none;
-        
       }
     }
     .itemBanner {
@@ -671,14 +566,23 @@ footer {
   height: 400px;
   max-width: 80%;
   transform: translate(-50%, -50%) scale(0);
+  border-radius: 1rem;
+
+  a {
+    text-decoration: none;
+    color: rgb(148, 144, 144);
+  }
 
   .modal-header {
-    padding: 10px 15px;
+    padding: 12px 15px;
     display: flex;
     align-items: center;
+    letter-spacing: 1px;
     justify-content: center;
-    border-bottom: solid 1px #e7e6e6;
-    background: #f1eeee;
+    // border-bottom: solid 1px #e7e6e6;
+    // background: #f1eeee;
+    margin-bottom: 1rem;
+    color: rgb(138, 133, 133);
     .title a {
       margin-right: 20px;
     }
@@ -691,7 +595,7 @@ footer {
     @include columnCenter();
 
     input {
-      width: 65%;
+      width: 100%;
       height: 27px;
       border-radius: 3px;
       border: none;
@@ -724,61 +628,102 @@ footer {
     .login-form {
       @include columnCenter();
       input {
-        width: 220px;
+        width: 285px;
         background: rgb(235, 232, 232);
+        border: none;
+        border: solid 1px rgb(231, 225, 225);
         padding: 12px;
+        margin: 0.2rem;
         height: 35px;
       }
       button {
-        width: 220px;
+        width: 150px;
+        align-self: center;
+        margin-bottom: 1rem;
       }
     }
 
     .registrar-form {
       margin-top: -30px;
+      form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 1rem;
+      }
       input {
-        width: 220px;
-        margin-top: 15px;
+        // width: 220px;
+        // margin-top: 15px;
+        width: 285px;
+        background: rgb(235, 232, 232);
+        border: none;
+        border: solid 1px rgb(231, 225, 225);
+        padding: 12px;
+        margin: 0.2rem;
+        height: 35px;
       }
       button {
-        width: 220px;
+        width: 150px;
       }
-      form {
-        margin-left: 16%;
-      }
+      // form {
+      //   margin-left: 16%;
+      // }
     }
 
     .recuperar-senha {
       flex-direction: column;
-      input {
-        width: 220px;
-        margin-top: 15px;
-        margin-bottom: -22px;
-      }
       button,
       p,
       a {
-        width: 220px;
+        // width: 220px;
+        margin: 0 auto;
       }
+
+      p {
+        width: 100%;
+        // padding: 1rem;
+        text-align: center;
+        color: rgb(66, 65, 65);
+      }
+
+      button {
+        width: 150px;
+      }
+
+      input {
+        width: 285px;
+        // margin-bottom: -22px;
+        background: rgb(235, 232, 232);
+        border: none;
+        border: solid 1px rgb(231, 225, 225);
+        padding: 12px;
+        margin: 0 auto;
+        height: 35px;
+        margin-top: 15px;
+        margin-bottom: 5px;
+      }
+
       a {
-        margin-top: -22px;
+        margin-top: 22px;
       }
 
       form {
-        margin-left: 16%;
+        display: flex;
+        align-self: center;
       }
     }
   }
   .close-button {
     cursor: pointer;
-    background: #f0eeee;
-    color: rgb(59, 59, 59);
+    background-color: transparent;
+    color: rgb(48, 143, 231);
     padding: 4px;
     border: none;
     font-size: 30px;
     font-weight: bold;
     outline: none;
     position: absolute;
+    right: 1rem;
   }
 }
 
@@ -1066,7 +1011,7 @@ th {
     left: 0;
 
     &:before {
-      content: '#{$prev-icon}';
+      content: "#{$prev-icon}";
       left: 50%;
       @include fadeshow-transform(translate(-50%, -50%));
       @if $responsive == true {
@@ -1091,7 +1036,7 @@ th {
     right: 0;
 
     &:before {
-      content: '#{$next-icon}';
+      content: "#{$next-icon}";
       right: 50%;
       @include fadeshow-transform(translate(50%, -50%));
       @if $responsive == true {
@@ -1112,7 +1057,7 @@ th {
   }
 
   /* Base functionality */
-  input[type='radio'] {
+  input[type="radio"] {
     position: fixed;
     top: -9999px;
 
@@ -1174,8 +1119,8 @@ th {
 }
 
 /* Handle Prev/Next buttons */
-[data-am-fadeshow~='next-prev-navigation'] {
-  input[type='radio'] {
+[data-am-fadeshow~="next-prev-navigation"] {
+  input[type="radio"] {
     &:checked {
       $i: $max-slides;
 
@@ -1305,8 +1250,8 @@ th {
       }
     }
 
-    [data-am-fadeshow~='autoplay'] {
-      input[type='radio']:nth-of-type(#{$i}):last-of-type {
+    [data-am-fadeshow~="autoplay"] {
+      input[type="radio"]:nth-of-type(#{$i}):last-of-type {
         /* Slide animation */
         ~ .fs-slides {
           .fs-slide {
