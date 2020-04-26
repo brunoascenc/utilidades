@@ -311,6 +311,9 @@
     left: 230px;
     color: #adadad;
   }
+  .menu .main {
+    margin-top: -50rem !important;
+  }
   .show-menu-item {
     display: -webkit-box;
     display: -ms-flexbox;

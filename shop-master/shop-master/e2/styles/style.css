@@ -100,9 +100,11 @@ header .login-link i {
   display: flex;
   -webkit-animation: slide 12s infinite;
           animation: slide 12s infinite;
-  height: 320px;
   position: relative;
   background-size: cover;
+  width: 100%;
+  margin-top: 1rem;
+  margin-bottom: -2rem;
 }
 
 .banner .carousel {
@@ -112,7 +114,7 @@ header .login-link i {
 }
 
 .banner .carousel img {
-  width: 100%;
+  width: 10%;
 }
 
 .banner .swiper-container {
@@ -123,47 +125,19 @@ header .login-link i {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   overflow: hidden;
-  background: url("https://imagens.trocafone.com/images/banners/20190715143338-Brazil-1920x320_s8.jpg");
-  background-size: cover;
-  background-position: center;
 }
 
 .banner .swiper-container .swiper-slide img {
   max-width: 100%;
-  height: 100%;
 }
 
-#prevButton {
+.banner .swiper-pagination {
   position: absolute;
-  top: 42%;
-  z-index: 100;
-  left: 5%;
-  font-size: 30px;
-  background: #00b7ff;
-  color: #ffffff;
-  padding: 6px;
-  opacity: 0.8;
-  cursor: pointer;
-}
-
-#nextButton {
-  position: absolute;
-  top: 42%;
-  z-index: 10;
-  right: 5%;
-  font-size: 30px;
-  background: #00b7ff;
-  color: #ffffff;
-  padding: 6px;
-  opacity: 0.8;
-  cursor: pointer;
+  bottom: 0;
 }
 
 #check-menu {
