@@ -166,32 +166,25 @@
             <div class="contato-form">
                 <div class="duvidas-form">
                     <h2>Contato</h2>
-                    <!-- <form action=""> -->
-                    <input type="text" placeholder="Seu nome">
-                    <input type="email" placeholder="Seu email">
+                    <form onsubmit="return validarForm()">
+                    <input id="nome" type="text" placeholder="Seu nome">
+                    <input id="email" type="email" placeholder="Seu email">
                     <select name="duvidas">
                         <option value="valor1" selected>Selecione uma dúvida</option>
                         <option value="devo">Devoluções</option>
                         <option value="troca">Troca</option>
                         <option value="garantia">Garantia</option>
                         <option value="defeito">Produto com defeito</option>
-                        <textarea id="story" rows="5" cols="33"></textarea>
+                        <textarea id="message" rows="5" cols="33"></textarea>
+                        <div id="error-msg"></div>
                         <button>Enviar</button>
                     </select>
-                    <!-- </form> -->
+                    </form>
                 </div>
 
                 <div class="sobre">
                     <h2>Quem somos?</h2>
-                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quos beatae animi in quas reprehenderit
-                        ea
-                        earum, nemo vitae illo iusto? Vel, omnis neque. Itaque eius, nemo enim tenetur ad perferendis
-                        culpa
-                        veritatis fugiat iusto porro non cupiditate accusantium soluta cum. Provident animi totam
-                        voluptatibus saepe ut obcaecati, asperiores aliquam tenetur, repellat nesciunt sint tempora
-                        nostrum!
-                        Laborum sit reiciendis tempora fugiat veniam in explicabo quod cumque facere ipsa, autem tenetur
-                        quasi rerum vero, beatae, soluta nostrum sed temporibus expedita? Doloribus, dignissimos.
+                    <p>Blues Celulares é uma empresa brasileira de comércio eletrônico. Criada em 1999, foi uma das pioneiras do Brasil neste segmento. Em 2006, juntou-se com a Americanas.com, criando a B2W. É uma loja virtual oficializada pela Associação Brasileira dos Produtores de Discos e pela Federação Internacional da Indústria Fonográfica.
                     </p>
                 </div>
             </div>

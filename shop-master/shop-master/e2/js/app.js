@@ -72,3 +72,26 @@ voltarLink.forEach((button) => {
     loginDiv.style.display = "flex";
   });
 });
+
+//Form Validation
+function validarForm() {
+  const nome= document.getElementById("nome").value;
+  const email = document.getElementById("email").value;
+  const textarea = document.getElementById("message").value;
+
+  if (!nome) {
+    document.getElementById("error-msg").innerHTML = "* Insira seu nome";
+    return false;
+  } else if (!email) {
+    document.getElementById("error-msg").innerHTML = "* Insira seu email";
+    return false;
+  } else if (!textarea){
+    document.getElementById("error-msg").innerHTML = "* Escreva sua mensagem";
+    return false;
+  }else {
+    alert(
+      "Mensagem enviada com sucesso!"
+    );
+    return true;
+  }
+}

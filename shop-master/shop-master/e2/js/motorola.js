@@ -301,7 +301,6 @@ function motoProd() {
                         <p>à vista no cartão</p>
                         <div class = "buttonsPag">
                            <button><i class="fas fa-check"></i> Comprar</button>
-                           <button><i class="fas fa-shopping-cart"></i> Adicionar ao carrinho</button>
                         </div>
                     </div>
                    

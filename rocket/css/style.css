@@ -13,6 +13,9 @@ img {
 body {
   font-family: "Quicksand", sans-serif;
   background-color: #f8f6f6;
+}
+
+html, body {
   overflow-x: hidden;
 }
 
@@ -27,6 +30,7 @@ body {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  overflow-x: hidden;
 }
 
 a {
@@ -151,7 +155,7 @@ header nav .links li {
     right: 0px;
     height: 100vh;
     width: 50%;
-    top: 10vh;
+    top: 0;
     background-image: -webkit-gradient(linear, left top, right top, from(#a140ce), to(#c76ff0));
     background-image: linear-gradient(to right, #a140ce, #c76ff0);
     display: -webkit-box;
@@ -167,15 +171,15 @@ header nav .links li {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    z-index: 100;
+    z-index: 0;
     -webkit-transform: translateX(100%);
             transform: translateX(100%);
     -webkit-transition: -webkit-transform 0.5s ease-in;
     transition: -webkit-transform 0.5s ease-in;
     transition: transform 0.5s ease-in;
     transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
-    border-top-left-radius: 25px;
-    border-bottom-left-radius: 25px;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
   }
 }
 
@@ -187,18 +191,15 @@ header nav .links li {
 
 @media (max-width: 565px) {
   header nav .links {
-    width: 75%;
-  }
-}
-
-@media (max-width: 380px) {
-  header nav .links {
-    width: 80%;
+    width: 100%;
+    border-top-left-radius: 0px;
+    border-bottom-left-radius: 0px;
   }
 }
 
 header nav .burguer {
   display: none;
+  z-index: 100;
 }
 
 @media (max-width: 780px) {
@@ -215,6 +216,10 @@ header nav .burguer div {
   margin: 5px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+}
+
+header nav .burguerToggle div {
+  background-color: #eee4e4;
 }
 
 header nav .burguerToggle .line1 {
@@ -1242,8 +1247,6 @@ footer {
   -ms-grid-columns: 1fr 1fr 1fr;
       grid-template-columns: 1fr 1fr 1fr;
   padding: 85px;
-  background-color: #f2f2f7;
-  background-color: red;
   background-image: -webkit-gradient(linear, left top, right top, from(#a344cf), to(#cd69fc));
   background-image: linear-gradient(to right, #a344cf, #cd69fc);
   width: 100vw;
