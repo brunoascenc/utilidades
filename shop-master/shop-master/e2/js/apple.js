@@ -252,18 +252,17 @@ function appleProd() {
           for (let i in cores) {
             output += `
              <div class = "item">
-                   <img src = "${cores[i].imagem}">
-                      <h3>${cores[i].titulo}</h3>
-                      <span class = "preco">
-                          <p>R$ ${cores[i].preco} à vista</p>
-                      </span>
-                      <span class = "parcela">
-                          <p>${cores[i].parcela}</p>
-                      </span>
-                      
-                      <button button-id="${cores[i].id}">Comprar</button>
-                  </div>
-                  </a>
+               <img src = "${cores[i].imagem}">
+                  <h3>${cores[i].titulo}</h3>
+                  <span class = "preco">
+                     <p>R$ ${cores[i].preco} à vista</p>
+                  </span>
+                  <span class = "parcela">
+                      <p>${cores[i].parcela}</p>
+                  </span>
+                  
+                  <button button-id="${cores[i].id}">Comprar</button>
+              </div>
               `;
           }
           document.getElementById("destaquesApple").innerHTML = output;
@@ -310,7 +309,6 @@ function appleProd() {
                        
                        <button button-id="${cores[i].id}">Comprar</button>
                    </div>
-                   </a>
                `;
           }
           document.getElementById("destaquesApple").innerHTML = output;
@@ -334,7 +332,6 @@ function appleProd() {
                       
                       <button button-id="${cores[i].id}">Comprar</button>
                   </div>
-                  </a>
               `;
           }
           document.getElementById("destaquesApple").innerHTML = output;
@@ -378,9 +375,10 @@ function appleProd() {
                     </div>
                    
                     <br>
+                    <br>
                     <p><i class="fas fa-barcode"></i> R$ ${produtos[j].preco} no boleto bancário</p>
                     <p><i class="far fa-credit-card"></i> R$ ${produtos[j].preco} no cartão de crédito em até 10x de R$ 220,99 s/ juros</p>
-                    <p><i class="fas fa-credit-card"></i> R$ 1899,90 no cartão Blues.com em até 12x de R$ 49,60 s/ juros</p>
+                    <p><i class="fas fa-credit-card"></i> R$ ${produtos[j].preco} no cartão Blues.com em até 12x de R$ 49,60 s/ juros</p>
                     <div class = "frete">
                         <p>Calcular o frete: </p>
                         <input type = "text">

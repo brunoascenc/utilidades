@@ -25,7 +25,6 @@ function samsungProd() {
                   
                   <button button-id="${produtos[i].id}">Comprar</button>
               </div>
-              </a>
           `;
       }
       /* CAPACIDADE FILTER */
@@ -184,7 +183,6 @@ function samsungProd() {
                      
                      <button button-id="${cores[i].id}">Comprar</button>
                  </div>
-                 </a>
              `;
           }
           document.getElementById("destaquesSam").innerHTML = output;
@@ -208,7 +206,6 @@ function samsungProd() {
                      
                      <button button-id="${cores[i].id}">Comprar</button>
                  </div>
-                 </a>
              `;
           }
           document.getElementById("destaquesSam").innerHTML = output;
@@ -232,7 +229,6 @@ function samsungProd() {
                      
                      <button button-id="${cores[i].id}">Comprar</button>
                  </div>
-                 </a>
              `;
           }
           document.getElementById("destaquesSam").innerHTML = output;
@@ -256,7 +252,6 @@ function samsungProd() {
                      
                      <button button-id="${cores[i].id}">Comprar</button>
                  </div>
-                 </a>
              `;
           }
           document.getElementById("destaquesSam").innerHTML = output;
@@ -301,9 +296,10 @@ function samsungProd() {
                     </div>
                    
                     <br>
+                    <br>
                     <p><i class="fas fa-barcode"></i> R$ ${produtos[j].preco} no boleto bancário</p>
                     <p><i class="far fa-credit-card"></i> R$ ${produtos[j].preco} no cartão de crédito em até 10x de R$ 220,99 s/ juros</p>
-                    <p><i class="fas fa-credit-card"></i> R$ 1899,90 no cartão Blues.com em até 12x de R$ 49,60 s/ juros</p>
+                    <p><i class="fas fa-credit-card"></i> R$ ${produtos[j].preco} no cartão Blues.com em até 12x de R$ 49,60 s/ juros</p>
                     <div class = "frete">
                         <p>Calcular o frete: </p>
                         <input type = "text">

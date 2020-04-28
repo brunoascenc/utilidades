@@ -5,9 +5,9 @@
   box-sizing: border-box;
 }
 
-body {
-  font-family: "Open Sans", sans-serif;
+html,body{
   overflow-x: hidden;
+  font-family: "Open Sans", sans-serif;
   background-color: #f8f2f2;
 }
 
@@ -19,7 +19,6 @@ header {
   padding: 2rem 0 1rem 0;
   align-items: center;
   height: 11vh;
-  // box-shadow: 10px 10px 8px #f3f0f0;
   nav ul {
     display: flex;
     list-style: none;
@@ -47,7 +46,6 @@ header {
     color: rgb(241, 245, 248);
     background-color: rgb(0, 183, 255);
     padding: 10px;
-    // width: 10p;
     border: solid 2px rgb(0, 183, 255);
     font-size: 1rem;
     border-radius: 5rem;
@@ -59,7 +57,6 @@ header {
       color: rgb(241, 245, 248);
       background-color: rgb(0, 183, 255);
       padding: 10px;
-      // width: 10p;
       border: solid 2px rgb(0, 183, 255);
       font-size: 1rem;
       border-radius: 5rem;
@@ -85,17 +82,13 @@ header {
   z-index: -1111;
 }
 
-
 /*Banner*/
 .banner {
   display: flex;
   animation: slide 12s infinite;
-  // height: 320px;
   position: relative;
   background-size: cover;
   width: 100%;
-  // margin: 0 auto;
-  // margin-top: 0.5rem;
   margin-bottom: -2rem;
   .carousel {
     display: flex;
@@ -105,64 +98,35 @@ header {
   }
   .swiper-container {
     width: 100%;
-    // background-color: red;
-    // height: 35vh;
-    .swiper-slide{
+    .swiper-slide {
       display: flex;
-      // align-items: center;
       justify-content: center;
-      // overflow: hidden;
-      img{
+      img {
         max-width: 100%;
       }
     }
+  }
+
+  .swiper-pagination {
+    position: absolute;
+    bottom: 0;
+    z-index: 100;
+    width: 100%;
+  }
+
+  .swiper-button-prev {
+    margin-left: 1rem;
+  }
+  .swiper-button-next {
+    margin-right: 1rem;
+  }
 }
 
-.swiper-pagination{
-  position: absolute;
-  bottom: 0;
-  z-index: 100;
-  width: 100%;
-}
-
-.swiper-button-prev{
-  margin-left: 1rem;
-}
-.swiper-button-next{
-  margin-right: 1rem;
-}
-
-}
-
-// #prevButton {
-//   position: absolute;
-//   top: 42%;
-//   z-index: 100;
-//   left: 5%;
-//   font-size: 30px;
-//   background: $mainBlue;
-//   color: #ffffff;
-//   padding: 6px;
-//   opacity: 0.8;
-//   cursor: pointer;
-// }
-
-// #nextButton {
-//   position: absolute;
-//   top: 42%;
-//   z-index: 10;
-//   right: 5%;
-//   font-size: 30px;
-//   background: $mainBlue;
-//   color: #ffffff;
-//   padding: 6px;
-//   opacity: 0.8;
-//   cursor: pointer;
-// }
 #check-menu {
   visibility: hidden;
   z-index: -1111;
 }
+
 .show-menu-item,
 .hide-menu-item {
   display: none;
@@ -407,14 +371,14 @@ main {
   margin-bottom: 2%;
   padding: 90px;
   margin-left: 0;
-  form{
+  form {
     display: flex;
     flex-direction: column;
     align-items: center;
     width: 100%;
   }
 
-  #error-msg{
+  #error-msg {
     color: red;
   }
   h2 {
@@ -433,7 +397,6 @@ main {
     width: 85%;
     border-radius: 1px;
     border: solid 1px rgb(225, 225, 233);
-    // border-bottom: solid 3px rgb(208, 213, 216);
     background: rgb(245, 243, 243);
   }
 
@@ -469,7 +432,6 @@ main {
 .contato-title {
   display: flex;
   justify-content: center;
-  // margin-top: 1%;
   padding: 14px;
   margin-bottom: -3rem;
   h1 {
@@ -535,7 +497,6 @@ footer {
     .socials i {
       color: rgb(0, 183, 255);
       padding: 2px;
-      // border-radius: 5rem;
     }
     .email {
       @include columnCenter();
@@ -550,7 +511,6 @@ footer {
         outline: none;
         border-radius: 1px;
         border: solid 1px rgb(224, 219, 219);
-        // border-bottom: solid 3px rgb(209, 211, 212);
         background: rgb(245, 243, 243);
       }
 
@@ -606,8 +566,6 @@ footer {
     align-items: center;
     letter-spacing: 1px;
     justify-content: center;
-    // border-bottom: solid 1px #e7e6e6;
-    // background: #f1eeee;
     margin-bottom: 1rem;
     color: rgb(138, 133, 133);
     .title a {
@@ -679,8 +637,6 @@ footer {
         margin-top: 1rem;
       }
       input {
-        // width: 220px;
-        // margin-top: 15px;
         width: 285px;
         background: rgb(235, 232, 232);
         border: none;
@@ -692,9 +648,6 @@ footer {
       button {
         width: 150px;
       }
-      // form {
-      //   margin-left: 16%;
-      // }
     }
 
     .recuperar-senha {
@@ -702,13 +655,11 @@ footer {
       button,
       p,
       a {
-        // width: 220px;
         margin: 0 auto;
       }
 
       p {
         width: 100%;
-        // padding: 1rem;
         text-align: center;
         color: rgb(66, 65, 65);
       }
@@ -719,7 +670,6 @@ footer {
 
       input {
         width: 285px;
-        // margin-bottom: -22px;
         background: rgb(235, 232, 232);
         border: none;
         border: solid 1px rgb(231, 225, 225);
@@ -806,7 +756,6 @@ footer {
   background: rgb(253, 253, 253);
   border: solid 1px rgb(224, 219, 219);
   padding: 28px;
-  // box-shadow: 10px 10px 8px #f8f5f5;
   img {
     padding: 4px;
     max-width: 100%;

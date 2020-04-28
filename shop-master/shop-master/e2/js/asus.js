@@ -25,7 +25,6 @@ function asusProd() {
                   
                   <button button-id="${produtosAsus[i].id}">Comprar</button>
               </div>
-              </a>
           `;
       }
 
@@ -183,7 +182,6 @@ function asusProd() {
                   
                   <button button-id="${cores[i].id}">Comprar</button>
               </div>
-              </a>
           `;
           }
           document.getElementById("destaquesAsus").innerHTML = output;
@@ -206,7 +204,6 @@ function asusProd() {
                   
                   <button button-id="${cores[i].id}">Comprar</button>
               </div>
-              </a>
           `;
           }
           document.getElementById("destaquesAsus").innerHTML = output;
@@ -229,7 +226,6 @@ function asusProd() {
                   
                   <button button-id="${cores[i].id}">Comprar</button>
               </div>
-              </a>
           `;
           }
           document.getElementById("destaquesAsus").innerHTML = output;
@@ -274,9 +270,10 @@ function asusProd() {
                     </div>
                    
                     <br>
+                    <br>
                     <p><i class="fas fa-barcode"></i> R$ ${produtosAsus[j].preco} no boleto bancário</p>
                     <p><i class="far fa-credit-card"></i> R$ ${produtosAsus[j].preco} no cartão de crédito em até 10x de R$ 220,99 s/ juros</p>
-                    <p><i class="fas fa-credit-card"></i> R$ 1899,90 no cartão Blues.com em até 12x de R$ 49,60 s/ juros</p>
+                    <p><i class="fas fa-credit-card"></i> R$ ${produtosAsus[j].preco} no cartão Blues.com em até 12x de R$ 49,60 s/ juros</p>
                     <div class = "frete">
                         <p>Calcular o frete: </p>
                         <input type = "text">
