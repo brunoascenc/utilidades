@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Paytone+One&display=swap");
+@import url("https://fonts.googleapis.com/css?family=Red+Hat+Text&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  background-color: #110f0f;
+  font-family: 'Red Hat Text', sans-serif;
+}
+
+a:hover {
+  color: inherit;
+  border: none;
+  text-decoration: none;
+}
+
+.greendetail {
+  color: #3de697;
+}
+
+.cursor {
+  width: 20px;
+  height: 20px;
+  border: solid 1px #e9e4e4;
+  border-radius: 50%;
+  position: absolute;
+  -webkit-transition-duration: 200ms;
+          transition-duration: 200ms;
+  -webkit-transition-timing-function: ease-out;
+          transition-timing-function: ease-out;
+  -webkit-animation: cursorAnimation .5s infinite alternate;
+          animation: cursorAnimation .5s infinite alternate;
+  pointer-events: none;
+  z-index: 100;
+}
+
+@-webkit-keyframes cursorAnimation {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+@keyframes cursorAnimation {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0.7);
+            transform: scale(0.7);
+  }
+}
+
+header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1.5rem 0 0 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  height: 10vh;
+  color: #f3e3e3;
+}
+
+header h1 {
+  font-family: "Paytone One", sans-serif;
+  font-size: 2rem;
+  text-transform: uppercase;
+}
+
+header ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  margin-top: 1rem;
+}
+
+header ul a {
+  margin: 1rem;
+  color: inherit;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  z-index: 1;
+}
+
+header ul a:hover {
+  color: inherit;
+  text-decoration: none;
+}
+
+#home {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home .row {
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#home img {
+  width: 135%;
+  z-index: -1;
+  margin-right: 10px;
+}
+
+#home .teste {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#home .home-txt {
+  margin-top: -10rem;
+}
+
+#home .home-txt h1 {
+  font-family: "Paytone One", sans-serif;
+  color: #f3e3e3;
+  letter-spacing: 1px;
+  font-size: 3.1rem;
+}
+
+#home .home-txt a {
+  color: #110f0f;
+  color: #f7f2f2;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  border: solid 1px #3de697;
+  padding: 0.7rem;
+  -webkit-transition: all 0.2s ease-out;
+  transition: all 0.2s ease-out;
+}
+
+#home .home-txt a:hover {
+  background-color: #3de697;
+  color: #0a0909;
+}
+
+#home .home-txt .subtitle {
+  color: #585656;
+}
+
+#home .home-txt .subtitle p {
+  margin-bottom: 3rem;
+}
+
+#home .circle {
+  -webkit-transform: translate(-20%, -70%);
+          transform: translate(-20%, -70%);
+  position: absolute;
+  opacity: 0.6;
+  overflow: hidden;
+}
+
+#home .circleOne img {
+  -webkit-animation: rotateCircle 2s linear infinite;
+          animation: rotateCircle 2s linear infinite;
+}
+
+#home .circleTwo img {
+  -webkit-animation: rotateCircle 8s linear infinite;
+          animation: rotateCircle 8s linear infinite;
+}
+
+@-webkit-keyframes rotateCircle {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes rotateCircle {
+  from {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  to {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+#about .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100vh;
+}
+
+#about h4 {
+  color: #5c5959;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+  margin-left: -1rem;
+}
+
+#about p {
+  color: #c7c2c2;
+}
+/*# sourceMappingURL=style.css.map */

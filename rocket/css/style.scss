@@ -139,7 +139,7 @@ svg {
 
 // Header
 header {
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -176,13 +176,18 @@ header {
       li {
         margin-left: 2.5rem;
         @include tablet {
-          margin: 10%;
+          margin: 2rem;
           font-size: 1.5rem;
           a {
             color: rgb(243, 239, 239);
             text-transform: uppercase;
             color: rgb(226, 219, 219);
           }
+        }
+
+        @include mobile{
+          margin: 1.3rem;
+          font-size: 1.2rem;
         }
 
         @include tablet {
@@ -317,7 +322,8 @@ header.sticky {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
-    margin-top: -60px;
+    // margin-top: 10rem;
+
 
     @include tablet {
       grid-template-columns: 320px 1fr;
@@ -327,6 +333,10 @@ header.sticky {
       grid-template-columns: 1fr;
       margin-top: 150px;
       justify-content: center;
+    }
+
+    @include xs-mobile{
+      margin-top: 200px;
     }
 
     .landing-text {
@@ -418,7 +428,6 @@ header.sticky {
 //About
 .about {
   height: 400px;
-  // margin-top: 450px;
   background-image: linear-gradient(
     to right,
     rgb(161, 64, 206),
@@ -443,7 +452,7 @@ header.sticky {
     width: 850px;
     height: 400px;
     margin: 0 auto;
-    margin-top: -165px;
+    margin-top: -100px;
     border-radius: 25px;
     display: flex;
     align-items: center;

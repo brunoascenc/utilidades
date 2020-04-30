@@ -74,8 +74,7 @@ svg {
 }
 
 header {
-  position: -webkit-sticky;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -133,13 +132,20 @@ header nav .links li {
 
 @media (max-width: 780px) {
   header nav .links li {
-    margin: 10%;
+    margin: 2rem;
     font-size: 1.5rem;
   }
   header nav .links li a {
     color: #f3efef;
     text-transform: uppercase;
     color: #e2dbdb;
+  }
+}
+
+@media (max-width: 625px) {
+  header nav .links li {
+    margin: 1.3rem;
+    font-size: 1.2rem;
   }
 }
 
@@ -314,7 +320,6 @@ header.sticky {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: -60px;
 }
 
 @media (max-width: 780px) {
@@ -332,6 +337,12 @@ header.sticky {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+
+@media (max-width: 380px) {
+  .home .landing-content {
+    margin-top: 200px;
   }
 }
 
@@ -479,7 +490,7 @@ header.sticky {
   width: 850px;
   height: 400px;
   margin: 0 auto;
-  margin-top: -165px;
+  margin-top: -100px;
   border-radius: 25px;
   display: -webkit-box;
   display: -ms-flexbox;
