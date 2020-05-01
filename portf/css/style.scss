@@ -209,20 +209,124 @@ header{
 
 //About
 #about{
-    // height: 100vh;
-    // width: 100%;
     .row{
         align-items: center;
         height: 100vh;
     }
+
     h4{
         color: rgb(92, 89, 89);
-        // margin-top: 5rem;
         margin-bottom: 1rem;
         text-transform: uppercase;
         margin-left: -1rem;
     }
+
     p{
         color: rgb(199, 194, 194);
+    }
+
+    .wrap{
+        perspective: 1000px;
+        perspective-origin: 50% 50%;
+    }
+
+    .cube{
+        transform-style: preserve-3d;
+        width: 200px;
+        height: 200px;
+        margin: auto;
+        position: relative;
+        animation: loop 10s linear infinite;
+
+        img{
+            position: absolute;
+            opacity: 0.7;
+            width: 100%;
+            height: 100%;
+        }
+
+        img:nth-child(1){
+            transform: rotateY(0deg) translateZ(100px);
+        }
+
+        img:nth-child(2){
+            transform: rotateY(90deg) translateZ(100px);
+        }
+
+        img:nth-child(3){
+            transform: rotateY(180deg) translateZ(100px);
+        }
+
+        img:nth-child(4){
+            transform: rotateY(-90deg) translateZ(100px);
+        }
+
+        img:nth-child(5){
+            transform: rotateX(90deg) translateZ(100px);
+        }
+
+        img:nth-child(6){
+            transform: rotateX(-90deg) translateZ(100px);
+        }
+
+        @keyframes loop{
+            from{
+                transform:rotateX(0deg) rotateY(0deg);
+            }
+            to{
+                transform: rotateX(360deg) rotateY(360deg);
+            }
+        }
+    }
+}
+
+#portfolio{
+    .row{
+        height: 100vh;
+        align-items: center;
+    }
+    h4{
+        color: rgb(92, 89, 89);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+        // margin-left: -1rem;
+    }
+
+    .item{
+        // background-color: red;
+        // width: 2000px;
+        margin-top: -35rem;
+        img{
+            width: 100%;
+        }
+    }
+}
+
+#contact{
+    .row{
+        height: 100vh;
+        align-items: center;
+        justify-content: center;
+    }
+    h4{
+        color: rgb(92, 89, 89);
+        margin-bottom: 1rem;
+        text-transform: uppercase;
+    }
+
+    p{
+        color: rgb(199, 194, 194);
+    }
+}
+
+
+footer{
+    color: rgb(243, 227, 227);
+    padding: 5rem 0 5rem 0;
+    .row{
+        border-top: solid 2px white;
+    }
+    h5{
+        font-family: $titleFont;
     }
 }

@@ -217,4 +217,135 @@ header ul a:hover {
 #about p {
   color: #c7c2c2;
 }
+
+#about .wrap {
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-perspective-origin: 50% 50%;
+          perspective-origin: 50% 50%;
+}
+
+#about .cube {
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+  width: 200px;
+  height: 200px;
+  margin: auto;
+  position: relative;
+  -webkit-animation: loop 10s linear infinite;
+          animation: loop 10s linear infinite;
+}
+
+#about .cube img {
+  position: absolute;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+}
+
+#about .cube img:nth-child(1) {
+  -webkit-transform: rotateY(0deg) translateZ(100px);
+          transform: rotateY(0deg) translateZ(100px);
+}
+
+#about .cube img:nth-child(2) {
+  -webkit-transform: rotateY(90deg) translateZ(100px);
+          transform: rotateY(90deg) translateZ(100px);
+}
+
+#about .cube img:nth-child(3) {
+  -webkit-transform: rotateY(180deg) translateZ(100px);
+          transform: rotateY(180deg) translateZ(100px);
+}
+
+#about .cube img:nth-child(4) {
+  -webkit-transform: rotateY(-90deg) translateZ(100px);
+          transform: rotateY(-90deg) translateZ(100px);
+}
+
+#about .cube img:nth-child(5) {
+  -webkit-transform: rotateX(90deg) translateZ(100px);
+          transform: rotateX(90deg) translateZ(100px);
+}
+
+#about .cube img:nth-child(6) {
+  -webkit-transform: rotateX(-90deg) translateZ(100px);
+          transform: rotateX(-90deg) translateZ(100px);
+}
+
+@-webkit-keyframes loop {
+  from {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+@keyframes loop {
+  from {
+    -webkit-transform: rotateX(0deg) rotateY(0deg);
+            transform: rotateX(0deg) rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateX(360deg) rotateY(360deg);
+            transform: rotateX(360deg) rotateY(360deg);
+  }
+}
+
+#portfolio .row {
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#portfolio h4 {
+  color: #5c5959;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+#portfolio .item {
+  margin-top: -35rem;
+}
+
+#portfolio .item img {
+  width: 100%;
+}
+
+#contact .row {
+  height: 100vh;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#contact h4 {
+  color: #5c5959;
+  margin-bottom: 1rem;
+  text-transform: uppercase;
+}
+
+#contact p {
+  color: #c7c2c2;
+}
+
+footer {
+  color: #f3e3e3;
+  padding: 5rem 0 5rem 0;
+}
+
+footer .row {
+  border-top: solid 2px white;
+}
+
+footer h5 {
+  font-family: "Paytone One", sans-serif;
+}
 /*# sourceMappingURL=style.css.map */
