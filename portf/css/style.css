@@ -104,10 +104,11 @@ header ul a:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100vh;
 }
 
 #home .row {
-  height: 100vh;
+  height: 100%;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -296,20 +297,51 @@ header ul a:hover {
 }
 
 #portfolio .row {
-  height: 100vh;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: 10rem !important;
 }
 
 #portfolio h4 {
   color: #5c5959;
   margin-bottom: 1rem;
   text-transform: uppercase;
+  margin-top: 10rem !important;
 }
 
 #portfolio .item {
-  margin-top: -35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #141414;
+  padding: 10px;
+  border-radius: 4px;
+  margin: 1rem;
+  -webkit-box-shadow: 1px 1px 1px 1px #3de697;
+          box-shadow: 1px 1px 1px 1px #3de697;
+}
+
+#portfolio .item p {
+  color: #c7c2c2;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+#portfolio .item a {
+  color: #3de697;
+  margin: 5px;
+  font-size: 1.5rem;
 }
 
 #portfolio .item img {
@@ -336,16 +368,42 @@ header ul a:hover {
   color: #c7c2c2;
 }
 
+#contact .contact-txt {
+  border-right: solid 1px #313133;
+}
+
+#contact .contact-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#contact .socials a {
+  color: #3de697;
+  font-size: 1.5rem;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  margin: 5px;
+}
+
 footer {
   color: #f3e3e3;
   padding: 5rem 0 5rem 0;
 }
 
 footer .row {
-  border-top: solid 2px white;
+  border-top: solid 1px #302f2f;
 }
 
-footer h5 {
-  font-family: "Paytone One", sans-serif;
+footer p {
+  margin-top: 1rem;
+  color: #646262;
 }
 /*# sourceMappingURL=style.css.map */
