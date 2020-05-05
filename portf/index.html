@@ -10,51 +10,59 @@
       crossorigin="anonymous"
     />
     <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-    integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
-    crossorigin="anonymous"
-  />
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
+      integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+      crossorigin="anonymous"
+    />
+
+    <!-- for fade animations -->
+    <link rel="stylesheet" href="css/animate.css" />
+    <script src="js/wow.min.js"></script>
+
     <link rel="stylesheet" href="css/style.css" />
     <title>Bruno</title>
   </head>
   <body>
+    <div class="cursor"></div>
+    <header>
+      <div class="container">
+        <h1 class="logo"><span class="greenetail">B</span>runo.</h1>
+
+        <nav class="nav">
+          <ul class="links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+        <div class="burger nav">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+      </div>
+    </header>
+
     <div class="container">
-      <div class="cursor"></div>
       <section id="home">
-        <header>
-          <h1><span class="greenetail">B</span>runo.</h1>
-  
-          <nav>
-            <ul class="links">
-              <li><a href="#home">Home</a></li>
-              <li><a href="#about">About</a></li>
-              <li><a href="#portfolio">Portfolio</a></li>
-              <li><a href="#contact">Contact</a></li>
-            </ul>
-          </nav>
-          <div class="burger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-          </div>
-        </header>
         <div class="home-content row">
           <div class="home-txt col-md-6 col-xs-12">
-            <h1>
+            <h1 class="h1">
               <span class="greenetail">H</span>ello
               <span class="reendetail">W</span>orld,<br />
               I'm <span class="greendetail">B</span>runo
               <span class="greendetail">A</span>scenção.
             </h1>
-            <span class="subtitle">
-              <p>Web Developer</p>
+            <span class="subtitle home-txt">
+              <p class="p1">Web Developer</p>
             </span>
 
-            <a href="projects.html">See my projects</a>
+            <a href="projects.html" class="a1">See my projects</a>
           </div>
 
-          <div class=".teste col-md-6">
+          <div class="circles col-md-6">
             <div class="circleOne circle">
               <img src="circle.png" alt="" />
             </div>
@@ -69,9 +77,9 @@
         <div class="row">
           <div class="about-txt col-md-6">
             <div class="col-md-12">
-              <h4>About me</h4>
+              <h4 class="wow fadeInUp" data-wow-delay="0.2s">About me</h4>
             </div>
-            <p>
+            <p class="wow fadeInUp" data-wow-delay="0.5s">
               Lorem ipsum dolor sit, amet consectetur adipisicing elit. Expedita
               est eligendi temporibus velit amet veniam ratione eius excepturi
               in, alias nesciunt quibusdam aperiam, dignissimos autem possimus?
@@ -79,24 +87,18 @@
               doloremque, quasi dolorem numquam assumenda.
             </p>
           </div>
-          <div class="wrap col-md-6">
+          <div
+            class="wrap wow fadeInRight col-md-6"
+            data-wow-duration="1.2s"
+            data-wow-delay="0.7s"
+          >
             <div class="cube">
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/99/Unofficial_JavaScript_logo_2.svg/1200px-Unofficial_JavaScript_logo_2.svg.png"
-              />
-              <img src="https://reactjs.org/logo-og.png" />
-              <img
-                src="https://colorlib.com/wp/wp-content/uploads/sites/2/creative-css3-tutorials.jpg"
-              />
-              <img
-                src="https://www.pngkey.com/png/detail/377-3771917_scss-logo.png"
-              />
-              <img
-                src="https://getbootstrap.com.br/docs/4.1/assets/brand/bootstrap-social.png"
-              />
-              <img
-                src="https://umdesenvolvedoriniciante.com/wp-content/uploads/2019/03/Melhores-Cursos-Gratuitos-na-Udemy2.png"
-              />
+              <img src="img/js.png" />
+              <img src="img/react.png" />
+              <img src="img/css.jpg" />
+              <img src="img/sass.png" />
+              <img src="img/bs.png" />
+              <img src="img/html.png" />
             </div>
           </div>
         </div>
@@ -105,27 +107,33 @@
       <section id="portfolio">
         <div class="row">
           <div class="col-md-12 text-center">
-            <h4>Portfolio</h4>
+            <h4 class="wow fadeInUp">Portfolio</h4>
           </div>
-          <div class="item col-md-3">
+          <div class="item wow fadeInUp col-md-3" data-wow-delay="0.1s">
             <img src="rocket.png" />
-            <p class="text-center">Front-End empresa de marketing digital.<br>HTML/SCSS/JS</p>
+            <p class="text-center">
+              Front-End empresa de marketing digital.<br />HTML/SCSS/JS
+            </p>
             <div class="links">
               <a href="#"><i class="fab fa-github"></i></a>
               <a href="#"><i class="fas fa-globe"></i></a>
             </div>
           </div>
-          <div class="item col-md-3">
+          <div class="item wow fadeInUp col-md-3" data-wow-delay="0.3s">
             <img src="blues.png" />
-            <p class="text-center">Front-End e-commerce de smartphones.<br>HTML/SCSS/JS/AJAX</p>
+            <p class="text-center">
+              Front-End e-commerce de smartphones.<br />HTML/SCSS/JS/AJAX
+            </p>
             <div class="links">
               <a href="#"><i class="fab fa-github"></i></a>
               <a href="#"><i class="fas fa-globe"></i></a>
             </div>
           </div>
-          <div class="item col-md-3">
+          <div class="item wow fadeInUp col-md-3" data-wow-delay="0.4s">
             <img src="rally.png" />
-            <p class="text-center">Front-End do portal Rally do conhecimento FMU.<br>JS/CSS/Bootstrap</p>
+            <p class="text-center">
+              Front-End do portal Rally do conhecimento FMU.<br />JS/CSS/Bootstrap
+            </p>
             <div class="links">
               <a href="#"><i class="fab fa-github"></i></a>
               <a href="#"><i class="fas fa-globe"></i></a>
@@ -137,14 +145,17 @@
       <section id="contact">
         <div class="row">
           <div class="contact-txt col-md-6">
-            <h4>Contact me</h4>
-            <p>
+            <h4 class="wow fadeInLeft" data-wow-delay="0.3s">Contact me</h4>
+            <p class="wow fadeInLeft" data-wow-delay="0.3s">
               Lorem ipsum dolor sit amet consectetur adipisicing elit.
               Laudantium, dignissimos magnam doloribus possimus ipsam corporis
               expedita in tenetur pariatur sequi?
             </p>
           </div>
-          <div class="contact-links col-md-3">
+          <div
+            class="contact-links wow fadeInRight col-md-3"
+            data-wow-delay="0.3s"
+          >
             <div class="socials">
               <a href="#"><i class="fab fa-github"></i></a>
               <a href="#"><i class="fab fa-linkedin"></i></a>
@@ -166,6 +177,11 @@
         </div>
       </div>
     </footer>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.2/TweenMax.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.6/plugins/animation.gsap.min.js"></script>
     <script src="js/main.js"></script>
+    <script>
+      new WOW().init();
+    </script>
   </body>
 </html>
