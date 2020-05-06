@@ -71,7 +71,7 @@ sections.forEach(section => {
 });
 
 //Smooth Scroll
-const scroll = new SmoothScroll('.links a[href*="#"]', {
+const scroll = new SmoothScroll('[href*="#"]', {
   speed: 600
 });
 
