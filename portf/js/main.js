@@ -20,14 +20,6 @@ navLinks.forEach(link => {
   })
 })
 
-document.addEventListener("click", () => {
-  cursor.classList.add("expand");
-
-  setTimeout(() => {
-    cursor.classList.remove("expand");
-  }, 500);
-});
-
 //Responsive Nav
 const navShow = () => {
   const burger = document.querySelector(".burger");
@@ -42,17 +34,16 @@ const navShow = () => {
 };
 navShow();
 
+//Close Nav
 const closeNav = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector(".links");
-  // const navLinks = document.querySelectorAll(".links li");
 
   navLinks.forEach((link) => {
     link.addEventListener("click", () => {
       nav.classList.remove("nav-active");
       burger.classList.toggle("burgerToggle")
     })
-
   })
 }
 closeNav();
@@ -93,10 +84,9 @@ TweenMax.from(".logo", 2, {
   ease: Expo.easeInOut
 });
 
-TweenMax.from(".nav", 2, {
+TweenMax.from("nav", 2, {
   delay: 0.3,
   opacity: 0,
-  y: -20,
   ease: Expo.easeInOut
 });
 
@@ -110,4 +100,10 @@ TweenMax.from(".circleTwo", 2, {
   delay: 0.4,
   opacity: 0,
   ease: Expo.easeInOut
+});
+
+
+// Nav smooth scroll
+const scroll = new SmoothScroll('[href*="#"]', {
+  speed: 600
 });

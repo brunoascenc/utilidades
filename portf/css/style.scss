@@ -74,6 +74,7 @@ $xs-mobile: 340px;
   text-transform: uppercase;
 }
 
+// Universal
 a:hover {
   color: inherit;
   border: none;
@@ -92,9 +93,7 @@ a:hover {
   position: absolute;
   transition-duration: 200ms;
   transition-timing-function: ease-out;
-  // animation: cursorAnimation 0.5s infinite alternate;
   transition-property: background, transform;
-  // transform-origin: 100% 100%;
   pointer-events: none;
   z-index: 10;
   @include xs-desktop {
@@ -216,10 +215,10 @@ header.sticky {
   background-color: rgb(17, 15, 15);
   box-shadow: 0px 0px 10px 1px rgba(17, 17, 17, 0.397);
 }
-.cursor-grow{
+.cursor-grow {
   transform: scale(2);
 }
-.hover-link{
+.hover-link {
   color: rgb(194, 187, 187);
 }
 
@@ -500,6 +499,7 @@ header.sticky {
   }
 }
 
+//Portfolio
 #portfolio {
   .row {
     align-items: center;
@@ -555,6 +555,7 @@ header.sticky {
   }
 }
 
+//Contact
 #contact {
   .row {
     align-items: center;
