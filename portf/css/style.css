@@ -246,7 +246,7 @@ header.sticky {
 
 @media (max-width: 767px) {
   #home .home-txt {
-    margin-top: 3rem;
+    margin-top: 1rem;
   }
 }
 
@@ -518,7 +518,7 @@ header.sticky {
 
 @media (max-width: 390px) {
   #about .cube {
-    margin-top: -8.5rem;
+    margin-top: -6.2rem;
     width: 120px;
     height: 120px;
   }
