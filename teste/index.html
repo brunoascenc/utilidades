@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="search-dogs">
+      <form action="">
+        <input
+          type="text"
+          name="name"
+          id="dog-name"
+          placeholder="Nome do cachorro"
+        />
+        <select name="dogs" id="select-color">
+          <option selected="true" disabled="disabled">Cor</option>
+          <option value="blue">Blue</option>
+          <option value="red">Red</option>
+          <option value="yellow">Yellow</option>
+          <option value="green">Green</option>
+          <option value="purple">Purple</option>
+        </select>
+        <select name="dogs" id="select-font">
+          <option selected="true" disabled="disabled">Fonte</option>
+          <option value="lexend-zetta">Lexend Zetta</option>
+          <option value="rancher">Rancher</option>
+          <option value="anton">Anton</option>
+          <option value="bebas-neue">Bebas-neue</option>
+          <option value="lobster">Lobster</option>
+        </select>
+        <select name="dogs" id="select-breed"> </select>
+        <button id="submit-btn">Confirm</button>
+        <button id="save">Save</button>
+      </form>
+    </div>
+
+    <main>
+      <div id="name-container"></div>
+      <div id="img-container"></div>
+    </main>
+
+    <script src="js/main.js"></script>
+  </body>
+</html>
