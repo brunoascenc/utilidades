@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+}
+
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.jumbotron {
+  background-color: #0B27FA;
+  color: #f7f1f1;
+}
+
+.jumbotron h4 {
+  font-size: 24px;
+  color: #00BA91;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-weight: bold;
+}
+
+.jumbotron p {
+  font-size: 2.6rem;
+  width: 50%;
+  line-height: 3.5rem;
+  font-weight: bold;
+}
+
+main {
+  margin-top: 5rem;
+}
+
+main .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+main .texto p {
+  color: #1d1b1b;
+  line-height: 1.8rem;
+}
+
+main .texto span {
+  font-weight: bold;
+  color: #0B27FA;
+}
+
+main form {
+  color: #021B51;
+}
+
+main form h4 {
+  margin-bottom: 1.5rem;
+}
+
+main form label {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+main form select,
+main form input {
+  border: solid 1px #021B51 !important;
+}
+
+.btn {
+  border: none;
+  background-color: #00BA91;
+  width: 170px;
+  color: #021B51;
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+
+footer {
+  padding: 2rem;
+}
+
+footer .footer span {
+  margin-right: 1.5rem;
+}
+/*# sourceMappingURL=style.css.map */
