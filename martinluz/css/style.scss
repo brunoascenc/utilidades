@@ -1,99 +1,259 @@
-@import url('https://fonts.googleapis.com/css2?family=DM+Sans&display=swap');
+//Font
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans&display=swap");
 
 //Resets
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    font-family: 'DM Sans', sans-serif;
+input:focus,
+select:focus,
+button:focus {
+  outline: 0px !important;
+  -webkit-appearance: none;
+  box-shadow: none !important;
+}
+
+body {
+  font-family: "DM Sans", sans-serif;
+  padding: 0;
 }
 
 //Variables
-$mainBlue: #0B27FA;
-$darkBlue: #021B51;
-$mainGreen: #00BA91;
+$mainBlue: #0b27fa;
+$darkBlue: #021b51;
+$mainGreen: #00ba91;
 
+//Breakpoints
+$sm-desktop: 1200px;
+$xs-desktop: 991px;
+$tablet: 767px;
+$mobile: 575px;
+$sm-mobile: 415px;
 
-.footer{
-    display: flex;
-    justify-content: space-between;
+//Mixins
+@mixin sm-desktop {
+  @media (max-width: #{$sm-desktop}) {
+    @content;
+  }
+}
+
+@mixin xs-desktop {
+  @media (max-width: #{$xs-desktop}) {
+    @content;
+  }
+}
+
+@mixin mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media (max-width: #{$tablet}) {
+    @content;
+  }
+}
+
+@mixin sm-mobile {
+  @media (max-width: #{$mobile}) {
+    @content;
+  }
+}
+
+//placeholder mixin
+@mixin placeholder {
+  color: #dadada !important;
+  font-size: 0.8rem;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+//buttons
+button {
+  border: none;
+  background-color: $mainGreen;
+  width: 12rem;
+  height: 40px;
+  color: $darkBlue;
+  font-weight: bold;
+  font-size: 0.9rem;
+  border-radius: 5px;
 }
 
 //header
-.jumbotron{
-    background-color: $mainBlue;
-    color: #f7f1f1;
-    h4{
-        font-size: 24px;
-        color: $mainGreen;
-        text-transform: uppercase;
-        letter-spacing: 0.2rem;
-        font-weight: bold;
+.jumbotron {
+  background-color: $mainBlue;
+  color: #f7f1f1;
+  border-radius: 0;
+  .logo {
+    @include mobile {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 5rem;
     }
-    p{
-        font-size: 2.6rem;
-        width: 50%;
-        line-height: 3.5rem;
-        font-weight: bold;
+  }
+
+  h4 {
+    font-size: 1.3rem;
+    color: $mainGreen;
+    text-transform: uppercase;
+    letter-spacing: 0.2rem;
+    font-weight: bold;
+  }
+
+  p {
+    font-size: 2.6rem;
+    width: 50%;
+    line-height: 3.5rem;
+    font-weight: bold;
+
+    @include sm-desktop {
+      width: 60%;
     }
+
+    @include xs-desktop {
+      width: 75%;
+    }
+
+    @include tablet {
+      width: 85%;
+    }
+
+    @include mobile {
+      line-height: 2.7rem;
+      width: 90%;
+      font-size: 2.3rem;
+    }
+  }
 }
 
 //main
-main{
-    margin-top: 5rem;
-    .row{
-        display: flex;
-        justify-content: space-between;
+main {
+  margin-top: 5rem;
+
+  .container {
+    @include mobile {
+      padding: 2rem;
     }
-    .texto{
-        p{
-            color: rgb(29, 27, 27);
-            line-height: 1.8rem;
-        }
+  }
 
-        span{
-            font-weight: bold;
-            color: $mainBlue;
-        }
+  @include tablet {
+    margin-top: 2rem;
+  }
+
+  .row {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .texto {
+    p {
+      color: rgb(61, 58, 58);
+      line-height: 1.8rem;
+      font-size: 1.1rem;
     }
 
-    //form
-    form{
-        color: $darkBlue;
-        h4{
-            margin-bottom: 1.5rem;
-        }
-        label{
-            font-weight: bold;
-            font-size: 0.9rem;
-        }
-
-        select,
-        input{
-            border: solid 1px $darkBlue !important;
-        }
+    span {
+      font-weight: bold;
+      color: $mainBlue;
     }
-}
+  }
 
-.btn{
-    border: none;
-    background-color: $mainGreen;
-    width: 170px;
+  //form
+  form {
     color: $darkBlue;
-    font-weight: bold;
-    font-size: 0.9rem;
-}
+    h4 {
+      margin-bottom: 1.5rem;
+      font-weight: bold;
+      @include tablet {
+        font-size: 2rem;
+        margin-top: 2rem;
+      }
+    }
+    label {
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
 
+    select,
+    input {
+      border: solid 1px $darkBlue !important;
+      &::placeholder {
+        @include placeholder;
+      }
+    }
+
+    select {
+      cursor: pointer;
+      background: url("../assets/select.png") no-repeat right #ddd;
+      -webkit-appearance: none;
+      background-position-x: 97%;
+      &:invalid {
+        @include placeholder;
+      }
+    }
+
+    button {
+      @include mobile {
+        margin-top: 2rem;
+      }
+    }
+  }
+}
 
 //footer
-footer{
-    padding: 2rem;
-    .footer{
-        span{
-            margin-right: 1.5rem;
-        }
+footer {
+  color: $darkBlue;
+  margin-top: -3.5rem;
+  padding: 0 0 4rem 0;
+  @include mobile {
+    padding: 0 0 1.5rem 0;
+  }
+
+  .container {
+    @include mobile {
+      padding: 2rem;
     }
+  }
+
+  @include xs-desktop {
+    margin-top: 0;
+  }
+
+  .copyright {
+    @include xs-desktop {
+      margin-top: 4.3rem;
+    }
+  }
+
+  .footer-items {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+
+    img {
+      cursor: pointer;
+      margin-right: 1.5rem;
+      @include sm-desktop {
+        margin-right: 0.5rem;
+      }
+
+      @include xs-desktop {
+        position: absolute;
+        top: 15px;
+        left: 16px;
+      }
+    }
+
+    button {
+      @include xs-desktop {
+        display: none;
+      }
+    }
+  }
 }
