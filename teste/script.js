@@ -1,8 +1,13 @@
-var elementos = document.querySelectorAll(".shelf__product");
+document.querySelectorAll(".shelf__product").forEach((el) =>
+  el.addEventListener("click", (event) => {
+    event.preventDefault();
 
-for (var el of elementos) {
-  el.addEventListener("click", function (e) {
-    e.preventDefault();
+    var productTitle = el.querySelector(".shelf-product__title").textContent;
+    var productThumb = el.querySelector(".rex-lazyload-loaded").src;
+    var normalPrice = el.querySelector(".shelf-product__price-best").innerHTML;
+    var desc = parseFloat(normalPrice.match(/\d+\.\d+|\d+\b|\d+(?=\w)/g), 10);
+    var precoDesconto = desc - desc * 0.1;
+    precoDesconto.toString();
 
     //Creating elements
     var mainContainer = document.createElement("DIV");
@@ -33,25 +38,29 @@ for (var el of elementos) {
     mainContainer.style.width = "100%";
     mainContainer.style.height = "150px";
     mainContainer.style.backgroundColor = "white";
+    mainContainer.style.zIndex = "100";
 
     //Product container style
     productContainer.style.display = "flex";
     productContainer.style.marginLeft = "30px";
 
-    //Product details style
-    productName.innerHTML = `PRODUCT NAME`;
-    productPrice.innerHTML = `PRODUCT PRECO`;
-    productDesconto.innerHTML = `PRODUCT DESC`;
+    // //Product details style
+    productName.innerHTML = `${productTitle}`;
+    productPrice.innerHTML = `Preço: ${normalPrice}`;
+    productDesconto.innerHTML = `Preço com desconto: R$ ${precoDesconto
+      .toPrecision(5)
+      .toString()
+      .replace(".", ",")}`;
     productDetails.style.display = "flex";
     productDetails.style.flexDirection = "column";
     productDetails.style.marginLeft = "10px";
     productDetails.style.justifyContent = "center";
     productDetails.style.alignItems = "flex-start";
+    productDetails.style.width = "700px";
     productName.style.fontSize = "16px";
     productImg.style.maxWidth = "100%";
     productImg.style.height = "120px";
-    productImg.src =
-      "https://lojaanimale.vteximg.com.br/arquivos/ids/912164-527-790/69110598_4042_2-T-SHIRT-BASICO-SEDA.jpg?v=637330151423700000";
+    productImg.src = `${productThumb}`;
 
     //Finalizar compra style
     finalizarBtn.innerHTML = `ADICIONAR À SACOLA`;
@@ -70,7 +79,6 @@ for (var el of elementos) {
     finalizarBtn.style.height = "50px";
     finalizarBtn.style.backgroundColor = "black";
     finalizarBtn.style.cursor = "pointer";
-    finalizarBtn.style.marginRight = "-35%";
 
     productContainer.appendChild(productImg);
     productContainer.appendChild(productDetails);
@@ -80,6 +88,6 @@ for (var el of elementos) {
     mainContainer.appendChild(productContainer);
     mainContainer.appendChild(finalizarBtn);
     mainContainer.appendChild(closeBtn);
-    document.getElementsByTagName("header")[0].appendChild(mainContainer);
-  });
-}
+    document.getElementsByTagName("body")[0].appendChild(mainContainer);
+  })
+);
