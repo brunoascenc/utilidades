@@ -2,23 +2,24 @@ document.querySelectorAll(".shelf__product").forEach((el) =>
   el.addEventListener("click", (event) => {
     event.preventDefault();
 
-    var productTitle = el.querySelector(".shelf-product__title").textContent;
-    var productThumb = el.querySelector(".rex-lazyload-loaded").src;
-    var normalPrice = el.querySelector(".shelf-product__price-best").innerHTML;
-    var desc = parseFloat(normalPrice.match(/\d+\.\d+|\d+\b|\d+(?=\w)/g), 10);
-    var precoDesconto = desc - desc * 0.1;
+    const productTitle = el.querySelector(".shelf-product__title").textContent;
+    const productThumb = el.querySelector(".rex-lazyload-loaded").src;
+    const normalPrice = el.querySelector(".shelf-product__price-best").innerHTML;
+    const desc = parseFloat(normalPrice.match(/\d+\.\d+|\d+\b|\d+(?=\w)/g), 10);
+    const precoDesconto = desc - desc * 0.1;
     precoDesconto.toString();
 
+    
     //Creating elements
-    var mainContainer = document.createElement("DIV");
-    var productContainer = document.createElement("DIV");
-    var productImg = document.createElement("IMG");
-    var finalizarBtn = document.createElement("BUTTON");
-    var closeBtn = document.createElement("BUTTON");
-    var productDetails = document.createElement("DIV");
-    var productName = document.createElement("H3");
-    var productPrice = document.createElement("SPAN");
-    var productDesconto = document.createElement("SPAN");
+    const mainContainer = document.createElement("DIV");
+    const productContainer = document.createElement("DIV");
+    const productImg = document.createElement("IMG");
+    const finalizarBtn = document.createElement("BUTTON");
+    const closeBtn = document.createElement("BUTTON");
+    const productDetails = document.createElement("DIV");
+    const productName = document.createElement("H3");
+    const productPrice = document.createElement("SPAN");
+    const productDesconto = document.createElement("SPAN");
 
     closeBtn.addEventListener("click", () => {
       mainContainer.style.display = "none";
@@ -48,7 +49,7 @@ document.querySelectorAll(".shelf__product").forEach((el) =>
     productName.innerHTML = `${productTitle}`;
     productPrice.innerHTML = `Preço: ${normalPrice}`;
     productDesconto.innerHTML = `Preço com desconto: R$ ${precoDesconto
-      .toPrecision(5)
+      .toPrecision(4)
       .toString()
       .replace(".", ",")}`;
     productDetails.style.display = "flex";
