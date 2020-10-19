@@ -1,32 +1,37 @@
 document.querySelectorAll(".shelf__product").forEach((el) =>
-  el.addEventListener("click", (event) => {
-    event.preventDefault();
+  el.addEventListener("click", (e) => {
+    e.preventDefault();
 
-    const productTitle = el.querySelector(".shelf-product__title").textContent;
-    const productThumb = el.querySelector(".rex-lazyload-loaded").src;
-    const normalPrice = el.querySelector(".shelf-product__price-best").innerHTML;
-    const desc = parseFloat(normalPrice.match(/\d+\.\d+|\d+\b|\d+(?=\w)/g), 10);
-    const precoDesconto = desc - desc * 0.1;
+    //Has video
+    if (e.target.tagName === "VIDEO") {
+      var productThumb = el.querySelector(".shelf-product__video").poster;
+    } else {
+      var productThumb = el.querySelector(".rex-lazyload-loaded").src;
+    }
+
+    var productTitle = el.querySelector(".shelf-product__title").textContent;
+    var detailsPage = el.href;
+    var normalPrice = el.querySelector(".shelf-product__price-best").innerHTML;
+    var desc = parseFloat(normalPrice.match(/\d+\.\d+|\d+\b|\d+(?=\w)/g), 10);
+    var precoDesconto = desc - desc * 0.1;
     precoDesconto.toString();
 
-    
     //Creating elements
-    const mainContainer = document.createElement("DIV");
-    const productContainer = document.createElement("DIV");
-    const productImg = document.createElement("IMG");
-    const finalizarBtn = document.createElement("BUTTON");
-    const closeBtn = document.createElement("BUTTON");
-    const productDetails = document.createElement("DIV");
-    const productName = document.createElement("H3");
-    const productPrice = document.createElement("SPAN");
-    const productDesconto = document.createElement("SPAN");
+    var mainContainer = document.createElement("DIV");
+    var productContainer = document.createElement("DIV");
+    var productImg = document.createElement("IMG");
+    var finalizarBtn = document.createElement("A");
+    var closeBtn = document.createElement("BUTTON");
+    var productDetails = document.createElement("DIV");
+    var productName = document.createElement("H3");
+    var productPrice = document.createElement("SPAN");
+    var productDesconto = document.createElement("SPAN");
 
     closeBtn.addEventListener("click", () => {
       mainContainer.style.display = "none";
     });
 
     //Main container style
-    mainContainer.id = "divID";
     mainContainer.style.textAlign = "center";
     mainContainer.style.display = "flex";
     mainContainer.style.justifyContent = "space-between";
@@ -64,7 +69,7 @@ document.querySelectorAll(".shelf__product").forEach((el) =>
     productImg.src = `${productThumb}`;
 
     //Finalizar compra style
-    finalizarBtn.innerHTML = `ADICIONAR À SACOLA`;
+    finalizarBtn.innerHTML = `COMPRAR`;
     closeBtn.innerHTML = `X`;
     closeBtn.style.backgroundColor = `white`;
     closeBtn.style.border = `none`;
@@ -80,6 +85,11 @@ document.querySelectorAll(".shelf__product").forEach((el) =>
     finalizarBtn.style.height = "50px";
     finalizarBtn.style.backgroundColor = "black";
     finalizarBtn.style.cursor = "pointer";
+    finalizarBtn.style.display = "flex";
+    finalizarBtn.style.alignItems = "center";
+    finalizarBtn.style.justifyContent = "center";
+    finalizarBtn.style.fontSize = "12px";
+    finalizarBtn.href = `${detailsPage}`;
 
     productContainer.appendChild(productImg);
     productContainer.appendChild(productDetails);
