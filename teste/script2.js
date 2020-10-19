@@ -1,36 +1,26 @@
-document.querySelectorAll(".shelf__product").forEach((el) =>
-  el.addEventListener("click", (e) => {
-    e.preventDefault();
-
-    //Has video
-    if (e.target.tagName === "VIDEO") {
-      var productThumb = el.querySelector(".shelf-product__video").poster;
-    } else {
-      var productThumb = el.querySelector(".rex-lazyload-loaded").src;
-    }
-
-    var productTitle = el.querySelector(".shelf-product__title").textContent;
-    var detailsPage = el.href;
-    var normalPrice = el.querySelector(".shelf-product__price-best").innerHTML;
+function createFooter (){
+    var productThumb = document.querySelector(".product__image").src;
+    var productTitle = document.querySelector(".productName").textContent;
+    var normalPrice = document.querySelector(".skuBestPrice").innerHTML;
     var desc = parseFloat(normalPrice.match(/\d+\.\d+|\d+\b|\d+(?=\w)/g), 10);
     var precoDesconto = desc - desc * 0.1;
     precoDesconto.toString();
-
+    
     //Creating elements
     var mainContainer = document.createElement("DIV");
     var productContainer = document.createElement("DIV");
     var productImg = document.createElement("IMG");
-    var finalizarBtn = document.createElement("A");
+    var finalizarBtn = document.createElement("BUTTON");
     var closeBtn = document.createElement("BUTTON");
     var productDetails = document.createElement("DIV");
     var productName = document.createElement("H3");
     var productPrice = document.createElement("SPAN");
     var productDesconto = document.createElement("SPAN");
-
+    
     closeBtn.addEventListener("click", () => {
       mainContainer.style.display = "none";
     });
-
+    
     //Main container style
     mainContainer.style.textAlign = "center";
     mainContainer.style.display = "flex";
@@ -45,11 +35,11 @@ document.querySelectorAll(".shelf__product").forEach((el) =>
     mainContainer.style.height = "150px";
     mainContainer.style.backgroundColor = "white";
     mainContainer.style.zIndex = "100";
-
+    
     //Product container style
     productContainer.style.display = "flex";
     productContainer.style.marginLeft = "30px";
-
+    
     // //Product details style
     productName.innerHTML = `${productTitle}`;
     productPrice.innerHTML = `Preço: ${normalPrice}`;
@@ -67,9 +57,9 @@ document.querySelectorAll(".shelf__product").forEach((el) =>
     productImg.style.maxWidth = "100%";
     productImg.style.height = "120px";
     productImg.src = `${productThumb}`;
-
+    
     //Finalizar compra style
-    finalizarBtn.innerHTML = `COMPRAR`;
+    finalizarBtn.innerHTML = `ADICIONAR À SACOLA`;
     closeBtn.innerHTML = `X`;
     closeBtn.style.backgroundColor = `white`;
     closeBtn.style.border = `none`;
@@ -89,8 +79,9 @@ document.querySelectorAll(".shelf__product").forEach((el) =>
     finalizarBtn.style.alignItems = "center";
     finalizarBtn.style.justifyContent = "center";
     finalizarBtn.style.fontSize = "12px";
-    finalizarBtn.href = `${detailsPage}`;
-
+    finalizarBtn.className = "product__add-to-cart";
+    finalizarBtn.href = "javascript:;";
+    
     productContainer.appendChild(productImg);
     productContainer.appendChild(productDetails);
     productDetails.appendChild(productName);
@@ -100,5 +91,5 @@ document.querySelectorAll(".shelf__product").forEach((el) =>
     mainContainer.appendChild(finalizarBtn);
     mainContainer.appendChild(closeBtn);
     document.getElementsByTagName("body")[0].appendChild(mainContainer);
-  })
-);
+}
+createFooter()
