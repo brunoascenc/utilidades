@@ -26,7 +26,7 @@ Para visitar o site:
 
 Interface: 
 
-`REACTJS` | `Bootstrap`
+`ReactJS` | `Bootstrap`
 
 API: 
 
