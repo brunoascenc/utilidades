@@ -1,6 +1,6 @@
 # Lista de espécies PokemonGO
 
-Essa aplicação permite buscar e filtrar diversas espécies do PokemonGO e ver seus detalhes.
+Transformei a planilha excel em uma API, criando uma aplicação que permite buscar e filtrar as espécies de PokemonGO e ver seus detalhes.
 
 ## URL
 
@@ -21,3 +21,13 @@ Para iniciar o servidor:
 Para visitar o site:
 
 `localhost:3000/`  
+
+## Tecnologias Utilizadas
+
+Interface: 
+
+`REACTJS` | `Bootstrap`
+
+API: 
+
+`https://sheetlabs.com/`
