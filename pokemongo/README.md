@@ -1,6 +1,6 @@
 # Lista de espécies PokemonGO
 
-Transformei a planilha excel em uma API, criando uma aplicação que permite buscar e filtrar as espécies de PokemonGO e ver seus detalhes.
+Transformei a planilha excel em uma API, criando uma aplicação que permite buscar e filtrar as espécies de PokemonGO.
 
 ## URL
 
