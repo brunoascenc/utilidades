@@ -29,7 +29,7 @@ const searchMovie = value => {
 //renderMovies
 const getUpcomingMovies = () => {
     const path = '/movie/upcoming'
-    const url =  `${dynamicUrl(path)}&region=US&language=pt-BR`
+    const url =  `${dynamicUrl(path)}&region=US`
     const render = renderUpcoming.bind({title: 'Upcoming Movies'})
     requestMovies(url, render, handleError)
 }
@@ -44,14 +44,14 @@ const getTrending = () => {
 
 const getPopularMovies = (value) => {
     const path = '/movie/popular'
-    const url =  `${dynamicUrl(path)}&page=${value}&region=US&language=pt-BR`
+    const url =  `${dynamicUrl(path)}&page=${value}&region=BR&language=pt-BR`
 
     requestMovies(url, renderPopular, handleError)
 }
 
 const getPopularSeries = (value) => {
     const path = '/tv/popular'
-    const url =  `${dynamicUrl(path)}&page=${value}&region=US&language=pt-BR`
+    const url =  `${dynamicUrl(path)}&page=${value}&region=BR&language=pt-BR`
 
     requestMovies(url, renderPopularSeries, handleError)
 }
@@ -79,7 +79,7 @@ const getTvShowDetails = () => {
 const getMovieTrailer = () => {
     let movieId = sessionStorage.getItem("movieId");
     const path = `/movie/${movieId}/videos`;
-    const url = `${dynamicUrl(path)}&language=pt-BR`;
+    const url = `${dynamicUrl(path)}&region=BR&language=pt-BR`;
 
     requestMovies(url, getTrailer, handleError)
 }
@@ -100,6 +100,15 @@ const getTvShowReviews = () => {
     const url = `${dynamicUrl(path)}&language=pt-BR`;
 
     requestMovies(url, getSeriesReviews, handleError)
+}
+
+//trailer tv show
+const getTvShowTrailer = () => {
+    let seriesId = sessionStorage.getItem("seriesId");
+    const path = `/tv/${seriesId}/videos`;
+    const url = `${dynamicUrl(path)}&language=en-US`;
+
+    requestMovies(url, getSerieTrailer, handleError)
 }
 
 //get recommendations

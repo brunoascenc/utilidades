@@ -252,7 +252,10 @@ const getDetails = (data) => {
              <li><span class="contrast">Avaliação: </span> ${
                movie.vote_average
              }</li>
-           </ul>    
+           </ul>
+           <div class="streams">
+              
+           </div>
         </div>
         
     `;
@@ -267,16 +270,26 @@ const getTrailer = (data) => {
   `;
   document.querySelector(".movie-trailer").innerHTML = output;
 };
-
+const streamImg = 'https://image.tmdb.org/t/p/original/'
 //Streams disponiveis
 const getMovieStreams = (data) => {
   const movie = data.results;
   const streams = movie.US
   console.log(streams)
-  // let output = `
-  // <img src = "${IMAGE_URL + movie.poster_path}"/>   
-  // `;
-  // document.querySelector(".movie-trailer").innerHTML = output;
+  const streamDisponivel = streams.flatrate
+
+  let output = `
+  
+  
+  <div class="disponivel">
+    <div class="title-section">
+      <span></span>
+      <h1>Assista agora:</h1>
+    </div>  
+    <img src = "${streamImg + streamDisponivel[0].logo_path}"/> 
+  </div>  
+  `;
+  document.querySelector(".streams").innerHTML = output;
 };
 
 //Movie Reviews

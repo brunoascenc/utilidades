@@ -3,6 +3,7 @@ function seriesData() {
     getTvShowReviews();
     getSeriesRecommendations();
     getTvShowImages();
+    getTvShowTrailer();
 }
 
 const seriesFilter = document.querySelector("#movies-filter");
@@ -136,6 +137,16 @@ function getSimilarSeries(data) {
         }
     }
 }
+
+
+const getSerieTrailer = (data) => {
+    const movie = data.results;
+    let output = `
+       <a class="popup-youtube" href="https://www.youtube.com/watch?v=${movie[0].key}"><i class="far fa-play-circle"></i></a>   
+    `;
+    document.querySelector(".movie-trailer").innerHTML = output;
+  };
+
 
 //Pagination of popular Series
 function seriesPagination() {
