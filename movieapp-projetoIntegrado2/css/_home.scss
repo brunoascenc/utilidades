@@ -224,6 +224,11 @@ main {
     .swiper-container {
       width: 100%;
       margin-top: 1rem;
+      img{
+        // width: 80%;
+        border-radius: 6px;
+        height: 220px;
+      }
     }
 
     .swiper-button-prev,
@@ -299,4 +304,28 @@ main {
   #movies-filter {
     margin-top: 3%;
   }
+}
+
+
+.data-options{
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: center;
+  a{
+    margin: 15px;
+    width: 80%;
+    border: none;
+    padding: 16px;
+    border: solid 2px rgb(142, 51, 211);
+    text-transform: uppercase;
+    font-weight: bold;;
+    letter-spacing: 2px;
+    text-align: center;
+    border-radius: 16px;
+  }
+}
+
+#backbutton{
+  display:inline-block;
 }

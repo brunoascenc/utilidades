@@ -173,3 +173,11 @@ const getStreams = () => {
 
     requestMovies(url, getMovieStreams, handleError)
 }
+
+//Airing tvshow
+const getAiringSerie = () => {
+    const path = '/tv/on_the_air'
+    const url =  `${dynamicUrl(path)}&region=BR&language=pt-BR`
+
+    requestMovies(url, renderAiring, handleError)
+}

@@ -204,6 +204,7 @@ function movieDetails(id) {
   return false;
 }
 
+
 //get movie images
 function getImages(data) {
   const img = data.backdrops;
@@ -270,6 +271,7 @@ const getTrailer = (data) => {
   `;
   document.querySelector(".movie-trailer").innerHTML = output;
 };
+
 const streamImg = 'https://image.tmdb.org/t/p/original/'
 //Streams disponiveis
 const getMovieStreams = (data) => {
@@ -385,3 +387,14 @@ function pagination() {
     }
   });
 }
+
+
+document.querySelector('.serieLink').addEventListener('click', () => {
+  window.location = "series.html";
+})
+
+
+document.querySelector('.filmeLink').addEventListener('click', () => {
+  window.location = "index.html";
+})
+

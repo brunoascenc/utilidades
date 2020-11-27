@@ -4,9 +4,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
     <!-- SwiperJs -->
     <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
-    <link rel="stylesheet" href="css/style.css">
     <!-- Jquery -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
     <!-- FontAwesome -->
@@ -22,7 +22,7 @@
 </head>
 
 <body>
-    <div id="landing-page">
+    <div id="landing-series">
         <div class="container">
             <header data-scroll-header style="width: 100%; right: 0px;">
                 <div class="search-container">
@@ -79,7 +79,7 @@
             <a href="index.html" class="filmeLink">Filmes</a>
             <a href="series.html" class="serieLink">Séries</a>
         </div>
-        <div id="upcoming-slide">
+        <!-- <div id="upcoming-slide">
             <div class="title-section">
                 <span></span>
                 <h1>Lançamentos futuros</h1>
@@ -95,7 +95,7 @@
                     <div class="swiper-button-prev"></div>
                 </div>
             </div>
-        </div>
+        </div> -->
 
         <div id="upcoming-slide">
             <div class="title-section">
@@ -145,7 +145,7 @@
         </div>
         </div>
 
-        <div id="popular-container">
+        <!-- <div id="popular-container">
             <div class="title-section">
                 <span></span>
                 <h1>Filmes populares</h1>
@@ -157,10 +157,10 @@
                 <a href="#popular-container" class="previous-page"><i class="fas fa-chevron-left"></i></a>
                 <a href="#popular-container" class="next-page"><i class="fas fa-chevron-right"></i></a>
             </div>
-        </div>
+        </div> -->
 
         <!-- Series -->
-        <!-- <div id="popular-series-container">
+        <div id="popular-series-container">
             <div class="title-section">
                 <span></span>
                 <h1>Séries populares</h1>
@@ -174,7 +174,7 @@
                 <a href="#popular-series-container" class="next-page" id="next-series"><i
                         class="fas fa-chevron-right"></i></a>
             </div>
-        </div> -->
+        </div>
     </main>
 
     <footer>
@@ -200,6 +200,7 @@
     <script>
       
         homeData()
+        // renderAiring()
         /* Swiper JS */
         var swiper = new Swiper('.swiper-container', {
             observer: true,

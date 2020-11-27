@@ -4,6 +4,7 @@ function seriesData() {
     getSeriesRecommendations();
     getTvShowImages();
     getTvShowTrailer();
+    getAiringSerie()
 }
 
 const seriesFilter = document.querySelector("#movies-filter");
@@ -56,6 +57,7 @@ function getSeriesImages(data) {
 
 const getSeriesDetails = (data) => {
     const series = data;
+    console.log(data)
     const genre = data.genres;
     const genreName = genre.map(e => `<span>${e.name}</span>`).join(", ")
 
@@ -168,3 +170,23 @@ function seriesPagination() {
         }
     })
 }
+
+
+function renderAiring(data) {
+    const series = data.results;
+    console.log(series)
+    let output = ``;
+    for (let i in series) {
+      if (series[i].poster_path) {
+        output += `
+        <div class ="swiper-slide">
+           <img class="movie-poster" src ="${
+             IMAGE_URL + series[i].poster_path
+           }" data-movie-id="${series[i].id}"/>
+           <span class="movie-date">${series[i].release_date}</span>
+        </div>
+     `;
+        document.querySelector(".swiper-wrapper").innerHTML = output;
+      }
+    }
+  }
