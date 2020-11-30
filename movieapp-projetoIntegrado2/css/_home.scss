@@ -216,8 +216,18 @@ main {
         font-weight: 100;
         margin-top: 0.3rem;
         font-size: 0.8rem;
+        text-align: center;
         letter-spacing: 1px;
         color: rgb(230, 207, 245);
+      }
+
+      .serie-name{
+        font-weight: 100;
+        margin-top: 0.3rem;
+        font-size: 0.7rem;
+        text-align: center;
+        letter-spacing: 1px;
+        color: rgba(226, 192, 248, 0.836);
       }
     }
 
@@ -226,7 +236,7 @@ main {
       margin-top: 1rem;
       img{
         // width: 80%;
-        border-radius: 6px;
+        border-radius: 2px;
         height: 220px;
       }
     }

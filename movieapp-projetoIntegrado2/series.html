@@ -26,7 +26,7 @@
         <div class="container">
             <header data-scroll-header style="width: 100%; right: 0px;">
                 <div class="search-container">
-                    <a href="index.html">
+                    <a href="series.html">
                         <h1>Movix</h1>
                     </a>
                     <input type="text" id="searchInput" placeholder="Pesquise por filmes e séries...">
@@ -51,7 +51,7 @@
                             <option value="primary_release_date.desc">Release Date</option>
                         </select>
 
-                        <a class="filter-btn">Pesquisar</a>
+                        <a class="filter-btn filter-series">Pesquisar</a>
                     </div>
                 </form>
 
@@ -103,7 +103,7 @@
                 <h1>Em alta</h1>
             </div>
             <div class="swiper-container">
-                <div class="swiper-wrapper" id="trending-wrapper">
+                <div class="swiper-wrapper xd" id="trending-wrapper">
                 </div>
 
                 <div class="swiper-pagination"></div>
@@ -139,6 +139,10 @@
 
         </div>
         <div id="movies-filter"></div>
+        <!-- <div class="pagination-btn">
+            <a href="#filtered-movies" class="next-series"><i class="fas fa-chevron-left"></i></a>
+            <a href="#filtered-movies" class="prev-series"><i class="fas fa-chevron-right"></i></a>
+        </div> -->
         <div class="pagination-btn">
             <a href="#filtered-movies" class="filter-prev"><i class="fas fa-chevron-left"></i></a>
             <a href="#filtered-movies" class="filter-next"><i class="fas fa-chevron-right"></i></a>
@@ -198,8 +202,10 @@
     <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
 
     <script>
-      
-        homeData()
+    //    getAiringSerie()
+       seriesData()
+        // homeData()
+       
         // renderAiring()
         /* Swiper JS */
         var swiper = new Swiper('.swiper-container', {

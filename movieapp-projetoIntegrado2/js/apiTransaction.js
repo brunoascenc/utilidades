@@ -140,11 +140,27 @@ const getGenres = () => {
     requestMovies(url, selectGenres, handleError)
 }
 
+//get serie genres
+const getGenresTv = () => {
+    const path = '/genre/tv/list'
+    const url = `${dynamicUrl(path)}&language=pt-BR`
+
+    requestMovies(url, selectGenresTv, handleError)
+}
+
 const filterMovie = (genre, options, value) => {
     const path = '/discover/movie'
     const url = `  ${dynamicUrl(path)}&sort_by=${options}&with_genres=${genre}&vote_count.gte=100&page=${value}&language=pt-BR`
 
     requestMovies(url, renderFilteredMovie, handleError)
+}
+
+const filterTv = (genre, options, value) => {
+    const path = '/discover/tv'
+    const url = `  ${dynamicUrl(path)}&sort_by=${options}&with_genres=${genre}&vote_count.gte=100&page=${value}&language=pt-BR`
+
+    // console.log(url)
+    requestMovies(url, renderFilteredTv, handleError)
 }
 
 //get movie detail
@@ -178,6 +194,7 @@ const getStreams = () => {
 const getAiringSerie = () => {
     const path = '/tv/on_the_air'
     const url =  `${dynamicUrl(path)}&region=BR&language=pt-BR`
+    // console.log(url)
 
     requestMovies(url, renderAiring, handleError)
 }

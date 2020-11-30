@@ -12,9 +12,10 @@ const searchBtn = document.getElementById("search");
 
 //searchMovies/filter
 const renderFilteredMovie = (data) => {
-  movieFilter.innerHTML = "";
-  movieFilter.style.display = "grid";
+  seriesFilter.innerHTML = "";
+  seriesFilter.style.display = "grid";
   const results = data.results;
+  console.log(results)
   let output = ``;
   for (let i in results) {
     if (!results[i].media_type || results[i].media_type === "movie") {
@@ -172,14 +173,14 @@ searchBtn.addEventListener("click", (e) => {
     const value = inputElement.value;
     searchMovie(value);
 
-    movieFilter.style.display = "grid";
+    seriesFilter.style.display = "grid";
     document.querySelector(".item-searched").style.display = "none";
     document.querySelector(".name-value").style.display = "flex";
     document.getElementById("movie-name").innerHTML = value;
     displayPopular.classList.add("hide");
     displayPopularSeries.classList.add("hide");
   } else {
-    movieFilter.style.display = "none";
+    seriesFilter.style.display = "none";
     document
       .querySelector(".pagination-btn")
       .classList.remove("show", "pagination");
@@ -397,4 +398,5 @@ document.querySelector('.serieLink').addEventListener('click', () => {
 document.querySelector('.filmeLink').addEventListener('click', () => {
   window.location = "index.html";
 })
+
 

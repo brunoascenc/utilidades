@@ -685,8 +685,18 @@ main #upcoming-slide .swiper-slide .movie-date {
   font-weight: 100;
   margin-top: 0.3rem;
   font-size: 0.8rem;
+  text-align: center;
   letter-spacing: 1px;
   color: #e6cff5;
+}
+
+main #upcoming-slide .swiper-slide .serie-name {
+  font-weight: 100;
+  margin-top: 0.3rem;
+  font-size: 0.7rem;
+  text-align: center;
+  letter-spacing: 1px;
+  color: rgba(226, 192, 248, 0.836);
 }
 
 main #upcoming-slide .swiper-container {
@@ -695,7 +705,7 @@ main #upcoming-slide .swiper-container {
 }
 
 main #upcoming-slide .swiper-container img {
-  border-radius: 6px;
+  border-radius: 2px;
   height: 220px;
 }
 
