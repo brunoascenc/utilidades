@@ -15,7 +15,6 @@ const renderFilteredMovie = (data) => {
   seriesFilter.innerHTML = "";
   seriesFilter.style.display = "grid";
   const results = data.results;
-  console.log(results)
   let output = ``;
   for (let i in results) {
     if (!results[i].media_type || results[i].media_type === "movie") {
@@ -64,6 +63,7 @@ const renderFilteredMovie = (data) => {
     const popularValue = popularSelect.value;
     const genreTxt = selectBtn.options[selectBtn.selectedIndex].text;
     const filterTxt = filterSelect.options[filterSelect.selectedIndex].text;
+    
 
     filterMovie(genreValue, popularValue);
 
@@ -73,15 +73,19 @@ const renderFilteredMovie = (data) => {
     document.getElementById("genre").innerHTML = genreTxt;
     document.getElementById("filter").innerHTML = filterTxt;
 
-    document
-      .querySelector(".pagination-btn")
-      .classList.add("show", "pagination");
+    document.querySelector('.pagination-btn').classList.add('show', 'pagination')
+    displayPopular.classList.add('hide')
+
+    // document
+    //   .querySelector(".pagination-btn")
+    //   .classList.add("show", "pagination");
   });
 };
 
 //render movies
 function renderUpcoming(data) {
   const movies = data.results;
+  console.log(movies)
   let output = ``;
   for (let i in movies) {
     if (movies[i].poster_path) {
@@ -90,7 +94,7 @@ function renderUpcoming(data) {
          <img class="movie-poster" src ="${
            IMAGE_URL + movies[i].poster_path
          }" data-movie-id="${movies[i].id}"/>
-         <span class="movie-date">${movies[i].release_date}</span>
+         <span class="movie-date"><p>${movies[i].title}</p></span>
       </div>
    `;
       document.querySelector(".swiper-wrapper").innerHTML = output;
@@ -277,9 +281,9 @@ const streamImg = 'https://image.tmdb.org/t/p/original/'
 //Streams disponiveis
 const getMovieStreams = (data) => {
   const movie = data.results;
-  const streams = movie.US
-  console.log(streams)
+  const streams = movie.BR
   const streamDisponivel = streams.flatrate
+  console.log(streams)
 
   let output = `
   
@@ -287,7 +291,7 @@ const getMovieStreams = (data) => {
   <div class="disponivel">
     <div class="title-section">
       <span></span>
-      <h1>Assista agora:</h1>
+      <h1>Disponível em:</h1>
     </div>  
     <img src = "${streamImg + streamDisponivel[0].logo_path}"/> 
   </div>  
@@ -306,9 +310,9 @@ function getReviews(data) {
       if (movie[i].content) {
         output += `
         <div>
-            <h3>By: ${movie[i].author}</h3>
+            <h3>Por: ${movie[i].author}</h3>
             <p>${movie[i].content}</p>
-            <a href = "${movie[i].url}">official review</a>
+            <a href = "${movie[i].url}">Review oficial</a>
         </div>
         `;
         document.querySelector(".movie-reviews").innerHTML = output;

@@ -9,6 +9,7 @@ function seriesData() {
   getGenresTv();
   filterTv();
   seriesPagination();
+  getTvStreams();
 }
 
 // const inputElement = document.getElementById("searchInput");
@@ -157,6 +158,10 @@ const getSeriesDetails = (data) => {
                  series.vote_average
                }</li>
              </ul>    
+
+             <div class="streams">
+              
+            </div>
           </div>
           
       `;
@@ -186,9 +191,9 @@ function getSeriesReviews(data) {
       if (series[i].content) {
         output += `
           <div>
-              <h3>By: ${series[i].author}</h3>
+              <h3>Por: ${series[i].author}</h3>
               <p>${series[i].content}</p>
-              <a href = "${series[i].url}">official review</a>
+              <a href = "${series[i].url}">Review oficial</a>
           </div>
           `;
         document.querySelector(".movie-reviews").innerHTML = output;
@@ -266,16 +271,16 @@ function seriesPagination() {
 }
 
 //search button
-document.querySelector('#search').addEventListener("click", (e) => {
-    e.preventDefault();
-    if (inputElement.value) {
-      displayPopularSeries.classList.add("hide");
-    }
-  });
+document.querySelector("#search").addEventListener("click", (e) => {
+  e.preventDefault();
+  if (inputElement.value) {
+    displayPopularSeries.classList.add("hide");
+  }
+});
 
 function renderAiring(data) {
   const series = data.results;
-  //   console.log(series);
+  console.log(series);
   let output = ``;
   for (let i in series) {
     if (series[i].poster_path) {
@@ -284,13 +289,44 @@ function renderAiring(data) {
            <img class="movie-poster series-poster" id="series-poster" src ="${
              IMAGE_URL + series[i].poster_path
            }" data-series-id="${series[i].id}"/>
-           <span class="movie-date serie-name">${series[i].name}</span>
+           <span class="movie-date serie-name"><p>${series[i].name}</p></span>
         </div>
      `;
-      document.querySelector(".xd").innerHTML = output;
+      document.querySelector(".series-airing").innerHTML = output;
     }
   }
 }
+
+const renderTvStreams = (data) => {
+  const movie = data.results;
+  const streams = movie.BR
+  const streamDisponivel = streams.flatrate
+  console.log(streams)
+
+  let output = `
+  
+  
+  <div class="disponivel">
+    <div class="title-section">
+      <span></span>
+      <h1>Disponível em:</h1>
+    </div>
+    <img src = "${streamImg + streamDisponivel[0].logo_path}"/> 
+  </div>  
+  `;
+  document.querySelector(".streams").innerHTML = output;
+};
+
+
+// const getGuest = (data) => {
+
+//   getAccountd(data.request_token);
+
+//   document.querySelector(".xdd").addEventListener("click", () => {
+//     const movie = data;
+//     console.log(movie.request_token);
+//   });
+// };
 
 document.querySelector(".homeSerie").addEventListener("click", () => {
   window.location = "series.html";

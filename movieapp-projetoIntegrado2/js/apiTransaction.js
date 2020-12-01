@@ -19,6 +19,22 @@ const requestMovies = (url, onComplete, onError) => {
       .catch((onError))
 }
 
+//session id
+// const getToken = () => {
+//     const path = '/authentication/token/new'
+//     const url =  dynamicUrl(path)
+
+//     requestMovies(url, getGuest, handleError)
+// }
+
+// //account details
+// const getAccount = (session_id) => {
+//     const path = '/account'
+//     const url =  `${dynamicUrl(path)}&session_id=${session_id}`
+
+//     requestMovies(url, getAccountd, handleError)
+// }
+
 const searchMovie = value => {
     const path = '/search/multi'
     const url =  `${dynamicUrl(path)}&query=${value}&language=pt-BR`
@@ -88,7 +104,7 @@ const getMovieTrailer = () => {
 const getMovieReviews = () => {
     let movieId = sessionStorage.getItem("movieId");
     const path = `/movie/${movieId}/reviews`;
-    const url = `${dynamicUrl(path)}&language=pt-BR`;
+    const url = `${dynamicUrl(path)}&language=en-US`;
 
     requestMovies(url, getReviews, handleError)
 }
@@ -97,7 +113,7 @@ const getMovieReviews = () => {
 const getTvShowReviews = () => {
     let seriesId = sessionStorage.getItem("seriesId");
     const path = `/tv/${seriesId}/reviews`;
-    const url = `${dynamicUrl(path)}&language=pt-BR`;
+    const url = `${dynamicUrl(path)}`;
 
     requestMovies(url, getSeriesReviews, handleError)
 }
@@ -106,7 +122,7 @@ const getTvShowReviews = () => {
 const getTvShowTrailer = () => {
     let seriesId = sessionStorage.getItem("seriesId");
     const path = `/tv/${seriesId}/videos`;
-    const url = `${dynamicUrl(path)}&language=en-US`;
+    const url = `${dynamicUrl(path)}`;
 
     requestMovies(url, getSerieTrailer, handleError)
 }
@@ -188,6 +204,14 @@ const getStreams = () => {
     const url =  dynamicUrl(path);
 
     requestMovies(url, getMovieStreams, handleError)
+}
+
+const getTvStreams = () => {
+    let seriesId = sessionStorage.getItem("seriesId");
+    const path = `/tv/${seriesId}/watch/providers`
+    const url =  dynamicUrl(path);
+
+    requestMovies(url, renderTvStreams, handleError)
 }
 
 //Airing tvshow

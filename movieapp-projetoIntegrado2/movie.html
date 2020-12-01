@@ -34,7 +34,10 @@
   <body>
     <div id="movie-banner">
       <div class="container">
-        <header class="details-header" style="width: 100%; right: 0px; position: fixed;">
+        <header
+          class="details-header"
+          style="width: 100%; right: 0px; position: fixed"
+        >
           <a href="index.html">
             <h1>Movix</h1>
           </a>
@@ -50,14 +53,12 @@
 
       <div class="movie-trailer"></div>
     </div>
-    
+
     <main>
       <div id="movies-filter"></div>
 
       <div class="about-movie">
-        <div id="movie-detail">
-        </div>
-
+        <div id="movie-detail"></div>
       </div>
 
       <div class="similar-section">
@@ -68,6 +69,13 @@
         <div class="similar-movies">
           <div class="swiper-container">
             <div class="swiper-wrapper"></div>
+
+            <div class="swiper-pagination"></div>
+
+            <div class="arrows">
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
           </div>
         </div>
       </div>
@@ -123,22 +131,30 @@
           delay: 2500,
           disableOnInteraction: false,
         },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
         breakpoints: {
           100: {
             slidesPerView: 2,
-            spaceBetween: 25,
+            spaceBetween: 20,
+          },
+          390: {
+            slidesPerView: 3,
+            spaceBetween: 20,
           },
           640: {
-            slidesPerView: 3,
-            spaceBetween: 25,
-          },
-          768: {
             slidesPerView: 4,
-            spaceBetween: 25,
+            spaceBetween: 20,
+          },
+          780: {
+            slidesPerView: 5,
+            spaceBetween: 20,
           },
           1024: {
             slidesPerView: 7,
-            spaceBetween: 25,
+            spaceBetween: 40,
           },
         },
       });

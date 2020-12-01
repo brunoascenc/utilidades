@@ -227,6 +227,11 @@
         max-width: 100%;
       }
     }
+
+    .swiper-button-prev,
+    .swiper-button-next {
+      color: rgb(158, 68, 226);
+    }
   }
 }
 
@@ -275,12 +280,13 @@
   }
 }
 
+
 .disponivel{
   .title-section{
     margin-bottom: 5px;
   }
   img{
-    width: 60px;
+    width: 50px;
   }
 }
 

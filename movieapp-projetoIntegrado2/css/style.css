@@ -394,6 +394,7 @@ main img {
   max-width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 2px;
   cursor: pointer;
 }
 
@@ -456,10 +457,10 @@ main #movies-filter,
 main #popular-movies {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (minmax(200px, 1fr))[auto-fill];
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-  grid-gap: 2rem;
-  grid-row-gap: 2rem;
+  -ms-grid-columns: (minmax(180px, 1fr))[auto-fill];
+      grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  grid-gap: 5rem;
+  grid-row-gap: 4rem;
   margin-top: 1rem;
 }
 
@@ -489,6 +490,7 @@ main .img-container {
 
 main .img-container .details-btn {
   background-color: rgba(158, 61, 238, 0.096);
+  border-radius: 2px;
   background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(27, 24, 29, 0.342)), to(rgba(30, 25, 32, 0.555)));
   background-image: linear-gradient(rgba(27, 24, 29, 0.342), rgba(30, 25, 32, 0.555));
   position: absolute;
@@ -690,7 +692,7 @@ main #upcoming-slide .swiper-slide .movie-date {
   color: #e6cff5;
 }
 
-main #upcoming-slide .swiper-slide .serie-name {
+main #upcoming-slide .swiper-slide p {
   font-weight: 100;
   margin-top: 0.3rem;
   font-size: 0.7rem;
@@ -1163,6 +1165,11 @@ main #movies-filter {
   max-width: 100%;
 }
 
+.similar-section .similar-movies .swiper-button-prev,
+.similar-section .similar-movies .swiper-button-next {
+  color: #9e44e2;
+}
+
 .reviews-section .title-section {
   border-bottom: none;
 }
@@ -1223,7 +1230,7 @@ main #movies-filter {
 }
 
 .disponivel img {
-  width: 60px;
+  width: 50px;
 }
 
 .movie-reviews::-webkit-scrollbar {
