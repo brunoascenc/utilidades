@@ -10,6 +10,9 @@ function seriesData() {
   filterTv();
   seriesPagination();
   getTvStreams();
+  getToken()
+       createSession()
+       getAccount()
 }
 
 // const inputElement = document.getElementById("searchInput");
@@ -318,15 +321,25 @@ const renderTvStreams = (data) => {
 };
 
 
-// const getGuest = (data) => {
+// let token = ""
+const getRequestToken = (data) => {
+  const movie = data;
+  // getAccountd(data.request_token);
 
-//   getAccountd(data.request_token);
+  document.querySelector(".login").addEventListener("click", () => {
+    window.location = `https://www.themoviedb.org/authenticate/${movie.request_token}?redirect_to=http://127.0.0.1:5500/series.html`;
+  });
+};
 
-//   document.querySelector(".xdd").addEventListener("click", () => {
-//     const movie = data;
-//     console.log(movie.request_token);
-//   });
-// };
+
+// console.log(token)
+
+const getAccountd = (data) => {
+  let output = `${data.username} `
+  // console.log(data)
+  document.querySelector(".login").innerHTML = output
+};
+
 
 document.querySelector(".homeSerie").addEventListener("click", () => {
   window.location = "series.html";

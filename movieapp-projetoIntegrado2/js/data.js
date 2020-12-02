@@ -16,4 +16,7 @@ function homeData() {
   filterMovie();
   pagination();
   seriesPagination();
+  getToken()
+       createSession()
+       getAccount()
 }
