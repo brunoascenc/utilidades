@@ -275,7 +275,7 @@ const getDetails = (data) => {
   document.addEventListener("click", (e) => {
     if (e.target.className === "favorite-movie") {
       fetch(
-        "https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=2e06b6bbbd1810d806e039caa42f9d22d50c254c",
+        `https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=${localStorage.getItem("sessionId")}`, 
         {
           method: "POST",
           body: JSON.stringify({
@@ -294,7 +294,7 @@ const getDetails = (data) => {
         });
     } else if (e.target.className === "watchlist-movie") {
       fetch(
-        "https://api.themoviedb.org/3/account/{account_id}/watchlist?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=2e06b6bbbd1810d806e039caa42f9d22d50c254c",
+      `https://api.themoviedb.org/3/account/{account_id}/watchlist?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=${localStorage.getItem("sessionId")} `,
         {
           method: "POST",
           body: JSON.stringify({
@@ -449,5 +449,10 @@ document.querySelector(".filmeLink").addEventListener("click", () => {
 });
 
 document.querySelector(".loginPage").addEventListener("click", () => {
-  window.location = "login.html";
+  if(!localStorage.getItem('sessionId')){
+    window.location = "login.html"
+  }else{
+    window.location = "listas.html"
+  }
+  // window.location = "login.html";
 });

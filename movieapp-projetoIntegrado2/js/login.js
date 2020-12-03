@@ -15,7 +15,7 @@ const getRequestToken = (data) => {
 
 const getAccountd = (data) => {
   let output = `${data.username} `;
-  // console.log(data)
+  console.log(data)
   document.querySelector(".username").innerHTML = output;
 };
 
@@ -48,3 +48,24 @@ const createSession = () => {
     }
 };
 createSession()
+
+
+document.querySelector('.logout').addEventListener('click', (e) => {
+  e.preventDefault()
+  window.location = "index.html"
+  localStorage.removeItem('sessionId')
+  // fetch(
+  //   "https://api.themoviedb.org/3/authentication/session/new?api_key=4a5e130486cb63a2caff652d783f6a36",
+  //   {
+  //     method: "DELETE",
+  //     body: JSON.stringify({ session_id: `${localStorage.getItem("sessionId")}` }),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   }
+  // )
+  //   .then((res) => res.json())
+  //   .then((res) => {
+  //     console.log(res);
+  //   });
+})

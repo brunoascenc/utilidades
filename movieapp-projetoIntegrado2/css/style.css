@@ -1752,6 +1752,7 @@ footer i {
   width: 25vw;
   height: 100vh;
   position: fixed;
+  border-right: solid 3px #9e3dee;
   left: 0;
   top: 0;
   background-image: -webkit-gradient(linear, left top, right bottom, from(#0d0d13), to(rgba(20, 14, 22, 0.884)));
@@ -1840,10 +1841,26 @@ footer i {
   width: 750px;
 }
 
+.watchlist-serie h3,
+.watchlist h3,
+.filmes-favoritos h3,
+.series-favoritas h3 {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
 .watchlist-serie .swiper-slide,
 .watchlist .swiper-slide,
 .filmes-favoritos .swiper-slide,
 .series-favoritas .swiper-slide {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -1869,6 +1886,7 @@ footer i {
   font-weight: 100;
   margin-top: 0.3rem;
   font-size: 0.7rem;
+  text-align: center;
   letter-spacing: 1px;
   color: rgba(226, 192, 248, 0.836);
 }
@@ -1907,7 +1925,6 @@ footer i {
   display: flex;
   -ms-flex-item-align: start;
       align-self: start;
-  margin-bottom: -10px;
 }
 
 .title-section span {
@@ -1925,5 +1942,34 @@ h1 {
   font-size: 3rem;
   color: #eee1f8;
   font-size: 2rem;
+}
+
+.removeWatchMovie,
+.removeWatchTv,
+.removeMovie,
+.removeTv {
+  display: none;
+  cursor: pointer;
+  text-decoration: none;
+  border: none;
+  color: rgba(230, 207, 245, 0.911);
+  letter-spacing: 1px;
+  font-family: "Bebas Neue", cursive;
+  font-size: 1rem !important;
+  background-color: transparent;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#a03ff0), to(rgba(84, 29, 139, 0.788)));
+  background-image: linear-gradient(to bottom right, #a03ff0, rgba(84, 29, 139, 0.788));
+  padding: 6px;
+  font-size: 1.7rem;
+  border-radius: 3px;
+  margin-top: 10px;
+}
+
+.lista-header {
+  background-image: -webkit-gradient(linear, left top, right bottom, from(#0d0d13), to(rgba(20, 14, 22, 0.884)));
+  background-image: linear-gradient(to bottom right, #0d0d13, rgba(20, 14, 22, 0.884));
 }
 /*# sourceMappingURL=style.css.map */

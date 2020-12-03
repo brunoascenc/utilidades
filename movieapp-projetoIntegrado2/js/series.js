@@ -179,7 +179,9 @@ const getSeriesDetails = (data) => {
   document.addEventListener("click", (e) => {
     if (e.target.className === "favorite-tv") {
       fetch(
-        "https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=2e06b6bbbd1810d806e039caa42f9d22d50c254c",
+        `https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=${localStorage.getItem(
+          "sessionId"
+        )}`,
         {
           method: "POST",
           body: JSON.stringify({
@@ -198,13 +200,38 @@ const getSeriesDetails = (data) => {
         });
     } else if (e.target.className === "watchlist") {
       fetch(
-        "https://api.themoviedb.org/3/account/{account_id}/watchlist?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=2e06b6bbbd1810d806e039caa42f9d22d50c254c",
+        `https://api.themoviedb.org/3/account/{account_id}/watchlist?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=${localStorage.getItem(
+          "sessionId"
+        )}`,
         {
           method: "POST",
           body: JSON.stringify({
             media_type: "tv",
             media_id: `${series.id}`,
             watchlist: true,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+        });
+
+    } else if(e.target.classList === "removeTv"){
+      console.log('xd')
+      fetch(
+        `https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=${localStorage.getItem(
+          "sessionId"
+        )}`,
+        {
+          method: "POST",
+          body: JSON.stringify({
+            media_type: "tv",
+            media_id: `${series.id}`,
+            favorite: false,
           }),
           headers: {
             "Content-Type": "application/json",

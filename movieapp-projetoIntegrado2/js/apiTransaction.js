@@ -245,9 +245,7 @@ const getToken = () => {
 //account details
 const getAccount = () => {
   const path = "/account";
-  const url = `${dynamicUrl(path)}&session_id=${localStorage.getItem(
-    "sessionId"
-  )}`;
+  const url = `${dynamicUrl(path)}&session_id=${localStorage.getItem("sessionId")}`;
   // console.log(url)
 
   requestMovies(url, getAccountd, handleError);
