@@ -260,12 +260,16 @@ const getDetails = (data) => {
                movie.vote_average
              }</li>
            </ul>
-
-           <button class="favorite-movie">Favoritar</button> 
-           <button class="watchlist-movie">Lista</button>
+           
 
            <div class="streams">
               
+           </div>
+
+           
+           <div class"actions">
+             <button class="favorite-movie">Favoritar <i class="fas fa-heart"></i></button> 
+             <button class="watchlist-movie">Adicionar à lista <i class="fas fa-list"></i></button>
            </div>
         </div>
         

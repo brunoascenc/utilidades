@@ -165,12 +165,16 @@ const getSeriesDetails = (data) => {
                  series.vote_average
                }</li>
              </ul>
-             <button class="favorite-tv">Favoritar</button> 
-             <button class="watchlist">Lista</button>
 
              <div class="streams">
               
             </div>
+
+            <div class"actions">
+            <button class="favorite-tv">Favoritar <i class="fas fa-heart"></i></button> 
+            <button class="watchlist">Adicionar à lista <i class="fas fa-list"></i></button>
+            </div>
+    
           </div>
           
       `;

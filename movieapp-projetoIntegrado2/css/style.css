@@ -1972,4 +1972,43 @@ h1 {
   background-image: -webkit-gradient(linear, left top, right bottom, from(#0d0d13), to(rgba(20, 14, 22, 0.884)));
   background-image: linear-gradient(to bottom right, #0d0d13, rgba(20, 14, 22, 0.884));
 }
+
+.loginPage i {
+  font-size: 35px;
+  color: #9e3dee;
+}
+
+.login-align {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.login-align i {
+  margin-left: 25px;
+}
+
+.watchlist,
+.favorite-tv,
+.watchlist-movie,
+.favorite-movie {
+  cursor: pointer;
+  margin-top: 40px;
+  background: transparent;
+  border: none;
+  font-size: 1.3rem;
+  letter-spacing: 2px;
+  margin-right: 15px;
+  color: #baafc2;
+}
+
+.watchlist i,
+.favorite-tv i,
+.watchlist-movie i,
+.favorite-movie i {
+  color: #9e3dee;
+}
 /*# sourceMappingURL=style.css.map */
