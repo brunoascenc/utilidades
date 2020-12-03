@@ -19,7 +19,6 @@ const requestMovies = (url, onComplete, onError) => {
     .catch(onError);
 };
 
-
 const searchMovie = (value) => {
   const path = "/search/multi";
   const url = `${dynamicUrl(path)}&query=${value}&language=pt-BR`;
@@ -210,7 +209,6 @@ const getAiringSerie = () => {
   requestMovies(url, renderAiring, handleError);
 };
 
-
 //session id
 const getToken = () => {
   const path = "/authentication/token/new";
@@ -219,34 +217,60 @@ const getToken = () => {
   requestMovies(url, getRequestToken, handleError);
 };
 
-//create sessionid
-const createSession = () => {
-  const url = new URL(window.location);
-  const token = url.searchParams.get("request_token");
-  fetch(
-    "https://api.themoviedb.org/3/authentication/session/new?api_key=4a5e130486cb63a2caff652d783f6a36",
-    {
-      method: "POST",
-      body: JSON.stringify({ request_token: `33f64338d091489b95b1ba18f521d376107ba7f0` }),
-      headers: {
-        "Content-Type": "application/json",
-      },
-    }
-  )
-    .then((res) => res.json())
-    .then((res) => {
-        console.log(res)
-    });
-};
+// create sessionid
+// const createSession = () => {
+//   const url = new URL(window.location);
+//   const token = url.searchParams.get("request_token");
 
-console.log(window.localStorage.getItem('id'))
+//   if (token !== null) {
+//     fetch(
+//       "https://api.themoviedb.org/3/authentication/session/new?api_key=4a5e130486cb63a2caff652d783f6a36",
+//       {
+//         method: "POST",
+//         body: JSON.stringify({ request_token: `${token}` }),
+//         headers: {
+//           "Content-Type": "application/json",
+//         },
+//       }
+//     )
+//       .then((res) => res.json())
+//       .then((res) => {
+//         console.log(res);
+//         localStorage.setItem("sessionId", res.session_id);
+//         // getAccount(localStorage.getItem('sessionId'))
+//       });
+//   }
+// };
+
 //account details
-const getAccount = (session_id) => {
+const getAccount = () => {
   const path = "/account";
-  const url = `${dynamicUrl(path)}&session_id=4954a9a94891fc6798a5364e702c2a7dc7d5a94c`;
+  const url = `${dynamicUrl(path)}&session_id=${localStorage.getItem(
+    "sessionId"
+  )}`;
+  // console.log(url)
 
   requestMovies(url, getAccountd, handleError);
 };
 
 //Mark as favorite
-
+const markFavorite = () => {
+  // fetch(
+  //   "https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=2e06b6bbbd1810d806e039caa42f9d22d50c254c",
+  //   {
+  //     method: "POST",
+  //     body: JSON.stringify({
+  //       media_type: "movie",
+  //       media_id: 2250,
+  //       favorite: true,
+  //     }),
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //   }
+  // )
+  //   .then((res) => res.json())
+  //   .then((res) => {
+  //     console.log(res);
+  //   });
+};

@@ -10,9 +10,10 @@ function seriesData() {
   filterTv();
   seriesPagination();
   getTvStreams();
-  getToken()
-       createSession()
-       getAccount()
+  // getToken();
+  // createSession();
+  // getAccount();
+  markFavorite();
 }
 
 // const inputElement = document.getElementById("searchInput");
@@ -29,6 +30,7 @@ const renderFilteredTv = (data) => {
   seriesFilter2.innerHTML = "";
   seriesFilter2.style.display = "grid";
   const results = data.results;
+
   let output = ``;
   for (let i in results) {
     if (!results[i].media_type || results[i].media_type === "tv") {
@@ -86,6 +88,7 @@ document.addEventListener("click", (e) => {
 
 function renderPopularSeries(data) {
   const series = data.results;
+
   let output = ``;
   for (let i in series) {
     if (series[i].poster_path) {
@@ -126,6 +129,7 @@ function getSeriesImages(data) {
 
 const getSeriesDetails = (data) => {
   const series = data;
+  // console.log(series)
   const genre = data.genres;
   const genreName = genre.map((e) => `<span>${e.name}</span>`).join(", ");
 
@@ -160,7 +164,9 @@ const getSeriesDetails = (data) => {
                <li><span class="contrast">Rating</span> ${
                  series.vote_average
                }</li>
-             </ul>    
+             </ul>
+             <button class="favorite-tv">Favoritar</button> 
+             <button class="watchlist">Lista</button>
 
              <div class="streams">
               
@@ -169,6 +175,48 @@ const getSeriesDetails = (data) => {
           
       `;
   document.getElementById("series-detail").innerHTML = output;
+
+  document.addEventListener("click", (e) => {
+    if (e.target.className === "favorite-tv") {
+      fetch(
+        "https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=2e06b6bbbd1810d806e039caa42f9d22d50c254c",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            media_type: "tv",
+            media_id: `${series.id}`,
+            favorite: true,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+        });
+    } else if (e.target.className === "watchlist") {
+      fetch(
+        "https://api.themoviedb.org/3/account/{account_id}/watchlist?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=2e06b6bbbd1810d806e039caa42f9d22d50c254c",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            media_type: "tv",
+            media_id: `${series.id}`,
+            watchlist: true,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+        });
+    }
+  });
 };
 
 //select genres
@@ -283,7 +331,7 @@ document.querySelector("#search").addEventListener("click", (e) => {
 
 function renderAiring(data) {
   const series = data.results;
-  console.log(series);
+  // console.log(series);
   let output = ``;
   for (let i in series) {
     if (series[i].poster_path) {
@@ -302,9 +350,9 @@ function renderAiring(data) {
 
 const renderTvStreams = (data) => {
   const movie = data.results;
-  const streams = movie.BR
-  const streamDisponivel = streams.flatrate
-  console.log(streams)
+  const streams = movie.BR;
+  const streamDisponivel = streams.flatrate;
+  // console.log(streams)
 
   let output = `
   
@@ -320,33 +368,36 @@ const renderTvStreams = (data) => {
   document.querySelector(".streams").innerHTML = output;
 };
 
-
 // let token = ""
-const getRequestToken = (data) => {
-  const movie = data;
-  // getAccountd(data.request_token);
+// const getRequestToken = (data) => {
+//   const movie = data;
+//   console.log(movie)
+//   // getAccountd(data.request_token);
 
-  document.querySelector(".login").addEventListener("click", () => {
-    window.location = `https://www.themoviedb.org/authenticate/${movie.request_token}?redirect_to=http://127.0.0.1:5500/series.html`;
-  });
-};
+//   document.querySelector(".login").addEventListener("click", () => {
+//     window.location = `https://www.themoviedb.org/authenticate/${movie.request_token}?redirect_to=http://127.0.0.1:5500/index.html`;
+//     localStorage.setItem("request_token", movie.request_token);
+//   });
+// };
 
+// localStorage.removeItem('sessionId')
+// localStorage.removeItem('request_token')
 
 // console.log(token)
 
-const getAccountd = (data) => {
-  let output = `${data.username} `
-  // console.log(data)
-  document.querySelector(".login").innerHTML = output
-};
-
+// const getAccountd = (data) => {
+//   let output = `${data.username} `;
+//   // console.log(data)
+//   document.querySelector(".login").innerHTML = output;
+//   document.querySelector(".username").innerHTML = output;
+// };
 
 document.querySelector(".homeSerie").addEventListener("click", () => {
   window.location = "series.html";
-  console.log("xd");
+  // console.log("xd");
 });
 
 document.querySelector(".back-home").addEventListener("click", () => {
   window.location = "series.html";
-  console.log("xd");
+  // console.log("xd");
 });

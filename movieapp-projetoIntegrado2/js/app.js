@@ -63,7 +63,6 @@ const renderFilteredMovie = (data) => {
     const popularValue = popularSelect.value;
     const genreTxt = selectBtn.options[selectBtn.selectedIndex].text;
     const filterTxt = filterSelect.options[filterSelect.selectedIndex].text;
-    
 
     filterMovie(genreValue, popularValue);
 
@@ -73,8 +72,10 @@ const renderFilteredMovie = (data) => {
     document.getElementById("genre").innerHTML = genreTxt;
     document.getElementById("filter").innerHTML = filterTxt;
 
-    document.querySelector('.pagination-btn').classList.add('show', 'pagination')
-    displayPopular.classList.add('hide')
+    document
+      .querySelector(".pagination-btn")
+      .classList.add("show", "pagination");
+    displayPopular.classList.add("hide");
 
     // document
     //   .querySelector(".pagination-btn")
@@ -85,7 +86,7 @@ const renderFilteredMovie = (data) => {
 //render movies
 function renderUpcoming(data) {
   const movies = data.results;
-  console.log(movies)
+  // console.log(movies);
   let output = ``;
   for (let i in movies) {
     if (movies[i].poster_path) {
@@ -209,7 +210,6 @@ function movieDetails(id) {
   return false;
 }
 
-
 //get movie images
 function getImages(data) {
   const img = data.backdrops;
@@ -221,6 +221,7 @@ function getImages(data) {
 //Movie Details output
 const getDetails = (data) => {
   const movie = data;
+  console.log(movie)
   const genre = data.genres;
   const genreName = genre.map((e) => `<span>${e.name}</span>`).join(", ");
 
@@ -259,6 +260,10 @@ const getDetails = (data) => {
                movie.vote_average
              }</li>
            </ul>
+
+           <button class="favorite-movie">Favoritar</button> 
+           <button class="watchlist-movie">Lista</button>
+
            <div class="streams">
               
            </div>
@@ -266,6 +271,48 @@ const getDetails = (data) => {
         
     `;
   document.getElementById("movie-detail").innerHTML = output;
+
+  document.addEventListener("click", (e) => {
+    if (e.target.className === "favorite-movie") {
+      fetch(
+        "https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=2e06b6bbbd1810d806e039caa42f9d22d50c254c",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            media_type: "movie",
+            media_id: `${movie.id}`,
+            favorite: true,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+        });
+    } else if (e.target.className === "watchlist-movie") {
+      fetch(
+        "https://api.themoviedb.org/3/account/{account_id}/watchlist?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=2e06b6bbbd1810d806e039caa42f9d22d50c254c",
+        {
+          method: "POST",
+          body: JSON.stringify({
+            media_type: "movie",
+            media_id: `${movie.id}`,
+            watchlist: true,
+          }),
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res);
+        });
+    }
+  });
 };
 
 // Display movie trailer
@@ -277,13 +324,13 @@ const getTrailer = (data) => {
   document.querySelector(".movie-trailer").innerHTML = output;
 };
 
-const streamImg = 'https://image.tmdb.org/t/p/original/'
+const streamImg = "https://image.tmdb.org/t/p/original/";
 //Streams disponiveis
 const getMovieStreams = (data) => {
   const movie = data.results;
-  const streams = movie.BR
-  const streamDisponivel = streams.flatrate
-  console.log(streams)
+  const streams = movie.BR;
+  const streamDisponivel = streams.flatrate;
+  console.log(streams);
 
   let output = `
   
@@ -393,14 +440,14 @@ function pagination() {
   });
 }
 
-
-document.querySelector('.serieLink').addEventListener('click', () => {
+document.querySelector(".serieLink").addEventListener("click", () => {
   window.location = "series.html";
-})
+});
 
-
-document.querySelector('.filmeLink').addEventListener('click', () => {
+document.querySelector(".filmeLink").addEventListener("click", () => {
   window.location = "index.html";
-})
+});
 
-
+document.querySelector(".loginPage").addEventListener("click", () => {
+  window.location = "login.html";
+});
