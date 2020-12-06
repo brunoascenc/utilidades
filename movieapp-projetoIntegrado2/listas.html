@@ -26,20 +26,26 @@
     <!-- <button class="login1">Entrar</button> -->
     <!-- <main> -->
         <div class="container">
-            <header
+            <header  data-scroll-header
               class="details-header lista-header"
-              style="width: 100%; right: 0px; position: fixed"
+              style="width: 100%; right: 0px; position:fixed"
             >
-              <a href="index.html">
+              <a class="logoz" href="index.html">
                 <h1>Movix</h1>
               </a>
               <!-- <input type="text" id="searchInput" placeholder="Search movie" /> -->
               <!-- <button id="search" type="submit">
                 <i class="fas fa-search"></i>
               </button> -->
-              <div class="back-home">
+              <div class="back-home back-home3">
                 <a href="index.html">Voltar</a>
               </div>
+
+              <div class="burger nav nav2">
+                <div class="line1"></div>
+                <div class="line2"></div>
+                <div class="line3"></div>
+            </div>
             </header>
           </div>
 
@@ -163,18 +169,7 @@
         // getToken();
         getAccount()
 
-//         const getRequestToken = (data) => {
-//     const movie = data;
-//     // getAccountd(data.request_token);
-  
-//     document.querySelector(".login1").addEventListener("click", () => {
-//       window.location = `https://www.themoviedb.org/authenticate/${movie.request_token}?redirect_to=http://127.0.0.1:5500/index.html`;
-//       localStorage.setItem("request_token", movie.request_token);
-//     });
-//   };
-        // getToken()
 
-       
         // renderAiring()
         /* Swiper JS */
         var swiper = new Swiper('.swiper-container', {
@@ -198,14 +193,14 @@
                     spaceBetween: 20,
                 },
                 640: {
-                    slidesPerView: 4,
+                    slidesPerView: 3,
                     spaceBetween: 20,
                 },
-                780: {
-                    slidesPerView: 5,
+                1280: {
+                    slidesPerView: 3,
                     spaceBetween: 20,
                 },
-                1024: {
+                1324: {
                     slidesPerView: 4,
                     spaceBetween: 40,
                 },

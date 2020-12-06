@@ -53,6 +53,12 @@
   }
 }
 
+@mixin detailsBreakpoint {
+  @media (max-width: #{$detailsBreakpoint}) {
+    @content;
+  }
+}
+
 @mixin btnStyle {
   text-decoration: none;
   border: none;
@@ -63,3 +69,4 @@
   background-color: transparent;
   background-image: $gradientBtn;
 }
+

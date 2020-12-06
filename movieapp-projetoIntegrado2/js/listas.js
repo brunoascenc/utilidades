@@ -231,3 +231,10 @@ getWatchListSerie();
 //       });
 //   }
 // })
+
+document.querySelector('.nav2').addEventListener('click', () => {
+    document.querySelector('.nav2').classList.toggle('.nav-active')
+})
+
+
+

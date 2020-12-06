@@ -2,10 +2,12 @@
 const navShow = () => {
   const burger = document.querySelector(".burger");
   const nav = document.querySelector("form");
+  const nav2 = document.querySelector(".lista-login");
 
   burger.addEventListener("click", () => {
     //toggle nav
     nav.classList.toggle("nav-active");
+    nav2.classList.toggle("nav-active");
   });
 };
 

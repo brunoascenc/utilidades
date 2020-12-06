@@ -4,7 +4,7 @@ const getRequestToken = (data) => {
 
   document.querySelector(".login1").addEventListener("click", (e) => {
     e.preventDefault();
-    window.location = `https://www.themoviedb.org/authenticate/${movie.request_token}?redirect_to=http://127.0.0.1:5500/listas.html`;
+    window.location = `https://www.themoviedb.org/authenticate/${movie.request_token}?redirect_to=https://movixapp.netlify.app/listas.html`;
     localStorage.setItem("request_token", movie.request_token);
   });
 };

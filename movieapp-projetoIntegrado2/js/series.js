@@ -135,53 +135,56 @@ const getSeriesDetails = (data) => {
 
   let output = `
           <div class = "poster-movie">
-            <img src = "${IMAGE_URL + series.poster_path}"/>
-            <div class="bgimg"></div>
+          <img src = "${IMAGE_URL + series.poster_path}"/>
+          <div class="bgimg"></div>
+        </div>
+        <div class= "details-container">    
+          <div class="movie-title">
+              <span></span>
+              <h1>${series.title}</h1>
           </div>
-          <div class= "details-container">    
-            <div class="movie-title">
-                <span></span>
-                <h1>${series.name}</h1>
-            </div>
-            <div class = "overview">
-               <div class="title-section">
-                  <span></span>
-                  <h1>Sinopse da série</h1>
-               </div>
-            <p>${series.overview}</p>
-          </div>
-          <div class = "detail-info">
+          <div class = "overview">
              <div class="title-section">
                 <span></span>
-                <h1>Detalhes da série</h1>
-             </div>    
-             <ul>
-               <li><span class="contrast">Title:</span> ${series.name}</li>
-               <li><span class="contrast">Release Date:</span> ${
-                 series.first_air_date
-               }</li>
-               <li><span class="contrast">Genre:</span> ${genreName}</li>
-               <li><span class="contrast">Rating</span> ${
-                 series.vote_average
-               }</li>
-             </ul>
+                <h1>Sinopse do filme</h1>
+             </div>
+          <p>${series.overview}</p>
+        </div>
+        <div class = "detail-info">
+           <div class="title-section">
+              <span></span>
+              <h1>Detalhes do filme</h1>
+           </div>    
+           <ul>
+             <li><span class="contrast">Titulo:</span> ${series.title}</li>
+             <li><span class="contrast">Data de lançamento:</span> ${
+              series.release_date
+             }</li>
+             <li><span class="contrast">Gênero:</span> ${genreName}</li>
+             <li><span class="contrast">Duração:</span> ${
+              series.runtime
+             } min</li>
+             <li><span class="contrast">Avaliação: </span> ${
+              series.vote_average
+             }</li>
+           </ul>
+           
 
-             <div class="streams">
+           <div class="streams">
               
-            </div>
-
-            <div class"actions">
-            <button class="favorite-tv">Favoritar <i class="fas fa-heart"></i></button> 
-            <button class="watchlist">Adicionar à lista <i class="fas fa-list"></i></button>
-            </div>
-    
-          </div>
+           </div>
+           
+           <div class"actions">
+           <button class="favorite-tv">Favoritar <i class="fas fa-heart"></i></button> 
+           <button class="watchlist3">Adicionar à lista <i class="fas fa-list"></i></button>
+           </div>
+        </div>
           
       `;
   document.getElementById("series-detail").innerHTML = output;
 
   document.addEventListener("click", (e) => {
-    if (e.target.className === "favorite-tv") {
+   if (e.target.className === "favorite-tv") {
       fetch(
         `https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=${localStorage.getItem(
           "sessionId"
@@ -202,7 +205,7 @@ const getSeriesDetails = (data) => {
         .then((res) => {
           console.log(res);
         });
-    } else if (e.target.className === "watchlist") {
+    } else if (e.target.className === "watchlist3") {
       fetch(
         `https://api.themoviedb.org/3/account/{account_id}/watchlist?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=${localStorage.getItem(
           "sessionId"

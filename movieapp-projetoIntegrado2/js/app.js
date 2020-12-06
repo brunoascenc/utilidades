@@ -277,6 +277,7 @@ const getDetails = (data) => {
   document.getElementById("movie-detail").innerHTML = output;
 
   document.addEventListener("click", (e) => {
+
     if (e.target.className === "favorite-movie") {
       fetch(
         `https://api.themoviedb.org/3/account/{account_id}/favorite?api_key=4a5e130486cb63a2caff652d783f6a36&session_id=${localStorage.getItem("sessionId")}`, 

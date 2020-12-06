@@ -1643,12 +1643,18 @@ footer i {
   text-align: center;
   margin-top: 1rem;
   font-weight: 100;
-  color: #1b1a1a;
   font-size: 2.6rem;
   letter-spacing: 2px;
   font-family: "Black Han Sans", sans-serif;
   font-weight: 100;
   color: #9e3dee;
+  width: 100% !important;
+}
+
+@media (max-width: 625px) {
+  .login-container .login-form form h1 {
+    font-size: 1.8rem !important;
+  }
 }
 
 .login-container .login-form form p {
@@ -1759,9 +1765,42 @@ footer i {
   background-image: linear-gradient(to bottom right, #0d0d13, rgba(20, 14, 22, 0.884));
 }
 
+@media (max-width: 1096px) {
+  .lista-login {
+    position: fixed;
+    left: 0;
+    width: 40%;
+    top: 25px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    opacity: 0;
+    -webkit-transform: translateZ(100%);
+            transform: translateZ(100%);
+    -webkit-transition: -webkit-transform 0.5s ease-in;
+    transition: -webkit-transform 0.5s ease-in;
+    transition: transform 0.5s ease-in;
+    transition: transform 0.5s ease-in, -webkit-transform 0.5s ease-in;
+    background-color: rgba(24, 23, 29, 0.925);
+    color: #8b8888;
+  }
+}
+
+@media (max-width: 780px) {
+  .lista-login {
+    width: 70%;
+  }
+}
+
 .lista-login form h1 {
   font-size: 1.8rem !important;
   margin-bottom: 10px;
+}
+
+@media (max-width: 625px) {
+  .lista-login form h1 {
+    font-size: 1.4rem !important;
+  }
 }
 
 .lista-login form .logout {
@@ -1781,9 +1820,29 @@ footer i {
   border-radius: 3px;
 }
 
+.logoz {
+  z-index: 1000;
+}
+
 .lista-container {
   margin-left: 25vw;
   width: 100%;
+}
+
+@media (max-width: 1096px) {
+  .lista-container {
+    margin: 0;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 100vh !important;
+  }
 }
 
 .lista-conteudo {
@@ -1800,6 +1859,13 @@ footer i {
           align-items: center;
   width: 100%;
   margin-left: 15vh;
+}
+
+@media (max-width: 1096px) {
+  .lista-conteudo {
+    margin: 0;
+    margin-top: 685px;
+  }
 }
 
 .lista-conteudo h1 {
@@ -1839,6 +1905,25 @@ footer i {
       -ms-flex-align: center;
           align-items: center;
   width: 750px;
+  height: 350px;
+}
+
+@media (max-width: 1150px) {
+  .watchlist-serie,
+  .watchlist,
+  .filmes-favoritos,
+  .series-favoritas {
+    width: 650px;
+  }
+}
+
+@media (max-width: 1096px) {
+  .watchlist-serie,
+  .watchlist,
+  .filmes-favoritos,
+  .series-favoritas {
+    width: 90%;
+  }
 }
 
 .watchlist-serie h3,
@@ -1973,6 +2058,14 @@ h1 {
   background-image: linear-gradient(to bottom right, #0d0d13, rgba(20, 14, 22, 0.884));
 }
 
+@media (max-width: 930px) {
+  .loginIcon {
+    position: absolute;
+    top: 33px;
+    right: 70px;
+  }
+}
+
 .loginPage i {
   font-size: 35px;
   color: #9e3dee;
@@ -1991,7 +2084,7 @@ h1 {
   margin-left: 25px;
 }
 
-.watchlist,
+.watchlist3,
 .favorite-tv,
 .watchlist-movie,
 .favorite-movie {
@@ -2005,10 +2098,40 @@ h1 {
   color: #baafc2;
 }
 
-.watchlist i,
+.watchlist3 i,
 .favorite-tv i,
 .watchlist-movie i,
 .favorite-movie i {
   color: #9e3dee;
+}
+
+@media (max-width: 565px) {
+  .watchlist3,
+  .favorite-tv,
+  .watchlist-movie,
+  .favorite-movie {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 1096px) {
+  .back-home3 {
+    display: none;
+  }
+}
+
+@media (max-width: 1096px) {
+  .nav2 {
+    display: block !important;
+    cursor: pointer !important;
+    z-index: 1000000;
+  }
+}
+
+.nav-active {
+  -webkit-transform: translateZ(0%) !important;
+          transform: translateZ(0%) !important;
+  z-index: 100;
+  opacity: 1;
 }
 /*# sourceMappingURL=style.css.map */

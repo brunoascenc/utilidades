@@ -87,7 +87,7 @@ const getMovieTrailer = () => {
 const getMovieReviews = () => {
   let movieId = sessionStorage.getItem("movieId");
   const path = `/movie/${movieId}/reviews`;
-  const url = `${dynamicUrl(path)}&language=en-US`;
+  const url = `${dynamicUrl(path)}&language=pt-BR`;
 
   requestMovies(url, getReviews, handleError);
 };
@@ -96,7 +96,7 @@ const getMovieReviews = () => {
 const getTvShowReviews = () => {
   let seriesId = sessionStorage.getItem("seriesId");
   const path = `/tv/${seriesId}/reviews`;
-  const url = `${dynamicUrl(path)}`;
+  const url = `${dynamicUrl(path)}&language=pt-BR`;
 
   requestMovies(url, getSeriesReviews, handleError);
 };
