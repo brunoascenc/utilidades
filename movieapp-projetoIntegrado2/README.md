@@ -1,6 +1,7 @@
 # Movix
-Projeto tem como objetivo fornecer um catálogo de filmes para aquelas pessoas que estão em dúvida sobre qual filme assistir. No site também é possível ver as datas dos filmes mais próximos em cartaz.
-* URL: (https://movixmovies.netlify.app/)
+Projeto tem como objetivo fornecer um catálogo de filmes para aquelas pessoas que estão em dúvida sobre qual filme assistir. No site também é possível ver as datas dos lançamentos, e criar uma lista de filmes e séries favotiras.
+
+* URL: (https://movixapp.netlify.app/)
 
 ## Feito com
 * HTML
