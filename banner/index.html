@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link rel="stylesheet" href="styles/styles.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="banner">
+        <div class="div">
+            <div class="text-box">
+                <img class="text1" src="assets/text1.png" alt="" />
+                <img class="text2" src="assets/text2.png" alt="" />
+            </div>
+            <img class="logo" src="assets/logo.png" alt="logo" />
+        </div>
+
+        <img class="img1 fadein fadeout" src="assets/img1.png" alt="" />
+        <img class="img2 fadein fadeout" src="assets/img2.png" alt="" />
+        <img class="img3 fadein fadeout" src="assets/img3.png" alt="" />
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js"></script>
+    <script>
+        TweenMax.from(".fadein", 1.5, {
+            opacity: 0,
+            delay: 1,
+            y: 50,
+            stagger: 0.5,
+            ease: Power3.easeInOut,
+        });
+
+        TweenMax.to(".fadeout", 1.5, {
+            opacity: 0,
+            delay: 3,
+            y: -20,
+            stagger: 0.5,
+            ease: Power3.easeInOut,
+        });
+
+        TweenMax.from(".text1", 1.5, {
+            opacity: 0,
+            delay: 5,
+            y: -50,
+            ease: Power3.easeInOut,
+        });
+
+        TweenMax.from(".logo", 1.5, {
+            opacity: 0,
+            delay: 6.2,
+            stagger: 0.6,
+            ease: Power3.easeInOut,
+        });
+
+        TweenMax.to(".text1", 1.5, {
+            opacity: 0,
+            delay: 7,
+            y: 50,
+            ease: Power3.easeInOut,
+        });
+
+        TweenMax.from(".text2", 1.5, {
+            opacity: 0,
+            delay: 7.7,
+            ease: Power3.easeInOut,
+        });
+    </script>
+</body>
+
+</html>
