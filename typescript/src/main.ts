@@ -1,21 +1,18 @@
-type ID = string;
-type PopularTag = string;
-type MaybePopularTag = PopularTag | null;
+const doSomething = (): void => {
+  // return something
+  console.log('doSomething');
+};
 
-interface UserInterface {
-  id: ID;
-  name: string;
-  surname: string;
-}
+const doSomething2 = (): never => {
+  //never stops
+  throw 'never';
+};
 
-const popularTags: PopularTag[] = ['dragon', 'coffe'];
+let vAny: any = 10;
+let vUnknown: unknown = 10;
 
-const dragonsTag: MaybePopularTag = null;
+// let s1: string = vAny // can
+let s2: string = vUnknown as string; //cant
 
-let userName: string = 'bruno';
-
-let pageName: string | number = '1';
-
-let errorMessage: string | null = null;
-
-let user: UserInterface | null = null;
+let pageNumber: string = '1';
+let numericPageNumber: number = pageNumber as unknown as number; // assign
