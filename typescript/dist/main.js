@@ -1,7 +1,13 @@
-// var a = "1"
-// console.log('aaa', a)
-// let hello: string = 'world';
-var getFullName = function (name, surname) {
-    return name + '' + surname;
+var user = {
+    name: 'Bruno',
+    age: 22,
+    getMessage: function () {
+        return 'Hello' + name;
+    }
 };
-console.log(getFullName('asas', 'asasas'));
+var user2 = {
+    name: 'Brunow',
+    getMessage: function () {
+        return 'Hello' + name;
+    }
+};

@@ -1,10 +1,20 @@
-// var a = "1"
-// console.log('aaa', a)
+interface UserInterface {
+  name: string;
+  age?: number;
+  getMessage(): string;
+}
 
-// let hello: string = 'world';
-
-const getFullName = (name: string, surname: string): string => {
-  return name + '' + surname;
+const user: UserInterface = {
+  name: 'Bruno',
+  age: 22,
+  getMessage() {
+    return 'Hello' + name;
+  },
 };
 
-console.log(getFullName('asas', 'asasas'));
+const user2: UserInterface = {
+  name: 'Brunow',
+  getMessage() {
+    return 'Hello' + name;
+  },
+};
