@@ -1,21 +1,25 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './App.css';
-import { Counter } from './Counter';
-import { TextField } from './TextField';
+
+interface IState {
+  people: {
+    name: string;
+    age: number;
+    note?: string;
+    url: string;
+  }[];
+}
 
 const App: React.FC = () => {
+  const [people, setPeople] = useState<IState['people']>([]);
+
+  // people.map((person) => {
+  //   person.age;
+  // });
+
   return (
     <div className="App">
-      <h1>a</h1>
-      <Counter>
-        {({ count, setCount }) => (
-          <div>
-            {count}
-            <button onClick={() => setCount(count + 1)}>count</button>
-          </div>
-        )}
-      </Counter>
-      <TextField text="oioi" person={{ firstName: 'asas', lastName: 'as' }} />
+      <h1>People invited to my party</h1>
     </div>
   );
 };
