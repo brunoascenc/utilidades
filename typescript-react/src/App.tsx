@@ -12,7 +12,14 @@ interface IState {
 }
 
 const App: React.FC = () => {
-  const [people, setPeople] = useState<IState['people']>([]);
+  const [people, setPeople] = useState<IState['people']>([
+    {
+      name: 'Lebron James',
+      url: 'https://www.lakersbrasil.com/data/posts/noticia-secundaria_60f7545d56a91_quadrada.jpg',
+      age: 36,
+      note: 'the goat',
+    },
+  ]);
 
   // people.map((person) => {
   //   person.age;
