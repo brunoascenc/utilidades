@@ -22,6 +22,8 @@ const App: React.FC = () => {
     },
   ]);
 
+  console.log(typeof people);
+
   // people.map((person) => {
   //   person.age;
   // });

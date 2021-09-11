@@ -1,4 +1,5 @@
 import React from 'react';
+import { preProcessFile } from 'typescript';
 import { IState as IProps } from '../App';
 
 const List: React.FC<IProps> = ({ people }) => {
