@@ -16,6 +16,21 @@ const Products = () => {
   const [products] = value.products;
   const [showMore, setShowMore] = useState(8);
 
+  let fixedPrice = '';
+  if (products) {
+    products.filter((instrumento) => {
+      const productPrice = instrumento.price.toString();
+      const priceArray = productPrice.split('');
+
+      const lastNumbers = priceArray.splice(productPrice.length - 2);
+      priceArray.push(',');
+
+      const fixedPriceArr = priceArray.concat(lastNumbers);
+
+      return (fixedPrice = fixedPriceArr.join(''));
+    });
+  }
+
   return (
     <ProductsContainer>
       <h1>
@@ -40,7 +55,7 @@ const Products = () => {
                 </div>
                 <span>{product.productName}</span>
                 <p>{product.descriptionShort}</p>
-                <span className="price">R$ {product.price}</span>
+                <span className="price">R$ {fixedPrice}</span>
               </ListItem>
             );
           })}

@@ -36,14 +36,14 @@ export const ProductsList = styled.ul`
   grid-gap: 40px;
   grid-row-gap: 60px;
   margin-top: 75px;
-  margin-bottom: 75px;
+  margin-bottom: 50px;
 `;
 
 export const ListItem = styled.li`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px;
+  padding: 34px 22px;
   border-radius: 4px;
 
   span {

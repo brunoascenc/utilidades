@@ -27,6 +27,36 @@ const Slider = () => {
             </SlideContent>
           </Container>
         </SwiperSlide>
+        <SwiperSlide
+          style={{
+            backgroundImage: ` url(${Slide})`,
+          }}
+        >
+          <Container>
+            <SlideContent>
+              <p>Novos produtos</p>
+              <h1>
+                Instrumentos <span>Profissionais</span>
+              </h1>
+              <button>Confira</button>
+            </SlideContent>
+          </Container>
+        </SwiperSlide>
+        <SwiperSlide
+          style={{
+            backgroundImage: ` url(${Slide})`,
+          }}
+        >
+          <Container>
+            <SlideContent>
+              <p>Novos produtos</p>
+              <h1>
+                Instrumentos <span>Profissionais</span>
+              </h1>
+              <button>Confira</button>
+            </SlideContent>
+          </Container>
+        </SwiperSlide>
       </Swiper>
     </SliderContainer>
   );
